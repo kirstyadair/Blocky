@@ -20,18 +20,24 @@ public class PlayerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (gameState != GameState.CHOOSEREQUIREMENTS)
         {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            if (Input.GetButtonDown("Fire1"))
+            {
+                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-            RaycastHit hit;
-            if (Physics.Raycast(ray, out hit))
-            {
-                Debug.Log("hit");
-            }
-            else
-            {
-                Debug.Log("no hit");
+                RaycastHit hit;
+                if (Physics.Raycast(ray, out hit))
+                {
+                    Debug.Log(hit.transform.gameObject.tag);
+                    GameObject hitCube = hit.transform.gameObject;
+                    Color hitColor = new Color(255, 0, 0, 0);
+                    hitCube.GetComponent<Renderer>().material.color = hitColor;
+                }
+                else
+                {
+                    Debug.Log("no hit");
+                }
             }
         }
     }
