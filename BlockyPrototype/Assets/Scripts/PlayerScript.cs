@@ -33,22 +33,22 @@ public class PlayerScript : MonoBehaviour
         {
             if (Input.GetButtonDown("Fire1"))
             {
-                if (!wallSelected)
-                {
-                    Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-                    RaycastHit hit;
-                    if (Physics.Raycast(ray, out hit))
+                RaycastHit hit;
+                if (Physics.Raycast(ray, out hit))
+                {
+                    if (!wallSelected)
                     {
                         // Find the tag of the cube hit by the raycast
                         selectedWallTag = hit.transform.gameObject.tag;
                         // Highlight every cube with this tag
                         HighlightWall(selectedWallTag);
                     }
-                }
-                else
-                {
-                    DeselectAllWalls();
+                    else
+                    {
+                        DeselectWalls();
+                    }
                 }
             }
         }
@@ -66,18 +66,41 @@ public class PlayerScript : MonoBehaviour
         // For each cube with the selected tag, change the colour to red
         foreach(GameObject cube in selectedCubes)
         {
-            Color selectedColor = new Color(255, 0, 0, 0);
+            Color selectedColor = new Color(255, 0, 0);
             cube.GetComponent<Renderer>().material.color = selectedColor;
         }
     }
 
 
 
-    void DeselectAllWalls()
+    void DeselectWalls()
     {
         drawingPanelAnim.SetBool("openPanel", false);
         wallSelected = false;
         GameObject[] allCubes;
-        //allCubes = GameObject.
+        allCubes = GameObject.FindGameObjectsWithTag("BackWall");
+        foreach (GameObject cube in allCubes)
+        {
+            Color selectedColor = new Color(0, 0, 0);
+            cube.GetComponent<Renderer>().material.color = selectedColor;
+        }
+        allCubes = GameObject.FindGameObjectsWithTag("FrontWall");
+        foreach (GameObject cube in allCubes)
+        {
+            Color selectedColor = new Color(0, 0, 0);
+            cube.GetComponent<Renderer>().material.color = selectedColor;
+        }
+        allCubes = GameObject.FindGameObjectsWithTag("LeftWall");
+        foreach (GameObject cube in allCubes)
+        {
+            Color selectedColor = new Color(0, 0, 0);
+            cube.GetComponent<Renderer>().material.color = selectedColor;
+        }
+        allCubes = GameObject.FindGameObjectsWithTag("RightWall");
+        foreach (GameObject cube in allCubes)
+        {
+            Color selectedColor = new Color(0, 0, 0);
+            cube.GetComponent<Renderer>().material.color = selectedColor;
+        }
     }
 }
