@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class RequirementsGeneratorScript : MonoBehaviour
 {
+    // Variables
     public PlayerScript playerScript;
     public GameObject chooseRequirementsPanel;
     public GameObject requirementsPanel;
@@ -17,6 +18,8 @@ public class RequirementsGeneratorScript : MonoBehaviour
     public string feature;
     public int requiredFloors;
 
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,11 +29,7 @@ public class RequirementsGeneratorScript : MonoBehaviour
         RandomlyGenerateRequirements();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
+    
 
     public void RandomlyGenerateRequirements()
     {
@@ -44,6 +43,8 @@ public class RequirementsGeneratorScript : MonoBehaviour
         randomFeatureText.text = "It must also have a " + feature + ".";
     }
 
+
+
     public void SaveRequirements()
     {
         chooseRequirementsPanel.SetActive(false);
@@ -54,8 +55,11 @@ public class RequirementsGeneratorScript : MonoBehaviour
         playerScript.gameState = GameState.CHOSENREQUIREMENTS;
     }
 
+
+
     IEnumerator SpawnRoom()
     {
+        // Spawn the back wall of cubes
         for (int i = 0; i < 20; i++)
         {
             GameObject spawnedCube = Instantiate(cubePrefab, transform.position, Quaternion.identity);
@@ -64,6 +68,7 @@ public class RequirementsGeneratorScript : MonoBehaviour
             yield return new WaitForSeconds(0.05f);
         }
 
+        // Spawn the right wall of cubes
         for (int i = 0; i < 20; i++)
         {
             GameObject spawnedCube = Instantiate(cubePrefab, transform.position, Quaternion.identity);
@@ -72,6 +77,7 @@ public class RequirementsGeneratorScript : MonoBehaviour
             yield return new WaitForSeconds(0.05f);
         }
 
+        // Spawn the front wall of cubes
         for (int i = 0; i < 20; i++)
         {
             GameObject spawnedCube = Instantiate(cubePrefab, transform.position, Quaternion.identity);
@@ -80,6 +86,7 @@ public class RequirementsGeneratorScript : MonoBehaviour
             yield return new WaitForSeconds(0.05f);
         }
 
+        // Spawn the left wall of cubes
         for (int i = 0; i < 20; i++)
         {
             GameObject spawnedCube = Instantiate(cubePrefab, transform.position, Quaternion.identity);

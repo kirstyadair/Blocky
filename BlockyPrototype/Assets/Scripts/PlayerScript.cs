@@ -7,15 +7,15 @@ public enum GameState
     CHOOSEREQUIREMENTS, CHOSENREQUIREMENTS
 }
 
+
+
 public class PlayerScript : MonoBehaviour
 {
+    // Variables
     public GameState gameState;
+    public string selectedWallTag;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+
 
     // Update is called once per frame
     void Update()
@@ -29,16 +29,31 @@ public class PlayerScript : MonoBehaviour
                 RaycastHit hit;
                 if (Physics.Raycast(ray, out hit))
                 {
-                    Debug.Log(hit.transform.gameObject.tag);
-                    GameObject hitCube = hit.transform.gameObject;
-                    Color hitColor = new Color(255, 0, 0, 0);
-                    hitCube.GetComponent<Renderer>().material.color = hitColor;
+                    // Find the tag of the cube hit by the raycast
+                    selectedWallTag = hit.transform.gameObject.tag;
+                    // Highlight every cube with this tag
+                    HighlightWall(selectedWallTag);
                 }
                 else
                 {
                     Debug.Log("no hit");
                 }
             }
+        }
+    }
+
+
+
+    void HighlightWall(string wallTag)
+    {
+        // Make an array of cubes with the selected tag
+        GameObject[] selectedCubes;
+        selectedCubes = GameObject.FindGameObjectsWithTag(wallTag);
+        // For each cube with the selected tag, change the colour to red
+        foreach(GameObject cube in selectedCubes)
+        {
+            Color selectedColor = new Color(255, 0, 0, 0);
+            cube.GetComponent<Renderer>().material.color = selectedColor;
         }
     }
 }
