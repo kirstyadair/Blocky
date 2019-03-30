@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class RequirementsGeneratorScript : MonoBehaviour
 {
+    public PlayerScript playerScript;
     public GameObject chooseRequirementsPanel;
     public GameObject requirementsPanel;
     public GameObject cubePrefab;
@@ -19,6 +20,7 @@ public class RequirementsGeneratorScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        playerScript.gameState = GameState.CHOOSEREQUIREMENTS;
         chooseRequirementsPanel.SetActive(true);
         requirementsPanel.SetActive(false);
         RandomlyGenerateRequirements();
@@ -49,6 +51,7 @@ public class RequirementsGeneratorScript : MonoBehaviour
         floorsText.text = "Required floors: " + requiredFloors;
         featureText.text = "Required feature: " + feature;
         StartCoroutine(SpawnRoom());
+        playerScript.gameState = GameState.CHOSENREQUIREMENTS;
     }
 
     IEnumerator SpawnRoom()
