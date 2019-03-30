@@ -374,7 +374,7 @@ GameObject:
   - component: {fileID: 738950957}
   - component: {fileID: 738950956}
   m_Layer: 5
-  m_Name: RequirementsPanel
+  m_Name: ChooseRequirementsPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -660,16 +660,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 958139296}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3634c56c83a54424c9936d429910615c, type: 3}
+  m_Script: {fileID: 11500000, guid: 0313b35221d664445950abe553195534, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  chooseRequirementsPanel: {fileID: 0}
+  requirementsPanel: {fileID: 0}
   requiredFloorsText: {fileID: 1610502877}
   randomFeatureText: {fileID: 1789683998}
+  floorsText: {fileID: 0}
+  featureText: {fileID: 0}
   features:
   - pool
-  - campfire
-  - big tree
   - deck
+  - big tree
+  - campfire
   - pond
   requiredFloors: 0
   feature: 
