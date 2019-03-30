@@ -281,6 +281,7 @@ GameObject:
   - component: {fileID: 343156660}
   - component: {fileID: 343156662}
   - component: {fileID: 343156661}
+  - component: {fileID: 343156663}
   m_Layer: 5
   m_Name: RequirementsPanel
   m_TagString: Untagged
@@ -304,10 +305,10 @@ RectTransform:
   m_Father: {fileID: 500119028}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 130, y: 145}
-  m_SizeDelta: {x: 250, y: -310}
+  m_AnchoredPosition: {x: 130, y: 69}
+  m_SizeDelta: {x: 250, y: 106}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &343156661
 MonoBehaviour:
@@ -346,6 +347,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 343156659}
   m_CullTransparentMesh: 0
+--- !u!95 &343156663
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 343156659}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a1c776b89a90fe846a2ee2e9f08ddb9f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &500119027
 GameObject:
   m_ObjectHideFlags: 0
@@ -608,6 +628,7 @@ GameObject:
   - component: {fileID: 738950955}
   - component: {fileID: 738950957}
   - component: {fileID: 738950956}
+  - component: {fileID: 738950958}
   m_Layer: 5
   m_Name: ChooseRequirementsPanel
   m_TagString: Untagged
@@ -675,6 +696,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 738950954}
   m_CullTransparentMesh: 0
+--- !u!95 &738950958
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 738950954}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 485418188e9c9ef40b42023cb19cfb81, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &797204192
 GameObject:
   m_ObjectHideFlags: 0
@@ -979,6 +1019,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerScript: {fileID: 1930385433}
+  chooseReqAnim: {fileID: 738950958}
+  savedReqAnim: {fileID: 343156663}
   chooseRequirementsPanel: {fileID: 738950954}
   requirementsPanel: {fileID: 343156659}
   cubePrefab: {fileID: 5990924509027115254, guid: 6eb6cc60bb32c714da6170868cdd0e2d,
@@ -1497,6 +1539,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameState: 0
+  selectedWallTag: 
 --- !u!4 &1930385434
 Transform:
   m_ObjectHideFlags: 0

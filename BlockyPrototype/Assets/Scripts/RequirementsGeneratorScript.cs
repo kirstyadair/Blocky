@@ -7,6 +7,8 @@ public class RequirementsGeneratorScript : MonoBehaviour
 {
     // Variables
     public PlayerScript playerScript;
+    public Animator chooseReqAnim;
+    public Animator savedReqAnim;
     public GameObject chooseRequirementsPanel;
     public GameObject requirementsPanel;
     public GameObject cubePrefab;
@@ -18,15 +20,19 @@ public class RequirementsGeneratorScript : MonoBehaviour
     public string feature;
     public int requiredFloors;
 
+    bool panelSlide = false;
+    bool requirementsSaved = false;
+
 
 
     // Start is called before the first frame update
     void Start()
     {
         playerScript.gameState = GameState.CHOOSEREQUIREMENTS;
-        chooseRequirementsPanel.SetActive(true);
-        requirementsPanel.SetActive(false);
+        chooseReqAnim.SetBool("panelSlide", false);
+        savedReqAnim.SetBool("slideIn", false);
         RandomlyGenerateRequirements();
+        requirementsSaved = false;
     }
 
     
@@ -47,12 +53,16 @@ public class RequirementsGeneratorScript : MonoBehaviour
 
     public void SaveRequirements()
     {
-        chooseRequirementsPanel.SetActive(false);
-        requirementsPanel.SetActive(true);
-        floorsText.text = "Required floors: " + requiredFloors;
-        featureText.text = "Required feature: " + feature;
-        StartCoroutine(SpawnRoom());
-        playerScript.gameState = GameState.CHOSENREQUIREMENTS;
+        if (!requirementsSaved)
+        {
+            requirementsSaved = true;
+            chooseReqAnim.SetBool("panelSlide", true);
+            savedReqAnim.SetBool("slideIn", true);
+            floorsText.text = "Required floors: " + requiredFloors;
+            featureText.text = "Required feature: " + feature;
+            StartCoroutine(SpawnRoom());
+            playerScript.gameState = GameState.CHOSENREQUIREMENTS;
+        }
     }
 
 
