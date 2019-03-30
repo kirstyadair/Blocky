@@ -7,13 +7,14 @@ public class RequirementsGeneratorScript : MonoBehaviour
 {
     public GameObject chooseRequirementsPanel;
     public GameObject requirementsPanel;
+    public GameObject cubePrefab;
     public Text requiredFloorsText;
     public Text randomFeatureText;
     public Text floorsText;
     public Text featureText;
     public string[] features;
-    public int requiredFloors;
     public string feature;
+    public int requiredFloors;
 
     // Start is called before the first frame update
     void Start()
@@ -47,5 +48,41 @@ public class RequirementsGeneratorScript : MonoBehaviour
         requirementsPanel.SetActive(true);
         floorsText.text = "Required floors: " + requiredFloors;
         featureText.text = "Required feature: " + feature;
+        StartCoroutine(SpawnRoom());
+    }
+
+    IEnumerator SpawnRoom()
+    {
+        for (int i = 0; i < 20; i++)
+        {
+            GameObject spawnedCube = Instantiate(cubePrefab, transform.position, Quaternion.identity);
+            spawnedCube.tag = "BackWall";
+            transform.Translate(Vector3.right * 0.1f);
+            yield return new WaitForSeconds(0.05f);
+        }
+
+        for (int i = 0; i < 20; i++)
+        {
+            GameObject spawnedCube = Instantiate(cubePrefab, transform.position, Quaternion.identity);
+            spawnedCube.tag = "RightWall";
+            transform.Translate(Vector3.back * 0.1f);
+            yield return new WaitForSeconds(0.05f);
+        }
+
+        for (int i = 0; i < 20; i++)
+        {
+            GameObject spawnedCube = Instantiate(cubePrefab, transform.position, Quaternion.identity);
+            spawnedCube.tag = "FrontWall";
+            transform.Translate(Vector3.left * 0.1f);
+            yield return new WaitForSeconds(0.05f);
+        }
+
+        for (int i = 0; i < 20; i++)
+        {
+            GameObject spawnedCube = Instantiate(cubePrefab, transform.position, Quaternion.identity);
+            spawnedCube.tag = "LeftWall";
+            transform.Translate(Vector3.forward * 0.1f);
+            yield return new WaitForSeconds(0.05f);
+        }
     }
 }
