@@ -10,9 +10,12 @@ public class GridScript : MonoBehaviour
     EventSystem eventSystem;
     PointerEventData pointerEventData;
     List<GameObject> gridCells;
-    GameObject grid;
 
-    // Start is called before the first frame update
+    GameObject grid;
+    GameObject gridTile;
+
+
+    
     void Start()
     {
         raycaster = GetComponent<GraphicRaycaster>();
@@ -21,7 +24,8 @@ public class GridScript : MonoBehaviour
         grid = GameObject.Find("Grid");
     }
 
-    // Update is called once per frame
+
+    
     void Update()
     {
         
@@ -39,10 +43,18 @@ public class GridScript : MonoBehaviour
                 if (result.gameObject.tag == "Tile")
                 {
                     Debug.Log(result.gameObject.name);
+                    gridTile = result.gameObject;
+                    SelectTile(gridTile);
                 }
             }
         }
     }
 
-    
+
+
+    void SelectTile(GameObject tile)
+    {
+        Color newColor = new Color(255, 255, 0);
+        tile.GetComponent<Image>().color = newColor;
+    }
 }

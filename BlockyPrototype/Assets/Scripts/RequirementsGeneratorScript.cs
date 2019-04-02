@@ -19,9 +19,11 @@ public class RequirementsGeneratorScript : MonoBehaviour
     public string[] features;
     public string feature;
     public int requiredFloors;
+    public bool canSelectWalls = false;
 
     bool panelSlide = false;
     bool requirementsSaved = false;
+    
 
 
 
@@ -69,13 +71,14 @@ public class RequirementsGeneratorScript : MonoBehaviour
 
     IEnumerator SpawnRoom()
     {
+        canSelectWalls = false;
         // Spawn the back wall of cubes
         for (int i = 0; i < 20; i++)
         {
             GameObject spawnedCube = Instantiate(cubePrefab, transform.position, Quaternion.identity);
             spawnedCube.tag = "BackWall";
             transform.Translate(Vector3.right * 0.1f);
-            yield return new WaitForSeconds(0.05f);
+            yield return new WaitForSeconds(0.04f);
         }
 
         // Spawn the right wall of cubes
@@ -84,7 +87,7 @@ public class RequirementsGeneratorScript : MonoBehaviour
             GameObject spawnedCube = Instantiate(cubePrefab, transform.position, Quaternion.identity);
             spawnedCube.tag = "RightWall";
             transform.Translate(Vector3.back * 0.1f);
-            yield return new WaitForSeconds(0.05f);
+            yield return new WaitForSeconds(0.04f);
         }
 
         // Spawn the front wall of cubes
@@ -93,7 +96,7 @@ public class RequirementsGeneratorScript : MonoBehaviour
             GameObject spawnedCube = Instantiate(cubePrefab, transform.position, Quaternion.identity);
             spawnedCube.tag = "FrontWall";
             transform.Translate(Vector3.left * 0.1f);
-            yield return new WaitForSeconds(0.05f);
+            yield return new WaitForSeconds(0.04f);
         }
 
         // Spawn the left wall of cubes
@@ -102,7 +105,8 @@ public class RequirementsGeneratorScript : MonoBehaviour
             GameObject spawnedCube = Instantiate(cubePrefab, transform.position, Quaternion.identity);
             spawnedCube.tag = "LeftWall";
             transform.Translate(Vector3.forward * 0.1f);
-            yield return new WaitForSeconds(0.05f);
+            yield return new WaitForSeconds(0.04f);
         }
+        canSelectWalls = true;
     }
 }

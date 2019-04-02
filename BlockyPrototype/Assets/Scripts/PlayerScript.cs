@@ -17,6 +17,7 @@ public class PlayerScript : MonoBehaviour
     public string selectedWallTag;
     bool wallSelected;
     public Animator drawingPanelAnim;
+    public RequirementsGeneratorScript reqGenScript;
     
 
 
@@ -24,7 +25,6 @@ public class PlayerScript : MonoBehaviour
     {
         drawingPanelAnim.SetBool("openPanel", false);
         wallSelected = false;
-        
     }
 
 
@@ -43,14 +43,14 @@ public class PlayerScript : MonoBehaviour
                     if (hit.collider.gameObject.tag == "BackWall" || hit.collider.gameObject.tag == "FrontWall" || hit.collider.gameObject.tag == "RightWall" || hit.collider.gameObject.tag == "LeftWall")
                     {
                         // if a wall has not already been selected 
-                        if (!wallSelected)
+                        if (!wallSelected  && reqGenScript.canSelectWalls)
                         {
                             // Find the tag of the cube hit by the raycast
                             selectedWallTag = hit.transform.gameObject.tag;
                             // Highlight every cube with this tag
                             HighlightWall(selectedWallTag);
                         }
-                        else // if a wall is selected
+                        else if (wallSelected && reqGenScript.canSelectWalls) // if a wall is selected
                         {
                             // deselect all walls
                             DeselectWalls();
