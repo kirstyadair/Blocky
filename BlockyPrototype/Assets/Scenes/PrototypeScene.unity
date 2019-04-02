@@ -6174,6 +6174,7 @@ MonoBehaviour:
   - pond
   feature: 
   requiredFloors: 0
+  canSelectWalls: 0
 --- !u!4 &958139298
 Transform:
   m_ObjectHideFlags: 0
@@ -9092,7 +9093,7 @@ RectTransform:
   m_GameObject: {fileID: 1592219313}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.8068, y: 0.8068, z: 0.8068}
   m_Children:
   - {fileID: 1358936562}
   - {fileID: 835655143}
@@ -11095,6 +11096,7 @@ MonoBehaviour:
   gameState: 0
   selectedWallTag: 
   drawingPanelAnim: {fileID: 1592219315}
+  reqGenScript: {fileID: 958139297}
 --- !u!4 &1930385434
 Transform:
   m_ObjectHideFlags: 0
