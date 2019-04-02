@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public enum GameState
 {
     CHOOSEREQUIREMENTS, CHOSENREQUIREMENTS
@@ -16,13 +17,14 @@ public class PlayerScript : MonoBehaviour
     public string selectedWallTag;
     bool wallSelected;
     public Animator drawingPanelAnim;
-
+    
 
 
     void Start()
     {
         drawingPanelAnim.SetBool("openPanel", false);
         wallSelected = false;
+        
     }
 
 
@@ -38,16 +40,25 @@ public class PlayerScript : MonoBehaviour
                 RaycastHit hit;
                 if (Physics.Raycast(ray, out hit))
                 {
-                    if (!wallSelected)
+                    if (hit.collider.gameObject.tag == "BackWall" || hit.collider.gameObject.tag == "FrontWall" || hit.collider.gameObject.tag == "RightWall" || hit.collider.gameObject.tag == "LeftWall")
                     {
-                        // Find the tag of the cube hit by the raycast
-                        selectedWallTag = hit.transform.gameObject.tag;
-                        // Highlight every cube with this tag
-                        HighlightWall(selectedWallTag);
-                    }
-                    else
-                    {
-                        DeselectWalls();
+                        // if a wall has not already been selected 
+                        if (!wallSelected)
+                        {
+                            // Find the tag of the cube hit by the raycast
+                            selectedWallTag = hit.transform.gameObject.tag;
+                            // Highlight every cube with this tag
+                            HighlightWall(selectedWallTag);
+                        }
+                        else // if a wall is selected
+                        {
+                            // deselect all walls
+                            DeselectWalls();
+                            // Find the tag of the cube hit by the raycast
+                            selectedWallTag = hit.transform.gameObject.tag;
+                            // Highlight every cube with this tag
+                            HighlightWall(selectedWallTag);
+                        }
                     }
                 }
             }
