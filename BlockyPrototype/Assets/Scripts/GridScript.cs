@@ -9,10 +9,13 @@ public class GridScript : MonoBehaviour
     GraphicRaycaster raycaster;
     EventSystem eventSystem;
     PointerEventData pointerEventData;
-    List<GameObject> gridCells;
+    public List<Transform> gridCells;
 
     GameObject grid;
     GameObject gridTile;
+
+    Color selectedColour;
+    Color defaultColour;
 
 
     
@@ -20,8 +23,9 @@ public class GridScript : MonoBehaviour
     {
         raycaster = GetComponent<GraphicRaycaster>();
         eventSystem = GetComponent<EventSystem>();
-        gridCells = new List<GameObject>();
         grid = GameObject.Find("Grid");
+        defaultColour = new Color(1, 1, 1);
+        selectedColour = defaultColour;
     }
 
 
@@ -40,11 +44,17 @@ public class GridScript : MonoBehaviour
 
             foreach (RaycastResult result in results)
             {
+                // If the hit tile is a standard tile within the grid
                 if (result.gameObject.tag == "Tile")
                 {
-                    Debug.Log(result.gameObject.name);
                     gridTile = result.gameObject;
-                    SelectTile(gridTile);
+                    ColourTile(gridTile, selectedColour);
+                }
+
+                // If the hit tile is a colour selection tile
+                if (result.gameObject.tag == "ColourTile")
+                {
+                    selectedColour = result.gameObject.GetComponent<Image>().color;
                 }
             }
         }
@@ -52,9 +62,18 @@ public class GridScript : MonoBehaviour
 
 
 
-    void SelectTile(GameObject tile)
+    void ColourTile(GameObject tile, Color color)
     {
-        Color newColor = new Color(255, 255, 0);
-        tile.GetComponent<Image>().color = newColor;
+        tile.GetComponent<Image>().color = selectedColour;
+    }
+
+
+
+    public void ClearGrid()
+    {
+        foreach (Transform cell in gridCells)
+        {
+            cell.GetComponent<Image>().color = defaultColour;
+        }
     }
 }

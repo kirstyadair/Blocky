@@ -9,6 +9,7 @@ TagManager:
   - LeftWall
   - RightWall
   - Tile
+  - ColourTile
   layers:
   - Default
   - TransparentFX
