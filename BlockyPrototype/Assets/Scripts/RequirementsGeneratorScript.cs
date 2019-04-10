@@ -19,7 +19,12 @@ public class RequirementsGeneratorScript : MonoBehaviour
     public string[] features;
     public string feature;
     public int requiredFloors;
+    public int speed;
     public bool canSelectWalls = false;
+
+    [Header("Cube Spawning")]
+    public float spaceBetweenCubes;
+    public float timeBetweenSpawning;
 
     bool panelSlide = false;
     bool requirementsSaved = false;
@@ -37,7 +42,20 @@ public class RequirementsGeneratorScript : MonoBehaviour
         requirementsSaved = false;
     }
 
-    
+
+
+    void Update()
+    {
+        if (playerScript.gameState == GameState.CHOSENREQUIREMENTS)
+        {
+            if (Input.GetButtonDown("Fire2"))
+            {
+                StartCoroutine(SpawnRoom());
+            }
+        }
+    }
+
+
 
     public void RandomlyGenerateRequirements()
     {
@@ -72,13 +90,15 @@ public class RequirementsGeneratorScript : MonoBehaviour
     IEnumerator SpawnRoom()
     {
         canSelectWalls = false;
+
         // Spawn the back wall of cubes
         for (int i = 0; i < 20; i++)
         {
             GameObject spawnedCube = Instantiate(cubePrefab, transform.position, Quaternion.identity);
             spawnedCube.tag = "BackWall";
-            transform.Translate(Vector3.right * 0.1f);
-            yield return new WaitForSeconds(0.04f);
+            spawnedCube.GetComponent<CubeScript>().cubeTag = spawnedCube.tag;
+            transform.Translate(Vector3.right * spaceBetweenCubes);
+            yield return new WaitForSeconds(timeBetweenSpawning);
         }
 
         // Spawn the right wall of cubes
@@ -86,8 +106,9 @@ public class RequirementsGeneratorScript : MonoBehaviour
         {
             GameObject spawnedCube = Instantiate(cubePrefab, transform.position, Quaternion.identity);
             spawnedCube.tag = "RightWall";
-            transform.Translate(Vector3.back * 0.1f);
-            yield return new WaitForSeconds(0.04f);
+            spawnedCube.GetComponent<CubeScript>().cubeTag = spawnedCube.tag;
+            transform.Translate(Vector3.back * spaceBetweenCubes);
+            yield return new WaitForSeconds(timeBetweenSpawning);
         }
 
         // Spawn the front wall of cubes
@@ -95,8 +116,9 @@ public class RequirementsGeneratorScript : MonoBehaviour
         {
             GameObject spawnedCube = Instantiate(cubePrefab, transform.position, Quaternion.identity);
             spawnedCube.tag = "FrontWall";
-            transform.Translate(Vector3.left * 0.1f);
-            yield return new WaitForSeconds(0.04f);
+            spawnedCube.GetComponent<CubeScript>().cubeTag = spawnedCube.tag;
+            transform.Translate(Vector3.left * spaceBetweenCubes);
+            yield return new WaitForSeconds(timeBetweenSpawning);
         }
 
         // Spawn the left wall of cubes
@@ -104,8 +126,9 @@ public class RequirementsGeneratorScript : MonoBehaviour
         {
             GameObject spawnedCube = Instantiate(cubePrefab, transform.position, Quaternion.identity);
             spawnedCube.tag = "LeftWall";
-            transform.Translate(Vector3.forward * 0.1f);
-            yield return new WaitForSeconds(0.04f);
+            spawnedCube.GetComponent<CubeScript>().cubeTag = spawnedCube.tag;
+            transform.Translate(Vector3.forward * spaceBetweenCubes);
+            yield return new WaitForSeconds(timeBetweenSpawning);
         }
         canSelectWalls = true;
     }

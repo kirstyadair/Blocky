@@ -9,6 +9,7 @@ public class GridScript : MonoBehaviour
     GraphicRaycaster raycaster;
     EventSystem eventSystem;
     PointerEventData pointerEventData;
+
     public List<Transform> gridCells;
 
     GameObject grid;
@@ -32,7 +33,6 @@ public class GridScript : MonoBehaviour
     
     void Update()
     {
-        
         if (Input.GetButton("Fire1"))
         {
             pointerEventData = new PointerEventData(eventSystem);
@@ -55,6 +55,25 @@ public class GridScript : MonoBehaviour
                 if (result.gameObject.tag == "ColourTile")
                 {
                     selectedColour = result.gameObject.GetComponent<Image>().color;
+                }
+            }
+        }
+
+        if (Input.GetButton("Fire2"))
+        {
+            pointerEventData = new PointerEventData(eventSystem);
+            pointerEventData.position = Input.mousePosition;
+
+            List<RaycastResult> results = new List<RaycastResult>();
+
+            raycaster.Raycast(pointerEventData, results);
+
+            foreach (RaycastResult result in results)
+            {
+                // If the hit tile is a standard tile within the grid
+                if (result.gameObject.tag == "Tile")
+                {
+                    result.gameObject.GetComponent<Image>().color = defaultColour;
                 }
             }
         }
