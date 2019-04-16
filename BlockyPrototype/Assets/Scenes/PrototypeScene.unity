@@ -4664,13 +4664,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 698064675}
-  m_LocalRotation: {x: 0.24008939, y: -0, z: -0, w: 0.97075087}
-  m_LocalPosition: {x: -0.38, y: 1.67, z: -1.51}
+  m_LocalRotation: {x: 0.33767027, y: 0, z: 0, w: 0.9412645}
+  m_LocalPosition: {x: -0.92, y: 2.54, z: -0.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 27.784, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 39.47, y: 0, z: 0}
 --- !u!1 &724910727
 GameObject:
   m_ObjectHideFlags: 0
@@ -6480,7 +6480,7 @@ MonoBehaviour:
   speed: 100
   canSelectWalls: 0
   spaceBetweenCubes: 0.101
-  timeBetweenSpawning: 0.04
+  timeBetweenSpawning: 0.001
 --- !u!4 &958139298
 Transform:
   m_ObjectHideFlags: 0
@@ -11690,6 +11690,7 @@ MonoBehaviour:
   selectedWallTag: 
   drawingPanelAnim: {fileID: 1592219315}
   reqGenScript: {fileID: 958139297}
+  gridScript: {fileID: 500119032}
 --- !u!4 &1930385434
 Transform:
   m_ObjectHideFlags: 0

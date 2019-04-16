@@ -18,13 +18,17 @@ public class PlayerScript : MonoBehaviour
     bool wallSelected;
     public Animator drawingPanelAnim;
     public RequirementsGeneratorScript reqGenScript;
-    
+    public GridScript gridScript;
+
+
+
 
 
     void Start()
     {
         drawingPanelAnim.SetBool("openPanel", false);
         wallSelected = false;
+        
     }
 
 
@@ -69,6 +73,7 @@ public class PlayerScript : MonoBehaviour
 
     void HighlightWall(string wallTag)
     {
+        int numberOfCubes = 0;
         drawingPanelAnim.SetBool("openPanel", true);
         wallSelected = true;
         // Make an array of cubes with the selected tag
@@ -77,9 +82,55 @@ public class PlayerScript : MonoBehaviour
         // For each cube with the selected tag, change the colour to red
         foreach(GameObject cube in selectedCubes)
         {
-            Color selectedColor = new Color(255, 0, 0);
+            numberOfCubes++;
+            if (numberOfCubes < 11)
+            {
+                cube.name = "cubeJ" + numberOfCubes.ToString();
+            }
+            else if (numberOfCubes < 21 && numberOfCubes > 10)
+            {
+                cube.name = "cubeI" + (numberOfCubes - 10).ToString();
+            }
+            else if (numberOfCubes < 31 && numberOfCubes > 20)
+            {
+                cube.name = "cubeH" + (numberOfCubes - 20).ToString();
+            }
+            else if (numberOfCubes < 41 && numberOfCubes > 30)
+            {
+                cube.name = "cubeG" + (numberOfCubes - 30).ToString();
+            }
+            else if (numberOfCubes < 51 && numberOfCubes > 40)
+            {
+                cube.name = "cubeF" + (numberOfCubes - 40).ToString();
+            }
+            else if (numberOfCubes < 61 && numberOfCubes > 50)
+            {
+                cube.name = "cubeE" + (numberOfCubes - 50).ToString();
+            }
+            else if (numberOfCubes < 71 && numberOfCubes > 60)
+            {
+                cube.name = "cubeD" + (numberOfCubes - 60).ToString();
+            }
+            else if (numberOfCubes < 81 && numberOfCubes > 70)
+            {
+                cube.name = "cubeC" + (numberOfCubes - 70).ToString();
+            }
+            else if (numberOfCubes < 91 && numberOfCubes > 80)
+            {
+                cube.name = "cubeB" + (numberOfCubes - 80).ToString();
+            }
+            else if (numberOfCubes < 101 && numberOfCubes > 90)
+            {
+                cube.name = "cubeA" + (numberOfCubes - 90).ToString();
+            }
+
+            Color selectedColor = new Color(0, 0, 0);
+            selectedColor.a = 0.2f;
             cube.GetComponent<Renderer>().material.color = selectedColor;
         }
+
+        
+
     }
 
 
@@ -92,26 +143,36 @@ public class PlayerScript : MonoBehaviour
         allCubes = GameObject.FindGameObjectsWithTag("BackWall");
         foreach (GameObject cube in allCubes)
         {
-            Color selectedColor = new Color(0, 0, 0);
-            cube.GetComponent<Renderer>().material.color = selectedColor;
+            //Color selectedColor = new Color(0, 0, 0);
+            //selectedColor.a = 0.2f;
+            //cube.GetComponent<Renderer>().material.color = selectedColor;
+            cube.name = "not assigned";
         }
         allCubes = GameObject.FindGameObjectsWithTag("FrontWall");
         foreach (GameObject cube in allCubes)
         {
-            Color selectedColor = new Color(0, 0, 0);
-            cube.GetComponent<Renderer>().material.color = selectedColor;
+            //Color selectedColor = new Color(0, 0, 0);
+            //selectedColor.a = 0.2f;
+            //cube.GetComponent<Renderer>().material.color = selectedColor;
+            cube.name = "not assigned";
         }
         allCubes = GameObject.FindGameObjectsWithTag("LeftWall");
         foreach (GameObject cube in allCubes)
         {
-            Color selectedColor = new Color(0, 0, 0);
-            cube.GetComponent<Renderer>().material.color = selectedColor;
+            //Color selectedColor = new Color(0, 0, 0);
+            //selectedColor.a = 0.2f;
+            //cube.GetComponent<Renderer>().material.color = selectedColor;
+            cube.name = "not assigned";
         }
         allCubes = GameObject.FindGameObjectsWithTag("RightWall");
         foreach (GameObject cube in allCubes)
         {
-            Color selectedColor = new Color(0, 0, 0);
-            cube.GetComponent<Renderer>().material.color = selectedColor;
+            //Color selectedColor = new Color(0, 0, 0);
+            //selectedColor.a = 0.2f;
+            //cube.GetComponent<Renderer>().material.color = selectedColor;
+            cube.name = "not assigned";
         }
+
+        gridScript.ClearGrid();
     }
 }

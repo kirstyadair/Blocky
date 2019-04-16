@@ -92,7 +92,7 @@ public class RequirementsGeneratorScript : MonoBehaviour
         canSelectWalls = false;
 
         // Spawn the back wall of cubes
-        for (int i = 0; i < 20; i++)
+        for (int i = 0; i < 10; i++)
         {
             GameObject spawnedCube = Instantiate(cubePrefab, transform.position, Quaternion.identity);
             spawnedCube.tag = "BackWall";
@@ -102,7 +102,7 @@ public class RequirementsGeneratorScript : MonoBehaviour
         }
 
         // Spawn the right wall of cubes
-        for (int i = 0; i < 20; i++)
+        for (int i = 0; i < 10; i++)
         {
             GameObject spawnedCube = Instantiate(cubePrefab, transform.position, Quaternion.identity);
             spawnedCube.tag = "RightWall";
@@ -112,7 +112,7 @@ public class RequirementsGeneratorScript : MonoBehaviour
         }
 
         // Spawn the front wall of cubes
-        for (int i = 0; i < 20; i++)
+        for (int i = 0; i < 10; i++)
         {
             GameObject spawnedCube = Instantiate(cubePrefab, transform.position, Quaternion.identity);
             spawnedCube.tag = "FrontWall";
@@ -122,7 +122,7 @@ public class RequirementsGeneratorScript : MonoBehaviour
         }
 
         // Spawn the left wall of cubes
-        for (int i = 0; i < 20; i++)
+        for (int i = 0; i < 10; i++)
         {
             GameObject spawnedCube = Instantiate(cubePrefab, transform.position, Quaternion.identity);
             spawnedCube.tag = "LeftWall";

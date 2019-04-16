@@ -49,6 +49,9 @@ public class GridScript : MonoBehaviour
                 {
                     gridTile = result.gameObject;
                     ColourTile(gridTile, selectedColour);
+
+                    GameObject cubeToColour = GameObject.Find("cube" + result.gameObject.name);
+                    cubeToColour.GetComponent<MeshRenderer>().material.color = selectedColour;
                 }
 
                 // If the hit tile is a colour selection tile
@@ -74,6 +77,7 @@ public class GridScript : MonoBehaviour
                 if (result.gameObject.tag == "Tile")
                 {
                     result.gameObject.GetComponent<Image>().color = defaultColour;
+                    
                 }
             }
         }
