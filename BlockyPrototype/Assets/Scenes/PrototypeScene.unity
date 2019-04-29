@@ -6481,6 +6481,7 @@ MonoBehaviour:
   canSelectWalls: 0
   spaceBetweenCubes: 0.101
   timeBetweenSpawning: 0.001
+  allCubes: []
 --- !u!4 &958139298
 Transform:
   m_ObjectHideFlags: 0
@@ -11691,6 +11692,7 @@ MonoBehaviour:
   drawingPanelAnim: {fileID: 1592219315}
   reqGenScript: {fileID: 958139297}
   gridScript: {fileID: 500119032}
+  opacity: 0.5
 --- !u!4 &1930385434
 Transform:
   m_ObjectHideFlags: 0

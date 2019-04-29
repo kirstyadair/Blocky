@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 public enum GameState
@@ -19,6 +20,8 @@ public class PlayerScript : MonoBehaviour
     public Animator drawingPanelAnim;
     public RequirementsGeneratorScript reqGenScript;
     public GridScript gridScript;
+    public float opacity;
+    Color blankColor;
 
 
 
@@ -28,7 +31,7 @@ public class PlayerScript : MonoBehaviour
     {
         drawingPanelAnim.SetBool("openPanel", false);
         wallSelected = false;
-        
+        blankColor = new Color(0, 0, 0, 0.2f);
     }
 
 
@@ -124,12 +127,22 @@ public class PlayerScript : MonoBehaviour
                 cube.name = "cubeA" + (numberOfCubes - 90).ToString();
             }
 
-            Color selectedColor = new Color(0, 0, 0);
+            Color selectedColor = cube.GetComponent<Renderer>().material.color;
             selectedColor.a = 0.2f;
             cube.GetComponent<Renderer>().material.color = selectedColor;
+
+            
         }
 
-        
+        foreach (Transform gridCell in gridScript.gridCells)
+        {
+            GameObject requiredCube = GameObject.Find("cube" + gridCell.gameObject.name);
+            Color cubeColour = requiredCube.GetComponent<MeshRenderer>().material.color;
+            if (cubeColour != blankColor) cubeColour.a = 1;
+            requiredCube.GetComponent<MeshRenderer>().material.color = cubeColour;
+            gridCell.GetComponent<Image>().color = cubeColour;
+
+        }
 
     }
 
@@ -139,40 +152,15 @@ public class PlayerScript : MonoBehaviour
     {
         drawingPanelAnim.SetBool("openPanel", false);
         wallSelected = false;
-        GameObject[] allCubes;
-        allCubes = GameObject.FindGameObjectsWithTag("BackWall");
-        foreach (GameObject cube in allCubes)
-        {
-            //Color selectedColor = new Color(0, 0, 0);
-            //selectedColor.a = 0.2f;
-            //cube.GetComponent<Renderer>().material.color = selectedColor;
-            cube.name = "not assigned";
-        }
-        allCubes = GameObject.FindGameObjectsWithTag("FrontWall");
-        foreach (GameObject cube in allCubes)
-        {
-            //Color selectedColor = new Color(0, 0, 0);
-            //selectedColor.a = 0.2f;
-            //cube.GetComponent<Renderer>().material.color = selectedColor;
-            cube.name = "not assigned";
-        }
-        allCubes = GameObject.FindGameObjectsWithTag("LeftWall");
-        foreach (GameObject cube in allCubes)
-        {
-            //Color selectedColor = new Color(0, 0, 0);
-            //selectedColor.a = 0.2f;
-            //cube.GetComponent<Renderer>().material.color = selectedColor;
-            cube.name = "not assigned";
-        }
-        allCubes = GameObject.FindGameObjectsWithTag("RightWall");
-        foreach (GameObject cube in allCubes)
-        {
-            //Color selectedColor = new Color(0, 0, 0);
-            //selectedColor.a = 0.2f;
-            //cube.GetComponent<Renderer>().material.color = selectedColor;
-            cube.name = "not assigned";
-        }
 
-        gridScript.ClearGrid();
+        foreach (GameObject cube in reqGenScript.allCubes)
+        {
+            Color selectedColor = cube.GetComponent<Renderer>().material.color;
+            selectedColor.a = opacity;
+            cube.GetComponent<Renderer>().material.color = selectedColor;
+            cube.name = "not assigned";
+        }
+        
+        gridScript.ClearOnlyGrid();
     }
 }

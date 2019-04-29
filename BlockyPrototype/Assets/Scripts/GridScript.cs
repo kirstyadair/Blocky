@@ -25,7 +25,7 @@ public class GridScript : MonoBehaviour
         raycaster = GetComponent<GraphicRaycaster>();
         eventSystem = GetComponent<EventSystem>();
         grid = GameObject.Find("Grid");
-        defaultColour = new Color(1, 1, 1);
+        defaultColour = new Color(0, 0, 0, 0.2f);
         selectedColour = defaultColour;
     }
 
@@ -50,14 +50,30 @@ public class GridScript : MonoBehaviour
                     gridTile = result.gameObject;
                     ColourTile(gridTile, selectedColour);
 
-                    GameObject cubeToColour = GameObject.Find("cube" + result.gameObject.name);
-                    cubeToColour.GetComponent<MeshRenderer>().material.color = selectedColour;
+                    if (result.gameObject != null)
+                    {
+                        GameObject cubeToColour = GameObject.Find("cube" + result.gameObject.name);
+                        cubeToColour.GetComponent<MeshRenderer>().material.color = selectedColour;
+                    }
+                    else
+                    {
+                        Debug.Log("No gameobject");
+                    }
+                    
                 }
 
                 // If the hit tile is a colour selection tile
                 if (result.gameObject.tag == "ColourTile")
                 {
-                    selectedColour = result.gameObject.GetComponent<Image>().color;
+                    if (result.gameObject.name != "EraserTile")
+                    {
+                        selectedColour = result.gameObject.GetComponent<Image>().color;
+                    }
+                    else
+                    {
+                        selectedColour = defaultColour;
+                    }
+                    
                 }
             }
         }
@@ -77,7 +93,8 @@ public class GridScript : MonoBehaviour
                 if (result.gameObject.tag == "Tile")
                 {
                     result.gameObject.GetComponent<Image>().color = defaultColour;
-                    
+                    GameObject cubeToColour = GameObject.Find("cube" + result.gameObject.name);
+                    cubeToColour.GetComponent<MeshRenderer>().material.color = defaultColour;
                 }
             }
         }
@@ -93,6 +110,16 @@ public class GridScript : MonoBehaviour
 
 
     public void ClearGrid()
+    {
+        foreach (Transform cell in gridCells)
+        {
+            cell.GetComponent<Image>().color = defaultColour;
+            GameObject cubeToColour = GameObject.Find("cube" + cell.gameObject.name);
+            cubeToColour.GetComponent<Renderer>().material.color = defaultColour;
+        }
+    }
+
+    public void ClearOnlyGrid()
     {
         foreach (Transform cell in gridCells)
         {

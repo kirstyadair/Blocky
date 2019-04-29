@@ -26,6 +26,8 @@ public class RequirementsGeneratorScript : MonoBehaviour
     public float spaceBetweenCubes;
     public float timeBetweenSpawning;
 
+    public List<GameObject> allCubes;
+
     bool panelSlide = false;
     bool requirementsSaved = false;
     
@@ -40,19 +42,14 @@ public class RequirementsGeneratorScript : MonoBehaviour
         savedReqAnim.SetBool("slideIn", false);
         RandomlyGenerateRequirements();
         requirementsSaved = false;
+        allCubes = new List<GameObject>();
     }
 
 
 
     void Update()
     {
-        if (playerScript.gameState == GameState.CHOSENREQUIREMENTS)
-        {
-            if (Input.GetButtonDown("Fire2"))
-            {
-                StartCoroutine(SpawnRoom());
-            }
-        }
+        
     }
 
 
@@ -91,45 +88,53 @@ public class RequirementsGeneratorScript : MonoBehaviour
     {
         canSelectWalls = false;
 
-        // Spawn the back wall of cubes
-        for (int i = 0; i < 10; i++)
+        for (int j = 0; j < 10; j++)
         {
-            GameObject spawnedCube = Instantiate(cubePrefab, transform.position, Quaternion.identity);
-            spawnedCube.tag = "BackWall";
-            spawnedCube.GetComponent<CubeScript>().cubeTag = spawnedCube.tag;
-            transform.Translate(Vector3.right * spaceBetweenCubes);
-            yield return new WaitForSeconds(timeBetweenSpawning);
-        }
+            // Spawn the back wall of cubes
+            for (int i = 0; i < 10; i++)
+            {
+                GameObject spawnedCube = Instantiate(cubePrefab, transform.position, Quaternion.identity);
+                spawnedCube.tag = "BackWall";
+                allCubes.Add(spawnedCube);
+                spawnedCube.GetComponent<CubeScript>().cubeTag = spawnedCube.tag;
+                transform.Translate(Vector3.right * spaceBetweenCubes);
+                yield return new WaitForSeconds(timeBetweenSpawning);
+            }
 
-        // Spawn the right wall of cubes
-        for (int i = 0; i < 10; i++)
-        {
-            GameObject spawnedCube = Instantiate(cubePrefab, transform.position, Quaternion.identity);
-            spawnedCube.tag = "RightWall";
-            spawnedCube.GetComponent<CubeScript>().cubeTag = spawnedCube.tag;
-            transform.Translate(Vector3.back * spaceBetweenCubes);
-            yield return new WaitForSeconds(timeBetweenSpawning);
-        }
+            // Spawn the right wall of cubes
+            for (int i = 0; i < 10; i++)
+            {
+                GameObject spawnedCube = Instantiate(cubePrefab, transform.position, Quaternion.identity);
+                spawnedCube.tag = "RightWall";
+                allCubes.Add(spawnedCube);
+                spawnedCube.GetComponent<CubeScript>().cubeTag = spawnedCube.tag;
+                transform.Translate(Vector3.back * spaceBetweenCubes);
+                yield return new WaitForSeconds(timeBetweenSpawning);
+            }
 
-        // Spawn the front wall of cubes
-        for (int i = 0; i < 10; i++)
-        {
-            GameObject spawnedCube = Instantiate(cubePrefab, transform.position, Quaternion.identity);
-            spawnedCube.tag = "FrontWall";
-            spawnedCube.GetComponent<CubeScript>().cubeTag = spawnedCube.tag;
-            transform.Translate(Vector3.left * spaceBetweenCubes);
-            yield return new WaitForSeconds(timeBetweenSpawning);
-        }
+            // Spawn the front wall of cubes
+            for (int i = 0; i < 10; i++)
+            {
+                GameObject spawnedCube = Instantiate(cubePrefab, transform.position, Quaternion.identity);
+                spawnedCube.tag = "FrontWall";
+                allCubes.Add(spawnedCube);
+                spawnedCube.GetComponent<CubeScript>().cubeTag = spawnedCube.tag;
+                transform.Translate(Vector3.left * spaceBetweenCubes);
+                yield return new WaitForSeconds(timeBetweenSpawning);
+            }
 
-        // Spawn the left wall of cubes
-        for (int i = 0; i < 10; i++)
-        {
-            GameObject spawnedCube = Instantiate(cubePrefab, transform.position, Quaternion.identity);
-            spawnedCube.tag = "LeftWall";
-            spawnedCube.GetComponent<CubeScript>().cubeTag = spawnedCube.tag;
-            transform.Translate(Vector3.forward * spaceBetweenCubes);
-            yield return new WaitForSeconds(timeBetweenSpawning);
+            // Spawn the left wall of cubes
+            for (int i = 0; i < 10; i++)
+            {
+                GameObject spawnedCube = Instantiate(cubePrefab, transform.position, Quaternion.identity);
+                spawnedCube.tag = "LeftWall";
+                allCubes.Add(spawnedCube);
+                spawnedCube.GetComponent<CubeScript>().cubeTag = spawnedCube.tag;
+                transform.Translate(Vector3.forward * spaceBetweenCubes);
+                yield return new WaitForSeconds(timeBetweenSpawning);
+            }
         }
+        
         canSelectWalls = true;
     }
 }

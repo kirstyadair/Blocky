@@ -36,13 +36,6 @@ public class CubeScript : MonoBehaviour
                 rb.constraints = RigidbodyConstraints.FreezeAll;
                 name = "FloorCube";
                 cubeOnFloor = true;
-
-                // if the combined heights of both blocks is less than 0.2, move it back
-                Collider secondCube = other.GetComponent<Collider>();
-                Collider firstCube = GetComponent<Collider>();
-                float combinedColliderHeight = 0.2f;
-
-                
             }
         }
     }
