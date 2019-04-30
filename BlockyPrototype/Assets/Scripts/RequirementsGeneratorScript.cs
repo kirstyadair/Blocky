@@ -7,6 +7,7 @@ public class RequirementsGeneratorScript : MonoBehaviour
 {
     // Variables
     public PlayerScript playerScript;
+    public FloorCubeSpawnerScript floorSpawner;
     public Animator chooseReqAnim;
     public Animator savedReqAnim;
     public GameObject chooseRequirementsPanel;
@@ -78,6 +79,7 @@ public class RequirementsGeneratorScript : MonoBehaviour
             floorsText.text = "Required floors: " + requiredFloors;
             featureText.text = "Required feature: " + feature;
             StartCoroutine(SpawnRoom());
+            floorSpawner.SpawnPlane(new Vector3(-2.5f, -0.5f, 4), 30, 20);
             playerScript.gameState = GameState.CHOSENREQUIREMENTS;
         }
     }

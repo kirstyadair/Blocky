@@ -6,6 +6,7 @@ public class CubeScript : MonoBehaviour
 {
     public string cubeTag;
     public bool cubeOnFloor = false;
+    Animator cubeAnim;
     Rigidbody rb;
 
     // Start is called before the first frame update
@@ -22,11 +23,16 @@ public class CubeScript : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Floor")
+        if (other.tag == "Floor" && gameObject.tag != "Floor")
         {
             name = "FloorCube";
             rb.constraints = RigidbodyConstraints.FreezeAll;
             cubeOnFloor = true;
+        }
+
+        if (other.tag == "Plane" && gameObject.tag == "Floor")
+        {
+            rb.constraints = RigidbodyConstraints.FreezeAll;
         }
 
         if (other.GetComponent<CubeScript>() != null)

@@ -18,6 +18,7 @@ public class PlayerScript : MonoBehaviour
     public string selectedWallTag;
     bool wallSelected;
     public Animator drawingPanelAnim;
+    public Animator colourSelectorAnim;
     public RequirementsGeneratorScript reqGenScript;
     public GridScript gridScript;
     public float opacity;
@@ -30,6 +31,7 @@ public class PlayerScript : MonoBehaviour
     void Start()
     {
         drawingPanelAnim.SetBool("openPanel", false);
+        colourSelectorAnim.SetBool("show", false);
         wallSelected = false;
         blankColor = new Color(0, 0, 0, 0.2f);
     }
@@ -77,7 +79,11 @@ public class PlayerScript : MonoBehaviour
     void HighlightWall(string wallTag)
     {
         int numberOfCubes = 0;
-        drawingPanelAnim.SetBool("openPanel", true);
+        if (colourSelectorAnim.GetBool("show") == false)
+        {
+            drawingPanelAnim.SetBool("openPanel", true);
+        }
+        
         wallSelected = true;
         // Make an array of cubes with the selected tag
         GameObject[] selectedCubes;
@@ -162,5 +168,21 @@ public class PlayerScript : MonoBehaviour
         }
         
         gridScript.ClearOnlyGrid();
+    }
+
+
+
+    public void ColourPickerMenuOpen()
+    {
+        drawingPanelAnim.SetBool("openPanel", false);
+        colourSelectorAnim.SetBool("show", true);
+    }
+
+
+
+    public void ColourPickerMenuClose()
+    {
+        drawingPanelAnim.SetBool("openPanel", true);
+        colourSelectorAnim.SetBool("show", false);
     }
 }

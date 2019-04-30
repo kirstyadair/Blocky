@@ -15,8 +15,10 @@ public class GridScript : MonoBehaviour
     GameObject grid;
     GameObject gridTile;
 
-    Color selectedColour;
+    public Color selectedColour;
     Color defaultColour;
+
+    public ColourSelectorScript colourSelectorScript;
 
 
     
