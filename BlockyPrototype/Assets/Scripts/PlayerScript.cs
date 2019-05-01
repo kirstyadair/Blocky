@@ -19,6 +19,7 @@ public class PlayerScript : MonoBehaviour
     bool wallSelected;
     public Animator drawingPanelAnim;
     public Animator colourSelectorAnim;
+    public Animator cameraAnim;
     public RequirementsGeneratorScript reqGenScript;
     public GridScript gridScript;
     public float opacity;
@@ -32,6 +33,7 @@ public class PlayerScript : MonoBehaviour
     {
         drawingPanelAnim.SetBool("openPanel", false);
         colourSelectorAnim.SetBool("show", false);
+        cameraAnim.SetBool("birdseye", false);
         wallSelected = false;
         blankColor = new Color(0, 0, 0, 0.2f);
     }
@@ -51,6 +53,7 @@ public class PlayerScript : MonoBehaviour
                 {
                     if (hit.collider.gameObject.tag == "BackWall" || hit.collider.gameObject.tag == "FrontWall" || hit.collider.gameObject.tag == "RightWall" || hit.collider.gameObject.tag == "LeftWall")
                     {
+                        cameraAnim.SetBool("birdseye", false);
                         // if a wall has not already been selected 
                         if (!wallSelected  && reqGenScript.canSelectWalls)
                         {
@@ -68,6 +71,13 @@ public class PlayerScript : MonoBehaviour
                             // Highlight every cube with this tag
                             HighlightWall(selectedWallTag);
                         }
+                    }
+
+                    if (hit.collider.gameObject.tag == "Floor")
+                    {
+                        DeselectWalls();
+                        drawingPanelAnim.SetBool("openPanel", false);
+                        cameraAnim.SetBool("birdseye", true);
                     }
                 }
             }
