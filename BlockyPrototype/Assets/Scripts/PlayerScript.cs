@@ -20,6 +20,7 @@ public class PlayerScript : MonoBehaviour
     public Animator drawingPanelAnim;
     public Animator colourSelectorAnim;
     public Animator cameraAnim;
+    public ColourSelectorScript colourSelectorScript;
     public RequirementsGeneratorScript reqGenScript;
     public GridScript gridScript;
     public float opacity;
@@ -51,34 +52,38 @@ public class PlayerScript : MonoBehaviour
                 RaycastHit hit;
                 if (Physics.Raycast(ray, out hit))
                 {
-                    if (hit.collider.gameObject.tag == "BackWall" || hit.collider.gameObject.tag == "FrontWall" || hit.collider.gameObject.tag == "RightWall" || hit.collider.gameObject.tag == "LeftWall")
+                    if (!gridScript.graphicalRaycasterHit)
                     {
-                        cameraAnim.SetBool("birdseye", false);
-                        // if a wall has not already been selected 
-                        if (!wallSelected  && reqGenScript.canSelectWalls)
+                        if (hit.collider.gameObject.tag == "BackWall" || hit.collider.gameObject.tag == "FrontWall" || hit.collider.gameObject.tag == "RightWall" || hit.collider.gameObject.tag == "LeftWall")
                         {
-                            // Find the tag of the cube hit by the raycast
-                            selectedWallTag = hit.transform.gameObject.tag;
-                            // Highlight every cube with this tag
-                            HighlightWall(selectedWallTag);
+                            cameraAnim.SetBool("birdseye", false);
+                            // if a wall has not already been selected 
+                            if (!wallSelected && reqGenScript.canSelectWalls)
+                            {
+                                // Find the tag of the cube hit by the raycast
+                                selectedWallTag = hit.transform.gameObject.tag;
+                                // Highlight every cube with this tag
+                                HighlightWall(selectedWallTag);
+                            }
+                            else if (wallSelected && reqGenScript.canSelectWalls) // if a wall is selected
+                            {
+                                // deselect all walls
+                                DeselectWalls();
+                                // Find the tag of the cube hit by the raycast
+                                selectedWallTag = hit.transform.gameObject.tag;
+                                // Highlight every cube with this tag
+                                HighlightWall(selectedWallTag);
+                            }
                         }
-                        else if (wallSelected && reqGenScript.canSelectWalls) // if a wall is selected
-                        {
-                            // deselect all walls
-                            DeselectWalls();
-                            // Find the tag of the cube hit by the raycast
-                            selectedWallTag = hit.transform.gameObject.tag;
-                            // Highlight every cube with this tag
-                            HighlightWall(selectedWallTag);
-                        }
-                    }
 
-                    if (hit.collider.gameObject.tag == "Floor")
-                    {
-                        DeselectWalls();
-                        drawingPanelAnim.SetBool("openPanel", false);
-                        cameraAnim.SetBool("birdseye", true);
+                        if (hit.collider.gameObject.tag == "Floor")
+                        {
+                            DeselectWalls();
+                            drawingPanelAnim.SetBool("openPanel", false);
+                            cameraAnim.SetBool("birdseye", true);
+                        }
                     }
+                    
                 }
             }
         }
@@ -186,6 +191,7 @@ public class PlayerScript : MonoBehaviour
     {
         drawingPanelAnim.SetBool("openPanel", false);
         colourSelectorAnim.SetBool("show", true);
+        colourSelectorScript.UpdateColour();
     }
 
 

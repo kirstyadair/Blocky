@@ -20,6 +20,8 @@ public class GridScript : MonoBehaviour
 
     public ColourSelectorScript colourSelectorScript;
 
+    public bool graphicalRaycasterHit = false;
+
 
     
     void Start()
@@ -37,6 +39,7 @@ public class GridScript : MonoBehaviour
     {
         if (Input.GetButton("Fire1"))
         {
+            graphicalRaycasterHit = false;
             pointerEventData = new PointerEventData(eventSystem);
             pointerEventData.position = Input.mousePosition;
 
@@ -46,6 +49,7 @@ public class GridScript : MonoBehaviour
 
             foreach (RaycastResult result in results)
             {
+                graphicalRaycasterHit = true;
                 // If the hit tile is a standard tile within the grid
                 if (result.gameObject.tag == "Tile")
                 {
@@ -76,6 +80,16 @@ public class GridScript : MonoBehaviour
                         selectedColour = defaultColour;
                     }
                     
+                }
+
+                if (result.gameObject.name == "SliderPanel")
+                {
+                    colourSelectorScript.RGBInput = false;
+                }
+
+                if (result.gameObject.name == "RGBPanel")
+                {
+                    colourSelectorScript.RGBInput = true;
                 }
             }
         }
