@@ -51,34 +51,38 @@ public class PlayerScript : MonoBehaviour
                 RaycastHit hit;
                 if (Physics.Raycast(ray, out hit))
                 {
-                    if (hit.collider.gameObject.tag == "BackWall" || hit.collider.gameObject.tag == "FrontWall" || hit.collider.gameObject.tag == "RightWall" || hit.collider.gameObject.tag == "LeftWall")
+                    if (!gridScript.graphicalRaycastHit)
                     {
-                        cameraAnim.SetBool("birdseye", false);
-                        // if a wall has not already been selected 
-                        if (!wallSelected  && reqGenScript.canSelectWalls)
+                        if (hit.collider.gameObject.tag == "BackWall" || hit.collider.gameObject.tag == "FrontWall" || hit.collider.gameObject.tag == "RightWall" || hit.collider.gameObject.tag == "LeftWall")
                         {
-                            // Find the tag of the cube hit by the raycast
-                            selectedWallTag = hit.transform.gameObject.tag;
-                            // Highlight every cube with this tag
-                            HighlightWall(selectedWallTag);
+                            cameraAnim.SetBool("birdseye", false);
+                            // if a wall has not already been selected 
+                            if (!wallSelected && reqGenScript.canSelectWalls)
+                            {
+                                // Find the tag of the cube hit by the raycast
+                                selectedWallTag = hit.transform.gameObject.tag;
+                                // Highlight every cube with this tag
+                                HighlightWall(selectedWallTag);
+                            }
+                            else if (wallSelected && reqGenScript.canSelectWalls) // if a wall is selected
+                            {
+                                // deselect all walls
+                                DeselectWalls();
+                                // Find the tag of the cube hit by the raycast
+                                selectedWallTag = hit.transform.gameObject.tag;
+                                // Highlight every cube with this tag
+                                HighlightWall(selectedWallTag);
+                            }
                         }
-                        else if (wallSelected && reqGenScript.canSelectWalls) // if a wall is selected
-                        {
-                            // deselect all walls
-                            DeselectWalls();
-                            // Find the tag of the cube hit by the raycast
-                            selectedWallTag = hit.transform.gameObject.tag;
-                            // Highlight every cube with this tag
-                            HighlightWall(selectedWallTag);
-                        }
-                    }
 
-                    if (hit.collider.gameObject.tag == "Floor")
-                    {
-                        DeselectWalls();
-                        drawingPanelAnim.SetBool("openPanel", false);
-                        cameraAnim.SetBool("birdseye", true);
+                        if (hit.collider.gameObject.tag == "Floor")
+                        {
+                            DeselectWalls();
+                            drawingPanelAnim.SetBool("openPanel", false);
+                            cameraAnim.SetBool("birdseye", true);
+                        }
                     }
+                    
                 }
             }
         }
@@ -154,7 +158,8 @@ public class PlayerScript : MonoBehaviour
         {
             GameObject requiredCube = GameObject.Find("cube" + gridCell.gameObject.name);
             Color cubeColour = requiredCube.GetComponent<MeshRenderer>().material.color;
-            if (cubeColour != blankColor) cubeColour.a = 1;
+            if (cubeColour != blankColor || cubeColour != new Color (0, 0, 0, 0.4f)) cubeColour.a = 1;
+            Debug.Log(requiredCube.name + "  color " + cubeColour);
             requiredCube.GetComponent<MeshRenderer>().material.color = cubeColour;
             gridCell.GetComponent<Image>().color = cubeColour;
 
@@ -168,12 +173,13 @@ public class PlayerScript : MonoBehaviour
     {
         drawingPanelAnim.SetBool("openPanel", false);
         wallSelected = false;
-
         foreach (GameObject cube in reqGenScript.allCubes)
         {
             Color selectedColor = cube.GetComponent<Renderer>().material.color;
-            selectedColor.a = opacity;
             cube.GetComponent<Renderer>().material.color = selectedColor;
+            
+            // make the colour less opaque
+            selectedColor.a = opacity;
             cube.name = "not assigned";
         }
         

@@ -4016,6 +4016,7 @@ MonoBehaviour:
   - {fileID: 744789715}
   selectedColour: {r: 0, g: 0, b: 0, a: 0}
   colourSelectorScript: {fileID: 1930385435}
+  graphicalRaycastHit: 0
 --- !u!1 &532854609
 GameObject:
   m_ObjectHideFlags: 0
@@ -13548,7 +13549,8 @@ MonoBehaviour:
   cameraAnim: {fileID: 698064679}
   reqGenScript: {fileID: 958139297}
   gridScript: {fileID: 500119032}
-  opacity: 0.35
+  opacity: 0.4
+  nonEmptyOpacity: 0.9
 --- !u!4 &1930385434
 Transform:
   m_ObjectHideFlags: 0
