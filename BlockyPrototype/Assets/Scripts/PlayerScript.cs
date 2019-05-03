@@ -36,7 +36,7 @@ public class PlayerScript : MonoBehaviour
         colourSelectorAnim.SetBool("show", false);
         cameraAnim.SetBool("birdseye", false);
         wallSelected = false;
-        blankColor = new Color(0, 0, 0, 0.2f);
+        blankColor = new Color(1 / 255, 1 / 255, 1 / 255, 0.2f);
     }
 
 
@@ -159,7 +159,11 @@ public class PlayerScript : MonoBehaviour
         {
             GameObject requiredCube = GameObject.Find("cube" + gridCell.gameObject.name);
             Color cubeColour = requiredCube.GetComponent<MeshRenderer>().material.color;
-            if (cubeColour != blankColor) cubeColour.a = 1;
+            if (cubeColour != blankColor)
+            {
+                cubeColour.a = 1;
+                Debug.Log("cube is not blank colour");
+            }
             requiredCube.GetComponent<MeshRenderer>().material.color = cubeColour;
             gridCell.GetComponent<Image>().color = cubeColour;
 

@@ -29,7 +29,7 @@ public class GridScript : MonoBehaviour
         raycaster = GetComponent<GraphicRaycaster>();
         eventSystem = GetComponent<EventSystem>();
         grid = GameObject.Find("Grid");
-        defaultColour = new Color(0, 0, 0, 0.2f);
+        defaultColour = new Color(1/255, 1/255, 1/255, 0.2f);
         selectedColour = defaultColour;
     }
 

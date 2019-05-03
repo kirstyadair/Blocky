@@ -35,24 +35,33 @@ public class ColourSelectorScript : MonoBehaviour
         {
             if (float.TryParse(redValField.text, out redValue))
             {
+                if (redValue == 0)
+                {
+                    redValue = 1;
+                }
                 float convertedVal = redValue / 255;
-                Debug.Log(convertedVal);
                 redSlider.value = convertedVal;
                 OnRedValueChanged();
             }
 
             if (float.TryParse(greenValField.text, out greenValue))
             {
+                if (greenValue == 0)
+                {
+                    greenValue = 1;
+                }
                 float convertedVal = greenValue / 255;
-                Debug.Log(convertedVal);
                 greenSlider.value = convertedVal;
                 OnGreenValueChanged();
             }
 
             if (float.TryParse(blueValField.text, out blueValue))
             {
+                if (blueValue == 0)
+                {
+                    blueValue = 1;
+                }
                 float convertedVal = blueValue / 255;
-                Debug.Log(convertedVal);
                 blueSlider.value = convertedVal;
                 OnBlueValueChanged();
             }
@@ -68,6 +77,10 @@ public class ColourSelectorScript : MonoBehaviour
     {
         Color newColour = colourTile.color;
         newColour.r = redSlider.value;
+        if (newColour.r == 0)
+        {
+            newColour.r = 0.01f;
+        }
         newColour.a = 1;
         colourTile.color = newColour;
         gridScript.selectedColour = colourTile.color;
@@ -81,6 +94,10 @@ public class ColourSelectorScript : MonoBehaviour
     {
         Color newColour = colourTile.color;
         newColour.g = greenSlider.value;
+        if (newColour.g == 0)
+        {
+            newColour.g = 0.01f;
+        }
         newColour.a = 1;
         colourTile.color = newColour;
         gridScript.selectedColour = colourTile.color;
@@ -94,6 +111,10 @@ public class ColourSelectorScript : MonoBehaviour
     {
         Color newColour = colourTile.color;
         newColour.b = blueSlider.value;
+        if (newColour.b == 0)
+        {
+            newColour.b = 0.01f;
+        }
         newColour.a = 1;
         colourTile.color = newColour;
         gridScript.selectedColour = colourTile.color;

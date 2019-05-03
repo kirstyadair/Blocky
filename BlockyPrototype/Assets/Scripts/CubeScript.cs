@@ -13,6 +13,11 @@ public class CubeScript : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        if (gameObject.tag != "Floor")
+        {
+            GetComponent<Renderer>().material.color = new Color(1 / 255, 1 / 255, 1 / 255, 0.4f);
+        }
+        
     }
 
     // Update is called once per frame
