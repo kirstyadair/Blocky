@@ -5307,7 +5307,7 @@ GameObject:
   - component: {fileID: 596761974}
   - component: {fileID: 596761973}
   m_Layer: 5
-  m_Name: LPinkTile
+  m_Name: WhiteTile
   m_TagString: ColourTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5371,7 +5371,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.56078434, b: 0.8238039, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -10753,7 +10753,7 @@ GameObject:
   - component: {fileID: 1243719193}
   - component: {fileID: 1243719192}
   m_Layer: 5
-  m_Name: DLPinkTile
+  m_Name: BlackTile
   m_TagString: ColourTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10817,7 +10817,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8679245, g: 0.49019608, b: 0.51920474, a: 1}
+  m_Color: {r: 0.003921569, g: 0.003921569, b: 0.003921569, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
