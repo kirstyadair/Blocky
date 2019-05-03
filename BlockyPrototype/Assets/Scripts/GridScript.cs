@@ -12,6 +12,8 @@ public class GridScript : MonoBehaviour
 
     public List<Transform> gridCells;
 
+    public Image currentColour;
+
     GameObject grid;
     GameObject gridTile;
 
@@ -37,6 +39,7 @@ public class GridScript : MonoBehaviour
     
     void Update()
     {
+        currentColour.color = selectedColour;
         if (Input.GetButton("Fire1"))
         {
             graphicalRaycasterHit = false;
@@ -47,51 +50,69 @@ public class GridScript : MonoBehaviour
 
             raycaster.Raycast(pointerEventData, results);
 
-            foreach (RaycastResult result in results)
+            if (!colourSelectorScript.colourPipetteSelected)
+            {
+                foreach (RaycastResult result in results)
+                {
+                    graphicalRaycasterHit = true;
+                    // If the hit tile is a standard tile within the grid
+                    if (result.gameObject.tag == "Tile")
+                    {
+                        gridTile = result.gameObject;
+                        ColourTile(gridTile, selectedColour);
+
+                        if (result.gameObject != null)
+                        {
+                            GameObject cubeToColour = GameObject.Find("cube" + result.gameObject.name);
+                            cubeToColour.GetComponent<MeshRenderer>().material.color = selectedColour;
+                        }
+                        else
+                        {
+                            Debug.Log("No gameobject");
+                        }
+
+                    }
+
+                    // If the hit tile is a colour selection tile
+                    if (result.gameObject.tag == "ColourTile")
+                    {
+                        if (result.gameObject.name != "EraserTile")
+                        {
+                            selectedColour = result.gameObject.GetComponent<Image>().color;
+                        }
+                        else
+                        {
+                            selectedColour = defaultColour;
+                        }
+
+                    }
+
+                    if (result.gameObject.name == "SliderPanel")
+                    {
+                        colourSelectorScript.RGBInput = false;
+                    }
+
+                    if (result.gameObject.name == "RGBPanel")
+                    {
+                        colourSelectorScript.RGBInput = true;
+                    }
+                }
+            }
+            else
             {
                 graphicalRaycasterHit = true;
-                // If the hit tile is a standard tile within the grid
-                if (result.gameObject.tag == "Tile")
+                foreach (RaycastResult result in results)
                 {
-                    gridTile = result.gameObject;
-                    ColourTile(gridTile, selectedColour);
-
-                    if (result.gameObject != null)
-                    {
-                        GameObject cubeToColour = GameObject.Find("cube" + result.gameObject.name);
-                        cubeToColour.GetComponent<MeshRenderer>().material.color = selectedColour;
-                    }
-                    else
-                    {
-                        Debug.Log("No gameobject");
-                    }
-                    
-                }
-
-                // If the hit tile is a colour selection tile
-                if (result.gameObject.tag == "ColourTile")
-                {
-                    if (result.gameObject.name != "EraserTile")
+                    if (result.gameObject.tag == "ColourTile" || result.gameObject.tag == "Tile")
                     {
                         selectedColour = result.gameObject.GetComponent<Image>().color;
                     }
-                    else
-                    {
-                        selectedColour = defaultColour;
-                    }
-                    
+
                 }
 
-                if (result.gameObject.name == "SliderPanel")
-                {
-                    colourSelectorScript.RGBInput = false;
-                }
-
-                if (result.gameObject.name == "RGBPanel")
-                {
-                    colourSelectorScript.RGBInput = true;
-                }
+                colourSelectorScript.colourPipetteSelected = false;
             }
+            
         }
 
         if (Input.GetButton("Fire2"))

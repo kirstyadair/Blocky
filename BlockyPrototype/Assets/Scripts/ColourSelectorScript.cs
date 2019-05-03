@@ -17,6 +17,7 @@ public class ColourSelectorScript : MonoBehaviour
     public float greenValue;
 
     public bool RGBInput = false;
+    public bool colourPipetteSelected = false;
 
     public Image colourTile;
 
@@ -132,5 +133,12 @@ public class ColourSelectorScript : MonoBehaviour
         redSlider.value = selectedColour.r;
         blueSlider.value = selectedColour.b;
         greenSlider.value = selectedColour.g;
+    }
+
+
+
+    public void ColourPipetteSelected()
+    {
+        colourPipetteSelected = true;
     }
 }
