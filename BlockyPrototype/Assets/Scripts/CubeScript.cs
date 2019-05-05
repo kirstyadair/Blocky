@@ -6,18 +6,13 @@ public class CubeScript : MonoBehaviour
 {
     public string cubeTag;
     public bool cubeOnFloor = false;
-    Animator cubeAnim;
     Rigidbody rb;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        if (gameObject.tag != "Floor")
-        {
-            GetComponent<Renderer>().material.color = new Color(1 / 255, 1 / 255, 1 / 255, 0.4f);
-        }
-        
+        GetComponent<Renderer>().material.color = new Color(1 / 255, 1 / 255, 1 / 255, 0.4f);
     }
 
     // Update is called once per frame
@@ -28,16 +23,10 @@ public class CubeScript : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Floor" && gameObject.tag != "Floor")
+        if (other.tag == "Floor")
         {
-            name = "FloorCube";
             rb.constraints = RigidbodyConstraints.FreezeAll;
             cubeOnFloor = true;
-        }
-
-        if (other.tag == "Plane" && gameObject.tag == "Floor")
-        {
-            rb.constraints = RigidbodyConstraints.FreezeAll;
         }
 
         if (other.GetComponent<CubeScript>() != null)
@@ -45,7 +34,6 @@ public class CubeScript : MonoBehaviour
             if (other.GetComponent<CubeScript>().cubeOnFloor)
             {
                 rb.constraints = RigidbodyConstraints.FreezeAll;
-                name = "FloorCube";
                 cubeOnFloor = true;
             }
         }

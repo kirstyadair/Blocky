@@ -11,11 +11,18 @@ public class FloorCubeSpawnerScript : MonoBehaviour
 
 
 
+    private void Start()
+    {
+        floorCubes = new List<GameObject>();
+    }
+
+
+
     public void SpawnPlane(Vector3 startPos, int x, int z)
     {
         transform.position = startPos;
         StartCoroutine(SpawnTheFloor(x, z));
-        floorCubes = new List<GameObject>();
+        
     }
 
 
@@ -30,14 +37,12 @@ public class FloorCubeSpawnerScript : MonoBehaviour
                 GameObject floorCube = Instantiate(floorCubePrefab, transform.position, Quaternion.identity);
                 floorCube.tag = "Floor";
                 floorCubes.Add(floorCube);
+                floorCube.name = "FloorCube" + floorCubes.Count;
                 transform.Translate(Vector3.right * spaceBetweenCubes);
             }
             transform.Translate(Vector3.back * spaceBetweenCubes);
             transform.Translate(Vector3.left * spaceBetweenCubes * x);
             yield return new WaitForSeconds(timeBetweenSpawning);
         }
-        
     }
-
-    
 }

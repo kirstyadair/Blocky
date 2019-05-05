@@ -40,6 +40,8 @@ public class GridScript : MonoBehaviour
     void Update()
     {
         currentColour.color = selectedColour;
+
+        // don't change this to get button down. that's further down.
         if (Input.GetButton("Fire1"))
         {
             graphicalRaycasterHit = false;
@@ -73,19 +75,7 @@ public class GridScript : MonoBehaviour
 
                     }
 
-                    // If the hit tile is a colour selection tile
-                    if (result.gameObject.tag == "ColourTile")
-                    {
-                        if (result.gameObject.name != "EraserTile")
-                        {
-                            selectedColour = result.gameObject.GetComponent<Image>().color;
-                        }
-                        else
-                        {
-                            selectedColour = defaultColour;
-                        }
-
-                    }
+                    // The colour tile stuff is in GetButtonDown
 
                     if (result.gameObject.name == "SliderPanel")
                     {
@@ -135,6 +125,34 @@ public class GridScript : MonoBehaviour
                 }
             }
         }
+
+        if (Input.GetButtonDown("Fire1"))
+        {
+            pointerEventData = new PointerEventData(eventSystem);
+            pointerEventData.position = Input.mousePosition;
+
+            List<RaycastResult> results = new List<RaycastResult>();
+
+            raycaster.Raycast(pointerEventData, results);
+
+            foreach (RaycastResult result in results)
+            {
+                // If the hit tile is a colour selection tile
+                if (result.gameObject.tag == "ColourTile")
+                {
+                    if (result.gameObject.name != "EraserTile")
+                    {
+                        selectedColour = result.gameObject.GetComponent<Image>().color;
+                        StartCoroutine(Pulse(result.gameObject));
+                    }
+                    else
+                    {
+                        selectedColour = defaultColour;
+                    }
+
+                }
+            }
+        }
     }
 
 
@@ -161,6 +179,21 @@ public class GridScript : MonoBehaviour
         foreach (Transform cell in gridCells)
         {
             cell.GetComponent<Image>().color = defaultColour;
+        }
+    }
+
+    IEnumerator Pulse(GameObject tile)
+    {
+        while (tile.transform.localScale.x < 1.5)
+        {
+            tile.transform.localScale = new Vector2(tile.transform.localScale.x + 0.1f, tile.transform.localScale.y + 0.1f);
+            yield return new WaitForSeconds(0.01f);
+        }
+
+        while (tile.transform.localScale.x > 1)
+        {
+            tile.transform.localScale = new Vector2(tile.transform.localScale.x - 0.1f, tile.transform.localScale.y - 0.1f);
+            yield return new WaitForSeconds(0.01f);
         }
     }
 }

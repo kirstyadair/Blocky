@@ -23,6 +23,7 @@ public class PlayerScript : MonoBehaviour
     public ColourSelectorScript colourSelectorScript;
     public RequirementsGeneratorScript reqGenScript;
     public GridScript gridScript;
+    
     public float opacity;
     Color blankColor;
 
@@ -34,7 +35,7 @@ public class PlayerScript : MonoBehaviour
     {
         drawingPanelAnim.SetBool("openPanel", false);
         colourSelectorAnim.SetBool("show", false);
-        cameraAnim.SetBool("birdseye", false);
+        AllCamAnimationsFalse();
         wallSelected = false;
         blankColor = new Color(1 / 255, 1 / 255, 1 / 255, 0.2f);
     }
@@ -56,9 +57,24 @@ public class PlayerScript : MonoBehaviour
                     {
                         if (!gridScript.graphicalRaycasterHit)
                         {
+                            Debug.Log(hit.collider.gameObject.name);
+
                             if (hit.collider.gameObject.tag == "BackWall" || hit.collider.gameObject.tag == "FrontWall" || hit.collider.gameObject.tag == "RightWall" || hit.collider.gameObject.tag == "LeftWall")
                             {
-                                cameraAnim.SetBool("birdseye", false);
+                                // if the camera is in birds eye position
+                                if (cameraAnim.GetBool("FrontToBirdsEye") || cameraAnim.GetBool("ZoomToBirdsEye"))
+                                {
+                                    AllCamAnimationsFalse();
+                                    cameraAnim.SetBool("BirdsEyeToFront", true);
+                                }
+                                // else is the camera is zoomed on the room
+                                else if (cameraAnim.GetBool("BirdsEyeToZoom"))
+                                {
+                                    AllCamAnimationsFalse();
+                                    cameraAnim.SetBool("ZoomToFront", true);
+                                }
+
+
                                 // if a wall has not already been selected 
                                 if (!wallSelected && reqGenScript.canSelectWalls)
                                 {
@@ -78,11 +94,36 @@ public class PlayerScript : MonoBehaviour
                                 }
                             }
 
-                            if (hit.collider.gameObject.tag == "Floor")
+                            // If hit the grass
+                            if (hit.collider.gameObject.tag == "Floor" && hit.collider.gameObject.name != "BlackFloorCube")
                             {
                                 DeselectWalls();
                                 drawingPanelAnim.SetBool("openPanel", false);
-                                cameraAnim.SetBool("birdseye", true);
+                                if (cameraAnim.GetBool("BirdsEyeToZoom"))
+                                {
+                                    Debug.Log("zoom to birdseye");
+                                    AllCamAnimationsFalse();
+                                    cameraAnim.SetBool("ZoomToBirdsEye", true);
+                                }
+                                else
+                                {
+                                    AllCamAnimationsFalse();
+                                    cameraAnim.SetBool("FrontToBirdsEye", true);
+                                }
+                                
+
+                            }
+
+                            if (hit.collider.gameObject.name == "BlackFloorCube")
+                            {
+                                if (cameraAnim.GetBool("FrontToBirdsEye") || cameraAnim.GetBool("ZoomToBirdsEye"))
+                                {
+                                    AllCamAnimationsFalse();
+                                    cameraAnim.SetBool("BirdsEyeToZoom", true);
+                                    
+                                }
+                                
+                                drawingPanelAnim.SetBool("openPanel", false);
                             }
                         }
                     }
@@ -207,5 +248,16 @@ public class PlayerScript : MonoBehaviour
     {
         drawingPanelAnim.SetBool("openPanel", true);
         colourSelectorAnim.SetBool("show", false);
+    }
+
+
+
+    public void AllCamAnimationsFalse()
+    {
+        cameraAnim.SetBool("BirdsEyeToFront", false);
+        cameraAnim.SetBool("FrontToBirdsEye", false);
+        cameraAnim.SetBool("ZoomToFront", false);
+        cameraAnim.SetBool("ZoomToBirdsEye", false);
+        cameraAnim.SetBool("BirdsEyeToZoom", false);
     }
 }
