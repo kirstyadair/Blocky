@@ -11,10 +11,18 @@ public enum GameState
 
 
 
+public enum EditingView
+{
+    INTERIOR, EXTERIOR, GROUND
+}
+
+
+
 public class PlayerScript : MonoBehaviour
 {
     // Variables
     public GameState gameState;
+    public EditingView editView;
     public string selectedWallTag;
     bool wallSelected;
     public Animator drawingPanelAnim;
@@ -38,6 +46,7 @@ public class PlayerScript : MonoBehaviour
         AllCamAnimationsFalse();
         wallSelected = false;
         blankColor = new Color(1 / 255, 1 / 255, 1 / 255, 0.2f);
+        editView = EditingView.EXTERIOR;
     }
 
 
@@ -57,7 +66,6 @@ public class PlayerScript : MonoBehaviour
                     {
                         if (!gridScript.graphicalRaycasterHit)
                         {
-                            Debug.Log(hit.collider.gameObject.name);
 
                             if (hit.collider.gameObject.tag == "BackWall" || hit.collider.gameObject.tag == "FrontWall" || hit.collider.gameObject.tag == "RightWall" || hit.collider.gameObject.tag == "LeftWall")
                             {
@@ -98,10 +106,16 @@ public class PlayerScript : MonoBehaviour
                             if (hit.collider.gameObject.tag == "Floor" && hit.collider.gameObject.name != "BlackFloorCube")
                             {
                                 DeselectWalls();
+                                /*foreach (GameObject cube in reqGenScript.allCubes)
+                                {
+                                    Color currentColour = cube.GetComponent<Renderer>().material.color;
+                                    currentColour.a = 1;
+                                    Debug.Log(currentColour.a);
+                                }*/
+
                                 drawingPanelAnim.SetBool("openPanel", false);
                                 if (cameraAnim.GetBool("BirdsEyeToZoom"))
                                 {
-                                    Debug.Log("zoom to birdseye");
                                     AllCamAnimationsFalse();
                                     cameraAnim.SetBool("ZoomToBirdsEye", true);
                                 }
@@ -132,6 +146,23 @@ public class PlayerScript : MonoBehaviour
                 }
             }
         }
+
+
+        // if the current camera animation focuses on the front
+        if (cameraAnim.GetBool("BirdsEyeToFront") || cameraAnim.GetBool("ZoomToFront"))
+        {
+            editView = EditingView.EXTERIOR;
+        }
+        // else if the current camera animation focuses on the zoom
+        else if (cameraAnim.GetBool("BirdsEyeToZoom"))
+        {
+            editView = EditingView.INTERIOR;
+        }
+        else if (cameraAnim.GetBool("ZoomToBirdsEye") || cameraAnim.GetBool("FrontToBirdsEye"))
+        {
+            editView = EditingView.GROUND;
+        }
+        
     }
 
 
@@ -226,6 +257,7 @@ public class PlayerScript : MonoBehaviour
         {
             Color selectedColor = cube.GetComponent<Renderer>().material.color;
             selectedColor.a = opacity;
+
             cube.GetComponent<Renderer>().material.color = selectedColor;
             cube.name = "not assigned";
         }
