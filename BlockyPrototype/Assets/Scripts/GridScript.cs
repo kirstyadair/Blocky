@@ -15,9 +15,12 @@ public class GridScript : MonoBehaviour
     public List<Transform> gridCells;
 
     public Image currentColour;
+    public Toggle orthoToggle;
 
     GameObject grid;
     GameObject gridTile;
+    public Camera mainCamera;
+    
 
     public Color selectedColour;
     Color defaultColour;
@@ -153,14 +156,21 @@ public class GridScript : MonoBehaviour
                     {
                         selectedColour = defaultColour;
                     }
-                    else if (result.gameObject.tag == "FloorTile")
-                    {
-                        if (result.gameObject.name == "WaterTile")
-                        {
-                            playerScript.cubeType = CubeType.WATER;
-                        }
-                    }
+                    
 
+                }
+                else if (result.gameObject.tag == "FloorTile")
+                {
+                    if (result.gameObject.name == "WaterTile")
+                    {
+                        playerScript.cubeType = CubeType.WATER;
+                        StartCoroutine(Pulse(result.gameObject));
+                    }
+                    if (result.gameObject.name == "GrassTile")
+                    {
+                        playerScript.cubeType = CubeType.GRASS;
+                        StartCoroutine(Pulse(result.gameObject));
+                    }
                 }
             }
         }
@@ -190,6 +200,19 @@ public class GridScript : MonoBehaviour
         foreach (Transform cell in gridCells)
         {
             cell.GetComponent<Image>().color = defaultColour;
+        }
+    }
+
+    public void ToggleOrthographicCamera()
+    {
+        if (orthoToggle.isOn)
+        {
+            mainCamera.orthographic = true;
+            mainCamera.orthographicSize = 1.2f;
+        }
+        else
+        {
+            mainCamera.orthographic = false;
         }
     }
 

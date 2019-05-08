@@ -26,9 +26,14 @@ public class PlayerScript : MonoBehaviour
     public string selectedWallTag;
     public EditingView editView;
     public CubeType cubeType;
+
+    [Header("Animators")]
     public Animator drawingPanelAnim;
     public Animator colourSelectorAnim;
     public Animator cameraAnim;
+    public Animator floorDrawingPanelAnim;
+
+    [Header("Scripts")]
     public ColourSelectorScript colourSelectorScript;
     public RequirementsGeneratorScript reqGenScript;
     public GridScript gridScript;
@@ -48,6 +53,7 @@ public class PlayerScript : MonoBehaviour
     {
         drawingPanelAnim.SetBool("openPanel", false);
         colourSelectorAnim.SetBool("show", false);
+        floorDrawingPanelAnim.SetBool("slideIn", false);
         AllCamAnimationsFalse();
         wallSelected = false;
         blankColor = new Color(1 / 255, 1 / 255, 1 / 255, 0.2f);
@@ -186,15 +192,34 @@ public class PlayerScript : MonoBehaviour
             if (cameraAnim.GetBool("BirdsEyeToFront") || cameraAnim.GetBool("ZoomToFront"))
             {
                 editView = EditingView.EXTERIOR;
+                if (floorDrawingPanelAnim.GetBool("slideIn"))
+                {
+                    floorDrawingPanelAnim.SetBool("slideIn", false);
+                }
+                gridScript.mainCamera.orthographic = false;
+                gridScript.orthoToggle.isOn = false;
+
             }
             // else if the current camera animation focuses on the zoom
             else if (cameraAnim.GetBool("BirdsEyeToZoom"))
             {
                 editView = EditingView.INTERIOR;
+                if (floorDrawingPanelAnim.GetBool("slideIn"))
+                {
+                    floorDrawingPanelAnim.SetBool("slideIn", false);
+                }
+                gridScript.mainCamera.orthographic = false;
+                gridScript.orthoToggle.isOn = false;
             }
             else if (cameraAnim.GetBool("ZoomToBirdsEye") || cameraAnim.GetBool("FrontToBirdsEye"))
             {
                 editView = EditingView.GROUND;
+                if (!floorDrawingPanelAnim.GetBool("slideIn"))
+                {
+                    floorDrawingPanelAnim.SetBool("slideIn", true);
+                    cubeType = CubeType.GRASS;
+                }
+                
             }
         }
         
