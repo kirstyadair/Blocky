@@ -23,6 +23,7 @@ public class GridScript : MonoBehaviour
     Color defaultColour;
 
     public ColourSelectorScript colourSelectorScript;
+    public PlayerScript playerScript;
 
     public bool graphicalRaycasterHit = false;
 
@@ -152,9 +153,12 @@ public class GridScript : MonoBehaviour
                     {
                         selectedColour = defaultColour;
                     }
-                    else if (result.gameObject.name == "WaterTile")
+                    else if (result.gameObject.tag == "FloorTile")
                     {
-
+                        if (result.gameObject.name == "WaterTile")
+                        {
+                            playerScript.cubeType = CubeType.WATER;
+                        }
                     }
 
                 }

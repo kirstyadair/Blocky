@@ -4,9 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-public enum GameState
+public enum CubeType
 {
-    CHOOSEREQUIREMENTS, CHOSENREQUIREMENTS
+    WATER, GRASS, STONE, WOOD
 }
 
 
@@ -21,21 +21,26 @@ public enum EditingView
 public class PlayerScript : MonoBehaviour
 {
     // Variables
-    public GameState gameState;
-    public EditingView editView;
+    public bool chosenRequirements = false;
+    public float opacity;
     public string selectedWallTag;
-    bool wallSelected;
+    public EditingView editView;
+    public CubeType cubeType;
     public Animator drawingPanelAnim;
     public Animator colourSelectorAnim;
     public Animator cameraAnim;
     public ColourSelectorScript colourSelectorScript;
     public RequirementsGeneratorScript reqGenScript;
     public GridScript gridScript;
-    
-    public float opacity;
+
+    bool wallSelected;
     Color blankColor;
 
+    [Header("Prefabs")]
     public GameObject waterCubePrefab;
+    public GameObject grassPrefab;
+    GameObject currentCubePrefab;
+
 
 
 
@@ -47,13 +52,23 @@ public class PlayerScript : MonoBehaviour
         wallSelected = false;
         blankColor = new Color(1 / 255, 1 / 255, 1 / 255, 0.2f);
         editView = EditingView.EXTERIOR;
+        cubeType = CubeType.GRASS;
     }
 
 
 
     void Update()
     {
-        if (gameState != GameState.CHOOSEREQUIREMENTS)
+        if (cubeType == CubeType.GRASS)
+        {
+            currentCubePrefab = grassPrefab;
+        }
+        else if (cubeType == CubeType.WATER)
+        {
+            currentCubePrefab = waterCubePrefab;
+        }
+
+        if (chosenRequirements)
         {
             if (Input.GetButtonDown("Fire1"))
             {
@@ -141,21 +156,30 @@ public class PlayerScript : MonoBehaviour
                 }
             }
 
+
+
+            // Floor editing
             if (Input.GetButton("Fire1"))
             {
-                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-                RaycastHit hit;
-                if (Physics.Raycast(ray, out hit))
+                if (editView == EditingView.GROUND)
                 {
-                    if (hit.collider.gameObject.tag == "Floor" && hit.collider.gameObject.name != "BlackFloorCube")
+                    Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+                    RaycastHit hit;
+                    if (Physics.Raycast(ray, out hit))
                     {
-                        Vector3 cubePos = hit.collider.gameObject.transform.position;
-                        Destroy(hit.collider.gameObject);
-                        GameObject waterCube = Instantiate(waterCubePrefab, cubePos, Quaternion.identity);
+                        if (hit.collider.gameObject.tag == "Floor" && hit.collider.gameObject.name != "BlackFloorCube")
+                        {
+                            Vector3 cubePos = hit.collider.gameObject.transform.position;
+                            Destroy(hit.collider.gameObject);
+                            GameObject newCube = Instantiate(currentCubePrefab, cubePos, Quaternion.identity);
+                            newCube.tag = "Floor";
+                        }
                     }
                 }
+                
             }
+
 
 
             // if the current camera animation focuses on the front

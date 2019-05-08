@@ -2092,102 +2092,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!1 &176015133
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 176015136}
-  - component: {fileID: 176015135}
-  - component: {fileID: 176015134}
-  - component: {fileID: 176015137}
-  m_Layer: 0
-  m_Name: Camera
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!81 &176015134
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 176015133}
-  m_Enabled: 1
---- !u!20 &176015135
-Camera:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 176015133}
-  m_Enabled: 1
-  serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
-  m_projectionMatrixMode: 1
-  m_SensorSize: {x: 36, y: 24}
-  m_LensShift: {x: 0, y: 0}
-  m_GateFitMode: 2
-  m_FocalLength: 50
-  m_NormalizedViewPortRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 60
-  orthographic: 0
-  orthographic size: 5
-  m_Depth: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
-  m_TargetDisplay: 0
-  m_TargetEye: 3
-  m_HDR: 1
-  m_AllowMSAA: 1
-  m_AllowDynamicResolution: 0
-  m_ForceIntoRT: 0
-  m_OcclusionCulling: 1
-  m_StereoConvergence: 10
-  m_StereoSeparation: 0.022
---- !u!4 &176015136
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 176015133}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.059743226, y: -0.36, z: 3.0306318}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &176015137
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 176015133}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  profile: {fileID: 11400000, guid: 88f09e8979e6e9643811af460af63d5c, type: 2}
 --- !u!1 &182748787
 GameObject:
   m_ObjectHideFlags: 0
@@ -3102,7 +3006,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &343156660
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4936,6 +4840,7 @@ MonoBehaviour:
   currentColour: {fileID: 1664489043}
   selectedColour: {r: 0, g: 0, b: 0, a: 0}
   colourSelectorScript: {fileID: 1930385435}
+  playerScript: {fileID: 0}
   graphicalRaycasterHit: 0
 --- !u!1 &510232347
 GameObject:
@@ -16649,17 +16554,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec306ccc9ababa1408440a5b6ce6f633, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameState: 0
-  editView: 0
+  chosenRequirements: 0
+  opacity: 0.35
   selectedWallTag: 
+  editView: 0
+  cubeType: 0
   drawingPanelAnim: {fileID: 1592219315}
   colourSelectorAnim: {fileID: 1310691558}
   cameraAnim: {fileID: 698064679}
   colourSelectorScript: {fileID: 1930385435}
   reqGenScript: {fileID: 958139297}
   gridScript: {fileID: 500119032}
-  opacity: 0.35
   waterCubePrefab: {fileID: 617789895762305217, guid: 389e375adee60ae48a79d3939a733e73,
+    type: 3}
+  grassPrefab: {fileID: 3014774579378426385, guid: 9af2a9c1228060c49bce3f842264e516,
     type: 3}
 --- !u!4 &1930385434
 Transform:

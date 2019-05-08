@@ -37,7 +37,7 @@ public class RequirementsGeneratorScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        playerScript.gameState = GameState.CHOOSEREQUIREMENTS;
+        playerScript.chosenRequirements = false;
         chooseReqAnim.SetBool("panelSlide", false);
         savedReqAnim.SetBool("slideIn", false);
         RandomlyGenerateRequirements();
@@ -79,7 +79,7 @@ public class RequirementsGeneratorScript : MonoBehaviour
             featureText.text = "Required feature: " + feature;
             StartCoroutine(SpawnRoom());
             floorSpawner.SpawnPlane(new Vector3(-2.5f, -0.5f, 4), 30, 20);
-            playerScript.gameState = GameState.CHOSENREQUIREMENTS;
+            playerScript.chosenRequirements = true;
         }
     }
 
