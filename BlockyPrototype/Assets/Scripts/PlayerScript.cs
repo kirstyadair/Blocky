@@ -35,7 +35,7 @@ public class PlayerScript : MonoBehaviour
     public float opacity;
     Color blankColor;
 
-
+    public GameObject waterCubePrefab;
 
 
 
@@ -100,18 +100,13 @@ public class PlayerScript : MonoBehaviour
                                     // Highlight every cube with this tag
                                     HighlightWall(selectedWallTag);
                                 }
+
                             }
 
                             // If hit the grass
                             if (hit.collider.gameObject.tag == "Floor" && hit.collider.gameObject.name != "BlackFloorCube")
                             {
                                 DeselectWalls();
-                                /*foreach (GameObject cube in reqGenScript.allCubes)
-                                {
-                                    Color currentColour = cube.GetComponent<Renderer>().material.color;
-                                    currentColour.a = 1;
-                                    Debug.Log(currentColour.a);
-                                }*/
 
                                 drawingPanelAnim.SetBool("openPanel", false);
                                 if (cameraAnim.GetBool("BirdsEyeToZoom"))
@@ -124,7 +119,7 @@ public class PlayerScript : MonoBehaviour
                                     AllCamAnimationsFalse();
                                     cameraAnim.SetBool("FrontToBirdsEye", true);
                                 }
-                                
+
 
                             }
 
@@ -134,33 +129,49 @@ public class PlayerScript : MonoBehaviour
                                 {
                                     AllCamAnimationsFalse();
                                     cameraAnim.SetBool("BirdsEyeToZoom", true);
-                                    
+
                                 }
-                                
+
                                 drawingPanelAnim.SetBool("openPanel", false);
                             }
                         }
                     }
-                    
-                    
+
+
                 }
             }
-        }
+
+            if (Input.GetButton("Fire1"))
+            {
+                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+                RaycastHit hit;
+                if (Physics.Raycast(ray, out hit))
+                {
+                    if (hit.collider.gameObject.tag == "Floor" && hit.collider.gameObject.name != "BlackFloorCube")
+                    {
+                        Vector3 cubePos = hit.collider.gameObject.transform.position;
+                        Destroy(hit.collider.gameObject);
+                        GameObject waterCube = Instantiate(waterCubePrefab, cubePos, Quaternion.identity);
+                    }
+                }
+            }
 
 
-        // if the current camera animation focuses on the front
-        if (cameraAnim.GetBool("BirdsEyeToFront") || cameraAnim.GetBool("ZoomToFront"))
-        {
-            editView = EditingView.EXTERIOR;
-        }
-        // else if the current camera animation focuses on the zoom
-        else if (cameraAnim.GetBool("BirdsEyeToZoom"))
-        {
-            editView = EditingView.INTERIOR;
-        }
-        else if (cameraAnim.GetBool("ZoomToBirdsEye") || cameraAnim.GetBool("FrontToBirdsEye"))
-        {
-            editView = EditingView.GROUND;
+            // if the current camera animation focuses on the front
+            if (cameraAnim.GetBool("BirdsEyeToFront") || cameraAnim.GetBool("ZoomToFront"))
+            {
+                editView = EditingView.EXTERIOR;
+            }
+            // else if the current camera animation focuses on the zoom
+            else if (cameraAnim.GetBool("BirdsEyeToZoom"))
+            {
+                editView = EditingView.INTERIOR;
+            }
+            else if (cameraAnim.GetBool("ZoomToBirdsEye") || cameraAnim.GetBool("FrontToBirdsEye"))
+            {
+                editView = EditingView.GROUND;
+            }
         }
         
     }
@@ -241,7 +252,6 @@ public class PlayerScript : MonoBehaviour
             }
             requiredCube.GetComponent<MeshRenderer>().material.color = cubeColour;
             gridCell.GetComponent<Image>().color = cubeColour;
-
         }
 
     }
@@ -255,11 +265,15 @@ public class PlayerScript : MonoBehaviour
 
         foreach (GameObject cube in reqGenScript.allCubes)
         {
-            Color selectedColor = cube.GetComponent<Renderer>().material.color;
-            selectedColor.a = opacity;
+            if (cube != null)
+            {
+                Color selectedColor = cube.GetComponent<Renderer>().material.color;
+                selectedColor.a = opacity;
 
-            cube.GetComponent<Renderer>().material.color = selectedColor;
-            cube.name = "not assigned";
+                cube.GetComponent<Renderer>().material.color = selectedColor;
+                cube.name = "not assigned";
+            }
+            
         }
         
         gridScript.ClearOnlyGrid();
@@ -278,6 +292,7 @@ public class PlayerScript : MonoBehaviour
 
     public void ColourPickerMenuClose()
     {
+        colourSelectorScript.RGBInput = false;
         drawingPanelAnim.SetBool("openPanel", true);
         colourSelectorAnim.SetBool("show", false);
     }

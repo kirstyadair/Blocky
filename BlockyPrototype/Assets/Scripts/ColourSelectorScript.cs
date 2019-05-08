@@ -66,6 +66,8 @@ public class ColourSelectorScript : MonoBehaviour
                 blueSlider.value = convertedVal;
                 OnBlueValueChanged();
             }
+
+            
         }
         
 

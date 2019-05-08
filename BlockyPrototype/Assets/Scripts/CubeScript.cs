@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
 public class CubeScript : MonoBehaviour
 {
     public string cubeTag;
@@ -19,7 +21,11 @@ public class CubeScript : MonoBehaviour
     void Update()
     {
         rb.MovePosition(transform.position - new Vector3(0, 0.01f, 0));
+        
     }
+
+
+
 
     void OnTriggerEnter(Collider other)
     {
@@ -38,4 +44,5 @@ public class CubeScript : MonoBehaviour
             }
         }
     }
+    
 }

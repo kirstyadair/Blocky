@@ -28,8 +28,7 @@ public class RequirementsGeneratorScript : MonoBehaviour
     public float timeBetweenSpawning;
 
     public List<GameObject> allCubes;
-
-    bool panelSlide = false;
+    
     bool requirementsSaved = false;
     
 

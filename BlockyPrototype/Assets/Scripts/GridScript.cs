@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
+
+
 public class GridScript : MonoBehaviour
 {
     GraphicRaycaster raycaster;
@@ -95,6 +97,7 @@ public class GridScript : MonoBehaviour
                 {
                     if (result.gameObject.tag == "ColourTile" || result.gameObject.tag == "Tile")
                     {
+                        selectedColour = new Color(0,0,0,0);
                         selectedColour = result.gameObject.GetComponent<Image>().color;
                     }
 
@@ -140,14 +143,18 @@ public class GridScript : MonoBehaviour
                 // If the hit tile is a colour selection tile
                 if (result.gameObject.tag == "ColourTile")
                 {
-                    if (result.gameObject.name != "EraserTile")
+                    if (result.gameObject.name != "EraserTile" && result.gameObject.name != "WaterTile")
                     {
                         selectedColour = result.gameObject.GetComponent<Image>().color;
                         StartCoroutine(Pulse(result.gameObject));
                     }
-                    else
+                    else if (result.gameObject.name == "EraserTile")
                     {
                         selectedColour = defaultColour;
+                    }
+                    else if (result.gameObject.name == "WaterTile")
+                    {
+
                     }
 
                 }

@@ -5,8 +5,6 @@ using UnityEngine;
 public class FloorCubeScript : MonoBehaviour
 {
     Rigidbody rb;
-    bool cubeLanded = false;
-
 
 
 
@@ -33,14 +31,9 @@ public class FloorCubeScript : MonoBehaviour
     {
         if (other.tag == "Plane")
         {
-            cubeLanded = true;
             rb.constraints = RigidbodyConstraints.FreezeAll;
         }
-
-       // if (other.tag == "BackWall" || other.tag == "FrontWall" || other.tag == "LeftWall" || other.tag == "RightWall")
-        //{
-            
-        //}
+        
     }
 
     
