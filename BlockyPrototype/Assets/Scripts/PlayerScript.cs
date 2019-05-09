@@ -39,11 +39,13 @@ public class PlayerScript : MonoBehaviour
     public GridScript gridScript;
 
     bool wallSelected;
+    bool hasMovedUp = false;
     Color blankColor;
 
     [Header("Prefabs")]
     public GameObject waterCubePrefab;
     public GameObject grassPrefab;
+    public GameObject woodPrefab;
     GameObject currentCubePrefab;
 
 
@@ -72,6 +74,10 @@ public class PlayerScript : MonoBehaviour
         else if (cubeType == CubeType.WATER)
         {
             currentCubePrefab = waterCubePrefab;
+        }
+        else if (cubeType == CubeType.WOOD)
+        {
+            currentCubePrefab = woodPrefab;
         }
 
         if (chosenRequirements)
@@ -141,7 +147,15 @@ public class PlayerScript : MonoBehaviour
                                     cameraAnim.SetBool("FrontToBirdsEye", true);
                                 }
 
-
+                                Vector3 cubePos = hit.collider.gameObject.transform.position;
+                                if (cubeType == CubeType.WOOD)
+                                {
+                                    GameObject newCube = Instantiate(currentCubePrefab, new Vector3(cubePos.x, cubePos.y + hit.collider.bounds.size.y, cubePos.z), Quaternion.identity);
+                                    newCube.AddComponent<WoodCubeScript>();
+                                    newCube.GetComponent<WoodCubeScript>().grassPrefab = grassPrefab;
+                                    newCube.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+                                    newCube.tag = "Floor";
+                                }
                             }
 
                             if (hit.collider.gameObject.name == "BlackFloorCube")
@@ -177,9 +191,12 @@ public class PlayerScript : MonoBehaviour
                         if (hit.collider.gameObject.tag == "Floor" && hit.collider.gameObject.name != "BlackFloorCube")
                         {
                             Vector3 cubePos = hit.collider.gameObject.transform.position;
-                            Destroy(hit.collider.gameObject);
-                            GameObject newCube = Instantiate(currentCubePrefab, cubePos, Quaternion.identity);
-                            newCube.tag = "Floor";
+                            if (cubeType != CubeType.WOOD)
+                            {
+                                Destroy(hit.collider.gameObject);
+                                GameObject newCube = Instantiate(currentCubePrefab, cubePos, Quaternion.identity);
+                                newCube.tag = "Floor";
+                            }
                         }
                     }
                 }
