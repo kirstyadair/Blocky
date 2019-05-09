@@ -151,8 +151,6 @@ public class PlayerScript : MonoBehaviour
                                 if (cubeType == CubeType.WOOD)
                                 {
                                     GameObject newCube = Instantiate(currentCubePrefab, new Vector3(cubePos.x, cubePos.y + hit.collider.bounds.size.y, cubePos.z), Quaternion.identity);
-                                    newCube.AddComponent<WoodCubeScript>();
-                                    newCube.GetComponent<WoodCubeScript>().grassPrefab = grassPrefab;
                                     newCube.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
                                     newCube.tag = "Floor";
                                 }

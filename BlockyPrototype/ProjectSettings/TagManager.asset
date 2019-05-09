@@ -12,6 +12,7 @@ TagManager:
   - ColourTile
   - Floor
   - Plane
+  - FloorTile
   layers:
   - Default
   - TransparentFX
