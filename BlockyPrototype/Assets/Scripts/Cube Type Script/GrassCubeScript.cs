@@ -4,10 +4,31 @@ using UnityEngine;
 
 public class GrassCubeScript : MonoBehaviour
 {
+    public float timeActive = 0.0f;
+    public bool isBlackCube;
+
+    private void Start()
+    {
+        if (!isBlackCube)
+        {
+            gameObject.name = "GrassCube";
+            gameObject.tag = "Floor";
+        }
+        else
+        {
+            gameObject.name = "BlackFloorCube";
+            gameObject.tag = "Floor";
+            GetComponent<Renderer>().material.color = new Color(0, 0, 0, 0.4f);
+        }
+        
+    }
+
+
 
     // Update is called once per frame
     void Update()
     {
+        timeActive += Time.deltaTime;
         if (transform.position.y > -0.95f)
         {
             transform.position = new Vector3(transform.position.x, -0.9599f, transform.position.z);
@@ -18,10 +39,13 @@ public class GrassCubeScript : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.GetComponent<GrassCubeScript>() != null || (other.tag == "Floor" && other.name != "BlackFloorCube"))
+        if (other.name == "GrassCube")
         {
-            Debug.Log("another grass cube hit");
-            Destroy(other.gameObject);
+            if (timeActive < other.GetComponent<GrassCubeScript>().timeActive)
+            {
+                Destroy(other.gameObject);
+            }
         }
+        
     }
 }

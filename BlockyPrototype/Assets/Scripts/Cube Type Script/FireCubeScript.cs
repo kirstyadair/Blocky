@@ -2,16 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WoodCubeScript : MonoBehaviour
+public class FireCubeScript : MonoBehaviour
 {
     public GameObject grassPrefab;
-    public GameObject burningWoodPrefab;
     public float timeActive = 0.0f;
 
     // Start is called before the first frame update
     void Start()
     {
-        gameObject.name = "WoodCube";
+        gameObject.name = "FireCube";
     }
 
     // Update is called once per frame
@@ -22,7 +21,7 @@ public class WoodCubeScript : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        // Don't allow wood to be put on water
+        // Don't allow fire to be put on water
         if (other.bounds.center.y < gameObject.GetComponent<Collider>().bounds.center.y)
         {
             if (other.name == "WaterCube")
@@ -32,24 +31,14 @@ public class WoodCubeScript : MonoBehaviour
                 GameObject newCube = Instantiate(grassPrefab, position, Quaternion.identity);
             }
         }
-        
+
         if (other.name == "FireCube")
         {
-            Vector3 position = transform.position;
-            // Destroy the fire cube
-            Destroy(other.gameObject);
-            gameObject.SetActive(false);
-            GameObject newCube = Instantiate(burningWoodPrefab, position, Quaternion.identity);
-            newCube.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
-            Destroy(gameObject);
-        }
-        
-        if (other.name == "WoodCube")
-        {
-            if (timeActive < other.GetComponent<WoodCubeScript>().timeActive)
+            if (timeActive < other.GetComponent<FireCubeScript>().timeActive)
             {
                 Destroy(other.gameObject);
             }
         }
+
     }
 }

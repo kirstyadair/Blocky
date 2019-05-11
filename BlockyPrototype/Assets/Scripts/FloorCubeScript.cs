@@ -5,6 +5,7 @@ using UnityEngine;
 public class FloorCubeScript : MonoBehaviour
 {
     Rigidbody rb;
+    public GameObject grassPrefab;
 
 
 
@@ -32,6 +33,18 @@ public class FloorCubeScript : MonoBehaviour
         if (other.tag == "Plane")
         {
             rb.constraints = RigidbodyConstraints.FreezeAll;
+            Vector3 pos = transform.position;
+            gameObject.SetActive(false);
+            GameObject grassCube = Instantiate(grassPrefab, pos, Quaternion.identity);
+            grassCube.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+            if (gameObject.name == "BlackFloorCube")
+            {
+                grassCube.GetComponent<GrassCubeScript>().isBlackCube = true;
+            }
+            else
+            {
+                grassCube.GetComponent<GrassCubeScript>().isBlackCube = false;
+            }
         }
         
     }

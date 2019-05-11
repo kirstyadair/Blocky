@@ -287,6 +287,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grassPrefab: {fileID: 3014774579378426385, guid: 9af2a9c1228060c49bce3f842264e516,
     type: 3}
+  burningWoodPrefab: {fileID: 7709139060426278228, guid: 06c06e06d314aa34e8e9e03c2944806c,
+    type: 3}
 --- !u!1 &8871273880419849761
 GameObject:
   m_ObjectHideFlags: 0

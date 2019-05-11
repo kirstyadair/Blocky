@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c4fd90ef171f5840947412e51d7f42d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  grassPrefab: {fileID: 3014774579378426385, guid: 9af2a9c1228060c49bce3f842264e516,
+    type: 3}
 --- !u!1001 &9079634596707150065
 PrefabInstance:
   m_ObjectHideFlags: 0
