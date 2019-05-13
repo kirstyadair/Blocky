@@ -8,17 +8,31 @@ public class WoodCubeScript : MonoBehaviour
     public GameObject burningWoodPrefab;
     public float timeActive = 0.0f;
 
+
+
+
     // Start is called before the first frame update
     void Start()
     {
         gameObject.name = "WoodCube";
     }
 
+
+
+
     // Update is called once per frame
     void Update()
     {
         timeActive += Time.deltaTime;
+
+        if (transform.position.y != -0.8799995f)
+        {
+            transform.position = new Vector3(transform.position.x, -0.8799995f, transform.position.z);
+        }
     }
+
+
+
 
     void OnTriggerEnter(Collider other)
     {
@@ -35,13 +49,14 @@ public class WoodCubeScript : MonoBehaviour
         
         if (other.name == "FireCube")
         {
+            Debug.Log("DestroyingFire");
             Vector3 position = transform.position;
             // Destroy the fire cube
             Destroy(other.gameObject);
             gameObject.SetActive(false);
             GameObject newCube = Instantiate(burningWoodPrefab, position, Quaternion.identity);
             newCube.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
-            Destroy(gameObject);
+            Destroy(this.gameObject);
         }
         
         if (other.name == "WoodCube")

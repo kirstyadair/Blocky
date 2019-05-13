@@ -7,17 +7,31 @@ public class FireCubeScript : MonoBehaviour
     public GameObject grassPrefab;
     public float timeActive = 0.0f;
 
+
+
+
     // Start is called before the first frame update
     void Start()
     {
         gameObject.name = "FireCube";
     }
 
+
+
+
     // Update is called once per frame
     void Update()
     {
         timeActive += Time.deltaTime;
+
+        if (transform.position.y != -0.8799995f)
+        {
+            transform.position = new Vector3(transform.position.x, -0.8799995f, transform.position.z);
+        }
     }
+
+
+
 
     void OnTriggerEnter(Collider other)
     {

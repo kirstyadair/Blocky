@@ -151,15 +151,10 @@ public class PlayerScript : MonoBehaviour
                                     cameraAnim.SetBool("FrontToBirdsEye", true);
                                 }
 
-                                Vector3 cubePos = hit.collider.gameObject.transform.position;
+                                //Vector3 cubePos = hit.collider.gameObject.transform.position;
 
-                                // have this cube above the ground and only allow one placement
-                                if (cubeType == CubeType.WOOD || cubeType == CubeType.FIRE)
-                                {
-                                    GameObject newCube = Instantiate(currentCubePrefab, new Vector3(cubePos.x, cubePos.y + hit.collider.bounds.size.y, cubePos.z), Quaternion.identity);
-                                    newCube.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
-                                    newCube.tag = "Floor";
-                                }
+                                
+                                
                             }
 
                             if (hit.collider.gameObject.name == "BlackFloorCube")
@@ -194,18 +189,8 @@ public class PlayerScript : MonoBehaviour
                     {
                         if (hit.collider.gameObject.tag == "Floor" && hit.collider.gameObject.name != "BlackFloorCube")
                         {
-                            Vector3 cubePos = hit.collider.gameObject.transform.position;
-                            if (cubeType != CubeType.WOOD && cubeType != CubeType.FIRE)
-                            {
-                                Destroy(hit.collider.gameObject);
-                                GameObject newCube = Instantiate(currentCubePrefab, cubePos, Quaternion.identity);
-                                newCube.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
-                                if (currentCubePrefab == waterCubePrefab)
-                                {
-                                    newCube.name = "WaterCube";
-                                }
-                                newCube.tag = "Floor";
-                            }
+                            StartCoroutine(SpawnInCube(hit));
+                            
                         }
                     }
                 }
@@ -381,5 +366,34 @@ public class PlayerScript : MonoBehaviour
         cameraAnim.SetBool("ZoomToFront", false);
         cameraAnim.SetBool("ZoomToBirdsEye", false);
         cameraAnim.SetBool("BirdsEyeToZoom", false);
+    }
+
+
+    IEnumerator SpawnInCube(RaycastHit hit)
+    {
+        Vector3 cubePos = hit.collider.gameObject.transform.position;
+        if (cubeType != CubeType.WOOD && cubeType != CubeType.FIRE)
+        {
+            Destroy(hit.collider.gameObject);
+            if (cubeType != CubeType.GRASS)
+            {
+                yield return new WaitForSeconds(0.1f);
+            }
+            GameObject newCube = Instantiate(currentCubePrefab, cubePos, Quaternion.identity);
+            newCube.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+            if (currentCubePrefab == waterCubePrefab)
+            {
+                newCube.name = "WaterCube";
+            }
+            newCube.tag = "Floor";
+        }
+
+        if (cubeType == CubeType.WOOD || cubeType == CubeType.FIRE)
+        {
+            yield return new WaitForSeconds(0.1f);
+            GameObject newCube = Instantiate(currentCubePrefab, new Vector3(cubePos.x, -0.8799995f, cubePos.z), Quaternion.identity);
+            newCube.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+            newCube.tag = "Floor";
+        }
     }
 }

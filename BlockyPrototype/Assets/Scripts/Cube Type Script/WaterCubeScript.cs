@@ -2,29 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GrassCubeScript : MonoBehaviour
+public class WaterCubeScript : MonoBehaviour
 {
     public float timeActive = 0.0f;
-    public bool isBlackCube;
 
 
 
 
-    private void Start()
+    // Start is called before the first frame update
+    void Start()
     {
-        if (!isBlackCube)
-        {
-            gameObject.name = "GrassCube";
-            gameObject.tag = "Floor";
-        }
-        else
-        {
-            gameObject.name = "BlackFloorCube";
-            gameObject.tag = "Floor";
-            GetComponent<Renderer>().material.color = new Color(0, 0, 0, 0.4f);
-        }
-        
+        gameObject.name = "WaterCube";
     }
+
 
 
 
@@ -40,15 +30,27 @@ public class GrassCubeScript : MonoBehaviour
 
 
 
+
     void OnTriggerEnter(Collider other)
     {
-        if (other.name == "GrassCube")
+        if (other.name == "WaterCube")
         {
-            if (timeActive < other.GetComponent<GrassCubeScript>().timeActive)
+            if (timeActive < other.GetComponent<WaterCubeScript>().timeActive)
             {
                 Destroy(other.gameObject);
             }
         }
-        
+
+        if (other.name == "GrassCube")
+        {
+            if (other.GetComponent<GrassCubeScript>().timeActive > timeActive)
+            {
+                Destroy(other.gameObject);
+            }
+            else
+            {
+                Destroy(this.gameObject);
+            }
+        }
     }
 }
