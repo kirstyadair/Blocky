@@ -6,7 +6,7 @@ public class WoodCubeScript : MonoBehaviour
 {
     public GameObject grassPrefab;
     public GameObject burningWoodPrefab;
-    public float timeActive = 0.0f;
+    public double timeActive = 0.0f;
 
 
 
@@ -49,7 +49,7 @@ public class WoodCubeScript : MonoBehaviour
         
         if (other.name == "FireCube")
         {
-            Debug.Log("DestroyingFire");
+
             Vector3 position = transform.position;
             // Destroy the fire cube
             Destroy(other.gameObject);

@@ -5,7 +5,7 @@ using UnityEngine;
 public class FireCubeScript : MonoBehaviour
 {
     public GameObject grassPrefab;
-    public float timeActive = 0.0f;
+    public double timeActive = 0.0f;
 
 
 
@@ -53,6 +53,8 @@ public class FireCubeScript : MonoBehaviour
                 Destroy(other.gameObject);
             }
         }
+
+        
 
     }
 }

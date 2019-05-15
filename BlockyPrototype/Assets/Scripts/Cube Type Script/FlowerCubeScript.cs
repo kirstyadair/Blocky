@@ -2,38 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BurningCubeScript : MonoBehaviour
+public class FlowerCubeScript : MonoBehaviour
 {
-    Animator anim;
-    public GameObject grassPrefab;
     public double timeActive = 0.0f;
-
-
-
+    public GameObject grassPrefab;
 
     // Start is called before the first frame update
     void Start()
     {
-        anim = GetComponent<Animator>();
-        gameObject.name = "BurningCube";
+        gameObject.name = "FlowerCube";
     }
-
-
-
 
     // Update is called once per frame
     void Update()
     {
         timeActive += Time.deltaTime;
-
         if (transform.position.y != -0.8799995f)
         {
             transform.position = new Vector3(transform.position.x, -0.8799995f, transform.position.z);
         }
     }
-
-
-
 
     void OnTriggerEnter(Collider other)
     {
@@ -47,18 +35,12 @@ public class BurningCubeScript : MonoBehaviour
             }
         }
 
-        if (other.name == "FireCube" && other.GetComponent<FireCubeScript>().timeActive < timeActive)
+        if (other.name == "FlowerCube")
         {
-            Destroy(other.gameObject);
-        }
-
-        if (other.name == "WoodCube")
-        {
-            if (timeActive < other.GetComponent<WoodCubeScript>().timeActive)
+            if (timeActive < other.GetComponent<FlowerCubeScript>().timeActive)
             {
                 Destroy(other.gameObject);
             }
         }
-
     }
 }

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public enum CubeType
 {
-    WATER, GRASS, STONE, WOOD, FIRE
+    WATER, GRASS, STONE, WOOD, FIRE, PAVING, FLOWER
 }
 
 
@@ -46,6 +46,8 @@ public class PlayerScript : MonoBehaviour
     public GameObject grassPrefab;
     public GameObject woodPrefab;
     public GameObject firePrefab;
+    public GameObject pavingPrefab;
+    public GameObject flowerPrefab;
     GameObject currentCubePrefab;
 
 
@@ -82,6 +84,14 @@ public class PlayerScript : MonoBehaviour
         else if (cubeType == CubeType.FIRE)
         {
             currentCubePrefab = firePrefab;
+        }
+        else if (cubeType == CubeType.PAVING)
+        {
+            currentCubePrefab = pavingPrefab;
+        }
+        else if (cubeType == CubeType.FLOWER)
+        {
+            currentCubePrefab = flowerPrefab;
         }
 
         if (chosenRequirements)
@@ -195,6 +205,27 @@ public class PlayerScript : MonoBehaviour
                     }
                 }
                 
+            }
+
+            if (Input.GetButton("Fire2"))
+            {
+                if (editView == EditingView.GROUND)
+                {
+                    Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+                    RaycastHit hit;
+                    if (Physics.Raycast(ray, out hit))
+                    {
+                        if (hit.collider.gameObject.tag == "Floor" && hit.collider.gameObject.name != "BlackFloorCube")
+                        {
+                            Vector3 position = hit.collider.transform.position;
+                            Destroy(hit.collider.gameObject);
+                            GameObject newCube = Instantiate(grassPrefab, position, Quaternion.identity);
+                            newCube.tag = "Floor";
+                        }
+                    }
+                }
+
             }
 
 
@@ -372,28 +403,27 @@ public class PlayerScript : MonoBehaviour
     IEnumerator SpawnInCube(RaycastHit hit)
     {
         Vector3 cubePos = hit.collider.gameObject.transform.position;
-        if (cubeType != CubeType.WOOD && cubeType != CubeType.FIRE)
+        if (cubeType != CubeType.WOOD && cubeType != CubeType.FIRE && cubeType!= CubeType.FLOWER)
         {
-            Destroy(hit.collider.gameObject);
+            //hit.collider.gameObject.SetActive(false);
             if (cubeType != CubeType.GRASS)
             {
                 yield return new WaitForSeconds(0.1f);
             }
             GameObject newCube = Instantiate(currentCubePrefab, cubePos, Quaternion.identity);
             newCube.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
-            if (currentCubePrefab == waterCubePrefab)
-            {
-                newCube.name = "WaterCube";
-            }
             newCube.tag = "Floor";
+            //Destroy(hit.collider.gameObject);
         }
 
-        if (cubeType == CubeType.WOOD || cubeType == CubeType.FIRE)
+        if (cubeType == CubeType.WOOD || cubeType == CubeType.FIRE || cubeType == CubeType.FLOWER)
         {
+            //hit.collider.gameObject.SetActive(false);
             yield return new WaitForSeconds(0.1f);
             GameObject newCube = Instantiate(currentCubePrefab, new Vector3(cubePos.x, -0.8799995f, cubePos.z), Quaternion.identity);
             newCube.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
             newCube.tag = "Floor";
+            //Destroy(hit.collider.gameObject);
         }
     }
 }

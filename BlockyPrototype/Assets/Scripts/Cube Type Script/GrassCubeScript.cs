@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GrassCubeScript : MonoBehaviour
 {
-    public float timeActive = 0.0f;
+    public double timeActive = 0.0f;
     public bool isBlackCube;
 
 

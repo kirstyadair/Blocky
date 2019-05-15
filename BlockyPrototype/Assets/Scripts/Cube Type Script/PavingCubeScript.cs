@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WaterCubeScript : MonoBehaviour
+public class PavingCubeScript : MonoBehaviour
 {
     public double timeActive = 0.0f;
 
@@ -12,7 +12,8 @@ public class WaterCubeScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gameObject.name = "WaterCube";
+        gameObject.name = "PavingCube";
+        //gameObject.tag = "Floor";
     }
 
 
@@ -33,9 +34,10 @@ public class WaterCubeScript : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.name == "WaterCube")
+        if (other.name == "PavingCube")
         {
-            if (timeActive < other.GetComponent<WaterCubeScript>().timeActive)
+            Debug.Log("Destroying paving");
+            if (timeActive < other.GetComponent<PavingCubeScript>().timeActive)
             {
                 Destroy(other.gameObject);
             }
@@ -43,8 +45,12 @@ public class WaterCubeScript : MonoBehaviour
 
         if (other.name == "GrassCube")
         {
+            Debug.Log("Grass Hit");
+            // if the grass cube is older than this cube
             if (other.GetComponent<GrassCubeScript>().timeActive > timeActive)
             {
+                // destroy the grass
+                Debug.Log("Destroying grass");
                 Destroy(other.gameObject);
             }
             else
