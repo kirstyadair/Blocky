@@ -38,6 +38,11 @@ public class WaterCubeScript : MonoBehaviour
     {
         if (other.name == "WaterCube")
         {
+            if (other.GetComponent<WaterCubeScript>().timeActive == timeActive)
+            {
+                other.GetComponent<WaterCubeScript>().timeActive += 0.01f;
+            }
+
             if (timeActive < other.GetComponent<WaterCubeScript>().timeActive)
             {
                 Destroy(other.gameObject);

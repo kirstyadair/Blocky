@@ -44,6 +44,11 @@ public class GrassCubeScript : MonoBehaviour
     {
         if (other.name == "GrassCube")
         {
+            if (other.GetComponent<GrassCubeScript>().timeActive == timeActive)
+            {
+                other.GetComponent<GrassCubeScript>().timeActive += 0.01f;
+            }
+
             if (timeActive < other.GetComponent<GrassCubeScript>().timeActive)
             {
                 Destroy(other.gameObject);

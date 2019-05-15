@@ -20,7 +20,7 @@ public class FloorCubeScript : MonoBehaviour
 
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         rb.MovePosition(transform.position - new Vector3(0, 0.01f, 0));
     }

@@ -58,6 +58,11 @@ public class FlowerCubeScript : MonoBehaviour
 
         if (other.name == "FlowerCube")
         {
+            if (other.GetComponent<FlowerCubeScript>().timeActive == timeActive)
+            {
+                other.GetComponent<FlowerCubeScript>().timeActive += 0.01f;
+            }
+
             if (timeActive < other.GetComponent<FlowerCubeScript>().timeActive)
             {
                 Destroy(other.gameObject);

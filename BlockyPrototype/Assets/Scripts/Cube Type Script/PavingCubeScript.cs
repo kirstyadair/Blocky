@@ -37,6 +37,11 @@ public class PavingCubeScript : MonoBehaviour
     {
         if (other.name == "PavingCube")
         {
+            if (other.GetComponent<PavingCubeScript>().timeActive == timeActive)
+            {
+                other.GetComponent<PavingCubeScript>().timeActive += 0.01f;
+            }
+
             if (timeActive < other.GetComponent<PavingCubeScript>().timeActive)
             {
                 Destroy(other.gameObject);
