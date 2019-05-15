@@ -25,13 +25,34 @@ public class FlowerCubeScript : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.bounds.center.y < gameObject.GetComponent<Collider>().bounds.center.y)
+        if (other.name == "WaterCube")
         {
-            if (other.name == "WaterCube")
+            Vector3 position = other.transform.position;
+            Destroy(other.gameObject);
+            GameObject newCube = Instantiate(grassPrefab, position, Quaternion.identity);
+        }
+
+        if (other.name == "FireCube")
+        {
+            if (timeActive < other.GetComponent<FireCubeScript>().timeActive)
             {
-                Vector3 position = other.transform.position;
                 Destroy(other.gameObject);
-                GameObject newCube = Instantiate(grassPrefab, position, Quaternion.identity);
+            }
+        }
+
+        if (other.name == "WoodCube")
+        {
+            if (timeActive < other.GetComponent<WoodCubeScript>().timeActive)
+            {
+                Destroy(other.gameObject);
+            }
+        }
+
+        if (other.name == "BurningCube")
+        {
+            if (timeActive < other.GetComponent<BurningCubeScript>().timeActive)
+            {
+                Destroy(other.gameObject);
             }
         }
 

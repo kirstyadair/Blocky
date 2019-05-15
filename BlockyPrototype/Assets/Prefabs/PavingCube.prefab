@@ -629,6 +629,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeActive: 0
+  grassPrefab: {fileID: 3014774579378426385, guid: 9af2a9c1228060c49bce3f842264e516,
+    type: 3}
 --- !u!1 &3488412395785435976
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,6 +5,7 @@ using UnityEngine;
 public class PavingCubeScript : MonoBehaviour
 {
     public double timeActive = 0.0f;
+    public GameObject grassPrefab;
 
 
 
@@ -36,7 +37,6 @@ public class PavingCubeScript : MonoBehaviour
     {
         if (other.name == "PavingCube")
         {
-            Debug.Log("Destroying paving");
             if (timeActive < other.GetComponent<PavingCubeScript>().timeActive)
             {
                 Destroy(other.gameObject);
@@ -45,18 +45,31 @@ public class PavingCubeScript : MonoBehaviour
 
         if (other.name == "GrassCube")
         {
-            Debug.Log("Grass Hit");
             // if the grass cube is older than this cube
             if (other.GetComponent<GrassCubeScript>().timeActive > timeActive)
             {
                 // destroy the grass
-                Debug.Log("Destroying grass");
                 Destroy(other.gameObject);
             }
             else
             {
                 Destroy(this.gameObject);
             }
+        }
+
+        if (other.name == "WaterCube")
+        {
+            if (timeActive < other.GetComponent<WaterCubeScript>().timeActive)
+            {
+                Destroy(other.gameObject);
+            }
+        }
+
+        if (other.name == "FireCube" || other.name == "FlowerCube")
+        {
+            Vector3 position = this.transform.position;
+            GameObject newCube = Instantiate(grassPrefab, position, Quaternion.identity);
+            Destroy(this.gameObject);
         }
     }
 }

@@ -5,6 +5,7 @@ using UnityEngine;
 public class WaterCubeScript : MonoBehaviour
 {
     public double timeActive = 0.0f;
+    public GameObject grassPrefab;
 
 
 
@@ -13,6 +14,7 @@ public class WaterCubeScript : MonoBehaviour
     void Start()
     {
         gameObject.name = "WaterCube";
+        gameObject.tag = "Floor";
     }
 
 
@@ -22,6 +24,7 @@ public class WaterCubeScript : MonoBehaviour
     void Update()
     {
         timeActive += Time.deltaTime;
+
         if (transform.position.y > -0.95f)
         {
             transform.position = new Vector3(transform.position.x, -0.9599f, transform.position.z);
@@ -50,6 +53,21 @@ public class WaterCubeScript : MonoBehaviour
             else
             {
                 Destroy(this.gameObject);
+            }
+        }
+
+        if (other.name == "FireCube" || other.name == "WoodCube" || other.name == "FlowerCube" || other.name == "BurningCube")
+        {
+            Vector3 position = this.transform.position;
+            GameObject newCube = Instantiate(grassPrefab, position, Quaternion.identity);
+            Destroy(this.gameObject);
+        }
+
+        if (other.name == "PavingCube")
+        {
+            if (timeActive < other.GetComponent<PavingCubeScript>().timeActive)
+            {
+                Destroy(other.gameObject);
             }
         }
     }

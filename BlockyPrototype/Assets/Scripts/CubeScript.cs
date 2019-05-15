@@ -17,8 +17,11 @@ public class CubeScript : MonoBehaviour
         GetComponent<Renderer>().material.color = new Color(1 / 255, 1 / 255, 1 / 255, 0.4f);
     }
 
+
+
+
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         rb.MovePosition(transform.position - new Vector3(0, 0.01f, 0));
         
