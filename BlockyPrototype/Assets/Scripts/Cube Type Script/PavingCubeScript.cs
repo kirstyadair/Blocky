@@ -14,7 +14,7 @@ public class PavingCubeScript : MonoBehaviour
     void Start()
     {
         gameObject.name = "PavingCube";
-        //gameObject.tag = "Floor";
+        GameObject.Find("AudioObject").GetComponent<AudioManager>().PlayCubeSpawn(CubeType.PAVING);
     }
 
 

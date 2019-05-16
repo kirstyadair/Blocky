@@ -8,6 +8,7 @@ public class CubeScript : MonoBehaviour
 {
     public string cubeTag;
     public bool cubeOnFloor = false;
+    PlayerScript playerScript;
     Rigidbody rb;
 
     // Start is called before the first frame update
@@ -15,6 +16,7 @@ public class CubeScript : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         GetComponent<Renderer>().material.color = new Color(1 / 255, 1 / 255, 1 / 255, 0.4f);
+        playerScript = GameObject.Find("PlayerObject").GetComponent<PlayerScript>();
     }
 
 
@@ -25,6 +27,12 @@ public class CubeScript : MonoBehaviour
     {
         rb.MovePosition(transform.position - new Vector3(0, 0.01f, 0));
         
+        if (playerScript.editView != EditingView.EXTERIOR)
+        {
+            Color colour = GetComponent<Renderer>().material.color;
+            colour.a = 1;
+            GetComponent<Renderer>().material.color = colour;
+        }
     }
 
 

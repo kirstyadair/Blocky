@@ -7,11 +7,18 @@ public class FlowerCubeScript : MonoBehaviour
     public double timeActive = 0.0f;
     public GameObject grassPrefab;
 
+
+
+
     // Start is called before the first frame update
     void Start()
     {
         gameObject.name = "FlowerCube";
+        GameObject.Find("AudioObject").GetComponent<AudioManager>().PlayCubeSpawn(CubeType.FLOWER);
     }
+
+
+
 
     // Update is called once per frame
     void Update()
@@ -22,6 +29,9 @@ public class FlowerCubeScript : MonoBehaviour
             transform.position = new Vector3(transform.position.x, -0.8799995f, transform.position.z);
         }
     }
+
+
+
 
     void OnTriggerEnter(Collider other)
     {

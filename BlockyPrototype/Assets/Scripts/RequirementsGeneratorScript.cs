@@ -13,10 +13,12 @@ public class RequirementsGeneratorScript : MonoBehaviour
     public GameObject chooseRequirementsPanel;
     public GameObject requirementsPanel;
     public GameObject cubePrefab;
+    public GameObject loadingPanel;
     public Text requiredFloorsText;
     public Text randomFeatureText;
     public Text floorsText;
     public Text featureText;
+    public Text percentageText;
     public string[] features;
     public string feature;
     public int requiredFloors;
@@ -30,6 +32,7 @@ public class RequirementsGeneratorScript : MonoBehaviour
     public List<GameObject> allCubes;
     
     bool requirementsSaved = false;
+    float percentageLoaded = 0;
     
 
 
@@ -37,6 +40,7 @@ public class RequirementsGeneratorScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        loadingPanel.SetActive(false);
         playerScript.chosenRequirements = false;
         chooseReqAnim.SetBool("panelSlide", false);
         savedReqAnim.SetBool("slideIn", false);
@@ -49,7 +53,8 @@ public class RequirementsGeneratorScript : MonoBehaviour
 
     void Update()
     {
-        
+        percentageLoaded = allCubes.Count / 4;
+        percentageText.text = percentageLoaded.ToString() + "%";
     }
 
 
@@ -87,6 +92,7 @@ public class RequirementsGeneratorScript : MonoBehaviour
 
     IEnumerator SpawnRoom()
     {
+        loadingPanel.SetActive(true);
         canSelectWalls = false;
 
         for (int j = 0; j < 10; j++)
@@ -94,6 +100,10 @@ public class RequirementsGeneratorScript : MonoBehaviour
             // Spawn the back wall of cubes
             for (int i = 0; i < 10; i++)
             {
+                //if (i == 0)
+                //{
+                    GameObject.Find("AudioObject").GetComponent<AudioManager>().VaryPitch();
+                //}
                 GameObject spawnedCube = Instantiate(cubePrefab, transform.position, Quaternion.identity);
                 spawnedCube.tag = "BackWall";
                 allCubes.Add(spawnedCube);
@@ -105,6 +115,10 @@ public class RequirementsGeneratorScript : MonoBehaviour
             // Spawn the right wall of cubes
             for (int i = 0; i < 10; i++)
             {
+                //if (i == 2)
+                //{
+                    GameObject.Find("AudioObject").GetComponent<AudioManager>().VaryPitch();
+                //}
                 GameObject spawnedCube = Instantiate(cubePrefab, transform.position, Quaternion.identity);
                 spawnedCube.tag = "RightWall";
                 allCubes.Add(spawnedCube);
@@ -116,6 +130,10 @@ public class RequirementsGeneratorScript : MonoBehaviour
             // Spawn the front wall of cubes
             for (int i = 0; i < 10; i++)
             {
+                //if (i == 4)
+                //{
+                    GameObject.Find("AudioObject").GetComponent<AudioManager>().VaryPitch();
+                //}
                 GameObject spawnedCube = Instantiate(cubePrefab, transform.position, Quaternion.identity);
                 spawnedCube.tag = "FrontWall";
                 allCubes.Add(spawnedCube);
@@ -127,6 +145,11 @@ public class RequirementsGeneratorScript : MonoBehaviour
             // Spawn the left wall of cubes
             for (int i = 0; i < 10; i++)
             {
+                //if (i == 6)
+                //{
+                    GameObject.Find("AudioObject").GetComponent<AudioManager>().VaryPitch();
+                //}
+                
                 GameObject spawnedCube = Instantiate(cubePrefab, transform.position, Quaternion.identity);
                 spawnedCube.tag = "LeftWall";
                 allCubes.Add(spawnedCube);
@@ -137,5 +160,6 @@ public class RequirementsGeneratorScript : MonoBehaviour
         }
         
         canSelectWalls = true;
+        loadingPanel.SetActive(false);
     }
 }

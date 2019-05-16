@@ -15,6 +15,7 @@ public class FireCubeScript : MonoBehaviour
     void Start()
     {
         gameObject.name = "FireCube";
+        GameObject.Find("AudioObject").GetComponent<AudioManager>().PlayCubeSpawn(CubeType.FIRE);
     }
 
 

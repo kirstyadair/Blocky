@@ -15,6 +15,7 @@ public class WaterCubeScript : MonoBehaviour
     {
         gameObject.name = "WaterCube";
         gameObject.tag = "Floor";
+        GameObject.Find("AudioObject").GetComponent<AudioManager>().PlayCubeSpawn(CubeType.WATER);
     }
 
 

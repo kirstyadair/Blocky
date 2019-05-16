@@ -15,6 +15,7 @@ public class WoodCubeScript : MonoBehaviour
     void Start()
     {
         gameObject.name = "WoodCube";
+        GameObject.Find("AudioObject").GetComponent<AudioManager>().PlayCubeSpawn(CubeType.WOOD);
     }
 
 

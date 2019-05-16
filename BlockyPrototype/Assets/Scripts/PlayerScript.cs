@@ -94,7 +94,7 @@ public class PlayerScript : MonoBehaviour
             currentCubePrefab = flowerPrefab;
         }
 
-        if (chosenRequirements)
+        if (chosenRequirements && reqGenScript.canSelectWalls)
         {
             if (Input.GetButtonDown("Fire1"))
             {
