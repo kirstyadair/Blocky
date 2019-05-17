@@ -162,4 +162,28 @@ public class RequirementsGeneratorScript : MonoBehaviour
         canSelectWalls = true;
         loadingPanel.SetActive(false);
     }
+
+
+
+    public void FillWall()
+    {
+        GridScript gridScript = GameObject.Find("Canvas").GetComponent<GridScript>();
+        foreach (GameObject cube in allCubes)
+        {
+            if (cube.gameObject.tag == playerScript.selectedWallTag)
+            {
+                Color colour = gridScript.selectedColour;
+                Debug.Log(colour);
+                cube.GetComponent<Renderer>().material.color = colour;
+                foreach (Transform cell in gridScript.gridCells)
+                {
+                    if ("cube" + cell.gameObject.name == cube.gameObject.name)
+                    {
+                        cell.GetComponent<Image>().color = gridScript.selectedColour;
+                    }
+                }
+            }
+        }
+        
+    }
 }

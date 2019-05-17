@@ -9,6 +9,7 @@ public class CubeScript : MonoBehaviour
     public string cubeTag;
     public bool cubeOnFloor = false;
     PlayerScript playerScript;
+    GridScript gridScript;
     Rigidbody rb;
 
     // Start is called before the first frame update
@@ -17,6 +18,7 @@ public class CubeScript : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         GetComponent<Renderer>().material.color = new Color(1 / 255, 1 / 255, 1 / 255, 0.4f);
         playerScript = GameObject.Find("PlayerObject").GetComponent<PlayerScript>();
+        gridScript = GameObject.Find("Canvas").GetComponent<GridScript>();
     }
 
 
@@ -33,6 +35,13 @@ public class CubeScript : MonoBehaviour
             colour.a = 1;
             GetComponent<Renderer>().material.color = colour;
         }
+    }
+
+
+
+    void Update()
+    {
+        
     }
 
 
@@ -55,5 +64,16 @@ public class CubeScript : MonoBehaviour
             }
         }
     }
+
+
+
+    /*public void Fill()
+    {
+        if (GetComponent<Renderer>().material.color.a == 0.2f)
+        {
+            Color colour = gridScript.selectedColour;
+            GetComponent<Renderer>().material.color = colour;
+        }
+    }*/
     
 }
