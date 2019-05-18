@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public enum CubeType
 {
-    WATER, GRASS, STONE, WOOD, FIRE, PAVING, FLOWER
+    WATER, GRASS, WOOD, FIRE, PAVING, FLOWER, SAND
 }
 
 
@@ -48,6 +48,7 @@ public class PlayerScript : MonoBehaviour
     public GameObject firePrefab;
     public GameObject pavingPrefab;
     public GameObject flowerPrefab;
+    public GameObject sandPrefab;
     GameObject currentCubePrefab;
 
 
@@ -92,6 +93,10 @@ public class PlayerScript : MonoBehaviour
         else if (cubeType == CubeType.FLOWER)
         {
             currentCubePrefab = flowerPrefab;
+        }
+        else if (cubeType == CubeType.SAND)
+        {
+            currentCubePrefab = sandPrefab;
         }
 
         if (chosenRequirements && reqGenScript.canSelectWalls)
@@ -405,7 +410,6 @@ public class PlayerScript : MonoBehaviour
         Vector3 cubePos = hit.collider.gameObject.transform.position;
         if (cubeType != CubeType.WOOD && cubeType != CubeType.FIRE && cubeType!= CubeType.FLOWER)
         {
-            //hit.collider.gameObject.SetActive(false);
             if (cubeType != CubeType.GRASS)
             {
                 yield return new WaitForSeconds(0.1f);
@@ -413,17 +417,14 @@ public class PlayerScript : MonoBehaviour
             GameObject newCube = Instantiate(currentCubePrefab, cubePos, Quaternion.identity);
             newCube.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
             newCube.tag = "Floor";
-            //Destroy(hit.collider.gameObject);
         }
 
         if (cubeType == CubeType.WOOD || cubeType == CubeType.FIRE || cubeType == CubeType.FLOWER)
         {
-            //hit.collider.gameObject.SetActive(false);
             yield return new WaitForSeconds(0.1f);
             GameObject newCube = Instantiate(currentCubePrefab, new Vector3(cubePos.x, -0.8799995f, cubePos.z), Quaternion.identity);
             newCube.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
             newCube.tag = "Floor";
-            //Destroy(hit.collider.gameObject);
         }
     }
 }

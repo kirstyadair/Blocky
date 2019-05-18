@@ -62,6 +62,14 @@ public class WaterCubeScript : MonoBehaviour
             }
         }
 
+        if (other.name == "SandCube")
+        {
+            if (other.GetComponent<SandCubeScript>().timeActive > timeActive)
+            {
+                Destroy(other.gameObject);
+            }
+        }
+
         if (other.name == "FireCube" || other.name == "WoodCube" || other.name == "FlowerCube" || other.name == "BurningCube")
         {
             Vector3 position = this.transform.position;

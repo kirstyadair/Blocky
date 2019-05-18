@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PavingCubeScript : MonoBehaviour
+public class SandCubeScript : MonoBehaviour
 {
     public double timeActive = 0.0f;
     public GameObject grassPrefab;
@@ -13,8 +13,8 @@ public class PavingCubeScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gameObject.name = "PavingCube";
-        GameObject.Find("AudioObject").GetComponent<AudioManager>().PlayCubeSpawn(CubeType.PAVING);
+        gameObject.name = "SandCube";
+        //GameObject.Find("AudioObject").GetComponent<AudioManager>().PlayCubeSpawn(CubeType.SAND);
     }
 
 
@@ -35,14 +35,14 @@ public class PavingCubeScript : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.name == "PavingCube")
+        if (other.name == "SandCube")
         {
-            if (other.GetComponent<PavingCubeScript>().timeActive == timeActive)
+            if (other.GetComponent<SandCubeScript>().timeActive == timeActive)
             {
-                other.GetComponent<PavingCubeScript>().timeActive += 0.01f;
+                other.GetComponent<SandCubeScript>().timeActive += 0.01f;
             }
 
-            if (timeActive < other.GetComponent<PavingCubeScript>().timeActive)
+            if (timeActive < other.GetComponent<SandCubeScript>().timeActive)
             {
                 Destroy(other.gameObject);
             }
@@ -50,15 +50,21 @@ public class PavingCubeScript : MonoBehaviour
 
         if (other.name == "GrassCube")
         {
-            // if the grass cube is older than this cube
             if (other.GetComponent<GrassCubeScript>().timeActive > timeActive)
             {
-                // destroy the grass
                 Destroy(other.gameObject);
             }
             else
             {
                 Destroy(this.gameObject);
+            }
+        }
+
+        if (other.name == "PavingCube")
+        {
+            if (other.GetComponent<PavingCubeScript>().timeActive > timeActive)
+            {
+                Destroy(other.gameObject);
             }
         }
 
@@ -75,14 +81,6 @@ public class PavingCubeScript : MonoBehaviour
             Vector3 position = this.transform.position;
             GameObject newCube = Instantiate(grassPrefab, position, Quaternion.identity);
             Destroy(this.gameObject);
-        }
-
-        if (other.name == "SandCube")
-        {
-            if (other.GetComponent<SandCubeScript>().timeActive > timeActive)
-            {
-                Destroy(other.gameObject);
-            }
         }
     }
 }
