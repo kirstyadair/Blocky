@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public enum CubeType
 {
-    WATER, GRASS, WOOD, FIRE, PAVING, FLOWER, SAND
+    WATER, GRASS, WOOD, FIRE, PAVING, FLOWER, SAND, STONE
 }
 
 
@@ -49,6 +49,7 @@ public class PlayerScript : MonoBehaviour
     public GameObject pavingPrefab;
     public GameObject flowerPrefab;
     public GameObject sandPrefab;
+    public GameObject stonePrefab;
     GameObject currentCubePrefab;
 
 
@@ -97,6 +98,10 @@ public class PlayerScript : MonoBehaviour
         else if (cubeType == CubeType.SAND)
         {
             currentCubePrefab = sandPrefab;
+        }
+        else if (cubeType == CubeType.STONE)
+        {
+            currentCubePrefab = stonePrefab;
         }
 
         if (chosenRequirements && reqGenScript.canSelectWalls)
@@ -408,7 +413,7 @@ public class PlayerScript : MonoBehaviour
     IEnumerator SpawnInCube(RaycastHit hit)
     {
         Vector3 cubePos = hit.collider.gameObject.transform.position;
-        if (cubeType != CubeType.WOOD && cubeType != CubeType.FIRE && cubeType!= CubeType.FLOWER)
+        if (cubeType != CubeType.WOOD && cubeType != CubeType.FIRE && cubeType!= CubeType.FLOWER  && cubeType != CubeType.STONE)
         {
             if (cubeType != CubeType.GRASS)
             {
@@ -419,7 +424,7 @@ public class PlayerScript : MonoBehaviour
             newCube.tag = "Floor";
         }
 
-        if (cubeType == CubeType.WOOD || cubeType == CubeType.FIRE || cubeType == CubeType.FLOWER)
+        if (cubeType == CubeType.WOOD || cubeType == CubeType.FIRE || cubeType == CubeType.FLOWER || cubeType == CubeType.STONE)
         {
             yield return new WaitForSeconds(0.1f);
             GameObject newCube = Instantiate(currentCubePrefab, new Vector3(cubePos.x, -0.8799995f, cubePos.z), Quaternion.identity);

@@ -196,6 +196,11 @@ public class GridScript : MonoBehaviour
                         playerScript.cubeType = CubeType.SAND;
                         StartCoroutine(Pulse(result.gameObject));
                     }
+                    if (result.gameObject.name == "StoneTile")
+                    {
+                        playerScript.cubeType = CubeType.STONE;
+                        StartCoroutine(Pulse(result.gameObject));
+                    }
                 }
             }
         }

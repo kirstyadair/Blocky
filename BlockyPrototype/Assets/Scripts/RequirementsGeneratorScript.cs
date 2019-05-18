@@ -100,10 +100,8 @@ public class RequirementsGeneratorScript : MonoBehaviour
             // Spawn the back wall of cubes
             for (int i = 0; i < 10; i++)
             {
-                //if (i == 0)
-                //{
-                    GameObject.Find("AudioObject").GetComponent<AudioManager>().VaryPitch();
-                //}
+                GameObject.Find("AudioObject").GetComponent<AudioManager>().VaryPitch();
+
                 GameObject spawnedCube = Instantiate(cubePrefab, transform.position, Quaternion.identity);
                 spawnedCube.tag = "BackWall";
                 allCubes.Add(spawnedCube);
@@ -115,10 +113,8 @@ public class RequirementsGeneratorScript : MonoBehaviour
             // Spawn the right wall of cubes
             for (int i = 0; i < 10; i++)
             {
-                //if (i == 2)
-                //{
-                    GameObject.Find("AudioObject").GetComponent<AudioManager>().VaryPitch();
-                //}
+                GameObject.Find("AudioObject").GetComponent<AudioManager>().VaryPitch();
+
                 GameObject spawnedCube = Instantiate(cubePrefab, transform.position, Quaternion.identity);
                 spawnedCube.tag = "RightWall";
                 allCubes.Add(spawnedCube);
@@ -130,10 +126,8 @@ public class RequirementsGeneratorScript : MonoBehaviour
             // Spawn the front wall of cubes
             for (int i = 0; i < 10; i++)
             {
-                //if (i == 4)
-                //{
-                    GameObject.Find("AudioObject").GetComponent<AudioManager>().VaryPitch();
-                //}
+                GameObject.Find("AudioObject").GetComponent<AudioManager>().VaryPitch();
+
                 GameObject spawnedCube = Instantiate(cubePrefab, transform.position, Quaternion.identity);
                 spawnedCube.tag = "FrontWall";
                 allCubes.Add(spawnedCube);
@@ -145,11 +139,8 @@ public class RequirementsGeneratorScript : MonoBehaviour
             // Spawn the left wall of cubes
             for (int i = 0; i < 10; i++)
             {
-                //if (i == 6)
-                //{
-                    GameObject.Find("AudioObject").GetComponent<AudioManager>().VaryPitch();
-                //}
-                
+                GameObject.Find("AudioObject").GetComponent<AudioManager>().VaryPitch();
+
                 GameObject spawnedCube = Instantiate(cubePrefab, transform.position, Quaternion.identity);
                 spawnedCube.tag = "LeftWall";
                 allCubes.Add(spawnedCube);
@@ -173,7 +164,7 @@ public class RequirementsGeneratorScript : MonoBehaviour
             if (cube.gameObject.tag == playerScript.selectedWallTag)
             {
                 Color colour = gridScript.selectedColour;
-                Debug.Log(colour);
+                
                 cube.GetComponent<Renderer>().material.color = colour;
                 foreach (Transform cell in gridScript.gridCells)
                 {
