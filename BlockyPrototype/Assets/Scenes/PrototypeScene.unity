@@ -21239,7 +21239,8 @@ MonoBehaviour:
     type: 3}
   fencePrefab: {fileID: 7033973679645492213, guid: 902fdb0ee031f69419180caaabd170ff,
     type: 3}
-  fenceCornerPrefab: {fileID: 0}
+  fenceCornerPrefab: {fileID: 7046544673806779891, guid: 98eb2a3ab30d3014cb0e292c6b303e0f,
+    type: 3}
 --- !u!4 &1930385434
 Transform:
   m_ObjectHideFlags: 0
@@ -22406,7 +22407,7 @@ GameObject:
   - component: {fileID: 2035555041}
   - component: {fileID: 2035555040}
   m_Layer: 5
-  m_Name: FenceCorner
+  m_Name: FenceCornerTile
   m_TagString: FloorTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
