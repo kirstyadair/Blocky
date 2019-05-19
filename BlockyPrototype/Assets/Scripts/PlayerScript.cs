@@ -6,7 +6,17 @@ using UnityEngine.UI;
 
 public enum CubeType
 {
-    WATER, GRASS, WOOD, FIRE, PAVING, FLOWER, SAND, STONE
+    WATER,
+    GRASS,
+    WOOD,
+    FIRE,
+    PAVING,
+    FLOWER,
+    SAND,
+    STONE,
+    DIRT,
+    FENCE,
+    FENCECORNER
 }
 
 
@@ -39,6 +49,7 @@ public class PlayerScript : MonoBehaviour
     public GridScript gridScript;
 
     bool wallSelected;
+    int woodRotation;
     Color blankColor;
 
     [Header("Prefabs")]
@@ -50,6 +61,9 @@ public class PlayerScript : MonoBehaviour
     public GameObject flowerPrefab;
     public GameObject sandPrefab;
     public GameObject stonePrefab;
+    public GameObject dirtPrefab;
+    public GameObject fencePrefab;
+    public GameObject fenceCornerPrefab;
     GameObject currentCubePrefab;
 
 
@@ -103,9 +117,31 @@ public class PlayerScript : MonoBehaviour
         {
             currentCubePrefab = stonePrefab;
         }
+        else if (cubeType == CubeType.DIRT)
+        {
+            currentCubePrefab = dirtPrefab;
+        }
+        else if (cubeType == CubeType.FENCE)
+        {
+            currentCubePrefab = fencePrefab;
+        }
+        else if (cubeType == CubeType.FENCECORNER)
+        {
+            currentCubePrefab = fenceCornerPrefab;
+        }
 
         if (chosenRequirements && reqGenScript.canSelectWalls)
         {
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                woodRotation += 90;
+                if (woodRotation == 360)
+                {
+                    woodRotation = 0;
+                }
+
+            }
+
             if (Input.GetButtonDown("Fire1"))
             {
                 Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -413,7 +449,7 @@ public class PlayerScript : MonoBehaviour
     IEnumerator SpawnInCube(RaycastHit hit)
     {
         Vector3 cubePos = hit.collider.gameObject.transform.position;
-        if (cubeType != CubeType.WOOD && cubeType != CubeType.FIRE && cubeType!= CubeType.FLOWER  && cubeType != CubeType.STONE)
+        if (cubeType != CubeType.WOOD && cubeType != CubeType.FIRE && cubeType!= CubeType.FLOWER  && cubeType != CubeType.STONE && cubeType != CubeType.FENCE && cubeType != CubeType.FENCECORNER)
         {
             if (cubeType != CubeType.GRASS)
             {
@@ -424,12 +460,25 @@ public class PlayerScript : MonoBehaviour
             newCube.tag = "Floor";
         }
 
-        if (cubeType == CubeType.WOOD || cubeType == CubeType.FIRE || cubeType == CubeType.FLOWER || cubeType == CubeType.STONE)
+        if (cubeType == CubeType.WOOD || cubeType == CubeType.FIRE || cubeType == CubeType.FLOWER || cubeType == CubeType.STONE || cubeType == CubeType.FENCE || cubeType == CubeType.FENCECORNER)
         {
             yield return new WaitForSeconds(0.1f);
-            GameObject newCube = Instantiate(currentCubePrefab, new Vector3(cubePos.x, -0.8799995f, cubePos.z), Quaternion.identity);
-            newCube.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
-            newCube.tag = "Floor";
+            if (cubeType == CubeType.FENCE || cubeType == CubeType.FENCECORNER)
+            {
+                GameObject newCube = Instantiate(currentCubePrefab, new Vector3(cubePos.x, -0.8799995f, cubePos.z), Quaternion.identity);
+                newCube.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+                Debug.Log(woodRotation);
+                newCube.transform.Rotate(transform.rotation.x, woodRotation, transform.rotation.z);
+                newCube.tag = "Floor";
+            }
+            else
+            {
+                GameObject newCube = Instantiate(currentCubePrefab, new Vector3(cubePos.x, -0.8799995f, cubePos.z), Quaternion.identity);
+                newCube.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+                newCube.tag = "Floor";
+            }
+            
+            
         }
     }
 }

@@ -27,7 +27,11 @@ public class CubeScript : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        rb.MovePosition(transform.position - new Vector3(0, 0.01f, 0));
+        if (!cubeOnFloor)
+        {
+            rb.MovePosition(transform.position - new Vector3(0, 0.01f, 0));
+        }
+        
         
         if (playerScript.editView != EditingView.EXTERIOR)
         {

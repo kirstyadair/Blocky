@@ -3,17 +3,31 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+public enum MenuOpen
+{
+    PATHS, WATER, NATURAL, PLANTS, FENCES, NONE
+}
+
 public class MenuScript : MonoBehaviour
 {
     // Variables
     public PlayerScript playerScript;
-    public GameObject terrainPanel;
-    public GameObject materialPanel;
+
+    public GameObject pathsPanel;
+    public GameObject waterPanel;
+    public GameObject naturalPanel;
+    public GameObject plantsPanel;
+    public GameObject fencesPanel;
+
     public GameObject backButton;
-    public GameObject terrainButton;
-    public GameObject materialButton;
+    public GameObject pathsButton;
+    public GameObject waterButton;
+    public GameObject naturalButton;
+    public GameObject fencesButton;
+    public GameObject plantsButton;
+
     public bool menuOpen = false;
-    public bool terrainPanelOpen = false;
+    public MenuOpen currentOpenMenu;
 
 
 
@@ -21,7 +35,7 @@ public class MenuScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        currentOpenMenu = MenuOpen.NONE;
     }
 
 
@@ -35,25 +49,49 @@ public class MenuScript : MonoBehaviour
             // if a button has not been selected
             if (!menuOpen)
             {
+                currentOpenMenu = MenuOpen.NONE;
                 backButton.SetActive(false);
-                terrainButton.SetActive(true);
-                materialButton.SetActive(true);
-                terrainPanel.SetActive(false);
-                materialPanel.SetActive(false);
+                pathsButton.SetActive(true);
+                waterButton.SetActive(true);
+                naturalButton.SetActive(true);
+                plantsButton.SetActive(true);
+                fencesButton.SetActive(true);
+
+                pathsPanel.SetActive(false);
+                waterPanel.SetActive(false);
+                naturalPanel.SetActive(false);
+                plantsPanel.SetActive(false);
+                fencesPanel.SetActive(false);
             }
             
             if (menuOpen)
             {
                 backButton.SetActive(true);
-                terrainButton.SetActive(false);
-                materialButton.SetActive(false);
-                if (terrainPanelOpen)
+                pathsButton.SetActive(false);
+                waterButton.SetActive(false);
+                naturalButton.SetActive(false);
+                plantsButton.SetActive(false);
+                fencesButton.SetActive(false);
+
+                if (currentOpenMenu == MenuOpen.PATHS)
                 {
-                    terrainPanel.SetActive(true);
+                    pathsPanel.SetActive(true);
+                }
+                else if (currentOpenMenu == MenuOpen.NATURAL)
+                {
+                    naturalPanel.SetActive(true);
+                }
+                else if (currentOpenMenu == MenuOpen.PLANTS)
+                {
+                    plantsPanel.SetActive(true);
+                }
+                else if (currentOpenMenu == MenuOpen.FENCES)
+                {
+                    fencesPanel.SetActive(true);
                 }
                 else
                 {
-                    materialPanel.SetActive(true);
+                    waterPanel.SetActive(true);
                 }
                 
             }
@@ -71,17 +109,41 @@ public class MenuScript : MonoBehaviour
 
 
 
-    public void TerrainButtonClicked()
+    public void PathsButtonClicked()
     {
-        terrainPanelOpen = true;
+        currentOpenMenu = MenuOpen.PATHS;
         menuOpen = true;
     }
 
 
 
-    public void MaterialButtonClicked()
+    public void WaterButtonClicked()
     {
-        terrainPanelOpen = false;
+        currentOpenMenu = MenuOpen.WATER;
+        menuOpen = true;
+    }
+
+
+
+    public void NaturalButtonClicked()
+    {
+        currentOpenMenu = MenuOpen.NATURAL;
+        menuOpen = true;
+    }
+
+
+
+    public void PlantsButtonClicked()
+    {
+        currentOpenMenu = MenuOpen.PLANTS;
+        menuOpen = true;
+    }
+
+
+
+    public void FencesButtonClicked()
+    {
+        currentOpenMenu = MenuOpen.FENCES;
         menuOpen = true;
     }
 }
