@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public enum MenuOpen
 {
-    PATHS, WATER, NATURAL, PLANTS, FENCES, NONE
+    PATHS, WATER, NATURAL, PLANTS, FENCES, LIGHTS, NONE
 }
 
 public class MenuScript : MonoBehaviour
@@ -18,6 +18,7 @@ public class MenuScript : MonoBehaviour
     public GameObject naturalPanel;
     public GameObject plantsPanel;
     public GameObject fencesPanel;
+    public GameObject lightsPanel;
 
     public GameObject backButton;
     public GameObject pathsButton;
@@ -25,6 +26,7 @@ public class MenuScript : MonoBehaviour
     public GameObject naturalButton;
     public GameObject fencesButton;
     public GameObject plantsButton;
+    public GameObject lightsButton;
 
     public bool menuOpen = false;
     public MenuOpen currentOpenMenu;
@@ -56,12 +58,14 @@ public class MenuScript : MonoBehaviour
                 naturalButton.SetActive(true);
                 plantsButton.SetActive(true);
                 fencesButton.SetActive(true);
+                lightsButton.SetActive(true);
 
                 pathsPanel.SetActive(false);
                 waterPanel.SetActive(false);
                 naturalPanel.SetActive(false);
                 plantsPanel.SetActive(false);
                 fencesPanel.SetActive(false);
+                lightsPanel.SetActive(false);
             }
             
             if (menuOpen)
@@ -72,6 +76,7 @@ public class MenuScript : MonoBehaviour
                 naturalButton.SetActive(false);
                 plantsButton.SetActive(false);
                 fencesButton.SetActive(false);
+                lightsButton.SetActive(false);
 
                 if (currentOpenMenu == MenuOpen.PATHS)
                 {
@@ -89,9 +94,13 @@ public class MenuScript : MonoBehaviour
                 {
                     fencesPanel.SetActive(true);
                 }
-                else
+                else if (currentOpenMenu == MenuOpen.WATER)
                 {
                     waterPanel.SetActive(true);
+                }
+                else
+                {
+                    lightsPanel.SetActive(true);
                 }
                 
             }
@@ -144,6 +153,14 @@ public class MenuScript : MonoBehaviour
     public void FencesButtonClicked()
     {
         currentOpenMenu = MenuOpen.FENCES;
+        menuOpen = true;
+    }
+
+
+
+    public void LightsButtonClicked()
+    {
+        currentOpenMenu = MenuOpen.LIGHTS;
         menuOpen = true;
     }
 }

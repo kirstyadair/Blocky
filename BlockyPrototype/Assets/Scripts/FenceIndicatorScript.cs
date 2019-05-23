@@ -35,12 +35,9 @@ public class FenceIndicatorScript : MonoBehaviour
     {
         if (menuScript.currentOpenMenu == MenuOpen.FENCES && playerScript.floorDrawingPanelAnim.GetBool("slideIn"))
         {
-            indicator.SetActive(true);
-            indicatorImage.enabled = false;
-
             if (playerScript.cubeType == CubeType.FENCE)
             {
-                indicatorImage.enabled = true;
+                indicator.SetActive(true);
                 if (woodRotation == 0 || woodRotation == 180)
                 {
                     indicatorImage.sprite = straight0;
@@ -52,7 +49,7 @@ public class FenceIndicatorScript : MonoBehaviour
             }
             else if (playerScript.cubeType == CubeType.FENCECORNER)
             {
-                indicatorImage.enabled = true;
+                indicator.SetActive(true);
                 if (woodRotation == 0)
                 {
                     indicatorImage.sprite = corner0;

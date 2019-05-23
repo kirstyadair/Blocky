@@ -221,6 +221,11 @@ public class GridScript : MonoBehaviour
                         playerScript.cubeType = CubeType.SNOW;
                         StartCoroutine(Pulse(result.gameObject));
                     }
+                    if (result.gameObject.name == "LanternTile")
+                    {
+                        playerScript.cubeType = CubeType.LANTERN;
+                        StartCoroutine(Pulse(result.gameObject));
+                    }
                 }
             }
         }

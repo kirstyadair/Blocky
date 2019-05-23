@@ -17,7 +17,8 @@ public enum CubeType
     DIRT,
     FENCE,
     FENCECORNER,
-    SNOW
+    SNOW,
+    LANTERN
 }
 
 
@@ -66,6 +67,7 @@ public class PlayerScript : MonoBehaviour
     public GameObject fencePrefab;
     public GameObject fenceCornerPrefab;
     public GameObject snowPrefab;
+    public GameObject lanternPrefab;
     GameObject currentCubePrefab;
 
 
@@ -134,6 +136,10 @@ public class PlayerScript : MonoBehaviour
         else if (cubeType == CubeType.SNOW)
         {
             currentCubePrefab = snowPrefab;
+        }
+        else if (cubeType == CubeType.LANTERN)
+        {
+            currentCubePrefab = lanternPrefab;
         }
 
         if (chosenRequirements && reqGenScript.canSelectWalls)
@@ -446,7 +452,7 @@ public class PlayerScript : MonoBehaviour
     IEnumerator SpawnInCube(RaycastHit hit)
     {
         Vector3 cubePos = hit.collider.gameObject.transform.position;
-        if (cubeType != CubeType.WOOD && cubeType != CubeType.FIRE && cubeType!= CubeType.FLOWER  && cubeType != CubeType.STONE && cubeType != CubeType.FENCE && cubeType != CubeType.FENCECORNER)
+        if (cubeType != CubeType.WOOD && cubeType != CubeType.FIRE && cubeType!= CubeType.FLOWER  && cubeType != CubeType.STONE && cubeType != CubeType.FENCE && cubeType != CubeType.FENCECORNER && cubeType != CubeType.LANTERN)
         {
             if (cubeType != CubeType.GRASS)
             {
@@ -457,7 +463,7 @@ public class PlayerScript : MonoBehaviour
             newCube.tag = "Floor";
         }
 
-        if (cubeType == CubeType.WOOD || cubeType == CubeType.FIRE || cubeType == CubeType.FLOWER || cubeType == CubeType.STONE || cubeType == CubeType.FENCE || cubeType == CubeType.FENCECORNER)
+        if (cubeType == CubeType.WOOD || cubeType == CubeType.FIRE || cubeType == CubeType.FLOWER || cubeType == CubeType.STONE || cubeType == CubeType.FENCE || cubeType == CubeType.FENCECORNER || cubeType == CubeType.LANTERN)
         {
             yield return new WaitForSeconds(0.1f);
             if (cubeType == CubeType.FENCE || cubeType == CubeType.FENCECORNER)
