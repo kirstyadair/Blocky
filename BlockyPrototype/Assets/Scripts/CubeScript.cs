@@ -4,19 +4,39 @@ using UnityEngine;
 
 
 
+public enum CubeMaterial
+{
+    STANDARD, GLASS
+}
+
+
+
 public class CubeScript : MonoBehaviour
 {
     public string cubeTag;
     public bool cubeOnFloor = false;
+    public CubeMaterial cubeMaterial;
     PlayerScript playerScript;
     GridScript gridScript;
     Rigidbody rb;
+
+
+
+
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        GetComponent<Renderer>().material.color = new Color(1 / 255, 1 / 255, 1 / 255, 0.4f);
+        if (cubeMaterial == CubeMaterial.STANDARD)
+        {
+            GetComponent<Renderer>().material.color = new Color(1 / 255, 1 / 255, 1 / 255, 0.4f);
+        }
+        if (cubeMaterial == CubeMaterial.GLASS)
+        {
+            GetComponent<Renderer>().material.color = new Color(1, 1, 1, 0.4f);
+        }
+        
         playerScript = GameObject.Find("PlayerObject").GetComponent<PlayerScript>();
         gridScript = GameObject.Find("Canvas").GetComponent<GridScript>();
     }
@@ -33,7 +53,7 @@ public class CubeScript : MonoBehaviour
         }
         
         
-        if (playerScript.editView != EditingView.EXTERIOR)
+        if (playerScript.editView != EditingView.EXTERIOR && cubeMaterial == CubeMaterial.STANDARD)
         {
             Color colour = GetComponent<Renderer>().material.color;
             colour.a = 1;
@@ -45,7 +65,12 @@ public class CubeScript : MonoBehaviour
 
     void Update()
     {
-        
+        if (cubeMaterial == CubeMaterial.GLASS)
+        {
+            Color colour = GetComponent<Renderer>().material.color;
+            colour.a = 0.1f;
+            GetComponent<Renderer>().material.color = colour;
+        }
     }
 
 
@@ -68,16 +93,5 @@ public class CubeScript : MonoBehaviour
             }
         }
     }
-
-
-
-    /*public void Fill()
-    {
-        if (GetComponent<Renderer>().material.color.a == 0.2f)
-        {
-            Color colour = gridScript.selectedColour;
-            GetComponent<Renderer>().material.color = colour;
-        }
-    }*/
     
 }

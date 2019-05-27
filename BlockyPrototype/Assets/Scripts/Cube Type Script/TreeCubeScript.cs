@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LanternCubeScript : MonoBehaviour
+public class TreeCubeScript : MonoBehaviour
 {
     public double timeActive = 0.0f;
     public GameObject grassPrefab;
@@ -13,8 +13,8 @@ public class LanternCubeScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gameObject.name = "LanternCube";
-        //GameObject.Find("AudioObject").GetComponent<AudioManager>().PlayCubeSpawn(CubeType.LANTERN);
+        gameObject.name = "TreeCube";
+        //GameObject.Find("AudioObject").GetComponent<AudioManager>().PlayCubeSpawn(CubeType.TREE);
     }
 
 
@@ -24,12 +24,11 @@ public class LanternCubeScript : MonoBehaviour
     void Update()
     {
         timeActive += Time.deltaTime;
-        if (transform.position.y != -0.8799995f)
+        if (transform.position.y != -0.755f)
         {
-            transform.position = new Vector3(transform.position.x, -0.8799995f, transform.position.z);
+            transform.position = new Vector3(transform.position.x, -0.755f, transform.position.z);
         }
     }
-
 
 
 
@@ -78,14 +77,14 @@ public class LanternCubeScript : MonoBehaviour
             }
         }
 
-        if (other.name == "LanternCube")
+        if (other.name == "TreeCube")
         {
-            if (other.GetComponent<LanternCubeScript>().timeActive == timeActive)
+            if (other.GetComponent<TreeCubeScript>().timeActive == timeActive)
             {
-                other.GetComponent<LanternCubeScript>().timeActive += 0.01f;
+                other.GetComponent<TreeCubeScript>().timeActive += 0.01f;
             }
 
-            if (timeActive < other.GetComponent<LanternCubeScript>().timeActive)
+            if (timeActive < other.GetComponent<TreeCubeScript>().timeActive)
             {
                 Destroy(other.gameObject);
             }
@@ -94,6 +93,18 @@ public class LanternCubeScript : MonoBehaviour
         if (other.name == "FlowerCube")
         {
             if (timeActive < other.GetComponent<FlowerCubeScript>().timeActive)
+            {
+                Destroy(other.gameObject);
+            }
+            else
+            {
+                Destroy(this.gameObject);
+            }
+        }
+
+        if (other.name == "LanternCube")
+        {
+            if (timeActive < other.GetComponent<LanternCubeScript>().timeActive)
             {
                 Destroy(other.gameObject);
             }

@@ -18,7 +18,8 @@ public enum CubeType
     FENCE,
     FENCECORNER,
     SNOW,
-    LANTERN
+    LANTERN,
+    TREE
 }
 
 
@@ -52,6 +53,7 @@ public class PlayerScript : MonoBehaviour
     public FenceIndicatorScript fiScript;
 
     bool wallSelected;
+    bool currentCubeAboveGround;
     Color blankColor;
 
     [Header("Prefabs")]
@@ -68,6 +70,7 @@ public class PlayerScript : MonoBehaviour
     public GameObject fenceCornerPrefab;
     public GameObject snowPrefab;
     public GameObject lanternPrefab;
+    public GameObject treePrefab;
     GameObject currentCubePrefab;
 
 
@@ -92,54 +95,72 @@ public class PlayerScript : MonoBehaviour
         if (cubeType == CubeType.GRASS)
         {
             currentCubePrefab = grassPrefab;
+            currentCubeAboveGround = false;
         }
         else if (cubeType == CubeType.WATER)
         {
             currentCubePrefab = waterCubePrefab;
+            currentCubeAboveGround = false;
         }
         else if (cubeType == CubeType.WOOD)
         {
             currentCubePrefab = woodPrefab;
+            currentCubeAboveGround = true;
         }
         else if (cubeType == CubeType.FIRE)
         {
             currentCubePrefab = firePrefab;
+            currentCubeAboveGround = true;
         }
         else if (cubeType == CubeType.PAVING)
         {
             currentCubePrefab = pavingPrefab;
+            currentCubeAboveGround = false;
         }
         else if (cubeType == CubeType.FLOWER)
         {
             currentCubePrefab = flowerPrefab;
+            currentCubeAboveGround = true;
         }
         else if (cubeType == CubeType.SAND)
         {
             currentCubePrefab = sandPrefab;
+            currentCubeAboveGround = false;
         }
         else if (cubeType == CubeType.STONE)
         {
             currentCubePrefab = stonePrefab;
+            currentCubeAboveGround = true;
         }
         else if (cubeType == CubeType.DIRT)
         {
             currentCubePrefab = dirtPrefab;
+            currentCubeAboveGround = false;
         }
         else if (cubeType == CubeType.FENCE)
         {
             currentCubePrefab = fencePrefab;
+            currentCubeAboveGround = true;
         }
         else if (cubeType == CubeType.FENCECORNER)
         {
             currentCubePrefab = fenceCornerPrefab;
+            currentCubeAboveGround = true;
         }
         else if (cubeType == CubeType.SNOW)
         {
             currentCubePrefab = snowPrefab;
+            currentCubeAboveGround = false;
         }
         else if (cubeType == CubeType.LANTERN)
         {
             currentCubePrefab = lanternPrefab;
+            currentCubeAboveGround = true;
+        }
+        else if (cubeType == CubeType.TREE)
+        {
+            currentCubePrefab = treePrefab;
+            currentCubeAboveGround = true;
         }
 
         if (chosenRequirements && reqGenScript.canSelectWalls)
@@ -308,7 +329,7 @@ public class PlayerScript : MonoBehaviour
                 if (!floorDrawingPanelAnim.GetBool("slideIn"))
                 {
                     floorDrawingPanelAnim.SetBool("slideIn", true);
-                    cubeType = CubeType.GRASS;
+                    
                 }
                 
             }
@@ -452,7 +473,7 @@ public class PlayerScript : MonoBehaviour
     IEnumerator SpawnInCube(RaycastHit hit)
     {
         Vector3 cubePos = hit.collider.gameObject.transform.position;
-        if (cubeType != CubeType.WOOD && cubeType != CubeType.FIRE && cubeType!= CubeType.FLOWER  && cubeType != CubeType.STONE && cubeType != CubeType.FENCE && cubeType != CubeType.FENCECORNER && cubeType != CubeType.LANTERN)
+        if (!currentCubeAboveGround)
         {
             if (cubeType != CubeType.GRASS)
             {
@@ -463,7 +484,7 @@ public class PlayerScript : MonoBehaviour
             newCube.tag = "Floor";
         }
 
-        if (cubeType == CubeType.WOOD || cubeType == CubeType.FIRE || cubeType == CubeType.FLOWER || cubeType == CubeType.STONE || cubeType == CubeType.FENCE || cubeType == CubeType.FENCECORNER || cubeType == CubeType.LANTERN)
+        if (currentCubeAboveGround)
         {
             yield return new WaitForSeconds(0.1f);
             if (cubeType == CubeType.FENCE || cubeType == CubeType.FENCECORNER)

@@ -28,6 +28,8 @@ public class MenuScript : MonoBehaviour
     public GameObject plantsButton;
     public GameObject lightsButton;
 
+    
+
     public bool menuOpen = false;
     public MenuOpen currentOpenMenu;
 
@@ -38,6 +40,8 @@ public class MenuScript : MonoBehaviour
     void Start()
     {
         currentOpenMenu = MenuOpen.NONE;
+        
+
     }
 
 
@@ -163,4 +167,8 @@ public class MenuScript : MonoBehaviour
         currentOpenMenu = MenuOpen.LIGHTS;
         menuOpen = true;
     }
+
+
+
+    
 }

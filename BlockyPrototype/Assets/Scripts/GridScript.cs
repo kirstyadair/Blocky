@@ -23,12 +23,14 @@ public class GridScript : MonoBehaviour
     
 
     public Color selectedColour;
+    public CubeMaterial selectedMaterial;
     Color defaultColour;
 
     public ColourSelectorScript colourSelectorScript;
     public PlayerScript playerScript;
 
     public bool graphicalRaycasterHit = false;
+    bool hitDropdown = false;
 
 
     
@@ -63,8 +65,10 @@ public class GridScript : MonoBehaviour
                 foreach (RaycastResult result in results)
                 {
                     graphicalRaycasterHit = true;
-                    // If the hit tile is a standard tile within the grid
-                    if (result.gameObject.tag == "Tile")
+                   
+
+
+                    if (result.gameObject.tag == "Tile" && !hitDropdown)
                     {
                         gridTile = result.gameObject;
                         ColourTile(gridTile, selectedColour);
@@ -72,7 +76,17 @@ public class GridScript : MonoBehaviour
                         if (result.gameObject != null)
                         {
                             GameObject cubeToColour = GameObject.Find("cube" + result.gameObject.name);
-                            cubeToColour.GetComponent<MeshRenderer>().material.color = selectedColour;
+                            if (selectedMaterial == CubeMaterial.STANDARD)
+                            {
+                                cubeToColour.GetComponent<MeshRenderer>().material.color = selectedColour;
+                            }
+                            else if (selectedMaterial == CubeMaterial.GLASS)
+                            {
+                                cubeToColour.GetComponent<MeshRenderer>().material.color = new Color(1, 1, 1, 0.1f);
+                                cubeToColour.GetComponent<CubeScript>().cubeMaterial = CubeMaterial.GLASS;
+                                selectedColour = defaultColour;
+                            }
+                            
                         }
                         else
                         {
@@ -80,7 +94,7 @@ public class GridScript : MonoBehaviour
                         }
 
                     }
-
+                    
                     // The colour tile stuff is in GetButtonDown
 
                     if (result.gameObject.name == "SliderPanel")
@@ -94,15 +108,35 @@ public class GridScript : MonoBehaviour
                     }
                 }
             }
-            else
+            else // if the colour dropper is selected
             {
                 graphicalRaycasterHit = true;
                 foreach (RaycastResult result in results)
                 {
                     if (result.gameObject.tag == "ColourTile" || result.gameObject.tag == "Tile")
                     {
-                        selectedColour = new Color(0,0,0,0);
-                        selectedColour = result.gameObject.GetComponent<Image>().color;
+                        if (result.gameObject.tag == "Tile")
+                        {
+                            GameObject cubeToColour = GameObject.Find("cube" + result.gameObject.name);
+                            if (cubeToColour.GetComponent<CubeScript>().cubeMaterial == CubeMaterial.STANDARD)
+                            {
+                                selectedColour = new Color(0, 0, 0, 0);
+                                selectedColour = result.gameObject.GetComponent<Image>().color;
+                                selectedMaterial = CubeMaterial.STANDARD;
+                            }
+                            else if (cubeToColour.GetComponent<CubeScript>().cubeMaterial == CubeMaterial.GLASS)
+                            {
+                                selectedColour = new Color(1, 1, 1, 0.1f);
+                                selectedMaterial = CubeMaterial.GLASS;
+                            }
+                        }
+                        else if (result.gameObject.tag == "ColourTile")
+                        {
+                            selectedColour = new Color(0, 0, 0, 0);
+                            selectedColour = result.gameObject.GetComponent<Image>().color;
+                            selectedMaterial = CubeMaterial.STANDARD;
+                        }
+                        
                     }
 
                 }
@@ -129,6 +163,7 @@ public class GridScript : MonoBehaviour
                     result.gameObject.GetComponent<Image>().color = defaultColour;
                     GameObject cubeToColour = GameObject.Find("cube" + result.gameObject.name);
                     cubeToColour.GetComponent<MeshRenderer>().material.color = defaultColour;
+                    cubeToColour.GetComponent<CubeScript>().cubeMaterial = CubeMaterial.STANDARD;
                 }
             }
         }
@@ -147,17 +182,26 @@ public class GridScript : MonoBehaviour
                 // If the hit tile is a colour selection tile
                 if (result.gameObject.tag == "ColourTile")
                 {
-                    if (result.gameObject.name != "EraserTile" && result.gameObject.name != "WaterTile")
+                    if (result.gameObject.name != "EraserTile")
                     {
+                        selectedMaterial = CubeMaterial.STANDARD;
                         selectedColour = result.gameObject.GetComponent<Image>().color;
                         StartCoroutine(Pulse(result.gameObject));
                     }
                     else if (result.gameObject.name == "EraserTile")
                     {
+                        selectedMaterial = CubeMaterial.STANDARD;
                         selectedColour = defaultColour;
                     }
                     
-
+                }
+                else if (result.gameObject.tag == "MaterialTile")
+                {
+                    if (result.gameObject.name == "GlassTile")
+                    {
+                        selectedMaterial = CubeMaterial.GLASS;
+                        StartCoroutine(Pulse(result.gameObject));
+                    }
                 }
                 else if (result.gameObject.tag == "FloorTile")
                 {
@@ -226,6 +270,11 @@ public class GridScript : MonoBehaviour
                         playerScript.cubeType = CubeType.LANTERN;
                         StartCoroutine(Pulse(result.gameObject));
                     }
+                    if (result.gameObject.name == "TreeTile")
+                    {
+                        playerScript.cubeType = CubeType.TREE;
+                        StartCoroutine(Pulse(result.gameObject));
+                    }
                 }
             }
         }
@@ -235,6 +284,11 @@ public class GridScript : MonoBehaviour
 
     void ColourTile(GameObject tile, Color color)
     {
+        GameObject cubeToColour = GameObject.Find("cube" + tile.name);
+        if (cubeToColour.GetComponent<CubeScript>().cubeMaterial != CubeMaterial.STANDARD)
+        {
+            cubeToColour.GetComponent<CubeScript>().cubeMaterial = CubeMaterial.STANDARD;
+        }
         tile.GetComponent<Image>().color = selectedColour;
     }
 

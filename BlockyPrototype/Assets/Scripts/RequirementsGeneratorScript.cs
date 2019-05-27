@@ -103,6 +103,7 @@ public class RequirementsGeneratorScript : MonoBehaviour
                 GameObject.Find("AudioObject").GetComponent<AudioManager>().VaryPitch();
 
                 GameObject spawnedCube = Instantiate(cubePrefab, transform.position, Quaternion.identity);
+                spawnedCube.GetComponent<CubeScript>().cubeMaterial = CubeMaterial.STANDARD;
                 spawnedCube.tag = "BackWall";
                 allCubes.Add(spawnedCube);
                 spawnedCube.GetComponent<CubeScript>().cubeTag = spawnedCube.tag;
@@ -116,6 +117,7 @@ public class RequirementsGeneratorScript : MonoBehaviour
                 GameObject.Find("AudioObject").GetComponent<AudioManager>().VaryPitch();
 
                 GameObject spawnedCube = Instantiate(cubePrefab, transform.position, Quaternion.identity);
+                spawnedCube.GetComponent<CubeScript>().cubeMaterial = CubeMaterial.STANDARD;
                 spawnedCube.tag = "RightWall";
                 allCubes.Add(spawnedCube);
                 spawnedCube.GetComponent<CubeScript>().cubeTag = spawnedCube.tag;
@@ -129,6 +131,7 @@ public class RequirementsGeneratorScript : MonoBehaviour
                 GameObject.Find("AudioObject").GetComponent<AudioManager>().VaryPitch();
 
                 GameObject spawnedCube = Instantiate(cubePrefab, transform.position, Quaternion.identity);
+                spawnedCube.GetComponent<CubeScript>().cubeMaterial = CubeMaterial.STANDARD;
                 spawnedCube.tag = "FrontWall";
                 allCubes.Add(spawnedCube);
                 spawnedCube.GetComponent<CubeScript>().cubeTag = spawnedCube.tag;
@@ -142,6 +145,7 @@ public class RequirementsGeneratorScript : MonoBehaviour
                 GameObject.Find("AudioObject").GetComponent<AudioManager>().VaryPitch();
 
                 GameObject spawnedCube = Instantiate(cubePrefab, transform.position, Quaternion.identity);
+                spawnedCube.GetComponent<CubeScript>().cubeMaterial = CubeMaterial.STANDARD;
                 spawnedCube.tag = "LeftWall";
                 allCubes.Add(spawnedCube);
                 spawnedCube.GetComponent<CubeScript>().cubeTag = spawnedCube.tag;
