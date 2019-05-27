@@ -313,7 +313,10 @@ public class GridScript : MonoBehaviour
         foreach (Transform cell in gridCells)
         {
             GameObject cubeToColour = GameObject.Find("cube" + cell.gameObject.name);
-            if (cubeToColour.GetComponent<CubeScript>().cubeMaterial != CubeMaterial.STANDARD) cubeToColour.GetComponent<CubeScript>().cubeMaterial = CubeMaterial.STANDARD;
+            if (cubeToColour != null)
+            {
+                if (cubeToColour.GetComponent<CubeScript>().cubeMaterial != CubeMaterial.STANDARD) cubeToColour.GetComponent<CubeScript>().cubeMaterial = CubeMaterial.STANDARD;
+            }
             cell.GetComponent<Image>().color = defaultColour;
         }
     }

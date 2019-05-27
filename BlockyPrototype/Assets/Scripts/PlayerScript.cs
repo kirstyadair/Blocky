@@ -163,6 +163,20 @@ public class PlayerScript : MonoBehaviour
             currentCubeAboveGround = true;
         }
 
+        if (editView == EditingView.EXTERIOR)
+        {
+            if (Input.GetKeyDown(KeyCode.M))
+            {
+                drawingPanelAnim.SetBool("openPanel", false);
+                DeselectWalls();
+            }
+            if (Input.GetKeyDown(KeyCode.N) && wallSelected)
+            {
+                drawingPanelAnim.SetBool("openPanel", true);
+            }
+        }
+
+
         if (chosenRequirements && reqGenScript.canSelectWalls)
         {
 
@@ -467,6 +481,23 @@ public class PlayerScript : MonoBehaviour
         cameraAnim.SetBool("ZoomToFront", false);
         cameraAnim.SetBool("ZoomToBirdsEye", false);
         cameraAnim.SetBool("BirdsEyeToZoom", false);
+    }
+
+
+
+    public void ShowHideDrawingPanel()
+    {
+        if (editView == EditingView.EXTERIOR)
+        {
+            if (drawingPanelAnim.GetBool("openPanel"))
+            {
+                drawingPanelAnim.SetBool("openPanel", false);
+            }
+            else
+            {
+                drawingPanelAnim.SetBool("openPanel", true);
+            }
+        }
     }
 
 
