@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class DropdownScript : MonoBehaviour
 {
     public Image colourIndicator;
+    public GameObject fillButton;
     public Dropdown dropDown;
     public GameObject paintToolbar;
     public GameObject materialsToolbar;
@@ -31,10 +32,12 @@ public class DropdownScript : MonoBehaviour
         if (dropDown.value == 1)
         {
             colourIndicator.enabled = false;
+            fillButton.SetActive(false);
         }
         else
         {
             colourIndicator.enabled = true;
+            fillButton.SetActive(true);
         }
     }
 

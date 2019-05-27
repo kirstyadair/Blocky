@@ -30,7 +30,7 @@ public class ColourSelectorScript : MonoBehaviour
 
     private void Start()
     {
-        colourTile.color = new Color(0.1f, 0.1f, 0.1f, 1);
+        
     }
 
 

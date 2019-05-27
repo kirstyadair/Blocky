@@ -47,7 +47,10 @@ public class GridScript : MonoBehaviour
     
     void Update()
     {
-        currentColour.color = selectedColour;
+        Color currentColourIndicator = selectedColour;
+        currentColourIndicator.a = 1;
+        currentColour.color = currentColourIndicator;
+        
 
         // don't change this to get button down. that's further down.
         if (Input.GetButton("Fire1"))
@@ -68,7 +71,7 @@ public class GridScript : MonoBehaviour
                    
 
 
-                    if (result.gameObject.tag == "Tile" && !hitDropdown)
+                    if (result.gameObject.tag == "Tile")
                     {
                         gridTile = result.gameObject;
                         ColourTile(gridTile, selectedColour);
@@ -300,6 +303,7 @@ public class GridScript : MonoBehaviour
         {
             cell.GetComponent<Image>().color = defaultColour;
             GameObject cubeToColour = GameObject.Find("cube" + cell.gameObject.name);
+            if (cubeToColour.GetComponent<CubeScript>().cubeMaterial != CubeMaterial.STANDARD) cubeToColour.GetComponent<CubeScript>().cubeMaterial = CubeMaterial.STANDARD;
             cubeToColour.GetComponent<Renderer>().material.color = defaultColour;
         }
     }
@@ -308,6 +312,8 @@ public class GridScript : MonoBehaviour
     {
         foreach (Transform cell in gridCells)
         {
+            GameObject cubeToColour = GameObject.Find("cube" + cell.gameObject.name);
+            if (cubeToColour.GetComponent<CubeScript>().cubeMaterial != CubeMaterial.STANDARD) cubeToColour.GetComponent<CubeScript>().cubeMaterial = CubeMaterial.STANDARD;
             cell.GetComponent<Image>().color = defaultColour;
         }
     }

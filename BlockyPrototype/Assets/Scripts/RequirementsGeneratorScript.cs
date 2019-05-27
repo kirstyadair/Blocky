@@ -174,6 +174,10 @@ public class RequirementsGeneratorScript : MonoBehaviour
                 {
                     if ("cube" + cell.gameObject.name == cube.gameObject.name)
                     {
+                        if (cube.gameObject.GetComponent<CubeScript>().cubeMaterial != CubeMaterial.STANDARD)
+                        {
+                            cube.gameObject.GetComponent<CubeScript>().cubeMaterial = CubeMaterial.STANDARD;
+                        }
                         cell.GetComponent<Image>().color = gridScript.selectedColour;
                     }
                 }
