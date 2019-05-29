@@ -5,7 +5,7 @@ using UnityEngine;
 public class DirtCubeScript : MonoBehaviour
 {
     public double timeActive = 0.0f;
-    public GameObject grassPrefab;
+    GameObject groundPrefab;
 
 
 
@@ -14,6 +14,8 @@ public class DirtCubeScript : MonoBehaviour
     {
         gameObject.name = "DirtCube";
         //GameObject.Find("AudioObject").GetComponent<AudioManager>().PlayCubeSpawn(CubeType.DIRT);
+        
+        
     }
 
 
@@ -92,13 +94,6 @@ public class DirtCubeScript : MonoBehaviour
             {
                 Destroy(this.gameObject);
             }
-        }
-
-        if (other.name == "FireCube")
-        {
-            Vector3 position = this.transform.position;
-            GameObject newCube = Instantiate(grassPrefab, position, Quaternion.identity);
-            Destroy(this.gameObject);
         }
     }
 }

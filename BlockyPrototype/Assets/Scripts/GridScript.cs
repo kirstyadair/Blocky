@@ -25,6 +25,7 @@ public class GridScript : MonoBehaviour
     public Color selectedColour;
     public CubeMaterial selectedMaterial;
     Color defaultColour;
+    public Dropdown dropdown;
 
     public ColourSelectorScript colourSelectorScript;
     public PlayerScript playerScript;

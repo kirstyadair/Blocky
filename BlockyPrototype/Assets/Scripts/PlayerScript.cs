@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public enum CubeType
 {
+    NULL,
     WATER,
     GRASS,
     WOOD,
@@ -73,7 +74,9 @@ public class PlayerScript : MonoBehaviour
     public GameObject lanternPrefab;
     public GameObject treePrefab;
     public GameObject longGrassPrefab;
+    public CubeType blankCubeType;
     GameObject currentCubePrefab;
+    public GameObject blankCubePrefab;
 
 
 
@@ -87,13 +90,37 @@ public class PlayerScript : MonoBehaviour
         wallSelected = false;
         blankColor = new Color(1 / 255, 1 / 255, 1 / 255, 0.2f);
         editView = EditingView.EXTERIOR;
-        cubeType = CubeType.GRASS;
+        cubeType = CubeType.NULL;
     }
 
 
 
     void Update()
     {
+        if (cubeType == CubeType.NULL)
+        {
+            cubeType = blankCubeType;
+        }
+
+        if (blankCubeType == CubeType.GRASS)
+        {
+            blankCubePrefab = grassPrefab;
+        }
+        else if (blankCubeType == CubeType.SAND)
+        {
+            blankCubePrefab = sandPrefab;
+        }
+        else if (blankCubeType == CubeType.DIRT)
+        {
+            blankCubePrefab = dirtPrefab;
+        }
+        else if (blankCubeType == CubeType.SNOW)
+        {
+            blankCubePrefab = snowPrefab;
+        }
+
+
+
         if (cubeType == CubeType.GRASS)
         {
             currentCubePrefab = grassPrefab;
@@ -311,7 +338,7 @@ public class PlayerScript : MonoBehaviour
                         {
                             Vector3 position = hit.collider.transform.position;
                             Destroy(hit.collider.gameObject);
-                            GameObject newCube = Instantiate(grassPrefab, position, Quaternion.identity);
+                            GameObject newCube = Instantiate(blankCubePrefab, position, Quaternion.identity);
                             newCube.tag = "Floor";
                         }
                     }
@@ -428,10 +455,14 @@ public class PlayerScript : MonoBehaviour
         {
             GameObject requiredCube = GameObject.Find("cube" + gridCell.gameObject.name);
             Color cubeColour = requiredCube.GetComponent<MeshRenderer>().material.color;
-            if (cubeColour != blankColor)
+            if (requiredCube.GetComponent<CubeScript>().cubeMaterial == CubeMaterial.STANDARD)
             {
-                cubeColour.a = 1;
+                if (cubeColour != blankColor)
+                {
+                    cubeColour.a = 1;
+                }
             }
+            
             requiredCube.GetComponent<MeshRenderer>().material.color = cubeColour;
             gridCell.GetComponent<Image>().color = cubeColour;
         }
@@ -513,7 +544,7 @@ public class PlayerScript : MonoBehaviour
         Vector3 cubePos = hit.collider.gameObject.transform.position;
         if (!currentCubeAboveGround)
         {
-            if (cubeType != CubeType.GRASS)
+            if (cubeType != blankCubeType)
             {
                 yield return new WaitForSeconds(0.1f);
             }

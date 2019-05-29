@@ -893,9 +893,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3452102fcfa4f943a7dce0a58a7fbd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  grassPrefab: {fileID: 3014774579378426385, guid: 9af2a9c1228060c49bce3f842264e516,
-    type: 3}
+  groundPrefab: {fileID: 0}
   burningCubePrefab: {fileID: 7709139060426278228, guid: 06c06e06d314aa34e8e9e03c2944806c,
+    type: 3}
+  dirtPrefab: {fileID: 5545948537728656736, guid: 238f0f7ec59fc664a83a475f3e579f19,
+    type: 3}
+  sandPrefab: {fileID: 7106929501281752313, guid: 34f6481c264caa641a8432aff2e1b6bc,
+    type: 3}
+  snowPrefab: {fileID: 6776630915081606865, guid: 0fe5262738c374146b93beebb6c3b558,
+    type: 3}
+  grassPrefab: {fileID: 3014774579378426385, guid: 9af2a9c1228060c49bce3f842264e516,
     type: 3}
   timeActive: 0
 --- !u!1 &5102364760947505607

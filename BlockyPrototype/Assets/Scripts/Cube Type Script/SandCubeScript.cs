@@ -5,7 +5,7 @@ using UnityEngine;
 public class SandCubeScript : MonoBehaviour
 {
     public double timeActive = 0.0f;
-    public GameObject grassPrefab;
+
 
 
 
@@ -28,6 +28,7 @@ public class SandCubeScript : MonoBehaviour
         {
             transform.position = new Vector3(transform.position.x, -0.9599f, transform.position.z);
         }
+        
     }
 
 
@@ -75,12 +76,6 @@ public class SandCubeScript : MonoBehaviour
                 Destroy(other.gameObject);
             }
         }
-
-        if (other.name == "FireCube" || other.name == "FlowerCube")
-        {
-            Vector3 position = this.transform.position;
-            GameObject newCube = Instantiate(grassPrefab, position, Quaternion.identity);
-            Destroy(this.gameObject);
-        }
+        
     }
 }

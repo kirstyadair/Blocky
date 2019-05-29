@@ -5,6 +5,10 @@ using UnityEngine;
 public class BurningCubeScript : MonoBehaviour
 {
     Animator anim;
+    public GameObject groundPrefab;
+    public GameObject dirtPrefab;
+    public GameObject sandPrefab;
+    public GameObject snowPrefab;
     public GameObject grassPrefab;
     public double timeActive = 0.0f;
 
@@ -17,6 +21,23 @@ public class BurningCubeScript : MonoBehaviour
         anim = GetComponent<Animator>();
         gameObject.name = "BurningCube";
         gameObject.tag = "Floor";
+        if (GameObject.Find("PlayerObject").GetComponent<PlayerScript>().blankCubeType == CubeType.DIRT)
+        {
+            groundPrefab = dirtPrefab;
+        }
+        else if (GameObject.Find("PlayerObject").GetComponent<PlayerScript>().blankCubeType == CubeType.SAND)
+        {
+            groundPrefab = sandPrefab;
+        }
+        else if (GameObject.Find("PlayerObject").GetComponent<PlayerScript>().blankCubeType == CubeType.SNOW)
+        {
+            groundPrefab = snowPrefab;
+        }
+        else if (GameObject.Find("PlayerObject").GetComponent<PlayerScript>().blankCubeType == CubeType.GRASS)
+        {
+            groundPrefab = grassPrefab;
+        }
+
     }
 
 
@@ -38,12 +59,13 @@ public class BurningCubeScript : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
+
         // if placed on water, replace it with grass
         if (other.name == "WaterCube")
         {
             Vector3 position = other.transform.position;
             Destroy(other.gameObject);
-            GameObject newCube = Instantiate(grassPrefab, position, Quaternion.identity);
+            GameObject newCube = Instantiate(groundPrefab, position, Quaternion.identity);
         }
 
         // if duplicates are placed, destroy one

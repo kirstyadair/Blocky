@@ -5,7 +5,7 @@ using UnityEngine;
 public class SnowCubeScript : MonoBehaviour
 {
     public double timeActive = 0.0f;
-    public GameObject grassPrefab;
+
 
 
 
@@ -28,6 +28,8 @@ public class SnowCubeScript : MonoBehaviour
         {
             transform.position = new Vector3(transform.position.x, -0.9599f, transform.position.z);
         }
+
+        
     }
 
 
@@ -108,11 +110,6 @@ public class SnowCubeScript : MonoBehaviour
             }
         }
 
-        if (other.name == "FireCube")
-        {
-            Vector3 position = this.transform.position;
-            GameObject newCube = Instantiate(grassPrefab, position, Quaternion.identity);
-            Destroy(this.gameObject);
-        }
+        
     }
 }

@@ -6,10 +6,14 @@ using UnityEngine.UI;
 public class DropdownScript : MonoBehaviour
 {
     public Image colourIndicator;
+    public Sprite glassIndicator;
+    public Sprite tileIndicator;
     public GameObject fillButton;
+    public GameObject colourSelectorButton;
     public Dropdown dropDown;
     public GameObject paintToolbar;
     public GameObject materialsToolbar;
+    public GridScript gridScript;
 
 
 
@@ -31,13 +35,23 @@ public class DropdownScript : MonoBehaviour
     {
         if (dropDown.value == 1)
         {
-            colourIndicator.enabled = false;
             fillButton.SetActive(false);
+            colourSelectorButton.SetActive(false);
         }
         else
         {
-            colourIndicator.enabled = true;
             fillButton.SetActive(true);
+            colourSelectorButton.SetActive(true);
+        }
+
+        if (gridScript.selectedMaterial == CubeMaterial.GLASS)
+        {
+            colourIndicator.sprite = glassIndicator;
+            colourIndicator.color = new Color(1, 1, 1, 1);
+        }
+        else
+        {
+            colourIndicator.sprite = tileIndicator;
         }
     }
 

@@ -69,13 +69,7 @@ public class PavingCubeScript : MonoBehaviour
                 Destroy(other.gameObject);
             }
         }
-
-        if (other.name == "FireCube" || other.name == "FlowerCube")
-        {
-            Vector3 position = this.transform.position;
-            GameObject newCube = Instantiate(grassPrefab, position, Quaternion.identity);
-            Destroy(this.gameObject);
-        }
+        
 
         if (other.name == "SandCube")
         {

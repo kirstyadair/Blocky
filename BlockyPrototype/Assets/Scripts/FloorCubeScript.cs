@@ -6,6 +6,9 @@ public class FloorCubeScript : MonoBehaviour
 {
     Rigidbody rb;
     public GameObject grassPrefab;
+    Transform blackCubeObject;
+    Transform grassCubeObject;
+    public Material texture;
 
 
 
@@ -40,11 +43,18 @@ public class FloorCubeScript : MonoBehaviour
             if (gameObject.name == "BlackFloorCube")
             {
                 grassCube.GetComponent<GrassCubeScript>().isBlackCube = true;
+                blackCubeObject = GameObject.Find("BlackFloorCubeObject").transform;
+                grassCube.transform.SetParent(blackCubeObject);
             }
             else
             {
                 grassCube.GetComponent<GrassCubeScript>().isBlackCube = false;
+                grassCube.GetComponent<Renderer>().material = texture;
+                grassCubeObject = GameObject.Find("GrassCubeObject").transform;
+                grassCube.transform.SetParent(grassCubeObject);
             }
+
+            Destroy(gameObject);
         }
         
     }
@@ -59,6 +69,7 @@ public class FloorCubeScript : MonoBehaviour
         {
             GetComponent<Renderer>().material.color = new Color(0, 0, 0, 0.4f);
             gameObject.name = "BlackFloorCube";
+            
         }
     }
 }

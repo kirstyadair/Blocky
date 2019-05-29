@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class LongGrassCubeScript : MonoBehaviour
 {
+    public GameObject groundPrefab;
+    public GameObject dirtPrefab;
+    public GameObject sandPrefab;
+    public GameObject snowPrefab;
     public GameObject grassPrefab;
     public double timeActive = 0.0f;
 
@@ -29,6 +33,23 @@ public class LongGrassCubeScript : MonoBehaviour
         {
             transform.position = new Vector3(transform.position.x, -0.8799995f, transform.position.z);
         }
+
+        if (GameObject.Find("PlayerObject").GetComponent<PlayerScript>().blankCubeType == CubeType.DIRT)
+        {
+            groundPrefab = dirtPrefab;
+        }
+        else if (GameObject.Find("PlayerObject").GetComponent<PlayerScript>().blankCubeType == CubeType.SAND)
+        {
+            groundPrefab = sandPrefab;
+        }
+        else if (GameObject.Find("PlayerObject").GetComponent<PlayerScript>().blankCubeType == CubeType.SNOW)
+        {
+            groundPrefab = snowPrefab;
+        }
+        else if (GameObject.Find("PlayerObject").GetComponent<PlayerScript>().blankCubeType == CubeType.GRASS)
+        {
+            groundPrefab = grassPrefab;
+        }
     }
 
 
@@ -40,7 +61,7 @@ public class LongGrassCubeScript : MonoBehaviour
         {
             Vector3 position = other.transform.position;
             Destroy(other.gameObject);
-            GameObject newCube = Instantiate(grassPrefab, position, Quaternion.identity);
+            GameObject newCube = Instantiate(groundPrefab, position, Quaternion.identity);
         }
 
         if (other.name == "LongGrassCube")

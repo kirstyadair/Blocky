@@ -5,6 +5,10 @@ using UnityEngine;
 public class WaterCubeScript : MonoBehaviour
 {
     public double timeActive = 0.0f;
+    public GameObject groundPrefab;
+    public GameObject dirtPrefab;
+    public GameObject sandPrefab;
+    public GameObject snowPrefab;
     public GameObject grassPrefab;
 
 
@@ -16,6 +20,22 @@ public class WaterCubeScript : MonoBehaviour
         gameObject.name = "WaterCube";
         gameObject.tag = "Floor";
         GameObject.Find("AudioObject").GetComponent<AudioManager>().PlayCubeSpawn(CubeType.WATER);
+        if (GameObject.Find("PlayerObject").GetComponent<PlayerScript>().blankCubeType == CubeType.DIRT)
+        {
+            groundPrefab = dirtPrefab;
+        }
+        else if (GameObject.Find("PlayerObject").GetComponent<PlayerScript>().blankCubeType == CubeType.SAND)
+        {
+            groundPrefab = sandPrefab;
+        }
+        else if (GameObject.Find("PlayerObject").GetComponent<PlayerScript>().blankCubeType == CubeType.SNOW)
+        {
+            groundPrefab = snowPrefab;
+        }
+        else if (GameObject.Find("PlayerObject").GetComponent<PlayerScript>().blankCubeType == CubeType.GRASS)
+        {
+            groundPrefab = grassPrefab;
+        }
     }
 
 
@@ -70,10 +90,10 @@ public class WaterCubeScript : MonoBehaviour
             }
         }
 
-        if (other.name == "FireCube" || other.name == "WoodCube" || other.name == "FlowerCube" || other.name == "BurningCube")
+        if (other.name == "FireCube" || other.name == "WoodCube" || other.name == "FlowerCube" || other.name == "BurningCube" || other.name == "StoneCube" || other.name == "TreeCube" || other.name == "LongGrassCube" || other.name == "LanternCube")
         {
             Vector3 position = this.transform.position;
-            GameObject newCube = Instantiate(grassPrefab, position, Quaternion.identity);
+            GameObject newCube = Instantiate(groundPrefab, position, Quaternion.identity);
             Destroy(this.gameObject);
         }
 

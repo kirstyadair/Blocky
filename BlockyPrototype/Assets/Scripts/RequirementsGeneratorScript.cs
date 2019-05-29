@@ -10,15 +10,22 @@ public class RequirementsGeneratorScript : MonoBehaviour
     public FloorCubeSpawnerScript floorSpawner;
     public Animator chooseReqAnim;
     public Animator savedReqAnim;
+    public GameObject terrainPanel;
     public GameObject chooseRequirementsPanel;
     public GameObject requirementsPanel;
     public GameObject cubePrefab;
     public GameObject loadingPanel;
+    public Transform cubesObject;
     public Text requiredFloorsText;
     public Text randomFeatureText;
     public Text floorsText;
     public Text featureText;
     public Text percentageText;
+    public Material grass;
+    public Material sand;
+    public Material dirt;
+    public Material snow;
+    Material terrain;
     public string[] features;
     public string feature;
     public int requiredFloors;
@@ -47,6 +54,7 @@ public class RequirementsGeneratorScript : MonoBehaviour
         RandomlyGenerateRequirements();
         requirementsSaved = false;
         allCubes = new List<GameObject>();
+        terrainPanel.SetActive(false);
     }
 
 
@@ -73,6 +81,53 @@ public class RequirementsGeneratorScript : MonoBehaviour
 
 
 
+    public void ChooseTerrain()
+    {
+        terrainPanel.SetActive(true);
+    }
+
+
+
+    public void GrassTerrainChosen()
+    {
+        terrain = grass;
+        SaveRequirements();
+        terrainPanel.SetActive(false);
+        playerScript.blankCubeType = CubeType.GRASS;
+    }
+
+
+
+    public void SandTerrainChosen()
+    {
+        terrain = sand;
+        SaveRequirements();
+        terrainPanel.SetActive(false);
+        playerScript.blankCubeType = CubeType.SAND;
+    }
+
+
+
+    public void DirtTerrainChosen()
+    {
+        terrain = dirt;
+        SaveRequirements();
+        terrainPanel.SetActive(false);
+        playerScript.blankCubeType = CubeType.DIRT;
+    }
+
+
+
+    public void SnowTerrainChosen()
+    {
+        terrain = snow;
+        SaveRequirements();
+        terrainPanel.SetActive(false);
+        playerScript.blankCubeType = CubeType.SNOW;
+    }
+
+
+
     public void SaveRequirements()
     {
         if (!requirementsSaved)
@@ -83,7 +138,7 @@ public class RequirementsGeneratorScript : MonoBehaviour
             floorsText.text = "Required floors: " + requiredFloors;
             featureText.text = "Required feature: " + feature;
             StartCoroutine(SpawnRoom());
-            floorSpawner.SpawnPlane(new Vector3(-2.5f, -0.5f, 4), 30, 20);
+            floorSpawner.SpawnPlane(new Vector3(-2.5f, -0.5f, 4), 30, 20, terrain);
             playerScript.chosenRequirements = true;
         }
     }
@@ -103,6 +158,7 @@ public class RequirementsGeneratorScript : MonoBehaviour
                 GameObject.Find("AudioObject").GetComponent<AudioManager>().VaryPitch();
 
                 GameObject spawnedCube = Instantiate(cubePrefab, transform.position, Quaternion.identity);
+                spawnedCube.transform.SetParent(GameObject.Find("HouseCubeObject").transform);
                 spawnedCube.GetComponent<CubeScript>().cubeMaterial = CubeMaterial.STANDARD;
                 spawnedCube.tag = "BackWall";
                 allCubes.Add(spawnedCube);
@@ -117,6 +173,7 @@ public class RequirementsGeneratorScript : MonoBehaviour
                 GameObject.Find("AudioObject").GetComponent<AudioManager>().VaryPitch();
 
                 GameObject spawnedCube = Instantiate(cubePrefab, transform.position, Quaternion.identity);
+                spawnedCube.transform.SetParent(GameObject.Find("HouseCubeObject").transform);
                 spawnedCube.GetComponent<CubeScript>().cubeMaterial = CubeMaterial.STANDARD;
                 spawnedCube.tag = "RightWall";
                 allCubes.Add(spawnedCube);
@@ -131,6 +188,7 @@ public class RequirementsGeneratorScript : MonoBehaviour
                 GameObject.Find("AudioObject").GetComponent<AudioManager>().VaryPitch();
 
                 GameObject spawnedCube = Instantiate(cubePrefab, transform.position, Quaternion.identity);
+                spawnedCube.transform.SetParent(GameObject.Find("HouseCubeObject").transform);
                 spawnedCube.GetComponent<CubeScript>().cubeMaterial = CubeMaterial.STANDARD;
                 spawnedCube.tag = "FrontWall";
                 allCubes.Add(spawnedCube);
@@ -145,6 +203,7 @@ public class RequirementsGeneratorScript : MonoBehaviour
                 GameObject.Find("AudioObject").GetComponent<AudioManager>().VaryPitch();
 
                 GameObject spawnedCube = Instantiate(cubePrefab, transform.position, Quaternion.identity);
+                spawnedCube.transform.SetParent(GameObject.Find("HouseCubeObject").transform);
                 spawnedCube.GetComponent<CubeScript>().cubeMaterial = CubeMaterial.STANDARD;
                 spawnedCube.tag = "LeftWall";
                 allCubes.Add(spawnedCube);
