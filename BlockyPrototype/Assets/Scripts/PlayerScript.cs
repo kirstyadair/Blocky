@@ -19,7 +19,8 @@ public enum CubeType
     FENCECORNER,
     SNOW,
     LANTERN,
-    TREE
+    TREE,
+    LONGGRASS
 }
 
 
@@ -71,6 +72,7 @@ public class PlayerScript : MonoBehaviour
     public GameObject snowPrefab;
     public GameObject lanternPrefab;
     public GameObject treePrefab;
+    public GameObject longGrassPrefab;
     GameObject currentCubePrefab;
 
 
@@ -162,13 +164,18 @@ public class PlayerScript : MonoBehaviour
             currentCubePrefab = treePrefab;
             currentCubeAboveGround = true;
         }
+        else if (cubeType == CubeType.LONGGRASS)
+        {
+            currentCubePrefab = longGrassPrefab;
+            currentCubeAboveGround = true;
+        }
 
         if (editView == EditingView.EXTERIOR)
         {
             if (Input.GetKeyDown(KeyCode.M))
             {
                 drawingPanelAnim.SetBool("openPanel", false);
-                DeselectWalls();
+                
             }
             if (Input.GetKeyDown(KeyCode.N) && wallSelected)
             {

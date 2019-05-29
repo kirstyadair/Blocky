@@ -65,6 +65,31 @@ public class TreeCubeScript : MonoBehaviour
             }
         }
 
+        if (other.name == "StoneCube")
+        {
+            if (timeActive < other.GetComponent<StoneCubeScript>().timeActive)
+            {
+                Destroy(other.gameObject);
+            }
+            else
+            {
+                Destroy(this.gameObject);
+            }
+        }
+
+        if (other.name == "FenceCube")
+        {
+            if (timeActive < other.GetComponent<FenceCubeScript>().timeActive)
+            {
+                Destroy(other.gameObject);
+            }
+            else
+            {
+                Destroy(this.gameObject);
+            }
+        }
+
+
         if (other.name == "BurningCube")
         {
             if (timeActive < other.GetComponent<BurningCubeScript>().timeActive)

@@ -15,7 +15,7 @@ public class FireCubeScript : MonoBehaviour
     void Start()
     {
         gameObject.name = "FireCube";
-        //GameObject.Find("AudioObject").GetComponent<AudioManager>().PlayCubeSpawn(CubeType.FIRE);
+        GameObject.Find("AudioObject").GetComponent<AudioManager>().PlayCubeSpawn(CubeType.FIRE);
     }
 
 
@@ -58,21 +58,85 @@ public class FireCubeScript : MonoBehaviour
 
         }
 
+        
+
         if (other.name == "WoodCube")
         {
-            Vector3 position = this.transform.position;
-            GameObject newCube = Instantiate(burningCubePrefab, position, Quaternion.identity);
-            newCube.GetComponent<BurningCubeScript>().timeActive += Random.Range(0, 0.01f);
+            Vector3 pos = this.transform.position;
+            GameObject newcube = Instantiate(burningCubePrefab, pos, Quaternion.identity);
             Destroy(other.gameObject);
             Destroy(this.gameObject);
         }
-        
+
+        if (other.name == "StoneCube")
+        {
+            if (timeActive < other.GetComponent<StoneCubeScript>().timeActive)
+            {
+                Destroy(other.gameObject);
+            }
+            else
+            {
+                Destroy(this.gameObject);
+            }
+        }
 
         if (other.name == "FlowerCube")
         {
             if (timeActive < other.GetComponent<FlowerCubeScript>().timeActive)
             {
                 Destroy(other.gameObject);
+            }
+            else
+            {
+                Destroy(this.gameObject);
+            }
+        }
+
+        if (other.name == "FenceCube")
+        {
+            if (timeActive < other.GetComponent<FenceCubeScript>().timeActive)
+            {
+                Destroy(other.gameObject);
+            }
+            else
+            {
+                Destroy(this.gameObject);
+            }
+        }
+
+        if (other.name == "LanternCube")
+        {
+            if (timeActive < other.GetComponent<LanternCubeScript>().timeActive)
+            {
+                Destroy(other.gameObject);
+            }
+            else
+            {
+                Destroy(this.gameObject);
+            }
+        }
+
+        if (other.name == "Tree")
+        {
+            if (timeActive < other.GetComponent<TreeCubeScript>().timeActive)
+            {
+                Destroy(other.gameObject);
+            }
+            else
+            {
+                Destroy(this.gameObject);
+            }
+        }
+
+        if (other.name == "LongGrassCube")
+        {
+            if (timeActive < other.GetComponent<LongGrassCubeScript>().timeActive)
+            {
+                Destroy(other.gameObject);
+            }
+            else
+            {
+                Destroy(this.gameObject);
             }
         }
     }

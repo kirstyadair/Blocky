@@ -57,6 +57,14 @@ public class WoodCubeScript : MonoBehaviour
             }
         }
 
+        if (other.name == "FireCube")
+        {
+            Vector3 pos = this.transform.position;
+            GameObject newcube = Instantiate(burningWoodPrefab, pos, Quaternion.identity);
+            Destroy(other.gameObject);
+            Destroy(this.gameObject);
+        }
+
         if (other.name == "BurningCube")
         {
             Destroy(gameObject);
