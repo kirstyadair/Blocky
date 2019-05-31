@@ -35,7 +35,7 @@ public class DropdownScript : MonoBehaviour
     {
         if (dropDown.value == 1)
         {
-            fillButton.SetActive(false);
+            //fillButton.SetActive(false);
             colourSelectorButton.SetActive(false);
         }
         else

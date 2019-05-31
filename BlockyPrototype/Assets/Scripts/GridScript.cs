@@ -52,6 +52,12 @@ public class GridScript : MonoBehaviour
         currentColourIndicator.a = 1;
         currentColour.color = currentColourIndicator;
         
+        if (selectedMaterial != CubeMaterial.STANDARD)
+        {
+            currentColourIndicator = Color.white;
+            currentColour.color = currentColourIndicator;
+        }
+
 
         // don't change this to get button down. that's further down.
         if (Input.GetButton("Fire1"))
@@ -88,7 +94,12 @@ public class GridScript : MonoBehaviour
                             {
                                 cubeToColour.GetComponent<MeshRenderer>().material.color = new Color(1, 1, 1, 0.1f);
                                 cubeToColour.GetComponent<CubeScript>().cubeMaterial = CubeMaterial.GLASS;
-                                selectedColour = defaultColour;
+                                selectedColour = new Color(0.8f, 1, 1, 1);
+                            }
+                            else if (selectedMaterial == CubeMaterial.SNOW)
+                            {
+                                cubeToColour.GetComponent<CubeScript>().cubeMaterial = CubeMaterial.SNOW;
+                                selectedColour = Color.white;
                             }
                             
                         }
@@ -132,6 +143,11 @@ public class GridScript : MonoBehaviour
                             {
                                 selectedColour = new Color(1, 1, 1, 0.1f);
                                 selectedMaterial = CubeMaterial.GLASS;
+                            }
+                            else if (cubeToColour.GetComponent<CubeScript>().cubeMaterial == CubeMaterial.SNOW)
+                            {
+                                selectedColour = new Color(1, 1, 1, 1f);
+                                selectedMaterial = CubeMaterial.SNOW;
                             }
                         }
                         else if (result.gameObject.tag == "ColourTile")
@@ -204,6 +220,11 @@ public class GridScript : MonoBehaviour
                     if (result.gameObject.name == "GlassTile")
                     {
                         selectedMaterial = CubeMaterial.GLASS;
+                        StartCoroutine(Pulse(result.gameObject));
+                    }
+                    if (result.gameObject.name == "SnowTile")
+                    {
+                        selectedMaterial = CubeMaterial.SNOW;
                         StartCoroutine(Pulse(result.gameObject));
                     }
                 }

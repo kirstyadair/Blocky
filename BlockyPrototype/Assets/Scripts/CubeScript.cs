@@ -6,7 +6,7 @@ using UnityEngine;
 
 public enum CubeMaterial
 {
-    STANDARD, GLASS
+    STANDARD, GLASS, SNOW
 }
 
 
@@ -16,6 +16,9 @@ public class CubeScript : MonoBehaviour
     public string cubeTag;
     public bool cubeOnFloor = false;
     public CubeMaterial cubeMaterial;
+
+    public Material snowMaterial;
+
     PlayerScript playerScript;
     GridScript gridScript;
     Rigidbody rb;
@@ -35,6 +38,10 @@ public class CubeScript : MonoBehaviour
         if (cubeMaterial == CubeMaterial.GLASS)
         {
             GetComponent<Renderer>().material.color = new Color(1, 1, 1, 0.4f);
+        }
+        if (cubeMaterial == CubeMaterial.SNOW)
+        {
+            GetComponent<Renderer>().material = snowMaterial;
         }
         
         playerScript = GameObject.Find("PlayerObject").GetComponent<PlayerScript>();
@@ -70,6 +77,11 @@ public class CubeScript : MonoBehaviour
             Color colour = GetComponent<Renderer>().material.color;
             colour.a = 0.1f;
             GetComponent<Renderer>().material.color = colour;
+        }
+
+        if (cubeMaterial == CubeMaterial.SNOW)
+        {
+            GetComponent<Renderer>().material = snowMaterial;
         }
     }
 

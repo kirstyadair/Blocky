@@ -6,21 +6,30 @@ using UnityEngine.UI;
 public class RequirementsGeneratorScript : MonoBehaviour
 {
     // Variables
+    [Header("Scripts")]
     public PlayerScript playerScript;
     public FloorCubeSpawnerScript floorSpawner;
+
+    [Header("Animators")]
     public Animator chooseReqAnim;
     public Animator savedReqAnim;
+
+    [Header("GameObjects")]
     public GameObject terrainPanel;
     public GameObject chooseRequirementsPanel;
     public GameObject requirementsPanel;
     public GameObject cubePrefab;
     public GameObject loadingPanel;
     public Transform cubesObject;
+
+    [Header("UI")]
     public Text requiredFloorsText;
     public Text randomFeatureText;
     public Text floorsText;
     public Text featureText;
     public Text percentageText;
+
+    [Header("Materials")]
     public Material grass;
     public Material sand;
     public Material dirt;
@@ -228,20 +237,42 @@ public class RequirementsGeneratorScript : MonoBehaviour
             {
                 Color colour = gridScript.selectedColour;
                 
+                if (gridScript.selectedMaterial == CubeMaterial.GLASS)
+                {
+                    colour = Color.white;
+                }
+                else if (gridScript.selectedMaterial == CubeMaterial.SNOW)
+                {
+                    colour = Color.white;
+                    Material material = cube.GetComponent<CubeScript>().snowMaterial;
+                    cube.GetComponent<Renderer>().material = material;
+                }
                 cube.GetComponent<Renderer>().material.color = colour;
+                
                 foreach (Transform cell in gridScript.gridCells)
                 {
                     if ("cube" + cell.gameObject.name == cube.gameObject.name)
                     {
-                        if (cube.gameObject.GetComponent<CubeScript>().cubeMaterial != CubeMaterial.STANDARD)
+                        if (cube.gameObject.GetComponent<CubeScript>().cubeMaterial != gridScript.selectedMaterial)
                         {
-                            cube.gameObject.GetComponent<CubeScript>().cubeMaterial = CubeMaterial.STANDARD;
+                            cube.gameObject.GetComponent<CubeScript>().cubeMaterial = gridScript.selectedMaterial;
                         }
-                        cell.GetComponent<Image>().color = gridScript.selectedColour;
+
+
+                        if (gridScript.selectedMaterial == CubeMaterial.SNOW)
+                        {
+                            cell.GetComponent<Image>().color = Color.white;
+                        }
+                        else if (gridScript.selectedMaterial == CubeMaterial.STANDARD)
+                        {
+                            cell.GetComponent<Image>().color = gridScript.selectedColour;
+                        }
+                    
+
+
                     }
                 }
             }
         }
-        
     }
 }

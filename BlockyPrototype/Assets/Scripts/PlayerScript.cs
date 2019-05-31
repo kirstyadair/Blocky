@@ -41,6 +41,7 @@ public class PlayerScript : MonoBehaviour
     public string selectedWallTag;
     public EditingView editView;
     public CubeType cubeType;
+    public GameObject rotateButton;
 
     [Header("Animators")]
     public Animator drawingPanelAnim;
@@ -77,6 +78,7 @@ public class PlayerScript : MonoBehaviour
     public CubeType blankCubeType;
     GameObject currentCubePrefab;
     public GameObject blankCubePrefab;
+    
 
 
 
@@ -97,6 +99,17 @@ public class PlayerScript : MonoBehaviour
 
     void Update()
     {
+        if (editView == EditingView.EXTERIOR && chosenRequirements)
+        {
+            rotateButton.SetActive(true);
+        }
+        else
+        {
+            rotateButton.SetActive(false);
+        }
+
+
+
         if (cubeType == CubeType.NULL)
         {
             cubeType = blankCubeType;
@@ -455,7 +468,7 @@ public class PlayerScript : MonoBehaviour
         {
             GameObject requiredCube = GameObject.Find("cube" + gridCell.gameObject.name);
             Color cubeColour = requiredCube.GetComponent<MeshRenderer>().material.color;
-            if (requiredCube.GetComponent<CubeScript>().cubeMaterial == CubeMaterial.STANDARD)
+            if (requiredCube.GetComponent<CubeScript>().cubeMaterial != CubeMaterial.GLASS)
             {
                 if (cubeColour != blankColor)
                 {
@@ -514,6 +527,7 @@ public class PlayerScript : MonoBehaviour
 
     public void AllCamAnimationsFalse()
     {
+        cameraAnim.SetInteger("RotationMode", 0);
         cameraAnim.SetBool("BirdsEyeToFront", false);
         cameraAnim.SetBool("FrontToBirdsEye", false);
         cameraAnim.SetBool("ZoomToFront", false);

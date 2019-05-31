@@ -79,6 +79,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cubeTag: 
   cubeOnFloor: 0
+  cubeMaterial: 0
+  snowMaterial: {fileID: 2100000, guid: 20be59ce95604d24abe856cf4c4d1cb5, type: 2}
 --- !u!23 &3752546829330635847
 MeshRenderer:
   m_ObjectHideFlags: 0
