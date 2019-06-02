@@ -99,7 +99,7 @@ public class PlayerScript : MonoBehaviour
 
     void Update()
     {
-        if (editView == EditingView.EXTERIOR && chosenRequirements)
+        if (editView == EditingView.EXTERIOR && chosenRequirements && drawingPanelAnim.GetBool("openPanel"))
         {
             rotateButton.SetActive(true);
         }
@@ -468,6 +468,7 @@ public class PlayerScript : MonoBehaviour
         {
             GameObject requiredCube = GameObject.Find("cube" + gridCell.gameObject.name);
             Color cubeColour = requiredCube.GetComponent<MeshRenderer>().material.color;
+            Image im = gridCell.GetComponent<Image>();
             if (requiredCube.GetComponent<CubeScript>().cubeMaterial != CubeMaterial.GLASS)
             {
                 if (cubeColour != blankColor)
@@ -477,7 +478,22 @@ public class PlayerScript : MonoBehaviour
             }
             
             requiredCube.GetComponent<MeshRenderer>().material.color = cubeColour;
-            gridCell.GetComponent<Image>().color = cubeColour;
+            
+            if (requiredCube.GetComponent<CubeScript>().cubeMaterial == CubeMaterial.STANDARD)
+            {
+                im.sprite = gridScript.standardSprite;
+                im.color = cubeColour;
+            }
+            else if (requiredCube.GetComponent<CubeScript>().cubeMaterial == CubeMaterial.GLASS)
+            {
+                im.sprite = gridScript.glassSprite;
+                im.color = new Color(0.8f, 1, 1, 1);
+            }
+            else if (requiredCube.GetComponent<CubeScript>().cubeMaterial == CubeMaterial.SNOW)
+            {
+                im.sprite = gridScript.snowSprite;
+                im.color = Color.white;
+            }
         }
 
     }

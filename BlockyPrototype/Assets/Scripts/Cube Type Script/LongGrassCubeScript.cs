@@ -18,7 +18,7 @@ public class LongGrassCubeScript : MonoBehaviour
     void Start()
     {
         gameObject.name = "LongGrassCube";
-        //GameObject.Find("AudioObject").GetComponent<AudioManager>().PlayCubeSpawn(CubeType.FIRE);
+        GameObject.Find("AudioObject").GetComponent<AudioManager>().PlayCubeSpawn(CubeType.LONGGRASS);
     }
 
 

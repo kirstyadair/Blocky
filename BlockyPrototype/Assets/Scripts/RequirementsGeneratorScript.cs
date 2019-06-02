@@ -35,6 +35,9 @@ public class RequirementsGeneratorScript : MonoBehaviour
     public Material dirt;
     public Material snow;
     Material terrain;
+    public Sprite tile;
+    public Sprite snowTile;
+    public Sprite glassTile;
     public string[] features;
     public string feature;
     public int requiredFloors;
@@ -233,6 +236,7 @@ public class RequirementsGeneratorScript : MonoBehaviour
         GridScript gridScript = GameObject.Find("Canvas").GetComponent<GridScript>();
         foreach (GameObject cube in allCubes)
         {
+            // only fill the cubes in one wall
             if (cube.gameObject.tag == playerScript.selectedWallTag)
             {
                 Color colour = gridScript.selectedColour;
@@ -262,12 +266,19 @@ public class RequirementsGeneratorScript : MonoBehaviour
                         if (gridScript.selectedMaterial == CubeMaterial.SNOW)
                         {
                             cell.GetComponent<Image>().color = Color.white;
+                            cell.GetComponent<Image>().sprite = snowTile;
                         }
                         else if (gridScript.selectedMaterial == CubeMaterial.STANDARD)
                         {
                             cell.GetComponent<Image>().color = gridScript.selectedColour;
+                            cell.GetComponent<Image>().sprite = tile;
                         }
-                    
+                        else if (gridScript.selectedMaterial == CubeMaterial.GLASS)
+                        {
+                            cell.GetComponent<Image>().color = new Color(0.8f, 1, 1, 1);
+                            cell.GetComponent<Image>().sprite = glassTile;
+                        }
+
 
 
                     }

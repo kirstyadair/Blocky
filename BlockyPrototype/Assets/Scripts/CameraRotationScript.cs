@@ -12,14 +12,6 @@ public class CameraRotationScript : MonoBehaviour
         cameraAnim = GetComponent<Animator>();
     }
 
-    void Update()
-    {
-        //if (rotationMode == 0)
-        //{
-            //cameraAnim.SetInteger("RotationMode", rotationMode);
-        //}
-    }
-
     // Start is called before the first frame update
     public void Rotate()
     {

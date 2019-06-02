@@ -18,7 +18,7 @@ public class LanternCubeScript : MonoBehaviour
     void Start()
     {
         gameObject.name = "LanternCube";
-        //GameObject.Find("AudioObject").GetComponent<AudioManager>().PlayCubeSpawn(CubeType.LANTERN);
+        GameObject.Find("AudioObject").GetComponent<AudioManager>().PlayCubeSpawn(CubeType.LANTERN);
     }
 
 

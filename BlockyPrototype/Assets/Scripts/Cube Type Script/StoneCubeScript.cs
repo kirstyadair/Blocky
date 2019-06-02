@@ -18,7 +18,7 @@ public class StoneCubeScript : MonoBehaviour
     void Start()
     {
         gameObject.name = "StoneCube";
-        //GameObject.Find("AudioObject").GetComponent<AudioManager>().PlayCubeSpawn(CubeType.FIRE);
+        GameObject.Find("AudioObject").GetComponent<AudioManager>().PlayCubeSpawn(CubeType.STONE);
     }
     
 

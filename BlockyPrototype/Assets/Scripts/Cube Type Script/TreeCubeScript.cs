@@ -18,7 +18,7 @@ public class TreeCubeScript : MonoBehaviour
     void Start()
     {
         gameObject.name = "TreeCube";
-        //GameObject.Find("AudioObject").GetComponent<AudioManager>().PlayCubeSpawn(CubeType.TREE);
+        GameObject.Find("AudioObject").GetComponent<AudioManager>().PlayCubeSpawn(CubeType.TREE);
     }
 
 

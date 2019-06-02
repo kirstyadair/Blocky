@@ -17,6 +17,10 @@ public class GridScript : MonoBehaviour
     public Image currentColour;
     public Toggle orthoToggle;
 
+    public Sprite standardSprite;
+    public Sprite snowSprite;
+    public Sprite glassSprite;
+
     GameObject grid;
     GameObject gridTile;
     public Camera mainCamera;
@@ -89,17 +93,20 @@ public class GridScript : MonoBehaviour
                             if (selectedMaterial == CubeMaterial.STANDARD)
                             {
                                 cubeToColour.GetComponent<MeshRenderer>().material.color = selectedColour;
+                                gridTile.GetComponent<Image>().sprite = standardSprite;
                             }
                             else if (selectedMaterial == CubeMaterial.GLASS)
                             {
                                 cubeToColour.GetComponent<MeshRenderer>().material.color = new Color(1, 1, 1, 0.1f);
                                 cubeToColour.GetComponent<CubeScript>().cubeMaterial = CubeMaterial.GLASS;
                                 selectedColour = new Color(0.8f, 1, 1, 1);
+                                gridTile.GetComponent<Image>().sprite = glassSprite;
                             }
                             else if (selectedMaterial == CubeMaterial.SNOW)
                             {
                                 cubeToColour.GetComponent<CubeScript>().cubeMaterial = CubeMaterial.SNOW;
                                 selectedColour = Color.white;
+                                gridTile.GetComponent<Image>().sprite = snowSprite;
                             }
                             
                         }
@@ -141,7 +148,7 @@ public class GridScript : MonoBehaviour
                             }
                             else if (cubeToColour.GetComponent<CubeScript>().cubeMaterial == CubeMaterial.GLASS)
                             {
-                                selectedColour = new Color(1, 1, 1, 0.1f);
+                                selectedColour = new Color(0.8f, 1, 1, 1);
                                 selectedMaterial = CubeMaterial.GLASS;
                             }
                             else if (cubeToColour.GetComponent<CubeScript>().cubeMaterial == CubeMaterial.SNOW)
@@ -323,7 +330,6 @@ public class GridScript : MonoBehaviour
     }
 
 
-
     public void ClearGrid()
     {
         foreach (Transform cell in gridCells)
@@ -335,6 +341,8 @@ public class GridScript : MonoBehaviour
         }
     }
 
+
+
     public void ClearOnlyGrid()
     {
         foreach (Transform cell in gridCells)
@@ -342,7 +350,11 @@ public class GridScript : MonoBehaviour
             GameObject cubeToColour = GameObject.Find("cube" + cell.gameObject.name);
             if (cubeToColour != null)
             {
-                if (cubeToColour.GetComponent<CubeScript>().cubeMaterial != CubeMaterial.STANDARD) cubeToColour.GetComponent<CubeScript>().cubeMaterial = CubeMaterial.STANDARD;
+                if (cubeToColour.GetComponent<CubeScript>().cubeMaterial != CubeMaterial.STANDARD)
+                {
+                    cubeToColour.GetComponent<CubeScript>().cubeMaterial = CubeMaterial.STANDARD;
+                    cell.GetComponent<Image>().sprite = standardSprite;
+                }
             }
             cell.GetComponent<Image>().color = defaultColour;
         }

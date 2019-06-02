@@ -14,7 +14,11 @@ public class SnowCubeScript : MonoBehaviour
     void Start()
     {
         gameObject.name = "SnowCube";
-        //GameObject.Find("AudioObject").GetComponent<AudioManager>().PlayCubeSpawn(CubeType.SAND);
+        // don't play the audio clip for this cube if this cube is the default cube type
+        if (GameObject.Find("PlayerObject").GetComponent<PlayerScript>().blankCubeType != CubeType.SNOW)
+        {
+            GameObject.Find("AudioObject").GetComponent<AudioManager>().PlayCubeSpawn(CubeType.SNOW);
+        }
     }
 
 

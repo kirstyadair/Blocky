@@ -13,9 +13,11 @@ public class DirtCubeScript : MonoBehaviour
     void Start()
     {
         gameObject.name = "DirtCube";
-        //GameObject.Find("AudioObject").GetComponent<AudioManager>().PlayCubeSpawn(CubeType.DIRT);
-        
-        
+        // don't play the audio clip for this cube if this cube is the default cube type
+        if (GameObject.Find("PlayerObject").GetComponent<PlayerScript>().blankCubeType != CubeType.DIRT)
+        {
+            GameObject.Find("AudioObject").GetComponent<AudioManager>().PlayCubeSpawn(CubeType.DIRT);
+        }
     }
 
 

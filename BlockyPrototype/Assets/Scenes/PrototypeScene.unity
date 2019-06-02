@@ -6864,6 +6864,9 @@ MonoBehaviour:
   - {fileID: 744789715}
   currentColour: {fileID: 1664489043}
   orthoToggle: {fileID: 478204078}
+  standardSprite: {fileID: 21300000, guid: aef12b082fe9d92459994fa39267ab4b, type: 3}
+  snowSprite: {fileID: 21300000, guid: fffa24cbe31786b40ae41c001bf68899, type: 3}
+  glassSprite: {fileID: 21300000, guid: 8842a2c002da56149bfa05576916bb5c, type: 3}
   mainCamera: {fileID: 698064677}
   selectedColour: {r: 0, g: 0, b: 0, a: 0}
   selectedMaterial: 0
@@ -12427,6 +12430,9 @@ MonoBehaviour:
   sand: {fileID: 2100000, guid: 5a17d1ecfd50d804cbff687fe83911d2, type: 2}
   dirt: {fileID: 2100000, guid: 31e162afe8bce094f984119e1f4e3e4e, type: 2}
   snow: {fileID: 2100000, guid: 20be59ce95604d24abe856cf4c4d1cb5, type: 2}
+  tile: {fileID: 21300000, guid: aef12b082fe9d92459994fa39267ab4b, type: 3}
+  snowTile: {fileID: 21300000, guid: fffa24cbe31786b40ae41c001bf68899, type: 3}
+  glassTile: {fileID: 21300000, guid: 8842a2c002da56149bfa05576916bb5c, type: 3}
   features:
   - pool
   - deck
@@ -18526,6 +18532,13 @@ MonoBehaviour:
   pavingClip: {fileID: 8300000, guid: 175acd1599d2e9c47b47bf835ec784a9, type: 3}
   flowerClip: {fileID: 8300000, guid: d88324312c99d61418dd9e04bd017b43, type: 3}
   cubePlacement: {fileID: 8300000, guid: ba056ac33f91e5f4e9a2c64e17d91c3b, type: 3}
+  stoneClip: {fileID: 8300000, guid: a4f1b523730d6854e9ddc8a8c225b1f2, type: 3}
+  treeClip: {fileID: 8300000, guid: d8bdd29bb23796e49b9f23521a41453c, type: 3}
+  grassClip: {fileID: 8300000, guid: 16d568a9dd6488b419e51e289ee978e5, type: 3}
+  sandClip: {fileID: 8300000, guid: 55eebcc1cb8947e4497141402e5927cd, type: 3}
+  snowClip: {fileID: 8300000, guid: a4f1b523730d6854e9ddc8a8c225b1f2, type: 3}
+  lanternClip: {fileID: 8300000, guid: 623c48a0c6b185645b1fd85c8392aaee, type: 3}
+  dirtClip: {fileID: 8300000, guid: d1c66df588888054ca81bcba5d38fbdc, type: 3}
   audio: {fileID: 1423407198}
 --- !u!82 &1423407198
 AudioSource:
@@ -25373,7 +25386,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: aef12b082fe9d92459994fa39267ab4b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fffa24cbe31786b40ae41c001bf68899, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -26688,7 +26701,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -369.43152, y: -140.54456}
+  m_AnchoredPosition: {x: -367.9, y: -140.54456}
   m_SizeDelta: {x: 60, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2037629533
@@ -26764,8 +26777,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 8b21bbcd5c77e72458adda0c5db4c651, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4

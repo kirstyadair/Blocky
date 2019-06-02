@@ -10,6 +10,14 @@ public class AudioManager : MonoBehaviour
     public AudioClip pavingClip;
     public AudioClip flowerClip;
     public AudioClip cubePlacement;
+    public AudioClip stoneClip;
+    public AudioClip treeClip;
+    public AudioClip grassClip;
+    public AudioClip sandClip;
+    public AudioClip snowClip;
+    public AudioClip lanternClip;
+    public AudioClip dirtClip;
+
     public AudioSource audio;
 
 
@@ -46,6 +54,41 @@ public class AudioManager : MonoBehaviour
             audio.PlayOneShot(waterClip);
         }
 
+        if (cubeType == CubeType.STONE)
+        {
+            audio.PlayOneShot(stoneClip);
+        }
+
+        if (cubeType == CubeType.TREE)
+        {
+            audio.PlayOneShot(treeClip);
+        }
+
+        if (cubeType == CubeType.LONGGRASS)
+        {
+            audio.PlayOneShot(grassClip);
+        }
+
+        if (cubeType == CubeType.SAND)
+        {
+            audio.PlayOneShot(sandClip);
+        }
+
+        if (cubeType == CubeType.SNOW)
+        {
+            audio.PlayOneShot(snowClip);
+        }
+
+        if (cubeType == CubeType.LANTERN)
+        {
+            audio.PlayOneShot(lanternClip);
+        }
+
+        if (cubeType == CubeType.DIRT)
+        {
+            audio.PlayOneShot(dirtClip);
+        }
+
         if (cubeType == CubeType.FLOWER)
         {
             if (!audio.isPlaying)
@@ -63,11 +106,7 @@ public class AudioManager : MonoBehaviour
     {
         audio.pitch = Random.Range(0.5f, 1.5f);
         audio.volume = 0.05f;
-        //if (!audio.isPlaying)
-        //{
-            audio.PlayOneShot(cubePlacement);
-        //}
-        
+        audio.PlayOneShot(cubePlacement);
     }
 
 }
