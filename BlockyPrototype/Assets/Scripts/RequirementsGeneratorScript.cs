@@ -96,6 +96,7 @@ public class RequirementsGeneratorScript : MonoBehaviour
     public void ChooseTerrain()
     {
         terrainPanel.SetActive(true);
+        chooseReqAnim.SetBool("panelSlide", true);
     }
 
 
@@ -145,7 +146,7 @@ public class RequirementsGeneratorScript : MonoBehaviour
         if (!requirementsSaved)
         {
             requirementsSaved = true;
-            chooseReqAnim.SetBool("panelSlide", true);
+            
             savedReqAnim.SetBool("slideIn", true);
             floorsText.text = "Required floors: " + requiredFloors;
             featureText.text = "Required feature: " + feature;
