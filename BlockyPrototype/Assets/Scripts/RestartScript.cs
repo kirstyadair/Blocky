@@ -1,0 +1,112 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class RestartScript : MonoBehaviour
+{
+    public GameObject grenadePrefab;
+    public GameObject plane;
+    public PlayerScript playerScript;
+    public GridScript gridScript;
+    public RequirementsGeneratorScript requirementsGeneratorScript;
+    public FloorCubeSpawnerScript floorCubeSpawnerScript;
+    public float radius;
+    public float force;
+    public bool exploding = false;
+    bool showMenu = false;
+
+
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            playerScript.AllCamAnimationsFalse();
+            if (playerScript.editView == EditingView.GROUND)
+            {
+                playerScript.cameraAnim.SetBool("BirdsEyeToFront", true);
+            }
+            else if (playerScript.editView == EditingView.INTERIOR)
+            {
+                playerScript.cameraAnim.SetBool("ZoomToFront", true);
+            }
+            Explode();
+        }
+
+        if (showMenu)
+        {
+            requirementsGeneratorScript.Start();
+            playerScript.Start();
+            gridScript.Start();
+            floorCubeSpawnerScript.Start();
+            plane.SetActive(true);
+            exploding = false;
+            showMenu = false;
+        }
+    }
+
+
+
+
+    public void Explode()
+    {
+        exploding = true;
+        GameObject grenade = Instantiate(grenadePrefab, transform.position, Quaternion.identity);
+        if (grenade.GetComponent<Rigidbody>().velocity.y == 0)
+        {
+            StartCoroutine(DelayExplosion(grenade));
+            
+        }
+        
+    }
+
+
+
+
+    IEnumerator DelayExplosion(GameObject grenade)
+    {
+        for (int i = 0; i < 10; i++)
+        {
+            GameObject.Find("Main Camera").GetComponent<Camera>().fieldOfView++;
+            yield return new WaitForSeconds(0.01f);
+        }
+        
+        yield return new WaitForSeconds(2);
+        
+
+        Collider[] colliders = Physics.OverlapSphere(grenade.transform.position, radius);
+        Destroy(grenade);
+        foreach (Collider hitCollider in colliders)
+        {
+            if (hitCollider.name == "Plane")
+            {
+                plane.SetActive(false);
+            }
+            if (hitCollider.GetComponent<Rigidbody>() != null)
+            {
+                Vector3 direction = hitCollider.transform.position - transform.position;
+                if (direction.y < 0)
+                {
+                    direction = new Vector3(direction.x, -direction.y, direction.z);
+                }
+                direction.Normalize();
+
+                hitCollider.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+                hitCollider.GetComponent<Rigidbody>().useGravity = true;
+                hitCollider.GetComponent<Rigidbody>().AddForce(direction * force);
+            }
+
+        }
+
+        yield return new WaitForSeconds(2);
+
+        for (int i = 0; i < 10; i++)
+        {
+            GameObject.Find("Main Camera").GetComponent<Camera>().fieldOfView--;
+            yield return new WaitForSeconds(0.01f);
+        }
+
+        showMenu = true;
+    }
+}

@@ -5,11 +5,13 @@ using UnityEngine;
 public class TreeCubeScript : MonoBehaviour
 {
     public double timeActive = 0.0f;
+    public double timeActiveExploded = 0.0f;
     public GameObject grassPrefab;
     public GameObject dirtPrefab;
     public GameObject sandPrefab;
     public GameObject snowPrefab;
     public GameObject groundPrefab;
+    public RestartScript restartScript;
 
 
 
@@ -18,6 +20,7 @@ public class TreeCubeScript : MonoBehaviour
     void Start()
     {
         gameObject.name = "TreeCube";
+        restartScript = GameObject.Find("RestartObject").GetComponent<RestartScript>();
         GameObject.Find("AudioObject").GetComponent<AudioManager>().PlayCubeSpawn(CubeType.TREE);
     }
 
@@ -28,10 +31,23 @@ public class TreeCubeScript : MonoBehaviour
     void Update()
     {
         timeActive += Time.deltaTime;
-        if (transform.position.y != -0.755f)
+
+        if (restartScript.exploding)
+        {
+            timeActiveExploded += Time.deltaTime;
+            if (timeActiveExploded > 3)
+            {
+                Destroy(this.gameObject);
+            }
+        }
+
+
+        if (transform.position.y != -0.755f && restartScript.exploding == false)
         {
             transform.position = new Vector3(transform.position.x, -0.755f, transform.position.z);
         }
+
+
 
         if (GameObject.Find("PlayerObject").GetComponent<PlayerScript>().blankCubeType == CubeType.DIRT)
         {

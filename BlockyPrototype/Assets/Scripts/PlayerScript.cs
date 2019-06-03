@@ -21,7 +21,8 @@ public enum CubeType
     SNOW,
     LANTERN,
     TREE,
-    LONGGRASS
+    LONGGRASS,
+    PONDWATER
 }
 
 
@@ -75,6 +76,7 @@ public class PlayerScript : MonoBehaviour
     public GameObject lanternPrefab;
     public GameObject treePrefab;
     public GameObject longGrassPrefab;
+    public GameObject pondWaterPrefab;
     public CubeType blankCubeType;
     GameObject currentCubePrefab;
     public GameObject blankCubePrefab;
@@ -83,7 +85,7 @@ public class PlayerScript : MonoBehaviour
 
 
 
-    void Start()
+    public void Start()
     {
         drawingPanelAnim.SetBool("openPanel", false);
         colourSelectorAnim.SetBool("show", false);
@@ -93,6 +95,7 @@ public class PlayerScript : MonoBehaviour
         blankColor = new Color(1 / 255, 1 / 255, 1 / 255, 0.2f);
         editView = EditingView.EXTERIOR;
         cubeType = CubeType.NULL;
+        blankCubeType = CubeType.NULL;
     }
 
 
@@ -209,6 +212,13 @@ public class PlayerScript : MonoBehaviour
             currentCubePrefab = longGrassPrefab;
             currentCubeAboveGround = true;
         }
+        else if (cubeType == CubeType.PONDWATER)
+        {
+            currentCubePrefab = pondWaterPrefab;
+            currentCubeAboveGround = false;
+        }
+
+
 
         if (editView == EditingView.EXTERIOR)
         {
@@ -222,6 +232,7 @@ public class PlayerScript : MonoBehaviour
                 drawingPanelAnim.SetBool("openPanel", true);
             }
         }
+
 
 
         if (chosenRequirements && reqGenScript.canSelectWalls)

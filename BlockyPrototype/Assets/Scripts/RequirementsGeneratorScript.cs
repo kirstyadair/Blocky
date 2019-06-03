@@ -12,6 +12,7 @@ public class RequirementsGeneratorScript : MonoBehaviour
 
     [Header("Animators")]
     public Animator chooseReqAnim;
+    public Animator terrainAnim;
     public Animator savedReqAnim;
 
     [Header("GameObjects")]
@@ -57,7 +58,7 @@ public class RequirementsGeneratorScript : MonoBehaviour
 
 
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
         loadingPanel.SetActive(false);
         playerScript.chosenRequirements = false;
@@ -96,7 +97,8 @@ public class RequirementsGeneratorScript : MonoBehaviour
     public void ChooseTerrain()
     {
         terrainPanel.SetActive(true);
-        chooseReqAnim.SetBool("panelSlide", true);
+        terrainAnim.SetBool("panelIn", true);
+        
     }
 
 
@@ -105,7 +107,7 @@ public class RequirementsGeneratorScript : MonoBehaviour
     {
         terrain = grass;
         SaveRequirements();
-        terrainPanel.SetActive(false);
+        terrainAnim.SetBool("panelIn", false);
         playerScript.blankCubeType = CubeType.GRASS;
     }
 
@@ -115,7 +117,7 @@ public class RequirementsGeneratorScript : MonoBehaviour
     {
         terrain = sand;
         SaveRequirements();
-        terrainPanel.SetActive(false);
+        terrainAnim.SetBool("panelIn", false);
         playerScript.blankCubeType = CubeType.SAND;
     }
 
@@ -125,7 +127,7 @@ public class RequirementsGeneratorScript : MonoBehaviour
     {
         terrain = dirt;
         SaveRequirements();
-        terrainPanel.SetActive(false);
+        terrainAnim.SetBool("panelIn", false);
         playerScript.blankCubeType = CubeType.DIRT;
     }
 
@@ -135,7 +137,7 @@ public class RequirementsGeneratorScript : MonoBehaviour
     {
         terrain = snow;
         SaveRequirements();
-        terrainPanel.SetActive(false);
+        terrainAnim.SetBool("panelIn", false);
         playerScript.blankCubeType = CubeType.SNOW;
     }
 
@@ -146,7 +148,7 @@ public class RequirementsGeneratorScript : MonoBehaviour
         if (!requirementsSaved)
         {
             requirementsSaved = true;
-            
+            chooseReqAnim.SetBool("panelSlide", true);
             savedReqAnim.SetBool("slideIn", true);
             floorsText.text = "Required floors: " + requiredFloors;
             featureText.text = "Required feature: " + feature;

@@ -5,6 +5,8 @@ using UnityEngine;
 public class PavingCubeScript : MonoBehaviour
 {
     public double timeActive = 0.0f;
+    public double timeActiveExploded = 0.0f;
+    public RestartScript restartScript;
     public GameObject grassPrefab;
 
 
@@ -15,6 +17,7 @@ public class PavingCubeScript : MonoBehaviour
     {
         gameObject.name = "PavingCube";
         GameObject.Find("AudioObject").GetComponent<AudioManager>().PlayCubeSpawn(CubeType.PAVING);
+        restartScript = GameObject.Find("RestartObject").GetComponent<RestartScript>();
     }
 
 
@@ -24,7 +27,18 @@ public class PavingCubeScript : MonoBehaviour
     void Update()
     {
         timeActive += Time.deltaTime;
-        if (transform.position.y > -0.95f)
+
+        if (restartScript.exploding)
+        {
+            timeActiveExploded += Time.deltaTime;
+            if (timeActiveExploded > 3)
+            {
+                Destroy(this.gameObject);
+            }
+        }
+
+
+        if (transform.position.y > -0.95f && restartScript.exploding == false)
         {
             transform.position = new Vector3(transform.position.x, -0.9599f, transform.position.z);
         }

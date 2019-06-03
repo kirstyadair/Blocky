@@ -5,12 +5,14 @@ using UnityEngine;
 public class BurningCubeScript : MonoBehaviour
 {
     Animator anim;
+    public RestartScript restartScript;
     public GameObject groundPrefab;
     public GameObject dirtPrefab;
     public GameObject sandPrefab;
     public GameObject snowPrefab;
     public GameObject grassPrefab;
     public double timeActive = 0.0f;
+    public double timeActiveExploded = 0.0f;
 
 
 
@@ -19,6 +21,7 @@ public class BurningCubeScript : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
+        restartScript = GameObject.Find("RestartObject").GetComponent<RestartScript>();
         gameObject.name = "BurningCube";
         gameObject.tag = "Floor";
         if (GameObject.Find("PlayerObject").GetComponent<PlayerScript>().blankCubeType == CubeType.DIRT)
@@ -48,7 +51,17 @@ public class BurningCubeScript : MonoBehaviour
     {
         timeActive += Time.deltaTime;
 
-        if (transform.position.y != -0.8799995f)
+        if (restartScript.exploding)
+        {
+            timeActiveExploded += Time.deltaTime;
+            if (timeActiveExploded > 3)
+            {
+                Destroy(this.gameObject);
+            }
+        }
+
+        
+        if (transform.position.y != -0.8799995f && restartScript.exploding == false)
         {
             transform.position = new Vector3(transform.position.x, -0.8799995f, transform.position.z);
         }

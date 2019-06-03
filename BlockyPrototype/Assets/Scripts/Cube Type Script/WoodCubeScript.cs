@@ -10,7 +10,9 @@ public class WoodCubeScript : MonoBehaviour
     public GameObject snowPrefab;
     public GameObject groundPrefab;
     public GameObject burningWoodPrefab;
+    public RestartScript restartScript;
     public double timeActive = 0.0f;
+    public double timeActiveExploded = 0.0f;
 
 
 
@@ -19,6 +21,7 @@ public class WoodCubeScript : MonoBehaviour
     void Start()
     {
         gameObject.name = "WoodCube";
+        restartScript = GameObject.Find("RestartObject").GetComponent<RestartScript>();
         GameObject.Find("AudioObject").GetComponent<AudioManager>().PlayCubeSpawn(CubeType.WOOD);
         if (GameObject.Find("PlayerObject").GetComponent<PlayerScript>().blankCubeType == CubeType.DIRT)
         {
@@ -46,7 +49,16 @@ public class WoodCubeScript : MonoBehaviour
     {
         timeActive += Time.deltaTime;
 
-        if (transform.position.y != -0.8799995f)
+        if (restartScript.exploding)
+        {
+            timeActiveExploded += Time.deltaTime;
+            if (timeActiveExploded > 3)
+            {
+                Destroy(this.gameObject);
+            }
+        }
+
+        if (transform.position.y != -0.8799995f && restartScript.exploding == false)
         {
             transform.position = new Vector3(transform.position.x, -0.8799995f, transform.position.z);
         }

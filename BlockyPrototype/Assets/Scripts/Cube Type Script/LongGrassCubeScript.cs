@@ -9,7 +9,9 @@ public class LongGrassCubeScript : MonoBehaviour
     public GameObject sandPrefab;
     public GameObject snowPrefab;
     public GameObject grassPrefab;
+    public RestartScript restartScript;
     public double timeActive = 0.0f;
+    public double timeActiveExploded = 0.0f;
 
 
 
@@ -19,6 +21,7 @@ public class LongGrassCubeScript : MonoBehaviour
     {
         gameObject.name = "LongGrassCube";
         GameObject.Find("AudioObject").GetComponent<AudioManager>().PlayCubeSpawn(CubeType.LONGGRASS);
+        restartScript = GameObject.Find("RestartObject").GetComponent<RestartScript>();
     }
 
 
@@ -29,7 +32,18 @@ public class LongGrassCubeScript : MonoBehaviour
     {
         timeActive += Time.deltaTime;
 
-        if (transform.position.y != -0.8799995f)
+
+        if (restartScript.exploding)
+        {
+            timeActiveExploded += Time.deltaTime;
+            if (timeActiveExploded > 3)
+            {
+                Destroy(this.gameObject);
+            }
+        }
+
+
+        if (transform.position.y != -0.8799995f && restartScript.exploding == false)
         {
             transform.position = new Vector3(transform.position.x, -0.8799995f, transform.position.z);
         }

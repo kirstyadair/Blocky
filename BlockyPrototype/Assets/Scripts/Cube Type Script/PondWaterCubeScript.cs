@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WaterCubeScript : MonoBehaviour
+public class PondWaterCubeScript : MonoBehaviour
 {
     public double timeActive = 0.0f;
     public double timeActiveExploded = 0.0f;
@@ -19,10 +19,11 @@ public class WaterCubeScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gameObject.name = "WaterCube";
+        gameObject.name = "PondWaterCube";
         gameObject.tag = "Floor";
         restartScript = GameObject.Find("RestartObject").GetComponent<RestartScript>();
         GameObject.Find("AudioObject").GetComponent<AudioManager>().PlayCubeSpawn(CubeType.WATER);
+
         if (GameObject.Find("PlayerObject").GetComponent<PlayerScript>().blankCubeType == CubeType.DIRT)
         {
             groundPrefab = dirtPrefab;
@@ -69,14 +70,14 @@ public class WaterCubeScript : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.name == "WaterCube")
+        if (other.name == "PondWaterCube")
         {
-            if (other.GetComponent<WaterCubeScript>().timeActive == timeActive)
+            if (other.GetComponent<PondWaterCubeScript>().timeActive == timeActive)
             {
-                other.GetComponent<WaterCubeScript>().timeActive += 0.01f;
+                other.GetComponent<PondWaterCubeScript>().timeActive += 0.01f;
             }
 
-            if (timeActive < other.GetComponent<WaterCubeScript>().timeActive)
+            if (timeActive < other.GetComponent<PondWaterCubeScript>().timeActive)
             {
                 Destroy(other.gameObject);
             }
@@ -85,6 +86,18 @@ public class WaterCubeScript : MonoBehaviour
         if (other.name == "GrassCube")
         {
             if (other.GetComponent<GrassCubeScript>().timeActive > timeActive)
+            {
+                Destroy(other.gameObject);
+            }
+            else
+            {
+                Destroy(this.gameObject);
+            }
+        }
+
+        if (other.name == "WaterCube")
+        {
+            if (other.GetComponent<WaterCubeScript>().timeActive > timeActive)
             {
                 Destroy(other.gameObject);
             }

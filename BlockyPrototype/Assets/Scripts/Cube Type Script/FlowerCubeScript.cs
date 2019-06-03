@@ -5,6 +5,8 @@ using UnityEngine;
 public class FlowerCubeScript : MonoBehaviour
 {
     public double timeActive = 0.0f;
+    public double timeActiveExploded = 0.0f;
+    public RestartScript restartScript;
     public GameObject grassPrefab;
     public GameObject sandPrefab;
     public GameObject snowPrefab;
@@ -18,6 +20,7 @@ public class FlowerCubeScript : MonoBehaviour
     void Start()
     {
         gameObject.name = "FlowerCube";
+        restartScript = GameObject.Find("RestartObject").GetComponent<RestartScript>();
         GameObject.Find("AudioObject").GetComponent<AudioManager>().PlayCubeSpawn(CubeType.FLOWER);
     }
 
@@ -28,10 +31,23 @@ public class FlowerCubeScript : MonoBehaviour
     void Update()
     {
         timeActive += Time.deltaTime;
-        if (transform.position.y != -0.8799995f)
+
+        if (restartScript.exploding)
+        {
+            timeActiveExploded += Time.deltaTime;
+            if (timeActiveExploded > 3)
+            {
+                Destroy(this.gameObject);
+            }
+        }
+
+
+        if (transform.position.y != -0.8799995f && restartScript.exploding == false)
         {
             transform.position = new Vector3(transform.position.x, -0.8799995f, transform.position.z);
         }
+
+
 
         if (GameObject.Find("PlayerObject").GetComponent<PlayerScript>().blankCubeType == CubeType.DIRT)
         {

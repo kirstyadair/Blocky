@@ -11,7 +11,7 @@ public class FloorCubeSpawnerScript : MonoBehaviour
 
 
 
-    private void Start()
+    public void Start()
     {
         floorCubes = new List<GameObject>();
     }

@@ -16,6 +16,8 @@ public class CubeScript : MonoBehaviour
     public string cubeTag;
     public bool cubeOnFloor = false;
     public CubeMaterial cubeMaterial;
+    public float timeActiveExploded = 0.0f;
+    public RestartScript restartScript;
 
     public Material snowMaterial;
 
@@ -30,6 +32,7 @@ public class CubeScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        restartScript = GameObject.Find("RestartObject").GetComponent<RestartScript>();
         rb = GetComponent<Rigidbody>();
         if (cubeMaterial == CubeMaterial.STANDARD)
         {
@@ -54,7 +57,7 @@ public class CubeScript : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (!cubeOnFloor)
+        if (!cubeOnFloor && restartScript.exploding == false)
         {
             rb.MovePosition(transform.position - new Vector3(0, 0.01f, 0));
         }
@@ -72,6 +75,17 @@ public class CubeScript : MonoBehaviour
 
     void Update()
     {
+
+        if (restartScript.exploding)
+        {
+            timeActiveExploded += Time.deltaTime;
+            if (timeActiveExploded > 3)
+            {
+                Destroy(this.gameObject);
+            }
+        }
+
+
         if (cubeMaterial == CubeMaterial.GLASS)
         {
             Color colour = GetComponent<Renderer>().material.color;
@@ -90,7 +104,7 @@ public class CubeScript : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Floor")
+        if (other.tag == "Floor" && restartScript.exploding == false)
         {
             rb.constraints = RigidbodyConstraints.FreezeAll;
             cubeOnFloor = true;
@@ -98,7 +112,7 @@ public class CubeScript : MonoBehaviour
 
         if (other.GetComponent<CubeScript>() != null)
         {
-            if (other.GetComponent<CubeScript>().cubeOnFloor)
+            if (other.GetComponent<CubeScript>().cubeOnFloor && restartScript.exploding == false)
             {
                 rb.constraints = RigidbodyConstraints.FreezeAll;
                 cubeOnFloor = true;

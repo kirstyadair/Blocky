@@ -5,11 +5,13 @@ using UnityEngine;
 public class LanternCubeScript : MonoBehaviour
 {
     public double timeActive = 0.0f;
+    public double timeActiveExploded = 0.0f;
     public GameObject groundPrefab;
     public GameObject dirtPrefab;
     public GameObject sandPrefab;
     public GameObject snowPrefab;
     public GameObject grassPrefab;
+    public RestartScript restartScript;
 
 
 
@@ -19,6 +21,7 @@ public class LanternCubeScript : MonoBehaviour
     {
         gameObject.name = "LanternCube";
         GameObject.Find("AudioObject").GetComponent<AudioManager>().PlayCubeSpawn(CubeType.LANTERN);
+        restartScript = GameObject.Find("RestartObject").GetComponent<RestartScript>();
     }
 
 
@@ -28,9 +31,19 @@ public class LanternCubeScript : MonoBehaviour
     void Update()
     {
         timeActive += Time.deltaTime;
-        if (transform.position.y != -0.8799995f)
+        if (transform.position.y != -0.8799995f && restartScript.exploding == false)
         {
             transform.position = new Vector3(transform.position.x, -0.8799995f, transform.position.z);
+        }
+
+
+        if (restartScript.exploding)
+        {
+            timeActiveExploded += Time.deltaTime;
+            if (timeActiveExploded > 3)
+            {
+                Destroy(this.gameObject);
+            }
         }
 
         if (GameObject.Find("PlayerObject").GetComponent<PlayerScript>().blankCubeType == CubeType.DIRT)

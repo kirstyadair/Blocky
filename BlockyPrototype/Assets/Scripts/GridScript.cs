@@ -39,7 +39,7 @@ public class GridScript : MonoBehaviour
 
 
     
-    void Start()
+    public void Start()
     {
         raycaster = GetComponent<GraphicRaycaster>();
         eventSystem = GetComponent<EventSystem>();
@@ -310,6 +310,11 @@ public class GridScript : MonoBehaviour
                     if (result.gameObject.name == "LongGrassTile")
                     {
                         playerScript.cubeType = CubeType.LONGGRASS;
+                        StartCoroutine(Pulse(result.gameObject));
+                    }
+                    if (result.gameObject.name == "PondWaterTile")
+                    {
+                        playerScript.cubeType = CubeType.PONDWATER;
                         StartCoroutine(Pulse(result.gameObject));
                     }
                 }
