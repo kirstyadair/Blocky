@@ -7,6 +7,7 @@ public class SandCubeScript : MonoBehaviour
     public double timeActive = 0.0f;
     public double timeActiveExploded = 0.0f;
     public RestartScript restartScript;
+    PlayerScript playerScript;
 
 
 
@@ -17,8 +18,10 @@ public class SandCubeScript : MonoBehaviour
     {
         gameObject.name = "SandCube";
         restartScript = GameObject.Find("RestartObject").GetComponent<RestartScript>();
+        playerScript = GameObject.Find("PlayerObject").GetComponent<PlayerScript>();
+
         // don't play the audio clip for this cube if this cube is the default cube type
-        if (GameObject.Find("PlayerObject").GetComponent<PlayerScript>().blankCubeType != CubeType.SAND)
+        if (playerScript.blankCubeType != CubeType.SAND)
         {
             GameObject.Find("AudioObject").GetComponent<AudioManager>().PlayCubeSpawn(CubeType.SAND);
         }
@@ -35,7 +38,7 @@ public class SandCubeScript : MonoBehaviour
         if (restartScript.exploding)
         {
             timeActiveExploded += Time.deltaTime;
-            if (timeActiveExploded > 3)
+            if (timeActiveExploded > 10)
             {
                 Destroy(this.gameObject);
             }

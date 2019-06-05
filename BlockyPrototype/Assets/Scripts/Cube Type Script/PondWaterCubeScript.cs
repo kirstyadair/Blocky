@@ -6,12 +6,19 @@ public class PondWaterCubeScript : MonoBehaviour
 {
     public double timeActive = 0.0f;
     public double timeActiveExploded = 0.0f;
+    bool transitioning = false;
     public GameObject groundPrefab;
     public GameObject dirtPrefab;
     public GameObject sandPrefab;
     public GameObject snowPrefab;
     public GameObject grassPrefab;
+    public Material nuclear1;
+    public Material nuclear2;
+    public Material nuclear3;
+    public Material nuclear4;
+    public Material nuclearOuter;
     public RestartScript restartScript;
+    PlayerScript playerScript;
 
 
 
@@ -22,21 +29,24 @@ public class PondWaterCubeScript : MonoBehaviour
         gameObject.name = "PondWaterCube";
         gameObject.tag = "Floor";
         restartScript = GameObject.Find("RestartObject").GetComponent<RestartScript>();
+        playerScript = GameObject.Find("PlayerObject").GetComponent<PlayerScript>();
+
+
         GameObject.Find("AudioObject").GetComponent<AudioManager>().PlayCubeSpawn(CubeType.WATER);
 
-        if (GameObject.Find("PlayerObject").GetComponent<PlayerScript>().blankCubeType == CubeType.DIRT)
+        if (playerScript.blankCubeType == CubeType.DIRT)
         {
             groundPrefab = dirtPrefab;
         }
-        else if (GameObject.Find("PlayerObject").GetComponent<PlayerScript>().blankCubeType == CubeType.SAND)
+        else if (playerScript.blankCubeType == CubeType.SAND)
         {
             groundPrefab = sandPrefab;
         }
-        else if (GameObject.Find("PlayerObject").GetComponent<PlayerScript>().blankCubeType == CubeType.SNOW)
+        else if (playerScript.blankCubeType == CubeType.SNOW)
         {
             groundPrefab = snowPrefab;
         }
-        else if (GameObject.Find("PlayerObject").GetComponent<PlayerScript>().blankCubeType == CubeType.GRASS)
+        else if (playerScript.blankCubeType == CubeType.GRASS)
         {
             groundPrefab = grassPrefab;
         }
@@ -53,7 +63,7 @@ public class PondWaterCubeScript : MonoBehaviour
         if (restartScript.exploding)
         {
             timeActiveExploded += Time.deltaTime;
-            if (timeActiveExploded > 3)
+            if (timeActiveExploded > 10)
             {
                 Destroy(this.gameObject);
             }
@@ -62,6 +72,21 @@ public class PondWaterCubeScript : MonoBehaviour
         if (transform.position.y > -0.95f && restartScript.exploding == false)
         {
             transform.position = new Vector3(transform.position.x, -0.9599f, transform.position.z);
+        }
+
+        Collider[] colliders = Physics.OverlapBox(transform.position, new Vector3(0.1f, 0.1f, 0.1f));
+        foreach (Collider col in colliders)
+        {
+            if (col.name == "NuclearCube")
+            {
+
+                if (!transitioning)
+                {
+                    Renderer[] innerCubes = gameObject.GetComponentsInChildren<Renderer>();
+                    StartCoroutine(NuclearCubeTransition(innerCubes));
+                }
+
+            }
         }
     }
 
@@ -129,5 +154,54 @@ public class PondWaterCubeScript : MonoBehaviour
                 Destroy(other.gameObject);
             }
         }
+    }
+
+
+
+
+    IEnumerator NuclearCubeTransition(Renderer[] innerCubes)
+    {
+        transitioning = true;
+
+        for (int i = 1; i < innerCubes.Length; i++)
+        {
+            int materialNo = Mathf.RoundToInt(Random.Range(0, 3));
+            Material mat;
+            switch (materialNo)
+            {
+                case 0:
+                    mat = nuclear1;
+                    break;
+                case 1:
+                    mat = nuclear2;
+                    break;
+                case 2:
+                    mat = nuclear3;
+                    break;
+                case 3:
+                    mat = nuclear4;
+                    break;
+                default:
+                    mat = nuclear1;
+                    break;
+            }
+
+            if (innerCubes[i].gameObject.name == "Floor") Destroy(innerCubes[i]);
+            innerCubes[i].material = mat;
+            yield return new WaitForSeconds(0.5f);
+        }
+
+        innerCubes[0].material = nuclearOuter;
+
+        innerCubes[0].gameObject.AddComponent<NuclearCubeScript>();
+        innerCubes[0].gameObject.AddComponent<NuclearCubeScript>();
+        innerCubes[0].gameObject.GetComponent<NuclearCubeScript>().dirtPrefab = dirtPrefab;
+        innerCubes[0].gameObject.GetComponent<NuclearCubeScript>().sandPrefab = sandPrefab;
+        innerCubes[0].gameObject.GetComponent<NuclearCubeScript>().snowPrefab = snowPrefab;
+        innerCubes[0].gameObject.GetComponent<NuclearCubeScript>().grassPrefab = grassPrefab;
+        innerCubes[0].gameObject.GetComponent<NuclearCubeScript>().groundPrefab = groundPrefab;
+
+        Destroy(this);
+
     }
 }

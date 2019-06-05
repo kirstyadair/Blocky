@@ -12,11 +12,10 @@ public class RequirementsGeneratorScript : MonoBehaviour
 
     [Header("Animators")]
     public Animator chooseReqAnim;
-    public Animator terrainAnim;
     public Animator savedReqAnim;
 
     [Header("GameObjects")]
-    public GameObject terrainPanel;
+   
     public GameObject chooseRequirementsPanel;
     public GameObject requirementsPanel;
     public GameObject cubePrefab;
@@ -35,7 +34,6 @@ public class RequirementsGeneratorScript : MonoBehaviour
     public Material sand;
     public Material dirt;
     public Material snow;
-    Material terrain;
     public Sprite tile;
     public Sprite snowTile;
     public Sprite glassTile;
@@ -50,6 +48,7 @@ public class RequirementsGeneratorScript : MonoBehaviour
     public float timeBetweenSpawning;
 
     public List<GameObject> allCubes;
+    public GameData gameData;
     
     bool requirementsSaved = false;
     float percentageLoaded = 0;
@@ -62,12 +61,11 @@ public class RequirementsGeneratorScript : MonoBehaviour
     {
         loadingPanel.SetActive(false);
         playerScript.chosenRequirements = false;
-        chooseReqAnim.SetBool("panelSlide", false);
+        //chooseReqAnim.SetBool("panelSlide", false);
         savedReqAnim.SetBool("slideIn", false);
-        RandomlyGenerateRequirements();
-        requirementsSaved = false;
+        SaveRequirements();
+        gameData = GameObject.Find("GameData").GetComponent<GameData>();
         allCubes = new List<GameObject>();
-        terrainPanel.SetActive(false);
     }
 
 
@@ -94,52 +92,11 @@ public class RequirementsGeneratorScript : MonoBehaviour
 
 
 
-    public void ChooseTerrain()
-    {
-        terrainPanel.SetActive(true);
-        terrainAnim.SetBool("panelIn", true);
-        
-    }
+    
 
 
 
-    public void GrassTerrainChosen()
-    {
-        terrain = grass;
-        SaveRequirements();
-        terrainAnim.SetBool("panelIn", false);
-        playerScript.blankCubeType = CubeType.GRASS;
-    }
-
-
-
-    public void SandTerrainChosen()
-    {
-        terrain = sand;
-        SaveRequirements();
-        terrainAnim.SetBool("panelIn", false);
-        playerScript.blankCubeType = CubeType.SAND;
-    }
-
-
-
-    public void DirtTerrainChosen()
-    {
-        terrain = dirt;
-        SaveRequirements();
-        terrainAnim.SetBool("panelIn", false);
-        playerScript.blankCubeType = CubeType.DIRT;
-    }
-
-
-
-    public void SnowTerrainChosen()
-    {
-        terrain = snow;
-        SaveRequirements();
-        terrainAnim.SetBool("panelIn", false);
-        playerScript.blankCubeType = CubeType.SNOW;
-    }
+    
 
 
 
@@ -148,12 +105,12 @@ public class RequirementsGeneratorScript : MonoBehaviour
         if (!requirementsSaved)
         {
             requirementsSaved = true;
-            chooseReqAnim.SetBool("panelSlide", true);
-            savedReqAnim.SetBool("slideIn", true);
+            //chooseReqAnim.SetBool("panelSlide", true);
+            //savedReqAnim.SetBool("slideIn", true);
             floorsText.text = "Required floors: " + requiredFloors;
             featureText.text = "Required feature: " + feature;
             StartCoroutine(SpawnRoom());
-            floorSpawner.SpawnPlane(new Vector3(-2.5f, -0.5f, 4), 30, 20, terrain);
+            floorSpawner.SpawnPlane(new Vector3(-2.5f, -0.5f, 4), 30, 20);
             playerScript.chosenRequirements = true;
         }
     }

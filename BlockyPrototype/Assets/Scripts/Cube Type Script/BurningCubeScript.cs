@@ -6,6 +6,7 @@ public class BurningCubeScript : MonoBehaviour
 {
     Animator anim;
     public RestartScript restartScript;
+    PlayerScript playerScript;
     public GameObject groundPrefab;
     public GameObject dirtPrefab;
     public GameObject sandPrefab;
@@ -22,21 +23,24 @@ public class BurningCubeScript : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         restartScript = GameObject.Find("RestartObject").GetComponent<RestartScript>();
+        playerScript = GameObject.Find("PlayerObject").GetComponent<PlayerScript>();
         gameObject.name = "BurningCube";
         gameObject.tag = "Floor";
-        if (GameObject.Find("PlayerObject").GetComponent<PlayerScript>().blankCubeType == CubeType.DIRT)
+
+
+        if (playerScript.blankCubeType == CubeType.DIRT)
         {
             groundPrefab = dirtPrefab;
         }
-        else if (GameObject.Find("PlayerObject").GetComponent<PlayerScript>().blankCubeType == CubeType.SAND)
+        else if (playerScript.blankCubeType == CubeType.SAND)
         {
             groundPrefab = sandPrefab;
         }
-        else if (GameObject.Find("PlayerObject").GetComponent<PlayerScript>().blankCubeType == CubeType.SNOW)
+        else if (playerScript.blankCubeType == CubeType.SNOW)
         {
             groundPrefab = snowPrefab;
         }
-        else if (GameObject.Find("PlayerObject").GetComponent<PlayerScript>().blankCubeType == CubeType.GRASS)
+        else if (playerScript.blankCubeType == CubeType.GRASS)
         {
             groundPrefab = grassPrefab;
         }
@@ -54,7 +58,7 @@ public class BurningCubeScript : MonoBehaviour
         if (restartScript.exploding)
         {
             timeActiveExploded += Time.deltaTime;
-            if (timeActiveExploded > 3)
+            if (timeActiveExploded > 10)
             {
                 Destroy(this.gameObject);
             }
@@ -65,6 +69,8 @@ public class BurningCubeScript : MonoBehaviour
         {
             transform.position = new Vector3(transform.position.x, -0.8799995f, transform.position.z);
         }
+
+        
     }
 
 

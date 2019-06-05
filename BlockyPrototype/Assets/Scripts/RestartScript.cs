@@ -94,7 +94,10 @@ public class RestartScript : MonoBehaviour
 
                 hitCollider.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
                 hitCollider.GetComponent<Rigidbody>().useGravity = true;
-                hitCollider.GetComponent<Rigidbody>().AddForce(direction * force);
+
+                Vector3 forceVect = new Vector3(Random.Range(0, direction.x), Random.Range(0, direction.y), Random.Range(0, direction.z));  
+                forceVect *= Random.Range(force - 100, force + 100);
+                hitCollider.GetComponent<Rigidbody>().AddForce(forceVect);
             }
 
         }

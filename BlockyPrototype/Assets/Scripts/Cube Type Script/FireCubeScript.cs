@@ -11,6 +11,7 @@ public class FireCubeScript : MonoBehaviour
     public GameObject snowPrefab;
     public GameObject grassPrefab;
     public RestartScript restartScript;
+    PlayerScript playerScript;
     public double timeActive = 0.0f;
     public double timeActiveExploded = 0.0f;
 
@@ -22,23 +23,28 @@ public class FireCubeScript : MonoBehaviour
     {
         gameObject.name = "FireCube";
         restartScript = GameObject.Find("RestartObject").GetComponent<RestartScript>();
+        playerScript = GameObject.Find("PlayerObject").GetComponent<PlayerScript>();
         GameObject.Find("AudioObject").GetComponent<AudioManager>().PlayCubeSpawn(CubeType.FIRE);
-        if (GameObject.Find("PlayerObject").GetComponent<PlayerScript>().blankCubeType == CubeType.DIRT)
+
+        
+
+        if (playerScript.blankCubeType == CubeType.DIRT)
         {
             groundPrefab = dirtPrefab;
         }
-        else if (GameObject.Find("PlayerObject").GetComponent<PlayerScript>().blankCubeType == CubeType.SAND)
+        else if (playerScript.blankCubeType == CubeType.SAND)
         {
             groundPrefab = sandPrefab;
         }
-        else if (GameObject.Find("PlayerObject").GetComponent<PlayerScript>().blankCubeType == CubeType.SNOW)
+        else if (playerScript.blankCubeType == CubeType.SNOW)
         {
             groundPrefab = snowPrefab;
         }
-        else if (GameObject.Find("PlayerObject").GetComponent<PlayerScript>().blankCubeType == CubeType.GRASS)
+        else if (playerScript.blankCubeType == CubeType.GRASS)
         {
             groundPrefab = grassPrefab;
         }
+
     }
 
 
@@ -52,7 +58,7 @@ public class FireCubeScript : MonoBehaviour
         if (restartScript.exploding)
         {
             timeActiveExploded += Time.deltaTime;
-            if (timeActiveExploded > 3)
+            if (timeActiveExploded > 10)
             {
                 Destroy(this.gameObject);
             }
@@ -62,6 +68,7 @@ public class FireCubeScript : MonoBehaviour
         {
             transform.position = new Vector3(transform.position.x, -0.8799995f, transform.position.z);
         }
+
     }
 
 

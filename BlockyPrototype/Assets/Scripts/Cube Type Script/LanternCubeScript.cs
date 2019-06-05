@@ -12,7 +12,7 @@ public class LanternCubeScript : MonoBehaviour
     public GameObject snowPrefab;
     public GameObject grassPrefab;
     public RestartScript restartScript;
-
+    PlayerScript playerScript;
 
 
 
@@ -22,6 +22,24 @@ public class LanternCubeScript : MonoBehaviour
         gameObject.name = "LanternCube";
         GameObject.Find("AudioObject").GetComponent<AudioManager>().PlayCubeSpawn(CubeType.LANTERN);
         restartScript = GameObject.Find("RestartObject").GetComponent<RestartScript>();
+        playerScript = GameObject.Find("PlayerObject").GetComponent<PlayerScript>();
+
+        if (playerScript.blankCubeType == CubeType.DIRT)
+        {
+            groundPrefab = dirtPrefab;
+        }
+        else if (playerScript.blankCubeType == CubeType.SAND)
+        {
+            groundPrefab = sandPrefab;
+        }
+        else if (playerScript.blankCubeType == CubeType.SNOW)
+        {
+            groundPrefab = snowPrefab;
+        }
+        else if (playerScript.blankCubeType == CubeType.GRASS)
+        {
+            groundPrefab = grassPrefab;
+        }
     }
 
 
@@ -40,28 +58,13 @@ public class LanternCubeScript : MonoBehaviour
         if (restartScript.exploding)
         {
             timeActiveExploded += Time.deltaTime;
-            if (timeActiveExploded > 3)
+            if (timeActiveExploded > 10)
             {
                 Destroy(this.gameObject);
             }
         }
 
-        if (GameObject.Find("PlayerObject").GetComponent<PlayerScript>().blankCubeType == CubeType.DIRT)
-        {
-            groundPrefab = dirtPrefab;
-        }
-        else if (GameObject.Find("PlayerObject").GetComponent<PlayerScript>().blankCubeType == CubeType.SAND)
-        {
-            groundPrefab = sandPrefab;
-        }
-        else if (GameObject.Find("PlayerObject").GetComponent<PlayerScript>().blankCubeType == CubeType.SNOW)
-        {
-            groundPrefab = snowPrefab;
-        }
-        else if (GameObject.Find("PlayerObject").GetComponent<PlayerScript>().blankCubeType == CubeType.GRASS)
-        {
-            groundPrefab = grassPrefab;
-        }
+       
     }
 
 

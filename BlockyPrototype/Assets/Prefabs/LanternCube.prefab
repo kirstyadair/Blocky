@@ -321,6 +321,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeActive: 0
+  timeActiveExploded: 0
   groundPrefab: {fileID: 0}
   dirtPrefab: {fileID: 5545948537728656736, guid: 238f0f7ec59fc664a83a475f3e579f19,
     type: 3}
@@ -330,6 +331,7 @@ MonoBehaviour:
     type: 3}
   grassPrefab: {fileID: 3014774579378426385, guid: 9af2a9c1228060c49bce3f842264e516,
     type: 3}
+  restartScript: {fileID: 0}
 --- !u!1 &1924293084973277296
 GameObject:
   m_ObjectHideFlags: 0
@@ -373,11 +375,11 @@ Light:
   m_Type: 2
   m_Color: {r: 0.96444035, g: 0.9811321, b: 0.68956923, a: 1}
   m_Intensity: 1
-  m_Range: 5
+  m_Range: 1.01
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1

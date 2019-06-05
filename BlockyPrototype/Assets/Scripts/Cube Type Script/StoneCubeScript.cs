@@ -11,6 +11,7 @@ public class StoneCubeScript : MonoBehaviour
     public GameObject snowPrefab;
     public GameObject dirtPrefab;
     public RestartScript restartScript;
+    PlayerScript playerScript;
     public double timeActive = 0.0f;
     public double timeActiveExploded = 0.0f;
 
@@ -21,7 +22,25 @@ public class StoneCubeScript : MonoBehaviour
     {
         gameObject.name = "StoneCube";
         restartScript = GameObject.Find("RestartObject").GetComponent<RestartScript>();
+        playerScript = GameObject.Find("PlayerObject").GetComponent<PlayerScript>();
         GameObject.Find("AudioObject").GetComponent<AudioManager>().PlayCubeSpawn(CubeType.STONE);
+
+        if (playerScript.blankCubeType == CubeType.DIRT)
+        {
+            groundPrefab = dirtPrefab;
+        }
+        else if (playerScript.blankCubeType == CubeType.SAND)
+        {
+            groundPrefab = sandPrefab;
+        }
+        else if (playerScript.blankCubeType == CubeType.SNOW)
+        {
+            groundPrefab = snowPrefab;
+        }
+        else if (playerScript.blankCubeType == CubeType.GRASS)
+        {
+            groundPrefab = grassPrefab;
+        }
     }
     
 
@@ -37,7 +56,7 @@ public class StoneCubeScript : MonoBehaviour
         if (restartScript.exploding)
         {
             timeActiveExploded += Time.deltaTime;
-            if (timeActiveExploded > 3)
+            if (timeActiveExploded > 10)
             {
                 Destroy(this.gameObject);
             }
@@ -50,22 +69,6 @@ public class StoneCubeScript : MonoBehaviour
         }
 
 
-        if (GameObject.Find("PlayerObject").GetComponent<PlayerScript>().blankCubeType == CubeType.DIRT)
-        {
-            groundPrefab = dirtPrefab;
-        }
-        else if (GameObject.Find("PlayerObject").GetComponent<PlayerScript>().blankCubeType == CubeType.SAND)
-        {
-            groundPrefab = sandPrefab;
-        }
-        else if (GameObject.Find("PlayerObject").GetComponent<PlayerScript>().blankCubeType == CubeType.SNOW)
-        {
-            groundPrefab = snowPrefab;
-        }
-        else if (GameObject.Find("PlayerObject").GetComponent<PlayerScript>().blankCubeType == CubeType.GRASS)
-        {
-            groundPrefab = grassPrefab;
-        }
     }
 
 

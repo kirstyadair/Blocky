@@ -317,6 +317,11 @@ public class GridScript : MonoBehaviour
                         playerScript.cubeType = CubeType.PONDWATER;
                         StartCoroutine(Pulse(result.gameObject));
                     }
+                    if (result.gameObject.name == "NuclearTile")
+                    {
+                        playerScript.cubeType = CubeType.NUCLEAR;
+                        StartCoroutine(Pulse(result.gameObject));
+                    }
                 }
             }
         }

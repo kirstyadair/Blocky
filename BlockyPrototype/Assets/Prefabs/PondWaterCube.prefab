@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeActive: 0
+  timeActiveExploded: 0
   groundPrefab: {fileID: 0}
   dirtPrefab: {fileID: 5545948537728656736, guid: 238f0f7ec59fc664a83a475f3e579f19,
     type: 3}
@@ -22,6 +23,12 @@ MonoBehaviour:
     type: 3}
   grassPrefab: {fileID: 3014774579378426385, guid: 9af2a9c1228060c49bce3f842264e516,
     type: 3}
+  nuclear1: {fileID: 2100000, guid: c559587db005fcc48b1299856bb7b7e3, type: 2}
+  nuclear2: {fileID: 2100000, guid: 7ce139933ceb91d4182013c0ead99a9a, type: 2}
+  nuclear3: {fileID: 2100000, guid: c2dc2d378d5c3b94b8a6ea16b3605edc, type: 2}
+  nuclear4: {fileID: 2100000, guid: 198125aa41e19814487808bb81ad4340, type: 2}
+  nuclearOuter: {fileID: 2100000, guid: f3964f189009679459783002edf9f65e, type: 2}
+  restartScript: {fileID: 0}
 --- !u!1 &3400283081076374144
 GameObject:
   m_ObjectHideFlags: 0
@@ -111,7 +118,7 @@ GameObject:
   - component: {fileID: 2466497729702846532}
   - component: {fileID: 6031852449180968152}
   m_Layer: 0
-  m_Name: Cube (2)
+  m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -129,7 +136,7 @@ Transform:
   m_LocalScale: {x: 1, y: 0.1, z: 1}
   m_Children: []
   m_Father: {fileID: 3339303332119183438}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2466497729702846532
 MeshFilter:
@@ -206,7 +213,7 @@ Transform:
   m_LocalScale: {x: 0.31846577, y: 0.31, z: 0.31846577}
   m_Children: []
   m_Father: {fileID: 3339303332119183438}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6851881986657857233
 MeshFilter:
@@ -283,7 +290,7 @@ Transform:
   m_LocalScale: {x: 0.1707429, y: 0.1707429, z: 0.1707429}
   m_Children: []
   m_Father: {fileID: 3339303332119183438}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2963549187493454798
 MeshFilter:

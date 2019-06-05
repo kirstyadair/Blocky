@@ -8,6 +8,7 @@ public class DirtCubeScript : MonoBehaviour
     public double timeActiveExploded = 0.0f;
     public RestartScript restartScript;
     GameObject groundPrefab;
+    PlayerScript playerScript;
 
 
 
@@ -16,8 +17,9 @@ public class DirtCubeScript : MonoBehaviour
     {
         gameObject.name = "DirtCube";
         restartScript = GameObject.Find("RestartObject").GetComponent<RestartScript>();
+        playerScript = GameObject.Find("PlayerObject").GetComponent<PlayerScript>();
         // don't play the audio clip for this cube if this cube is the default cube type
-        if (GameObject.Find("PlayerObject").GetComponent<PlayerScript>().blankCubeType != CubeType.DIRT)
+        if (playerScript.blankCubeType != CubeType.DIRT)
         {
             GameObject.Find("AudioObject").GetComponent<AudioManager>().PlayCubeSpawn(CubeType.DIRT);
         }
@@ -34,7 +36,7 @@ public class DirtCubeScript : MonoBehaviour
         if (restartScript.exploding)
         {
             timeActiveExploded += Time.deltaTime;
-            if (timeActiveExploded > 3)
+            if (timeActiveExploded > 10)
             {
                 Destroy(this.gameObject);
             }

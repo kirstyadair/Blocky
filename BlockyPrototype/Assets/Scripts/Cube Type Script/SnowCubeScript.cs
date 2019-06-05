@@ -7,6 +7,7 @@ public class SnowCubeScript : MonoBehaviour
     public double timeActive = 0.0f;
     public double timeActiveExploded = 0.0f;
     public RestartScript restartScript;
+    PlayerScript playerScript;
 
 
 
@@ -16,8 +17,10 @@ public class SnowCubeScript : MonoBehaviour
     {
         gameObject.name = "SnowCube";
         restartScript = GameObject.Find("RestartObject").GetComponent<RestartScript>();
+        playerScript = GameObject.Find("PlayerObject").GetComponent<PlayerScript>();
+
         // don't play the audio clip for this cube if this cube is the default cube type
-        if (GameObject.Find("PlayerObject").GetComponent<PlayerScript>().blankCubeType != CubeType.SNOW)
+        if (playerScript.blankCubeType != CubeType.SNOW)
         {
             GameObject.Find("AudioObject").GetComponent<AudioManager>().PlayCubeSpawn(CubeType.SNOW);
         }
@@ -34,7 +37,7 @@ public class SnowCubeScript : MonoBehaviour
         if (restartScript.exploding)
         {
             timeActiveExploded += Time.deltaTime;
-            if (timeActiveExploded > 3)
+            if (timeActiveExploded > 10)
             {
                 Destroy(this.gameObject);
             }

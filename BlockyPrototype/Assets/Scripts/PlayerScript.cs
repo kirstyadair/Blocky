@@ -22,7 +22,8 @@ public enum CubeType
     LANTERN,
     TREE,
     LONGGRASS,
-    PONDWATER
+    PONDWATER,
+    NUCLEAR
 }
 
 
@@ -77,6 +78,7 @@ public class PlayerScript : MonoBehaviour
     public GameObject treePrefab;
     public GameObject longGrassPrefab;
     public GameObject pondWaterPrefab;
+    public GameObject nuclearPrefab;
     public CubeType blankCubeType;
     GameObject currentCubePrefab;
     public GameObject blankCubePrefab;
@@ -95,7 +97,24 @@ public class PlayerScript : MonoBehaviour
         blankColor = new Color(1 / 255, 1 / 255, 1 / 255, 0.2f);
         editView = EditingView.EXTERIOR;
         cubeType = CubeType.NULL;
-        blankCubeType = CubeType.NULL;
+        blankCubeType = GameObject.Find("GameData").GetComponent<GameData>().blankCubeType;
+
+        if (blankCubeType == CubeType.GRASS)
+        {
+            blankCubePrefab = grassPrefab;
+        }
+        else if (blankCubeType == CubeType.SAND)
+        {
+            blankCubePrefab = sandPrefab;
+        }
+        else if (blankCubeType == CubeType.DIRT)
+        {
+            blankCubePrefab = dirtPrefab;
+        }
+        else if (blankCubeType == CubeType.SNOW)
+        {
+            blankCubePrefab = snowPrefab;
+        }
     }
 
 
@@ -118,22 +137,7 @@ public class PlayerScript : MonoBehaviour
             cubeType = blankCubeType;
         }
 
-        if (blankCubeType == CubeType.GRASS)
-        {
-            blankCubePrefab = grassPrefab;
-        }
-        else if (blankCubeType == CubeType.SAND)
-        {
-            blankCubePrefab = sandPrefab;
-        }
-        else if (blankCubeType == CubeType.DIRT)
-        {
-            blankCubePrefab = dirtPrefab;
-        }
-        else if (blankCubeType == CubeType.SNOW)
-        {
-            blankCubePrefab = snowPrefab;
-        }
+        
 
 
 
@@ -217,6 +221,11 @@ public class PlayerScript : MonoBehaviour
             currentCubePrefab = pondWaterPrefab;
             currentCubeAboveGround = false;
         }
+        else if (cubeType == CubeType.NUCLEAR)
+        {
+            currentCubePrefab = nuclearPrefab;
+            currentCubeAboveGround = false;
+        }
 
 
 
@@ -230,6 +239,20 @@ public class PlayerScript : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.N) && wallSelected)
             {
                 drawingPanelAnim.SetBool("openPanel", true);
+            }
+        }
+
+
+        if (editView == EditingView.GROUND)
+        {
+            if (Input.GetKeyDown(KeyCode.M))
+            {
+                floorDrawingPanelAnim.gameObject.SetActive(false);
+
+            }
+            if (Input.GetKeyDown(KeyCode.N))
+            {
+                floorDrawingPanelAnim.gameObject.SetActive(true);
             }
         }
 
@@ -423,7 +446,7 @@ public class PlayerScript : MonoBehaviour
         // Make an array of cubes with the selected tag
         GameObject[] selectedCubes;
         selectedCubes = GameObject.FindGameObjectsWithTag(wallTag);
-        // For each cube with the selected tag, change the colour to red
+        
         foreach(GameObject cube in selectedCubes)
         {
             numberOfCubes++;
