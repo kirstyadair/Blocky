@@ -7,6 +7,8 @@ public class NightToggleScript : MonoBehaviour
 {
     public Light directionalLight;
     public Toggle dayNightToggle;
+    public Material nightSky;
+    public Material daySky;
 
 
 
@@ -15,11 +17,16 @@ public class NightToggleScript : MonoBehaviour
     {
         if (dayNightToggle.isOn)
         {
-            directionalLight.intensity = 0;
+            directionalLight.intensity = 1f;
+            directionalLight.color = new Color(0.5f, 0.5f, 1, 1);
+            RenderSettings.skybox = nightSky;
+            
         }
         else if (!dayNightToggle.isOn)
         {
-            directionalLight.intensity = 0.7f;
+            directionalLight.intensity = 2f;
+            directionalLight.color = new Color(1, 0.9f, 0.8f, 1);
+            RenderSettings.skybox = daySky;
         }
     }
 

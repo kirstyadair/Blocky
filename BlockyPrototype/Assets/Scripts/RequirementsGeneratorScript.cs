@@ -52,8 +52,12 @@ public class RequirementsGeneratorScript : MonoBehaviour
     
     bool requirementsSaved = false;
     float percentageLoaded = 0;
-    
 
+
+    private void Awake()
+    {
+        allCubes = new List<GameObject>();
+    }
 
 
     // Start is called before the first frame update
@@ -65,7 +69,7 @@ public class RequirementsGeneratorScript : MonoBehaviour
         savedReqAnim.SetBool("slideIn", false);
         SaveRequirements();
         gameData = GameObject.Find("GameData").GetComponent<GameData>();
-        allCubes = new List<GameObject>();
+        
     }
 
 
