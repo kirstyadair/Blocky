@@ -8,6 +8,7 @@ public class DropdownScript : MonoBehaviour
     public Image colourIndicator;
     public Sprite glassIndicator;
     public Sprite tileIndicator;
+    public Sprite woodIndicator;
     public GameObject fillButton;
     public GameObject colourSelectorButton;
     public Dropdown dropDown;
@@ -42,12 +43,18 @@ public class DropdownScript : MonoBehaviour
         {
             fillButton.SetActive(true);
             colourSelectorButton.SetActive(true);
+            gridScript.colourPopup.SetActive(false);
         }
 
         if (gridScript.selectedMaterial == CubeMaterial.GLASS)
         {
             colourIndicator.sprite = glassIndicator;
             colourIndicator.color = new Color(1, 1, 1, 1);
+        }
+        else if (gridScript.selectedMaterial == CubeMaterial.WOOD)
+        {
+            colourIndicator.sprite = woodIndicator;
+            colourIndicator.color = gridScript.selectedColour;
         }
         else
         {

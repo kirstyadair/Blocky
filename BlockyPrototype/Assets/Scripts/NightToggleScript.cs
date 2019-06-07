@@ -17,15 +17,15 @@ public class NightToggleScript : MonoBehaviour
     {
         if (dayNightToggle.isOn)
         {
-            directionalLight.intensity = 1f;
+            directionalLight.intensity = 0.2f;
             directionalLight.color = new Color(0.5f, 0.5f, 1, 1);
             RenderSettings.skybox = nightSky;
             
         }
         else if (!dayNightToggle.isOn)
         {
-            directionalLight.intensity = 2f;
-            directionalLight.color = new Color(1, 0.9f, 0.8f, 1);
+            directionalLight.intensity = 0.5f;
+            directionalLight.color = new Color(1, 0.9f, 0.9f, 1);
             RenderSettings.skybox = daySky;
         }
     }

@@ -37,6 +37,7 @@ public class RequirementsGeneratorScript : MonoBehaviour
     public Sprite tile;
     public Sprite snowTile;
     public Sprite glassTile;
+    public Sprite woodTile;
     public string[] features;
     public string feature;
     public int requiredFloors;
@@ -215,6 +216,11 @@ public class RequirementsGeneratorScript : MonoBehaviour
                     Material material = cube.GetComponent<CubeScript>().snowMaterial;
                     cube.GetComponent<Renderer>().material = material;
                 }
+                else if (gridScript.selectedMaterial == CubeMaterial.WOOD)
+                {
+                    Material material = cube.GetComponent<CubeScript>().woodMaterial;
+                    cube.GetComponent<Renderer>().material = material;
+                }
                 cube.GetComponent<Renderer>().material.color = colour;
                 
                 foreach (Transform cell in gridScript.gridCells)
@@ -241,6 +247,11 @@ public class RequirementsGeneratorScript : MonoBehaviour
                         {
                             cell.GetComponent<Image>().color = new Color(0.8f, 1, 1, 1);
                             cell.GetComponent<Image>().sprite = glassTile;
+                        }
+                        else if (gridScript.selectedMaterial == CubeMaterial.WOOD)
+                        {
+                            cell.GetComponent<Image>().color = gridScript.selectedColour;
+                            cell.GetComponent<Image>().sprite = woodTile;
                         }
 
 

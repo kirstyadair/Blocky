@@ -528,6 +528,11 @@ public class PlayerScript : MonoBehaviour
                 im.sprite = gridScript.snowSprite;
                 im.color = Color.white;
             }
+            else if (requiredCube.GetComponent<CubeScript>().cubeMaterial == CubeMaterial.WOOD)
+            {
+                im.sprite = gridScript.woodSprite;
+                im.color = cubeColour;
+            }
         }
 
     }

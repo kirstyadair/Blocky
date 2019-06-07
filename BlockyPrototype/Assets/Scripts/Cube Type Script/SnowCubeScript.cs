@@ -105,6 +105,18 @@ public class SnowCubeScript : MonoBehaviour
             }
         }
 
+        if (other.name == "PondWaterCube")
+        {
+            if (timeActive < other.GetComponent<PondWaterCubeScript>().timeActive)
+            {
+                Destroy(other.gameObject);
+            }
+            else
+            {
+                Destroy(this.gameObject);
+            }
+        }
+
         if (other.name == "SandCube")
         {
             if (timeActive < other.GetComponent<SandCubeScript>().timeActive)
@@ -129,6 +141,18 @@ public class SnowCubeScript : MonoBehaviour
             }
         }
 
-        
+        if (other.name == "NuclearCube")
+        {
+            if (timeActive < other.GetComponent<NuclearCubeScript>().timeActive)
+            {
+                Destroy(other.gameObject);
+            }
+            else
+            {
+                Destroy(this.gameObject);
+            }
+        }
+
+
     }
 }

@@ -112,5 +112,29 @@ public class DirtCubeScript : MonoBehaviour
                 Destroy(this.gameObject);
             }
         }
+
+        if (other.name == "PondWaterCube")
+        {
+            if (timeActive < other.GetComponent<PondWaterCubeScript>().timeActive)
+            {
+                Destroy(other.gameObject);
+            }
+            else
+            {
+                Destroy(this.gameObject);
+            }
+        }
+
+        if (other.name == "NuclearCube")
+        {
+            if (timeActive < other.GetComponent<NuclearCubeScript>().timeActive)
+            {
+                Destroy(other.gameObject);
+            }
+            else
+            {
+                Destroy(this.gameObject);
+            }
+        }
     }
 }
