@@ -23,7 +23,8 @@ public enum CubeType
     TREE,
     LONGGRASS,
     PONDWATER,
-    NUCLEAR
+    NUCLEAR,
+    LILYPAD
 }
 
 
@@ -79,6 +80,7 @@ public class PlayerScript : MonoBehaviour
     public GameObject longGrassPrefab;
     public GameObject pondWaterPrefab;
     public GameObject nuclearPrefab;
+    public GameObject lilypadPrefab;
     public CubeType blankCubeType;
     GameObject currentCubePrefab;
     public GameObject blankCubePrefab;
@@ -225,6 +227,11 @@ public class PlayerScript : MonoBehaviour
         {
             currentCubePrefab = nuclearPrefab;
             currentCubeAboveGround = false;
+        }
+        else if (cubeType == CubeType.LILYPAD)
+        {
+            currentCubePrefab = lilypadPrefab;
+            currentCubeAboveGround = true;
         }
 
 

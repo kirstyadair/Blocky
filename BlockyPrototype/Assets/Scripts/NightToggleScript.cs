@@ -24,7 +24,7 @@ public class NightToggleScript : MonoBehaviour
         }
         else if (!dayNightToggle.isOn)
         {
-            directionalLight.intensity = 0.5f;
+            directionalLight.intensity = 1f;
             directionalLight.color = new Color(1, 0.9f, 0.9f, 1);
             RenderSettings.skybox = daySky;
         }

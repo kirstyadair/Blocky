@@ -275,7 +275,7 @@ Light:
   serializedVersion: 8
   m_Type: 2
   m_Color: {r: 1, g: 0.56868994, b: 0, a: 1}
-  m_Intensity: 5
+  m_Intensity: 1
   m_Range: 0.1
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -344,7 +344,7 @@ Light:
   serializedVersion: 8
   m_Type: 2
   m_Color: {r: 1, g: 0.56868994, b: 0, a: 1}
-  m_Intensity: 5
+  m_Intensity: 1
   m_Range: 0.1
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -491,7 +491,7 @@ Light:
   serializedVersion: 8
   m_Type: 2
   m_Color: {r: 1, g: 0.56868994, b: 0, a: 1}
-  m_Intensity: 5
+  m_Intensity: 1
   m_Range: 0.1
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -560,7 +560,7 @@ Light:
   serializedVersion: 8
   m_Type: 2
   m_Color: {r: 1, g: 0.56868994, b: 0, a: 1}
-  m_Intensity: 5
+  m_Intensity: 1
   m_Range: 0.1
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -904,7 +904,9 @@ MonoBehaviour:
     type: 3}
   grassPrefab: {fileID: 3014774579378426385, guid: 9af2a9c1228060c49bce3f842264e516,
     type: 3}
+  restartScript: {fileID: 0}
   timeActive: 0
+  timeActiveExploded: 0
 --- !u!1 &5102364760947505607
 GameObject:
   m_ObjectHideFlags: 0
@@ -1171,7 +1173,7 @@ Light:
   serializedVersion: 8
   m_Type: 2
   m_Color: {r: 1, g: 0.56868994, b: 0, a: 1}
-  m_Intensity: 5
+  m_Intensity: 1
   m_Range: 0.1
   m_SpotAngle: 30
   m_CookieSize: 10
