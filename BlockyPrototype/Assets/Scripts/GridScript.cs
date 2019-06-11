@@ -362,6 +362,16 @@ public class GridScript : MonoBehaviour
                         playerScript.cubeType = CubeType.LILYPAD;
                         StartCoroutine(Pulse(result.gameObject));
                     }
+                    if (result.gameObject.name == "LavaTile")
+                    {
+                        playerScript.cubeType = CubeType.LAVA;
+                        StartCoroutine(Pulse(result.gameObject));
+                    }
+                    if (result.gameObject.name == "LamppostTile")
+                    {
+                        playerScript.cubeType = CubeType.LAMPPOST;
+                        StartCoroutine(Pulse(result.gameObject));
+                    }
                 }
             }
         }

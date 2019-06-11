@@ -23,7 +23,7 @@ public class LilypadCubeScript : MonoBehaviour
         gameObject.name = "LilypadCube";
         restartScript = GameObject.Find("RestartObject").GetComponent<RestartScript>();
         playerScript = GameObject.Find("PlayerObject").GetComponent<PlayerScript>();
-        GameObject.Find("AudioObject").GetComponent<AudioManager>().PlayCubeSpawn(CubeType.FLOWER);
+        GameObject.Find("AudioObject").GetComponent<AudioManager>().PlayCubeSpawn(CubeType.LILYPAD);
 
         if (playerScript.blankCubeType == CubeType.DIRT)
         {

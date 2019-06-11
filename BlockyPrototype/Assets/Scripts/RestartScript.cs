@@ -23,6 +23,7 @@ public class RestartScript : MonoBehaviour
     {
         chooseTerrainPanel.SetBool("in", false);
         gameData = GameObject.Find("GameData").GetComponent<GameData>();
+        exploding = false;
     }
 
 

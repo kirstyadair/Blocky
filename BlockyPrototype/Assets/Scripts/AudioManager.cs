@@ -17,6 +17,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip snowClip;
     public AudioClip lanternClip;
     public AudioClip dirtClip;
+    public AudioClip lilypadClip;
 
     public AudioSource audio;
 
@@ -24,8 +25,17 @@ public class AudioManager : MonoBehaviour
 
     public void PlayCubeSpawn(CubeType cubeType)
     {
-        audio.pitch = Random.Range(-2f, 2f);
+        if (cubeType != CubeType.NUCLEAR)
+        {
+            audio.pitch = Random.Range(-2f, 1f);
+        }
+        else
+        {
+            audio.pitch = Random.Range(1.5f, 3f);
+        }
+
         audio.volume = 0.4f;
+
 
         if (cubeType == CubeType.FIRE)
         {
@@ -87,6 +97,16 @@ public class AudioManager : MonoBehaviour
         if (cubeType == CubeType.DIRT)
         {
             audio.PlayOneShot(dirtClip);
+        }
+
+        if (cubeType == CubeType.LILYPAD)
+        {
+            audio.PlayOneShot(lilypadClip);
+        }
+
+        if (cubeType == CubeType.NUCLEAR)
+        {
+            audio.PlayOneShot(waterClip);
         }
 
         if (cubeType == CubeType.FLOWER)
