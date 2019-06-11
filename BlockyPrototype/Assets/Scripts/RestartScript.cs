@@ -1,19 +1,29 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class RestartScript : MonoBehaviour
 {
     public GameObject grenadePrefab;
     public GameObject plane;
+    GameData gameData;
     public PlayerScript playerScript;
     public GridScript gridScript;
     public RequirementsGeneratorScript requirementsGeneratorScript;
     public FloorCubeSpawnerScript floorCubeSpawnerScript;
+    public Animator chooseTerrainPanel;
     public float radius;
     public float force;
     public bool exploding = false;
     bool showMenu = false;
+
+
+    private void Start()
+    {
+        chooseTerrainPanel.SetBool("in", false);
+        gameData = GameObject.Find("GameData").GetComponent<GameData>();
+    }
 
 
 
@@ -36,13 +46,8 @@ public class RestartScript : MonoBehaviour
 
         if (showMenu)
         {
-            requirementsGeneratorScript.Start();
-            playerScript.Start();
-            gridScript.Start();
-            floorCubeSpawnerScript.Start();
-            plane.SetActive(true);
-            exploding = false;
-            showMenu = false;
+            chooseTerrainPanel.SetBool("in", true);
+            
         }
     }
 
@@ -111,5 +116,39 @@ public class RestartScript : MonoBehaviour
         }
 
         showMenu = true;
+    }
+
+
+
+
+    public void GrassTerrain()
+    {
+        gameData.blankCubeType = CubeType.GRASS;
+        SceneManager.LoadScene("BlockySandbox");
+    }
+
+
+
+    public void SandTerrain()
+    {
+        gameData.blankCubeType = CubeType.SAND;
+        SceneManager.LoadScene("BlockySandbox");
+    }
+
+
+
+    public void SnowTerrain()
+    {
+        gameData.blankCubeType = CubeType.SNOW;
+        SceneManager.LoadScene("BlockySandbox");
+    }
+
+
+
+
+    public void DirtTerrain()
+    {
+        gameData.blankCubeType = CubeType.DIRT;
+        SceneManager.LoadScene("BlockySandbox");
     }
 }

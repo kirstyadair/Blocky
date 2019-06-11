@@ -8,11 +8,13 @@ public class RequirementsGeneratorScript : MonoBehaviour
     // Variables
     [Header("Scripts")]
     public PlayerScript playerScript;
+    public GridScript gridScript;
     public FloorCubeSpawnerScript floorSpawner;
 
     [Header("Animators")]
     public Animator chooseReqAnim;
     public Animator savedReqAnim;
+    public Animator chooseTerrainAnim;
 
     [Header("GameObjects")]
    
@@ -55,7 +57,7 @@ public class RequirementsGeneratorScript : MonoBehaviour
     float percentageLoaded = 0;
 
 
-    private void Awake()
+    public void Awake()
     {
         allCubes = new List<GameObject>();
     }
@@ -66,11 +68,20 @@ public class RequirementsGeneratorScript : MonoBehaviour
     {
         loadingPanel.SetActive(false);
         playerScript.chosenRequirements = false;
-        //chooseReqAnim.SetBool("panelSlide", false);
         savedReqAnim.SetBool("slideIn", false);
         SaveRequirements();
         gameData = GameObject.Find("GameData").GetComponent<GameData>();
         
+    }
+
+    public void ExplodeyStart()
+    {
+        loadingPanel.SetActive(false);
+        playerScript.chosenRequirements = false;
+        chooseTerrainAnim.SetBool("panelIn", true);
+        savedReqAnim.SetBool("slideIn", false);
+        //SaveRequirements();
+        gameData = GameObject.Find("GameData").GetComponent<GameData>();
     }
 
 
@@ -261,4 +272,7 @@ public class RequirementsGeneratorScript : MonoBehaviour
             }
         }
     }
+
+
+    
 }
