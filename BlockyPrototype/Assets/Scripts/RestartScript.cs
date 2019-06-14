@@ -13,6 +13,7 @@ public class RestartScript : MonoBehaviour
     public RequirementsGeneratorScript requirementsGeneratorScript;
     public FloorCubeSpawnerScript floorCubeSpawnerScript;
     public Animator chooseTerrainPanel;
+    public Animator drawingPanelAnim;
     public float radius;
     public float force;
     public bool exploding = false;
@@ -61,6 +62,11 @@ public class RestartScript : MonoBehaviour
         GameObject grenade = Instantiate(grenadePrefab, transform.position, Quaternion.identity);
         if (grenade.GetComponent<Rigidbody>().velocity.y == 0)
         {
+            if (drawingPanelAnim.GetBool("openPanel"))
+            {
+                drawingPanelAnim.SetBool("openPanel", false);
+            }
+
             StartCoroutine(DelayExplosion(grenade));
             
         }

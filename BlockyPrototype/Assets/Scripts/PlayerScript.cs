@@ -105,6 +105,7 @@ public class PlayerScript : MonoBehaviour
         cubeType = CubeType.NULL;
         blankCubeType = GameObject.Find("GameData").GetComponent<GameData>().blankCubeType;
 
+        // Blank cube types only
         if (blankCubeType == CubeType.GRASS)
         {
             blankCubePrefab = grassPrefab;
@@ -552,6 +553,11 @@ public class PlayerScript : MonoBehaviour
             else if (requiredCube.GetComponent<CubeScript>().cubeMaterial == CubeMaterial.WOOD)
             {
                 im.sprite = gridScript.woodSprite;
+                im.color = cubeColour;
+            }
+            else if (requiredCube.GetComponent<CubeScript>().cubeMaterial == CubeMaterial.BRICK)
+            {
+                im.sprite = gridScript.brickSprite;
                 im.color = cubeColour;
             }
         }

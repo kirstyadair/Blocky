@@ -84,7 +84,8 @@ MonoBehaviour:
   restartScript: {fileID: 0}
   standardMaterial: {fileID: 2100000, guid: f49904b88d36d354fadd94d6102d94f6, type: 2}
   snowMaterial: {fileID: 2100000, guid: 20be59ce95604d24abe856cf4c4d1cb5, type: 2}
-  woodMaterial: {fileID: 2100000, guid: a988daff07dd973459c16b52a6cf245b, type: 2}
+  woodMaterial: {fileID: 2100000, guid: c396b47affd9c9d48b32a3899c7c26da, type: 2}
+  brickMaterial: {fileID: 2100000, guid: 024ea29ef7ee9b04090a4c0a2546a930, type: 2}
 --- !u!23 &3752546829330635847
 MeshRenderer:
   m_ObjectHideFlags: 0

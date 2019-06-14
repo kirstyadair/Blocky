@@ -21,6 +21,12 @@ public class GridScript : MonoBehaviour
     public Sprite snowSprite;
     public Sprite glassSprite;
     public Sprite woodSprite;
+    public Sprite brickSprite;
+
+    public GameObject glassPopup;
+    public GameObject snowPopup;
+    public GameObject woodPopup;
+    public GameObject brickPopup;
 
     GameObject grid;
     GameObject gridTile;
@@ -58,7 +64,7 @@ public class GridScript : MonoBehaviour
         currentColourIndicator.a = 1;
         currentColour.color = currentColourIndicator;
         
-        if (selectedMaterial != CubeMaterial.STANDARD && selectedMaterial != CubeMaterial.WOOD)
+        if (selectedMaterial != CubeMaterial.STANDARD && selectedMaterial != CubeMaterial.WOOD && selectedMaterial != CubeMaterial.BRICK)
         {
             currentColourIndicator = Color.white;
             currentColour.color = currentColourIndicator;
@@ -118,6 +124,13 @@ public class GridScript : MonoBehaviour
                                 cubeToColour.GetComponent<MeshRenderer>().material.color = selectedColour;
                                 gridTile.GetComponent<Image>().sprite = woodSprite;
                             }
+                            else if (selectedMaterial == CubeMaterial.BRICK)
+                            {
+                                cubeToColour.GetComponent<CubeScript>().cubeMaterial = CubeMaterial.BRICK;
+                                cubeToColour.GetComponent<MeshRenderer>().material = cubeToColour.GetComponent<CubeScript>().brickMaterial;
+                                cubeToColour.GetComponent<MeshRenderer>().material.color = selectedColour;
+                                gridTile.GetComponent<Image>().sprite = brickSprite;
+                            }
 
                         }
                         else
@@ -170,6 +183,11 @@ public class GridScript : MonoBehaviour
                             {
                                 selectedColour = result.gameObject.GetComponent<Image>().color;
                                 selectedMaterial = CubeMaterial.WOOD;
+                            }
+                            else if (cubeToColour.GetComponent<CubeScript>().cubeMaterial == CubeMaterial.BRICK)
+                            {
+                                selectedColour = result.gameObject.GetComponent<Image>().color;
+                                selectedMaterial = CubeMaterial.BRICK;
                             }
                         }
                         else if (result.gameObject.tag == "ColourTile")
@@ -231,6 +249,7 @@ public class GridScript : MonoBehaviour
                 {
                     if (result.gameObject.name != "EraserTile")
                     {
+                        DisableAllPopups();
                         selectedMaterial = CubeMaterial.STANDARD;
                         selectedColour = result.gameObject.GetComponent<Image>().color;
                         StartCoroutine(Pulse(result.gameObject));
@@ -242,6 +261,11 @@ public class GridScript : MonoBehaviour
                     }
                     
                 }
+
+                /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                //////////////////////////////////////////////// MATERIAL DRAWING TILES /////////////////////////////////////////////////////////////////
+                /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                
                 else if (result.gameObject.tag == "MaterialTile")
                 {
                     if (result.gameObject.name == "GlassTile")
@@ -249,18 +273,33 @@ public class GridScript : MonoBehaviour
                         selectedMaterial = CubeMaterial.GLASS;
                         StartCoroutine(Pulse(result.gameObject));
                         colourPopup.SetActive(false);
+
+                        DisableOtherPopups(glassPopup);
+                        
                     }
                     if (result.gameObject.name == "SnowTile")
                     {
                         selectedMaterial = CubeMaterial.SNOW;
                         StartCoroutine(Pulse(result.gameObject));
                         colourPopup.SetActive(false);
+
+                        DisableOtherPopups(snowPopup);
                     }
                     if (result.gameObject.name == "WoodTile")
                     {
                         selectedMaterial = CubeMaterial.WOOD;
                         StartCoroutine(Pulse(result.gameObject));
                         colourPopup.SetActive(true);
+
+                        DisableOtherPopups(woodPopup);
+                    }
+                    if (result.gameObject.name == "BrickTile")
+                    {
+                        selectedMaterial = CubeMaterial.BRICK;
+                        StartCoroutine(Pulse(result.gameObject));
+                        colourPopup.SetActive(true);
+
+                        DisableOtherPopups(brickPopup);
                     }
                 }
                 else if (result.gameObject.tag == "MaterialColourTile")
@@ -269,9 +308,14 @@ public class GridScript : MonoBehaviour
                     StartCoroutine(Pulse(result.gameObject));
                 }
 
+                /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                //////////////////////////////////////////////// FLOOR DRAWING TILES /////////////////////////////////////////////////////////////////
+                /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
                 else if (result.gameObject.tag == "FloorTile")
                 {
+                    
+
                     if (result.gameObject.name == "WaterTile")
                     {
                         playerScript.cubeType = CubeType.WATER;
@@ -384,7 +428,6 @@ public class GridScript : MonoBehaviour
         GameObject cubeToColour = GameObject.Find("cube" + tile.name);
         if (cubeToColour.GetComponent<CubeScript>().cubeMaterial != CubeMaterial.STANDARD && selectedMaterial == CubeMaterial.STANDARD)
         {
-            Debug.Log("not standard material, changing");
             cubeToColour.GetComponent<CubeScript>().cubeMaterial = CubeMaterial.STANDARD;
             cubeToColour.GetComponent<Renderer>().material = cubeToColour.GetComponent<CubeScript>().standardMaterial;
         }
@@ -437,7 +480,21 @@ public class GridScript : MonoBehaviour
     }
 
 
-    
+    void DisableOtherPopups(GameObject activePopup)
+    {
+        DisableAllPopups();
+
+        activePopup.SetActive(true);
+    }
+
+    public void DisableAllPopups()
+    {
+        glassPopup.SetActive(false);
+        snowPopup.SetActive(false);
+        woodPopup.SetActive(false);
+        brickPopup.SetActive(false);
+    }
+
 
     IEnumerator Pulse(GameObject tile)
     {
