@@ -83,9 +83,14 @@ MonoBehaviour:
   timeActiveExploded: 0
   restartScript: {fileID: 0}
   standardMaterial: {fileID: 2100000, guid: f49904b88d36d354fadd94d6102d94f6, type: 2}
-  snowMaterial: {fileID: 2100000, guid: 20be59ce95604d24abe856cf4c4d1cb5, type: 2}
+  snowMaterial: {fileID: 2100000, guid: d45b8524161138f4cbec9a07d24e02f7, type: 2}
   woodMaterial: {fileID: 2100000, guid: c396b47affd9c9d48b32a3899c7c26da, type: 2}
   brickMaterial: {fileID: 2100000, guid: 024ea29ef7ee9b04090a4c0a2546a930, type: 2}
+  opaqueStandardMaterial: {fileID: 2100000, guid: 68e27212220803d41bb0d6872425e7a4,
+    type: 2}
+  opaqueSnowMaterial: {fileID: 2100000, guid: f732f28956111ed4f80d205ee1c3e9c4, type: 2}
+  opaqueWoodMaterial: {fileID: 2100000, guid: 687839f3bdb3a054aaa0220708a4a350, type: 2}
+  opaqueBrickMaterial: {fileID: 2100000, guid: 22b70494a5b4f314f815e7a21290e92d, type: 2}
 --- !u!23 &3752546829330635847
 MeshRenderer:
   m_ObjectHideFlags: 0

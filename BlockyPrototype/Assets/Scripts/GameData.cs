@@ -10,6 +10,10 @@ public class GameData : MonoBehaviour
     public Material snow;
     public Material sand;
     public Material dirt;
+    public float backgroundAudioLevel = 0.4f;
+    public float cubePlacementAudioLevel = 0.4f;
+
+
 
 
     // Start is called before the first frame update
@@ -17,6 +21,9 @@ public class GameData : MonoBehaviour
     {
         DontDestroyOnLoad(gameObject);
     }
+
+
+
 
     // Update is called once per frame
     void Update()
@@ -38,5 +45,23 @@ public class GameData : MonoBehaviour
             terrain = grass;
         }
         
+    }
+
+
+
+
+    public void BackgroundMusicVolChanged(float value)
+    {
+        backgroundAudioLevel = value;
+        GetComponent<AudioSource>().volume = backgroundAudioLevel;
+    }
+
+
+
+
+    public void CubePlacementMusicVolChanged(float value)
+    {
+        cubePlacementAudioLevel = value;
+        // Audio manager uses this value in AudioManager - don't touch it
     }
 }

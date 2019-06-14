@@ -5,14 +5,25 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuScript : MonoBehaviour
 {
-    public GameData gameData;
+    public GameObject gameData;
     public GameObject terrainPanel;
     public Animator terrainAnim;
+    public AudioClip backgroundMusic;
+
+    public Material grass;
+    public Material snow;
+    public Material sand;
+    public Material dirt;
 
 
     private void Start()
     {
-        gameData = GameObject.Find("GameData").GetComponent<GameData>();
+        gameData = GameObject.Find("GameData");
+        if (gameData == null)
+        {
+            CreateGameData();
+            
+        }
     }
 
 
@@ -45,7 +56,7 @@ public class MainMenuScript : MonoBehaviour
     public void GrassTerrainChosen()
     {
         terrainAnim.SetBool("panelIn", false);
-        gameData.blankCubeType = CubeType.GRASS;
+        gameData.GetComponent<GameData>().blankCubeType = CubeType.GRASS;
         StartSandbox();
     }
 
@@ -54,7 +65,7 @@ public class MainMenuScript : MonoBehaviour
     public void SandTerrainChosen()
     {
         terrainAnim.SetBool("panelIn", false);
-        gameData.blankCubeType = CubeType.SAND;
+        gameData.GetComponent<GameData>().blankCubeType = CubeType.SAND;
         StartSandbox();
     }
 
@@ -63,7 +74,7 @@ public class MainMenuScript : MonoBehaviour
     public void DirtTerrainChosen()
     {
         terrainAnim.SetBool("panelIn", false);
-        gameData.blankCubeType = CubeType.DIRT;
+        gameData.GetComponent<GameData>().blankCubeType = CubeType.DIRT;
         StartSandbox();
     }
 
@@ -72,7 +83,42 @@ public class MainMenuScript : MonoBehaviour
     public void SnowTerrainChosen()
     {
         terrainAnim.SetBool("panelIn", false);
-        gameData.blankCubeType = CubeType.SNOW;
+        gameData.GetComponent<GameData>().blankCubeType = CubeType.SNOW;
         StartSandbox();
+    }
+
+
+
+    public void OptionsMenu()
+    {
+        StartCoroutine(DelayStartOptions());
+    }
+
+
+
+    IEnumerator DelayStartOptions()
+    {
+        GetComponent<AudioSource>().Play();
+        yield return new WaitForSeconds(0.5f);
+        SceneManager.LoadScene("Options");
+    }
+
+
+
+    public void CreateGameData()
+    {
+        gameData = new GameObject("GameData");
+        gameData.AddComponent<GameData>();
+        gameData.AddComponent<AudioSource>();
+
+        gameData.GetComponent<AudioSource>().clip = backgroundMusic;
+        gameData.GetComponent<AudioSource>().loop = true;
+        gameData.GetComponent<AudioSource>().Play();
+        gameData.GetComponent<AudioSource>().volume = gameData.GetComponent<GameData>().backgroundAudioLevel;
+
+        gameData.GetComponent<GameData>().sand = sand;
+        gameData.GetComponent<GameData>().snow = snow;
+        gameData.GetComponent<GameData>().dirt = dirt;
+        gameData.GetComponent<GameData>().grass = grass;
     }
 }

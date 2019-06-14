@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: b5beeabc4d243cb489898cd5138e6940
   - enabled: 1
+    path: Assets/Scenes/Options.unity
+    guid: 9d005c91cce627645b4d7f27fab8c4e3
+  - enabled: 1
     path: Assets/Scenes/BlockySandbox.unity
     guid: 7c0d7812f1be6504ca6d0c9938cac231
   m_configObjects: {}

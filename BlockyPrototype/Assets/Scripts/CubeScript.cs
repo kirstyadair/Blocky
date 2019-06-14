@@ -27,6 +27,7 @@ public class CubeScript : MonoBehaviour
     PlayerScript playerScript;
     GridScript gridScript;
     Rigidbody rb;
+    Renderer ren;
 
 
 
@@ -35,27 +36,28 @@ public class CubeScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        ren = GetComponent<Renderer>();
         restartScript = GameObject.Find("RestartObject").GetComponent<RestartScript>();
         rb = GetComponent<Rigidbody>();
         if (cubeMaterial == CubeMaterial.STANDARD)
         {
-            GetComponent<Renderer>().material.color = new Color(1 / 255, 1 / 255, 1 / 255, 0.4f);
+            ren.material.color = new Color(1 / 255, 1 / 255, 1 / 255, 0.4f);
         }
         if (cubeMaterial == CubeMaterial.GLASS)
         {
-            GetComponent<Renderer>().material.color = new Color(1, 1, 1, 0.4f);
+            ren.material.color = new Color(1, 1, 1, 0.4f);
         }
         if (cubeMaterial == CubeMaterial.SNOW)
         {
-            GetComponent<Renderer>().material = snowMaterial;
+            ren.material = snowMaterial;
         }
         if (cubeMaterial == CubeMaterial.WOOD)
         {
-            GetComponent<Renderer>().material = woodMaterial;
+            ren.material = woodMaterial;
         }
         if (cubeMaterial == CubeMaterial.BRICK)
         {
-            GetComponent<Renderer>().material = brickMaterial;
+            ren.material = brickMaterial;
         }
 
         playerScript = GameObject.Find("PlayerObject").GetComponent<PlayerScript>();
@@ -73,12 +75,12 @@ public class CubeScript : MonoBehaviour
             rb.MovePosition(transform.position - new Vector3(0, 0.01f, 0));
         }
         
-        
-        if (playerScript.editView != EditingView.EXTERIOR && cubeMaterial != CubeMaterial.GLASS)
+        // if not editing the walls and not glass, or if F is pressed, make the walls opaque
+        if ((playerScript.editView != EditingView.EXTERIOR && cubeMaterial != CubeMaterial.GLASS) || Input.GetKey(KeyCode.F))
         {
-            Color colour = GetComponent<Renderer>().material.color;
-            colour.a = 1;
-            GetComponent<Renderer>().material.color = colour;
+            Color colour = ren.material.color;
+            colour.a = 1f;
+            ren.material.color = colour;
         }
     }
 
@@ -100,18 +102,9 @@ public class CubeScript : MonoBehaviour
 
         if (cubeMaterial == CubeMaterial.GLASS)
         {
-            Color colour = GetComponent<Renderer>().material.color;
+            Color colour = ren.material.color;
             colour.a = 0.1f;
-            GetComponent<Renderer>().material.color = colour;
-        }
-
-        if (cubeMaterial == CubeMaterial.SNOW)
-        {
-            GetComponent<Renderer>().material = snowMaterial;
-        }
-        if (cubeMaterial == CubeMaterial.BRICK)
-        {
-            Debug.Log(GetComponent<Renderer>().material.color.a);
+            ren.material.color = colour;
         }
     }
 

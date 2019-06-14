@@ -34,7 +34,7 @@ public class AudioManager : MonoBehaviour
             audio.pitch = Random.Range(1.5f, 3f);
         }
 
-        audio.volume = 0.4f;
+        audio.volume = GameObject.Find("GameData").GetComponent<GameData>().cubePlacementAudioLevel;
 
 
         if (cubeType == CubeType.FIRE)
@@ -125,7 +125,7 @@ public class AudioManager : MonoBehaviour
     public void VaryPitch()
     {
         audio.pitch = Random.Range(0.5f, 1.5f);
-        audio.volume = 0.05f;
+        audio.volume = GameObject.Find("GameData").GetComponent<GameData>().cubePlacementAudioLevel / 4;
         audio.PlayOneShot(cubePlacement);
     }
 
