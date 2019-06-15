@@ -8,6 +8,7 @@ public class FloorCubeSpawnerScript : MonoBehaviour
     public List<GameObject> floorCubes;
     public float spaceBetweenCubes;
     public float timeBetweenSpawning;
+    int numOfCubes = 0;
 
 
 
@@ -35,10 +36,10 @@ public class FloorCubeSpawnerScript : MonoBehaviour
             for (int j = 0; j < x; j++)
             {
                 GameObject floorCube = Instantiate(floorCubePrefab, transform.position, Quaternion.identity);
+                numOfCubes++;
                 floorCube.GetComponent<FloorCubeScript>().texture = chosenTerrain;
                 floorCube.tag = "Floor";
-                floorCubes.Add(floorCube);
-                floorCube.name = "FloorCube" + floorCubes.Count;
+                floorCube.name = "FloorCube" + numOfCubes.ToString();
                 transform.Translate(Vector3.right * spaceBetweenCubes);
             }
             transform.Translate(Vector3.back * spaceBetweenCubes);

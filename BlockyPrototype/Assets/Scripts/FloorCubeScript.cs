@@ -6,6 +6,7 @@ public class FloorCubeScript : MonoBehaviour
 {
     Rigidbody rb;
     public GameObject grassPrefab;
+    FloorCubeSpawnerScript fcsScript;
     Transform blackCubeObject;
     Transform grassCubeObject;
     public Material texture;
@@ -16,6 +17,7 @@ public class FloorCubeScript : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        fcsScript = GameObject.Find("FloorCubeSpawner").GetComponent<FloorCubeSpawnerScript>();
         ColourCube();
     }
 
@@ -39,6 +41,9 @@ public class FloorCubeScript : MonoBehaviour
             Vector3 pos = transform.position;
             gameObject.SetActive(false);
             GameObject grassCube = Instantiate(grassPrefab, pos, Quaternion.identity);
+
+            fcsScript.floorCubes.Add(grassCube);
+
             grassCube.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
             if (gameObject.name == "BlackFloorCube")
             {
@@ -65,7 +70,7 @@ public class FloorCubeScript : MonoBehaviour
     {
         int cubeID = int.Parse(gameObject.name.Substring(9));
         // find a way to make this more efficient
-        if (cubeID > 5 && cubeID < 17 || cubeID > 35 && cubeID < 47 || cubeID > 65 && cubeID < 77 || cubeID > 95 && cubeID < 107 || cubeID > 125 && cubeID < 137 || cubeID > 155 && cubeID < 167 || cubeID > 185 && cubeID < 197 || cubeID > 215 && cubeID < 227 || cubeID > 245 && cubeID < 257 || cubeID > 275 && cubeID < 287 )
+        if (cubeID > 5 && cubeID < 17 || cubeID > 35 && cubeID < 47 || cubeID > 65 && cubeID < 77 || cubeID > 95 && cubeID < 107 || cubeID > 125 && cubeID < 137 || cubeID > 155 && cubeID < 167 || cubeID > 185 && cubeID < 197 || cubeID > 215 && cubeID < 227 || cubeID > 245 && cubeID < 257 || cubeID > 275 && cubeID < 287 || cubeID > 305 && cubeID < 317)
         {
             GetComponent<Renderer>().material.color = new Color(0, 0, 0, 0.4f);
             gameObject.name = "BlackFloorCube";
