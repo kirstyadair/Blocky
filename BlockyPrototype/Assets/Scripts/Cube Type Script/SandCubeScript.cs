@@ -6,7 +6,9 @@ public class SandCubeScript : MonoBehaviour
 {
     public double timeActive = 0.0f;
     public double timeActiveExploded = 0.0f;
+    public bool isBlackCube;
     public RestartScript restartScript;
+    public Material sandMaterial;
     PlayerScript playerScript;
 
 
@@ -16,7 +18,17 @@ public class SandCubeScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gameObject.name = "SandCube";
+       if (!isBlackCube)
+        {
+            gameObject.name = "SandCube";
+            //GetComponent<Renderer>().material = sandMaterial;
+        }
+        else
+        {
+            gameObject.name = "BlackFloorCube";
+            GetComponent<Renderer>().material.color = new Color(0, 0, 0, 0.4f);
+        }
+        gameObject.tag = "Floor";
         restartScript = GameObject.Find("RestartObject").GetComponent<RestartScript>();
         playerScript = GameObject.Find("PlayerObject").GetComponent<PlayerScript>();
 

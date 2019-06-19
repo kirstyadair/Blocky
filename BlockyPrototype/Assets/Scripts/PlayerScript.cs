@@ -103,7 +103,6 @@ public class PlayerScript : MonoBehaviour
         blankColor = new Color(1 / 255, 1 / 255, 1 / 255, 0.2f);
         editView = EditingView.EXTERIOR;
         cubeType = CubeType.NULL;
-        blankCubeType = GameObject.Find("GameData").GetComponent<GameData>().blankCubeType;
 
         // Blank cube types only
         if (blankCubeType == CubeType.GRASS)
@@ -128,6 +127,24 @@ public class PlayerScript : MonoBehaviour
 
     void Update()
     {
+        blankCubeType = GameObject.Find("GameData").GetComponent<GameData>().blankCubeType;
+        if (blankCubeType == CubeType.GRASS)
+        {
+            blankCubePrefab = grassPrefab;
+        }
+        else if (blankCubeType == CubeType.SAND)
+        {
+            blankCubePrefab = sandPrefab;
+        }
+        else if (blankCubeType == CubeType.DIRT)
+        {
+            blankCubePrefab = dirtPrefab;
+        }
+        else if (blankCubeType == CubeType.SNOW)
+        {
+            blankCubePrefab = snowPrefab;
+        }
+
         if (editView == EditingView.EXTERIOR && chosenRequirements && drawingPanelAnim.GetBool("openPanel"))
         {
             rotateButton.SetActive(true);
@@ -640,10 +657,7 @@ public class PlayerScript : MonoBehaviour
         Vector3 cubePos = hit.collider.gameObject.transform.position;
         if (!currentCubeAboveGround)
         {
-            if (cubeType != blankCubeType)
-            {
-                yield return new WaitForSeconds(0.1f);
-            }
+            yield return new WaitForSeconds(0.05f);
             GameObject newCube = Instantiate(currentCubePrefab, cubePos, Quaternion.identity);
             newCube.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
             newCube.tag = "Floor";
@@ -651,13 +665,18 @@ public class PlayerScript : MonoBehaviour
 
         if (currentCubeAboveGround)
         {
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(0.05f);
             if (cubeType == CubeType.FENCE || cubeType == CubeType.FENCECORNER)
             {
                 GameObject newCube = Instantiate(currentCubePrefab, new Vector3(cubePos.x, -0.8799995f, cubePos.z), Quaternion.identity);
                 newCube.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
                 newCube.transform.Rotate(transform.rotation.x, fiScript.woodRotation, transform.rotation.z);
                 newCube.tag = "Floor";
+                newCube.GetComponent<FenceCubeScript>().rotation = fiScript.woodRotation;
+                if (cubeType == CubeType.FENCECORNER)
+                {
+                    newCube.GetComponent<FenceCubeScript>().isCorner = true;
+                }
             }
             else
             {

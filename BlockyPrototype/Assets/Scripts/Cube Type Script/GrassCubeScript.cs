@@ -6,8 +6,11 @@ public class GrassCubeScript : MonoBehaviour
 {
     public double timeActive = 0.0f;
     public double timeActiveExploded = 0.0f;
+    public int indexInFloorCube;
     public bool isBlackCube;
-    public RestartScript restartScript;
+    public Material grassMaterial;
+    RestartScript restartScript;
+    FloorCubeSpawnerScript spawnerScript;
 
 
 
@@ -17,15 +20,16 @@ public class GrassCubeScript : MonoBehaviour
         if (!isBlackCube)
         {
             gameObject.name = "GrassCube";
-            gameObject.tag = "Floor";
+            //GetComponent<MeshRenderer>().material = grassMaterial;
         }
         else
         {
             gameObject.name = "BlackFloorCube";
-            gameObject.tag = "Floor";
             GetComponent<Renderer>().material.color = new Color(0, 0, 0, 0.4f);
         }
+        gameObject.tag = "Floor";
         restartScript = GameObject.Find("RestartObject").GetComponent<RestartScript>();
+        spawnerScript = GameObject.Find("FloorCubeSpawner").GetComponent<FloorCubeSpawnerScript>();
 
     }
 
@@ -65,9 +69,13 @@ public class GrassCubeScript : MonoBehaviour
 
             if (timeActive < other.GetComponent<GrassCubeScript>().timeActive)
             {
+                //indexInFloorCube = other.GetComponent<GrassCubeScript>().indexInFloorCube;
+                //spawnerScript.floorCubes[indexInFloorCube] = gameObject.transform;
                 Destroy(other.gameObject);
             }
         }
+
+
         
     }
 }

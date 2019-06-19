@@ -18,7 +18,8 @@ public class RestartScript : MonoBehaviour
     public float force;
     public bool exploding = false;
     bool showMenu = false;
-
+    // this variable is only here because all above-ground cubes and SaveToXMLscript have access to it here
+    public bool loading = false;
 
     private void Start()
     {

@@ -1,2403 +1,2369 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <FloorCubes>
-  <FloorCube0>
-    <Position x="-2.5" y="-0.9599996" z="4" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube0>
-  <FloorCube1>
-    <Position x="-2.4" y="-0.9599996" z="4" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube1>
-  <FloorCube2>
-    <Position x="-2.3" y="-0.9599996" z="4" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube2>
-  <FloorCube3>
-    <Position x="-2.2" y="-0.9599996" z="4" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube3>
-  <FloorCube4>
-    <Position x="-2.1" y="-0.9599996" z="4" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube4>
-  <FloorCube5>
-    <Position x="-2" y="-0.9599996" z="4" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube5>
-  <FloorCube6>
-    <Position x="-1.9" y="-0.9599996" z="4" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube6>
-  <FloorCube7>
-    <Position x="-1.8" y="-0.9599996" z="4" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube7>
-  <FloorCube8>
-    <Position x="-1.7" y="-0.9599996" z="4" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube8>
-  <FloorCube9>
-    <Position x="-1.6" y="-0.9599996" z="4" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube9>
-  <FloorCube10>
-    <Position x="-1.5" y="-0.9599996" z="4" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube10>
-  <FloorCube11>
-    <Position x="-1.4" y="-0.9599996" z="4" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube11>
-  <FloorCube12>
-    <Position x="-1.3" y="-0.9599996" z="4" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube12>
-  <FloorCube13>
-    <Position x="-1.2" y="-0.9599996" z="4" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube13>
-  <FloorCube14>
-    <Position x="-1.1" y="-0.9599996" z="4" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube14>
-  <FloorCube15>
-    <Position x="-1" y="-0.9599996" z="4" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube15>
-  <FloorCube16>
-    <Position x="-0.9000002" y="-0.9599996" z="4" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube16>
-  <FloorCube17>
-    <Position x="-0.8000002" y="-0.9599996" z="4" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube17>
-  <FloorCube18>
-    <Position x="-0.7000002" y="-0.9599996" z="4" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube18>
-  <FloorCube19>
-    <Position x="-0.6000001" y="-0.9599996" z="4" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube19>
-  <FloorCube20>
-    <Position x="-0.5000001" y="-0.9599996" z="4" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube20>
-  <FloorCube21>
-    <Position x="-0.4000001" y="-0.9599996" z="4" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube21>
-  <FloorCube22>
-    <Position x="-0.3000001" y="-0.9599996" z="4" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube22>
-  <FloorCube23>
-    <Position x="-0.2000001" y="-0.9599996" z="4" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube23>
-  <FloorCube24>
-    <Position x="-0.1000001" y="-0.9599996" z="4" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube24>
-  <FloorCube25>
-    <Position x="-1.341105E-07" y="-0.9599996" z="4" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube25>
-  <FloorCube26>
-    <Position x="0.09999987" y="-0.9599996" z="4" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube26>
-  <FloorCube27>
-    <Position x="0.1999999" y="-0.9599996" z="4" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube27>
-  <FloorCube28>
-    <Position x="0.2999999" y="-0.9599996" z="4" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube28>
-  <FloorCube29>
-    <Position x="0.3999999" y="-0.9599996" z="4" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube29>
-  <FloorCube30>
-    <Position x="0.09999963" y="-0.9599996" z="3.9" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube30>
-  <FloorCube31>
-    <Position x="-0.4000004" y="-0.9599996" z="3.9" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube31>
-  <FloorCube32>
-    <Position x="-0.9000005" y="-0.9599996" z="3.9" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube32>
-  <FloorCube33>
-    <Position x="-1.400001" y="-0.9599996" z="3.9" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube33>
-  <FloorCube34>
-    <Position x="-1.900001" y="-0.9599996" z="3.9" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube34>
-  <FloorCube35>
-    <Position x="-2.4" y="-0.9599996" z="3.9" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube35>
-  <FloorCube36>
-    <Position x="0.1999996" y="-0.9599996" z="3.9" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube36>
-  <FloorCube37>
-    <Position x="-1.800001" y="-0.9599996" z="3.9" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube37>
-  <FloorCube38>
-    <Position x="0.2999996" y="-0.9599996" z="3.9" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube38>
-  <FloorCube39>
-    <Position x="-0.2000004" y="-0.9599996" z="3.9" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube39>
-  <FloorCube40>
-    <Position x="-0.7000004" y="-0.9599996" z="3.9" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube40>
-  <FloorCube41>
-    <Position x="-1.200001" y="-0.9599996" z="3.9" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube41>
-  <FloorCube42>
-    <Position x="-1.700001" y="-0.9599996" z="3.9" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube42>
-  <FloorCube43>
-    <Position x="-2.200001" y="-0.9599996" z="3.9" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube43>
-  <FloorCube44>
-    <Position x="-0.3000004" y="-0.9599996" z="3.9" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube44>
-  <FloorCube45>
-    <Position x="0.3999996" y="-0.9599996" z="3.9" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube45>
-  <FloorCube46>
-    <Position x="-0.1000004" y="-0.9599996" z="3.9" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube46>
-  <FloorCube47>
-    <Position x="-3.72529E-07" y="-0.9599996" z="3.9" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube47>
-  <FloorCube48>
-    <Position x="-0.6000004" y="-0.9599996" z="3.9" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube48>
-  <FloorCube49>
-    <Position x="-0.5000004" y="-0.9599996" z="3.9" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube49>
-  <FloorCube50>
-    <Position x="-1.100001" y="-0.9599996" z="3.9" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube50>
-  <FloorCube51>
-    <Position x="-1" y="-0.9599996" z="3.9" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube51>
-  <FloorCube52>
-    <Position x="-1.600001" y="-0.9599996" z="3.9" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube52>
-  <FloorCube53>
-    <Position x="-1.500001" y="-0.9599996" z="3.9" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube53>
-  <FloorCube54>
-    <Position x="-2.100001" y="-0.9599996" z="3.9" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube54>
-  <FloorCube55>
-    <Position x="-2.000001" y="-0.9599996" z="3.9" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube55>
-  <FloorCube56>
-    <Position x="-2.5" y="-0.9599996" z="3.9" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube56>
-  <FloorCube57>
-    <Position x="-2.3" y="-0.9599996" z="3.9" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube57>
-  <FloorCube58>
-    <Position x="-0.8000004" y="-0.9599996" z="3.9" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube58>
-  <FloorCube59>
-    <Position x="-1.300001" y="-0.9599996" z="3.9" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube59>
-  <FloorCube60>
-    <Position x="-1.000001" y="-0.9599996" z="3.8" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube60>
-  <FloorCube61>
-    <Position x="-1.500001" y="-0.9599996" z="3.8" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube61>
-  <FloorCube62>
-    <Position x="-2.000001" y="-0.9599996" z="3.8" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube62>
-  <FloorCube63>
-    <Position x="-2.5" y="-0.9599996" z="3.8" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube63>
-  <FloorCube64>
-    <Position x="-2.400001" y="-0.9599996" z="3.8" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube64>
-  <FloorCube65>
-    <Position x="0.09999939" y="-0.9599996" z="3.8" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube65>
-  <FloorCube66>
-    <Position x="0.2999994" y="-0.9599996" z="3.8" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube66>
-  <FloorCube67>
-    <Position x="0.3999994" y="-0.9599996" z="3.8" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube67>
-  <FloorCube68>
-    <Position x="-0.2000006" y="-0.9599996" z="3.8" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube68>
-  <FloorCube69>
-    <Position x="-0.1000006" y="-0.9599996" z="3.8" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube69>
-  <FloorCube70>
-    <Position x="-0.7000006" y="-0.9599996" z="3.8" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube70>
-  <FloorCube71>
-    <Position x="-0.6000006" y="-0.9599996" z="3.8" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube71>
-  <FloorCube72>
-    <Position x="-1.200001" y="-0.9599996" z="3.8" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube72>
-  <FloorCube73>
-    <Position x="-1.100001" y="-0.9599996" z="3.8" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube73>
-  <FloorCube74>
-    <Position x="-1.700001" y="-0.9599996" z="3.8" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube74>
-  <FloorCube75>
-    <Position x="-1.600001" y="-0.9599996" z="3.8" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube75>
-  <FloorCube76>
-    <Position x="-2.200001" y="-0.9599996" z="3.8" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube76>
-  <FloorCube77>
-    <Position x="-2.100001" y="-0.9599996" z="3.8" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube77>
-  <FloorCube78>
-    <Position x="-0.4000006" y="-0.9599996" z="3.8" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube78>
-  <FloorCube79>
-    <Position x="-1.400001" y="-0.9599996" z="3.8" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube79>
-  <FloorCube80>
-    <Position x="-1.900001" y="-0.9599996" z="3.8" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube80>
-  <FloorCube81>
-    <Position x="-6.109476E-07" y="-0.9599996" z="3.8" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube81>
-  <FloorCube82>
-    <Position x="-0.5000006" y="-0.9599996" z="3.8" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube82>
-  <FloorCube83>
-    <Position x="0.1999994" y="-0.9599996" z="3.8" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube83>
-  <FloorCube84>
-    <Position x="-0.3000006" y="-0.9599996" z="3.8" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube84>
-  <FloorCube85>
-    <Position x="-0.8000007" y="-0.9599996" z="3.8" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube85>
-  <FloorCube86>
-    <Position x="-1.300001" y="-0.9599996" z="3.8" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube86>
-  <FloorCube87>
-    <Position x="-1.800001" y="-0.9599996" z="3.8" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube87>
-  <FloorCube88>
-    <Position x="-2.300001" y="-0.9599996" z="3.8" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube88>
-  <FloorCube89>
-    <Position x="-0.9000007" y="-0.9599996" z="3.8" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube89>
-  <FloorCube90>
-    <Position x="-0.8000009" y="-0.9599996" z="3.7" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube90>
-  <FloorCube91>
-    <Position x="-1.400001" y="-0.9599996" z="3.7" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube91>
-  <FloorCube92>
-    <Position x="-1.300001" y="-0.9599996" z="3.7" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube92>
-  <FloorCube93>
-    <Position x="-1.900001" y="-0.9599996" z="3.7" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube93>
-  <FloorCube94>
-    <Position x="-1.800001" y="-0.9599996" z="3.7" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube94>
-  <FloorCube95>
-    <Position x="-2.400001" y="-0.9599996" z="3.7" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube95>
-  <FloorCube96>
-    <Position x="-2.300001" y="-0.9599996" z="3.7" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube96>
-  <FloorCube97>
-    <Position x="-2.100001" y="-0.9599996" z="3.7" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube97>
-  <FloorCube98>
-    <Position x="-0.1000009" y="-0.9599996" z="3.7" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube98>
-  <FloorCube99>
-    <Position x="0.2999991" y="-0.9599996" z="3.7" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube99>
-  <FloorCube100>
-    <Position x="-0.2000009" y="-0.9599996" z="3.7" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube100>
-  <FloorCube101>
-    <Position x="-0.7000009" y="-0.9599996" z="3.7" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube101>
-  <FloorCube102>
-    <Position x="-1.200001" y="-0.9599996" z="3.7" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube102>
-  <FloorCube103>
-    <Position x="-1.700001" y="-0.9599996" z="3.7" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube103>
-  <FloorCube104>
-    <Position x="-2.200001" y="-0.9599996" z="3.7" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube104>
-  <FloorCube105>
-    <Position x="-0.6000009" y="-0.9599996" z="3.7" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube105>
-  <FloorCube106>
-    <Position x="0.3999991" y="-0.9599996" z="3.7" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube106>
-  <FloorCube107>
-    <Position x="-8.493662E-07" y="-0.9599996" z="3.7" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube107>
-  <FloorCube108>
-    <Position x="-0.5000008" y="-0.9599996" z="3.7" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube108>
-  <FloorCube109>
-    <Position x="-1.000001" y="-0.9599996" z="3.7" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube109>
-  <FloorCube110>
-    <Position x="-1.500001" y="-0.9599996" z="3.7" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube110>
-  <FloorCube111>
-    <Position x="-2.000001" y="-0.9599996" z="3.7" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube111>
-  <FloorCube112>
-    <Position x="-2.500001" y="-0.9599996" z="3.7" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube112>
-  <FloorCube113>
-    <Position x="-1.100001" y="-0.9599996" z="3.7" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube113>
-  <FloorCube114>
-    <Position x="-1.600001" y="-0.9599996" z="3.7" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube114>
-  <FloorCube115>
-    <Position x="0.09999915" y="-0.9599996" z="3.7" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube115>
-  <FloorCube116>
-    <Position x="0.1999992" y="-0.9599996" z="3.7" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube116>
-  <FloorCube117>
-    <Position x="-0.4000008" y="-0.9599996" z="3.7" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube117>
-  <FloorCube118>
-    <Position x="-0.3000008" y="-0.9599996" z="3.7" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube118>
-  <FloorCube119>
-    <Position x="-0.9000009" y="-0.9599996" z="3.7" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube119>
-  <FloorCube120>
-    <Position x="0.3999989" y="-0.9599996" z="3.6" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube120>
-  <FloorCube121>
-    <Position x="-2.500001" y="-0.9599996" z="3.6" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube121>
-  <FloorCube122>
-    <Position x="-2.400001" y="-0.9599996" z="3.6" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube122>
-  <FloorCube123>
-    <Position x="-2.300001" y="-0.9599996" z="3.6" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube123>
-  <FloorCube124>
-    <Position x="-2.200001" y="-0.9599996" z="3.6" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube124>
-  <FloorCube125>
-    <Position x="-2.100001" y="-0.9599996" z="3.6" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube125>
-  <FloorCube126>
-    <Position x="-2.000001" y="-0.9599996" z="3.6" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube126>
-  <FloorCube127>
-    <Position x="-1.900001" y="-0.9599996" z="3.6" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube127>
-  <FloorCube128>
-    <Position x="-1.800001" y="-0.9599996" z="3.6" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube128>
-  <FloorCube129>
-    <Position x="-1.700001" y="-0.9599996" z="3.6" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube129>
-  <FloorCube130>
-    <Position x="-1.600001" y="-0.9599996" z="3.6" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube130>
-  <FloorCube131>
-    <Position x="-1.500001" y="-0.9599996" z="3.6" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube131>
-  <FloorCube132>
-    <Position x="-1.400001" y="-0.9599996" z="3.6" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube132>
-  <FloorCube133>
-    <Position x="-1.300001" y="-0.9599996" z="3.6" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube133>
-  <FloorCube134>
-    <Position x="-1.200001" y="-0.9599996" z="3.6" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube134>
-  <FloorCube135>
-    <Position x="-1.100001" y="-0.9599996" z="3.6" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube135>
-  <FloorCube136>
-    <Position x="-1.000001" y="-0.9599996" z="3.6" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube136>
-  <FloorCube137>
-    <Position x="-0.9000012" y="-0.9599996" z="3.6" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube137>
-  <FloorCube138>
-    <Position x="-0.8000011" y="-0.9599996" z="3.6" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube138>
-  <FloorCube139>
-    <Position x="-0.7000011" y="-0.9599996" z="3.6" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube139>
-  <FloorCube140>
-    <Position x="-0.6000011" y="-0.9599996" z="3.6" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube140>
-  <FloorCube141>
-    <Position x="-0.5000011" y="-0.9599996" z="3.6" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube141>
-  <FloorCube142>
-    <Position x="-0.4000011" y="-0.9599996" z="3.6" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube142>
-  <FloorCube143>
-    <Position x="-0.3000011" y="-0.9599996" z="3.6" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube143>
-  <FloorCube144>
-    <Position x="-0.2000011" y="-0.9599996" z="3.6" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube144>
-  <FloorCube145>
-    <Position x="-0.1000011" y="-0.9599996" z="3.6" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube145>
-  <FloorCube146>
-    <Position x="-1.087785E-06" y="-0.9599996" z="3.6" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube146>
-  <FloorCube147>
-    <Position x="0.09999891" y="-0.9599996" z="3.6" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube147>
-  <FloorCube148>
-    <Position x="0.1999989" y="-0.9599996" z="3.6" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube148>
-  <FloorCube149>
-    <Position x="0.2999989" y="-0.9599996" z="3.6" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube149>
-  <FloorCube150>
-    <Position x="0.3999987" y="-0.9599996" z="3.5" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube150>
-  <FloorCube151>
-    <Position x="-2.500001" y="-0.9599996" z="3.5" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube151>
-  <FloorCube152>
-    <Position x="-2.400001" y="-0.9599996" z="3.5" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube152>
-  <FloorCube153>
-    <Position x="-2.300001" y="-0.9599996" z="3.5" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube153>
-  <FloorCube154>
-    <Position x="-2.200001" y="-0.9599996" z="3.5" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube154>
-  <FloorCube155>
-    <Position x="-2.100002" y="-0.9599996" z="3.5" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube155>
-  <FloorCube156>
-    <Position x="-2.000002" y="-0.9599996" z="3.5" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube156>
-  <FloorCube157>
-    <Position x="-1.900002" y="-0.9599996" z="3.5" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube157>
-  <FloorCube158>
-    <Position x="-1.800002" y="-0.9599996" z="3.5" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube158>
-  <FloorCube159>
-    <Position x="-1.700002" y="-0.9599996" z="3.5" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube159>
-  <FloorCube160>
-    <Position x="-1.600002" y="-0.9599996" z="3.5" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube160>
-  <FloorCube161>
-    <Position x="-1.500002" y="-0.9599996" z="3.5" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube161>
-  <FloorCube162>
-    <Position x="-1.400002" y="-0.9599996" z="3.5" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube162>
-  <FloorCube163>
-    <Position x="-1.300002" y="-0.9599996" z="3.5" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube163>
-  <FloorCube164>
-    <Position x="-1.200001" y="-0.9599996" z="3.5" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube164>
-  <FloorCube165>
-    <Position x="-1.100001" y="-0.9599996" z="3.5" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube165>
-  <FloorCube166>
-    <Position x="-1.000001" y="-0.9599996" z="3.5" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube166>
-  <FloorCube167>
-    <Position x="-0.9000014" y="-0.9599996" z="3.5" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube167>
-  <FloorCube168>
-    <Position x="-0.8000014" y="-0.9599996" z="3.5" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube168>
-  <FloorCube169>
-    <Position x="-0.7000014" y="-0.9599996" z="3.5" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube169>
-  <FloorCube170>
-    <Position x="-0.6000013" y="-0.9599996" z="3.5" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube170>
-  <FloorCube171>
-    <Position x="-0.5000013" y="-0.9599996" z="3.5" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube171>
-  <FloorCube172>
-    <Position x="-0.4000013" y="-0.9599996" z="3.5" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube172>
-  <FloorCube173>
-    <Position x="-0.3000013" y="-0.9599996" z="3.5" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube173>
-  <FloorCube174>
-    <Position x="-0.2000013" y="-0.9599996" z="3.5" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube174>
-  <FloorCube175>
-    <Position x="-0.1000013" y="-0.9599996" z="3.5" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube175>
-  <FloorCube176>
-    <Position x="-1.326203E-06" y="-0.9599996" z="3.5" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube176>
-  <FloorCube177>
-    <Position x="0.09999868" y="-0.9599996" z="3.5" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube177>
-  <FloorCube178>
-    <Position x="0.1999987" y="-0.9599996" z="3.5" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube178>
-  <FloorCube179>
-    <Position x="0.2999987" y="-0.9599996" z="3.5" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube179>
-  <FloorCube180>
-    <Position x="-2.500001" y="-0.9599996" z="3.400001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube180>
-  <FloorCube181>
-    <Position x="-2.400002" y="-0.9599996" z="3.400001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube181>
-  <FloorCube182>
-    <Position x="-2.300002" y="-0.9599996" z="3.400001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube182>
-  <FloorCube183>
-    <Position x="-2.200002" y="-0.9599996" z="3.400001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube183>
-  <FloorCube184>
-    <Position x="-2.100002" y="-0.9599996" z="3.400001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube184>
-  <FloorCube185>
-    <Position x="-2.000002" y="-0.9599996" z="3.400001" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube185>
-  <FloorCube186>
-    <Position x="-1.900002" y="-0.9599996" z="3.400001" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube186>
-  <FloorCube187>
-    <Position x="-1.800002" y="-0.9599996" z="3.400001" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube187>
-  <FloorCube188>
-    <Position x="-1.700002" y="-0.9599996" z="3.400001" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube188>
-  <FloorCube189>
-    <Position x="-1.600002" y="-0.9599996" z="3.400001" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube189>
-  <FloorCube190>
-    <Position x="-1.500002" y="-0.9599996" z="3.400001" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube190>
-  <FloorCube191>
-    <Position x="-1.400002" y="-0.9599996" z="3.400001" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube191>
-  <FloorCube192>
-    <Position x="-1.300002" y="-0.9599996" z="3.400001" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube192>
-  <FloorCube193>
-    <Position x="-1.200002" y="-0.9599996" z="3.400001" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube193>
-  <FloorCube194>
-    <Position x="-1.100002" y="-0.9599996" z="3.400001" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube194>
-  <FloorCube195>
-    <Position x="-1.000002" y="-0.9599996" z="3.400001" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube195>
-  <FloorCube196>
-    <Position x="-0.9000016" y="-0.9599996" z="3.400001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube196>
-  <FloorCube197>
-    <Position x="-0.8000016" y="-0.9599996" z="3.400001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube197>
-  <FloorCube198>
-    <Position x="-0.7000016" y="-0.9599996" z="3.400001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube198>
-  <FloorCube199>
-    <Position x="-0.6000016" y="-0.9599996" z="3.400001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube199>
-  <FloorCube200>
-    <Position x="-0.5000015" y="-0.9599996" z="3.400001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube200>
-  <FloorCube201>
-    <Position x="-0.4000016" y="-0.9599996" z="3.400001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube201>
-  <FloorCube202>
-    <Position x="-0.3000016" y="-0.9599996" z="3.400001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube202>
-  <FloorCube203>
-    <Position x="-0.2000016" y="-0.9599996" z="3.400001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube203>
-  <FloorCube204>
-    <Position x="-0.1000016" y="-0.9599996" z="3.400001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube204>
-  <FloorCube205>
-    <Position x="-1.564622E-06" y="-0.9599996" z="3.400001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube205>
-  <FloorCube206>
-    <Position x="0.09999844" y="-0.9599996" z="3.400001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube206>
-  <FloorCube207>
-    <Position x="0.1999984" y="-0.9599996" z="3.400001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube207>
-  <FloorCube208>
-    <Position x="0.2999984" y="-0.9599996" z="3.400001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube208>
-  <FloorCube209>
-    <Position x="0.3999984" y="-0.9599996" z="3.400001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube209>
-  <FloorCube210>
-    <Position x="0.1999982" y="-0.9599996" z="3.300001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube210>
-  <FloorCube211>
-    <Position x="-0.6000018" y="-0.9599996" z="3.300001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube211>
-  <FloorCube212>
-    <Position x="-1.300002" y="-0.9599996" z="3.300001" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube212>
-  <FloorCube213>
-    <Position x="-2.100002" y="-0.9599996" z="3.300001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube213>
-  <FloorCube214>
-    <Position x="-0.8000019" y="-0.9599996" z="3.300001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube214>
-  <FloorCube215>
-    <Position x="-2.300002" y="-0.9599996" z="3.300001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube215>
-  <FloorCube216>
-    <Position x="-1.400002" y="-0.9599996" z="3.300001" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube216>
-  <FloorCube217>
-    <Position x="-2.400002" y="-0.9599996" z="3.300001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube217>
-  <FloorCube218>
-    <Position x="-0.1000018" y="-0.9599996" z="3.300001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube218>
-  <FloorCube219>
-    <Position x="-1.803041E-06" y="-0.9599996" z="3.300001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube219>
-  <FloorCube220>
-    <Position x="-0.4000018" y="-0.9599996" z="3.300001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube220>
-  <FloorCube221>
-    <Position x="-1.200002" y="-0.9599996" z="3.300001" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube221>
-  <FloorCube222>
-    <Position x="-1.800002" y="-0.9599996" z="3.300001" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube222>
-  <FloorCube223>
-    <Position x="-2.200002" y="-0.9599996" z="3.300001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube223>
-  <FloorCube224>
-    <Position x="0.3999982" y="-0.9599996" z="3.300001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube224>
-  <FloorCube225>
-    <Position x="0.2999982" y="-0.9599996" z="3.300001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube225>
-  <FloorCube226>
-    <Position x="0.0999982" y="-0.9599996" z="3.300001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube226>
-  <FloorCube227>
-    <Position x="-0.5000018" y="-0.9599996" z="3.300001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube227>
-  <FloorCube228>
-    <Position x="-1.100002" y="-0.9599996" z="3.300001" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube228>
-  <FloorCube229>
-    <Position x="-2.000002" y="-0.9599996" z="3.300001" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube229>
-  <FloorCube230>
-    <Position x="-1.600002" y="-0.9599996" z="3.300001" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube230>
-  <FloorCube231>
-    <Position x="-0.3000018" y="-0.9599996" z="3.300001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube231>
-  <FloorCube232>
-    <Position x="-0.9000019" y="-0.9599996" z="3.300001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube232>
-  <FloorCube233>
-    <Position x="-1.000002" y="-0.9599996" z="3.300001" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube233>
-  <FloorCube234>
-    <Position x="-1.700002" y="-0.9599996" z="3.300001" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube234>
-  <FloorCube235>
-    <Position x="-1.900002" y="-0.9599996" z="3.300001" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube235>
-  <FloorCube236>
-    <Position x="-2.500002" y="-0.9599996" z="3.300001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube236>
-  <FloorCube237>
-    <Position x="-0.7000018" y="-0.9599996" z="3.300001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube237>
-  <FloorCube238>
-    <Position x="-1.500002" y="-0.9599996" z="3.300001" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube238>
-  <FloorCube239>
-    <Position x="-0.2000018" y="-0.9599996" z="3.300001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube239>
-  <FloorCube240>
-    <Position x="-2.500002" y="-0.9599996" z="3.200001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube240>
-  <FloorCube241>
-    <Position x="-2.400002" y="-0.9599996" z="3.200001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube241>
-  <FloorCube242>
-    <Position x="-2.300002" y="-0.9599996" z="3.200001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube242>
-  <FloorCube243>
-    <Position x="-2.200002" y="-0.9599996" z="3.200001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube243>
-  <FloorCube244>
-    <Position x="-2.100002" y="-0.9599996" z="3.200001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube244>
-  <FloorCube245>
-    <Position x="-2.000002" y="-0.9599996" z="3.200001" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube245>
-  <FloorCube246>
-    <Position x="-1.900002" y="-0.9599996" z="3.200001" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube246>
-  <FloorCube247>
-    <Position x="-1.800002" y="-0.9599996" z="3.200001" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube247>
-  <FloorCube248>
-    <Position x="-1.700002" y="-0.9599996" z="3.200001" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube248>
-  <FloorCube249>
-    <Position x="-1.600002" y="-0.9599996" z="3.200001" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube249>
-  <FloorCube250>
-    <Position x="-1.500002" y="-0.9599996" z="3.200001" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube250>
-  <FloorCube251>
-    <Position x="-1.400002" y="-0.9599996" z="3.200001" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube251>
-  <FloorCube252>
-    <Position x="-1.300002" y="-0.9599996" z="3.200001" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube252>
-  <FloorCube253>
-    <Position x="-1.200002" y="-0.9599996" z="3.200001" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube253>
-  <FloorCube254>
-    <Position x="-1.100002" y="-0.9599996" z="3.200001" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube254>
-  <FloorCube255>
-    <Position x="-1.000002" y="-0.9599996" z="3.200001" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube255>
-  <FloorCube256>
-    <Position x="-0.9000021" y="-0.9599996" z="3.200001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube256>
-  <FloorCube257>
-    <Position x="-0.8000021" y="-0.9599996" z="3.200001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube257>
-  <FloorCube258>
-    <Position x="-0.7000021" y="-0.9599996" z="3.200001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube258>
-  <FloorCube259>
-    <Position x="-0.6000021" y="-0.9599996" z="3.200001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube259>
-  <FloorCube260>
-    <Position x="-0.500002" y="-0.9599996" z="3.200001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube260>
-  <FloorCube261>
-    <Position x="-0.400002" y="-0.9599996" z="3.200001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube261>
-  <FloorCube262>
-    <Position x="-0.300002" y="-0.9599996" z="3.200001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube262>
-  <FloorCube263>
-    <Position x="-0.200002" y="-0.9599996" z="3.200001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube263>
-  <FloorCube264>
-    <Position x="-0.100002" y="-0.9599996" z="3.200001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube264>
-  <FloorCube265>
-    <Position x="-2.041459E-06" y="-0.9599996" z="3.200001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube265>
-  <FloorCube266>
-    <Position x="0.09999796" y="-0.9599996" z="3.200001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube266>
-  <FloorCube267>
-    <Position x="0.199998" y="-0.9599996" z="3.200001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube267>
-  <FloorCube268>
-    <Position x="0.299998" y="-0.9599996" z="3.200001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube268>
-  <FloorCube269>
-    <Position x="0.3999979" y="-0.9599996" z="3.200001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube269>
-  <FloorCube270>
-    <Position x="-2.500002" y="-0.9599996" z="3.100001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube270>
-  <FloorCube271>
-    <Position x="-2.400002" y="-0.9599996" z="3.100001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube271>
-  <FloorCube272>
-    <Position x="-2.300002" y="-0.9599996" z="3.100001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube272>
-  <FloorCube273>
-    <Position x="-2.200002" y="-0.9599996" z="3.100001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube273>
-  <FloorCube274>
-    <Position x="-2.100003" y="-0.9599996" z="3.100001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube274>
-  <FloorCube275>
-    <Position x="-2.000003" y="-0.9599996" z="3.100001" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube275>
-  <FloorCube276>
-    <Position x="-1.900003" y="-0.9599996" z="3.100001" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube276>
-  <FloorCube277>
-    <Position x="-1.800003" y="-0.9599996" z="3.100001" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube277>
-  <FloorCube278>
-    <Position x="-1.700003" y="-0.9599996" z="3.100001" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube278>
-  <FloorCube279>
-    <Position x="-1.600003" y="-0.9599996" z="3.100001" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube279>
-  <FloorCube280>
-    <Position x="-1.500003" y="-0.9599996" z="3.100001" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube280>
-  <FloorCube281>
-    <Position x="-1.400002" y="-0.9599996" z="3.100001" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube281>
-  <FloorCube282>
-    <Position x="-1.300002" y="-0.9599996" z="3.100001" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube282>
-  <FloorCube283>
-    <Position x="-1.200002" y="-0.9599996" z="3.100001" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube283>
-  <FloorCube284>
-    <Position x="-1.100002" y="-0.9599996" z="3.100001" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube284>
-  <FloorCube285>
-    <Position x="-1.000002" y="-0.9599996" z="3.100001" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube285>
-  <FloorCube286>
-    <Position x="-0.9000024" y="-0.9599996" z="3.100001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube286>
-  <FloorCube287>
-    <Position x="-0.8000023" y="-0.9599996" z="3.100001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube287>
-  <FloorCube288>
-    <Position x="-0.7000023" y="-0.9599996" z="3.100001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube288>
-  <FloorCube289>
-    <Position x="-0.6000023" y="-0.9599996" z="3.100001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube289>
-  <FloorCube290>
-    <Position x="-0.5000023" y="-0.9599996" z="3.100001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube290>
-  <FloorCube291>
-    <Position x="-0.4000023" y="-0.9599996" z="3.100001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube291>
-  <FloorCube292>
-    <Position x="-0.3000023" y="-0.9599996" z="3.100001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube292>
-  <FloorCube293>
-    <Position x="-0.2000023" y="-0.9599996" z="3.100001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube293>
-  <FloorCube294>
-    <Position x="-0.1000023" y="-0.9599996" z="3.100001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube294>
-  <FloorCube295>
-    <Position x="-2.279878E-06" y="-0.9599996" z="3.100001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube295>
-  <FloorCube296>
-    <Position x="0.09999772" y="-0.9599996" z="3.100001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube296>
-  <FloorCube297>
-    <Position x="0.1999977" y="-0.9599996" z="3.100001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube297>
-  <FloorCube298>
-    <Position x="0.3999977" y="-0.9599996" z="3.100001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube298>
-  <FloorCube299>
-    <Position x="0.2999977" y="-0.9599996" z="3.100001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube299>
-  <FloorCube300>
-    <Position x="-2.500002" y="-0.9599996" z="3.000001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube300>
-  <FloorCube301>
-    <Position x="-2.400002" y="-0.9599996" z="3.000001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube301>
-  <FloorCube302>
-    <Position x="-2.300003" y="-0.9599996" z="3.000001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube302>
-  <FloorCube303>
-    <Position x="-2.200003" y="-0.9599996" z="3.000001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube303>
-  <FloorCube304>
-    <Position x="-2.100003" y="-0.9599996" z="3.000001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube304>
-  <FloorCube305>
-    <Position x="-2.000003" y="-0.9599996" z="3.000001" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube305>
-  <FloorCube306>
-    <Position x="-1.900003" y="-0.9599996" z="3.000001" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube306>
-  <FloorCube307>
-    <Position x="-1.800003" y="-0.9599996" z="3.000001" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube307>
-  <FloorCube308>
-    <Position x="-1.700003" y="-0.9599996" z="3.000001" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube308>
-  <FloorCube309>
-    <Position x="-1.600003" y="-0.9599996" z="3.000001" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube309>
-  <FloorCube310>
-    <Position x="-1.500003" y="-0.9599996" z="3.000001" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube310>
-  <FloorCube311>
-    <Position x="-1.400003" y="-0.9599996" z="3.000001" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube311>
-  <FloorCube312>
-    <Position x="-1.300003" y="-0.9599996" z="3.000001" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube312>
-  <FloorCube313>
-    <Position x="-1.200003" y="-0.9599996" z="3.000001" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube313>
-  <FloorCube314>
-    <Position x="-1.100003" y="-0.9599996" z="3.000001" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube314>
-  <FloorCube315>
-    <Position x="-1.000003" y="-0.9599996" z="3.000001" />
-    <BlackFloorCube>true</BlackFloorCube>
-  </FloorCube315>
-  <FloorCube316>
-    <Position x="-0.9000026" y="-0.9599996" z="3.000001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube316>
-  <FloorCube317>
-    <Position x="-0.8000026" y="-0.9599996" z="3.000001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube317>
-  <FloorCube318>
-    <Position x="-0.7000026" y="-0.9599996" z="3.000001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube318>
-  <FloorCube319>
-    <Position x="-0.6000025" y="-0.9599996" z="3.000001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube319>
-  <FloorCube320>
-    <Position x="-0.5000025" y="-0.9599996" z="3.000001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube320>
-  <FloorCube321>
-    <Position x="-0.4000025" y="-0.9599996" z="3.000001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube321>
-  <FloorCube322>
-    <Position x="-0.3000025" y="-0.9599996" z="3.000001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube322>
-  <FloorCube323>
-    <Position x="-0.2000025" y="-0.9599996" z="3.000001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube323>
-  <FloorCube324>
-    <Position x="-0.1000025" y="-0.9599996" z="3.000001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube324>
-  <FloorCube325>
-    <Position x="-2.518296E-06" y="-0.9599996" z="3.000001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube325>
-  <FloorCube326>
-    <Position x="0.09999748" y="-0.9599996" z="3.000001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube326>
-  <FloorCube327>
-    <Position x="0.1999975" y="-0.9599996" z="3.000001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube327>
-  <FloorCube328>
-    <Position x="0.2999975" y="-0.9599996" z="3.000001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube328>
-  <FloorCube329>
-    <Position x="0.3999975" y="-0.9599996" z="3.000001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube329>
-  <FloorCube330>
-    <Position x="-2.500003" y="-0.9599996" z="2.900001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube330>
-  <FloorCube331>
-    <Position x="-2.400003" y="-0.9599996" z="2.900001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube331>
-  <FloorCube332>
-    <Position x="-2.300003" y="-0.9599996" z="2.900001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube332>
-  <FloorCube333>
-    <Position x="-2.200003" y="-0.9599996" z="2.900001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube333>
-  <FloorCube334>
-    <Position x="-2.100003" y="-0.9599996" z="2.900001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube334>
-  <FloorCube335>
-    <Position x="-2.000003" y="-0.9599996" z="2.900001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube335>
-  <FloorCube336>
-    <Position x="-1.900003" y="-0.9599996" z="2.900001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube336>
-  <FloorCube337>
-    <Position x="-1.800003" y="-0.9599996" z="2.900001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube337>
-  <FloorCube338>
-    <Position x="-1.700003" y="-0.9599996" z="2.900001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube338>
-  <FloorCube339>
-    <Position x="-1.600003" y="-0.9599996" z="2.900001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube339>
-  <FloorCube340>
-    <Position x="-1.500003" y="-0.9599996" z="2.900001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube340>
-  <FloorCube341>
-    <Position x="-1.400003" y="-0.9599996" z="2.900001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube341>
-  <FloorCube342>
-    <Position x="-1.300003" y="-0.9599996" z="2.900001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube342>
-  <FloorCube343>
-    <Position x="-1.200003" y="-0.9599996" z="2.900001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube343>
-  <FloorCube344>
-    <Position x="-1.100003" y="-0.9599996" z="2.900001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube344>
-  <FloorCube345>
-    <Position x="-1.000003" y="-0.9599996" z="2.900001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube345>
-  <FloorCube346>
-    <Position x="-0.9000028" y="-0.9599996" z="2.900001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube346>
-  <FloorCube347>
-    <Position x="-0.8000028" y="-0.9599996" z="2.900001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube347>
-  <FloorCube348>
-    <Position x="-0.7000028" y="-0.9599996" z="2.900001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube348>
-  <FloorCube349>
-    <Position x="-0.6000028" y="-0.9599996" z="2.900001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube349>
-  <FloorCube350>
-    <Position x="-0.5000027" y="-0.9599996" z="2.900001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube350>
-  <FloorCube351>
-    <Position x="-0.4000027" y="-0.9599996" z="2.900001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube351>
-  <FloorCube352>
-    <Position x="-0.3000028" y="-0.9599996" z="2.900001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube352>
-  <FloorCube353>
-    <Position x="-0.2000028" y="-0.9599996" z="2.900001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube353>
-  <FloorCube354>
-    <Position x="-0.1000028" y="-0.9599996" z="2.900001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube354>
-  <FloorCube355>
-    <Position x="-2.756715E-06" y="-0.9599996" z="2.900001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube355>
-  <FloorCube356>
-    <Position x="0.09999724" y="-0.9599996" z="2.900001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube356>
-  <FloorCube357>
-    <Position x="0.1999972" y="-0.9599996" z="2.900001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube357>
-  <FloorCube358>
-    <Position x="0.2999972" y="-0.9599996" z="2.900001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube358>
-  <FloorCube359>
-    <Position x="0.3999972" y="-0.9599996" z="2.900001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube359>
-  <FloorCube360>
-    <Position x="-2.500003" y="-0.9599996" z="2.800001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube360>
-  <FloorCube361>
-    <Position x="-2.400003" y="-0.9599996" z="2.800001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube361>
-  <FloorCube362>
-    <Position x="-2.300003" y="-0.9599996" z="2.800001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube362>
-  <FloorCube363>
-    <Position x="-2.200003" y="-0.9599996" z="2.800001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube363>
-  <FloorCube364>
-    <Position x="-2.100003" y="-0.9599996" z="2.800001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube364>
-  <FloorCube365>
-    <Position x="-2.000003" y="-0.9599996" z="2.800001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube365>
-  <FloorCube366>
-    <Position x="-1.900003" y="-0.9599996" z="2.800001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube366>
-  <FloorCube367>
-    <Position x="-1.800003" y="-0.9599996" z="2.800001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube367>
-  <FloorCube368>
-    <Position x="-1.700003" y="-0.9599996" z="2.800001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube368>
-  <FloorCube369>
-    <Position x="-1.600003" y="-0.9599996" z="2.800001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube369>
-  <FloorCube370>
-    <Position x="-1.500003" y="-0.9599996" z="2.800001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube370>
-  <FloorCube371>
-    <Position x="-1.400003" y="-0.9599996" z="2.800001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube371>
-  <FloorCube372>
-    <Position x="-1.300003" y="-0.9599996" z="2.800001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube372>
-  <FloorCube373>
-    <Position x="-1.200003" y="-0.9599996" z="2.800001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube373>
-  <FloorCube374>
-    <Position x="-1.100003" y="-0.9599996" z="2.800001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube374>
-  <FloorCube375>
-    <Position x="-1.000003" y="-0.9599996" z="2.800001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube375>
-  <FloorCube376>
-    <Position x="-0.9000031" y="-0.9599996" z="2.800001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube376>
-  <FloorCube377>
-    <Position x="-0.8000031" y="-0.9599996" z="2.800001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube377>
-  <FloorCube378>
-    <Position x="-0.700003" y="-0.9599996" z="2.800001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube378>
-  <FloorCube379>
-    <Position x="-0.600003" y="-0.9599996" z="2.800001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube379>
-  <FloorCube380>
-    <Position x="-0.500003" y="-0.9599996" z="2.800001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube380>
-  <FloorCube381>
-    <Position x="-0.400003" y="-0.9599996" z="2.800001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube381>
-  <FloorCube382>
-    <Position x="-0.300003" y="-0.9599996" z="2.800001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube382>
-  <FloorCube383>
-    <Position x="-0.200003" y="-0.9599996" z="2.800001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube383>
-  <FloorCube384>
-    <Position x="-0.100003" y="-0.9599996" z="2.800001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube384>
-  <FloorCube385>
-    <Position x="-2.995133E-06" y="-0.9599996" z="2.800001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube385>
-  <FloorCube386>
-    <Position x="0.09999701" y="-0.9599996" z="2.800001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube386>
-  <FloorCube387>
-    <Position x="0.199997" y="-0.9599996" z="2.800001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube387>
-  <FloorCube388>
-    <Position x="0.299997" y="-0.9599996" z="2.800001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube388>
-  <FloorCube389>
-    <Position x="0.399997" y="-0.9599996" z="2.800001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube389>
-  <FloorCube390>
-    <Position x="0.09999677" y="-0.9599996" z="2.700001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube390>
-  <FloorCube391>
-    <Position x="-0.4000032" y="-0.9599996" z="2.700001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube391>
-  <FloorCube392>
-    <Position x="-1.200003" y="-0.9599996" z="2.700001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube392>
-  <FloorCube393>
-    <Position x="-2.000004" y="-0.9599996" z="2.700001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube393>
-  <FloorCube394>
-    <Position x="-0.9000033" y="-0.9599996" z="2.700001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube394>
-  <FloorCube395>
-    <Position x="-0.2000032" y="-0.9599996" z="2.700001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube395>
-  <FloorCube396>
-    <Position x="0.3999968" y="-0.9599996" z="2.700001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube396>
-  <FloorCube397>
-    <Position x="-1.000003" y="-0.9599996" z="2.700001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube397>
-  <FloorCube398>
-    <Position x="0.1999968" y="-0.9599996" z="2.700001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube398>
-  <FloorCube399>
-    <Position x="-0.6000032" y="-0.9599996" z="2.700001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube399>
-  <FloorCube400>
-    <Position x="-1.400003" y="-0.9599996" z="2.700001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube400>
-  <FloorCube401>
-    <Position x="-2.200003" y="-0.9599996" z="2.700001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube401>
-  <FloorCube402>
-    <Position x="-2.500003" y="-0.9599996" z="2.700001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube402>
-  <FloorCube403>
-    <Position x="-0.8000033" y="-0.9599996" z="2.700001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube403>
-  <FloorCube404>
-    <Position x="-3.233552E-06" y="-0.9599996" z="2.700001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube404>
-  <FloorCube405>
-    <Position x="-0.7000033" y="-0.9599996" z="2.700001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube405>
-  <FloorCube406>
-    <Position x="-1.500003" y="-0.9599996" z="2.700001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube406>
-  <FloorCube407>
-    <Position x="-2.300003" y="-0.9599996" z="2.700001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube407>
-  <FloorCube408>
-    <Position x="-1.700004" y="-0.9599996" z="2.700001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube408>
-  <FloorCube409>
-    <Position x="-0.1000032" y="-0.9599996" z="2.700001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube409>
-  <FloorCube410>
-    <Position x="-1.800004" y="-0.9599996" z="2.700001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube410>
-  <FloorCube411>
-    <Position x="0.2999968" y="-0.9599996" z="2.700001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube411>
-  <FloorCube412>
-    <Position x="-0.3000032" y="-0.9599996" z="2.700001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube412>
-  <FloorCube413>
-    <Position x="-0.5000032" y="-0.9599996" z="2.700001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube413>
-  <FloorCube414>
-    <Position x="-1.100003" y="-0.9599996" z="2.700001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube414>
-  <FloorCube415>
-    <Position x="-1.300003" y="-0.9599996" z="2.700001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube415>
-  <FloorCube416>
-    <Position x="-1.900004" y="-0.9599996" z="2.700001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube416>
-  <FloorCube417>
-    <Position x="-2.100003" y="-0.9599996" z="2.700001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube417>
-  <FloorCube418>
-    <Position x="-2.400003" y="-0.9599996" z="2.700001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube418>
-  <FloorCube419>
-    <Position x="-1.600003" y="-0.9599996" z="2.700001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube419>
-  <FloorCube420>
-    <Position x="-2.500003" y="-0.9599996" z="2.600001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube420>
-  <FloorCube421>
-    <Position x="-2.400003" y="-0.9599996" z="2.600001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube421>
-  <FloorCube422>
-    <Position x="-2.300004" y="-0.9599996" z="2.600001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube422>
-  <FloorCube423>
-    <Position x="-2.200004" y="-0.9599996" z="2.600001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube423>
-  <FloorCube424>
-    <Position x="-2.100004" y="-0.9599996" z="2.600001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube424>
-  <FloorCube425>
-    <Position x="-2.000004" y="-0.9599996" z="2.600001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube425>
-  <FloorCube426>
-    <Position x="-1.900004" y="-0.9599996" z="2.600001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube426>
-  <FloorCube427>
-    <Position x="-1.800004" y="-0.9599996" z="2.600001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube427>
-  <FloorCube428>
-    <Position x="-1.700004" y="-0.9599996" z="2.600001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube428>
-  <FloorCube429>
-    <Position x="-1.600004" y="-0.9599996" z="2.600001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube429>
-  <FloorCube430>
-    <Position x="-1.500004" y="-0.9599996" z="2.600001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube430>
-  <FloorCube431>
-    <Position x="-1.400004" y="-0.9599996" z="2.600001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube431>
-  <FloorCube432>
-    <Position x="-1.300004" y="-0.9599996" z="2.600001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube432>
-  <FloorCube433>
-    <Position x="-1.200004" y="-0.9599996" z="2.600001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube433>
-  <FloorCube434>
-    <Position x="-1.100004" y="-0.9599996" z="2.600001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube434>
-  <FloorCube435>
-    <Position x="-1.000004" y="-0.9599996" z="2.600001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube435>
-  <FloorCube436>
-    <Position x="-0.9000036" y="-0.9599996" z="2.600001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube436>
-  <FloorCube437>
-    <Position x="-0.8000035" y="-0.9599996" z="2.600001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube437>
-  <FloorCube438>
-    <Position x="-0.7000035" y="-0.9599996" z="2.600001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube438>
-  <FloorCube439>
-    <Position x="-0.6000035" y="-0.9599996" z="2.600001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube439>
-  <FloorCube440>
-    <Position x="-0.5000035" y="-0.9599996" z="2.600001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube440>
-  <FloorCube441>
-    <Position x="-0.4000035" y="-0.9599996" z="2.600001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube441>
-  <FloorCube442>
-    <Position x="-0.3000035" y="-0.9599996" z="2.600001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube442>
-  <FloorCube443>
-    <Position x="-0.2000035" y="-0.9599996" z="2.600001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube443>
-  <FloorCube444>
-    <Position x="-0.1000035" y="-0.9599996" z="2.600001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube444>
-  <FloorCube445>
-    <Position x="-3.471971E-06" y="-0.9599996" z="2.600001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube445>
-  <FloorCube446>
-    <Position x="0.09999653" y="-0.9599996" z="2.600001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube446>
-  <FloorCube447>
-    <Position x="0.1999965" y="-0.9599996" z="2.600001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube447>
-  <FloorCube448>
-    <Position x="0.2999965" y="-0.9599996" z="2.600001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube448>
-  <FloorCube449>
-    <Position x="0.3999965" y="-0.9599996" z="2.600001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube449>
-  <FloorCube450>
-    <Position x="-2.500004" y="-0.9599996" z="2.500001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube450>
-  <FloorCube451>
-    <Position x="-2.400004" y="-0.9599996" z="2.500001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube451>
-  <FloorCube452>
-    <Position x="-2.300004" y="-0.9599996" z="2.500001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube452>
-  <FloorCube453>
-    <Position x="-2.200004" y="-0.9599996" z="2.500001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube453>
-  <FloorCube454>
-    <Position x="-2.100004" y="-0.9599996" z="2.500001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube454>
-  <FloorCube455>
-    <Position x="-2.000004" y="-0.9599996" z="2.500001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube455>
-  <FloorCube456>
-    <Position x="-1.900004" y="-0.9599996" z="2.500001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube456>
-  <FloorCube457>
-    <Position x="-1.800004" y="-0.9599996" z="2.500001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube457>
-  <FloorCube458>
-    <Position x="-1.700004" y="-0.9599996" z="2.500001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube458>
-  <FloorCube459>
-    <Position x="-1.600004" y="-0.9599996" z="2.500001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube459>
-  <FloorCube460>
-    <Position x="-1.500004" y="-0.9599996" z="2.500001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube460>
-  <FloorCube461>
-    <Position x="-1.400004" y="-0.9599996" z="2.500001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube461>
-  <FloorCube462>
-    <Position x="-1.300004" y="-0.9599996" z="2.500001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube462>
-  <FloorCube463>
-    <Position x="-1.200004" y="-0.9599996" z="2.500001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube463>
-  <FloorCube464>
-    <Position x="-1.100004" y="-0.9599996" z="2.500001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube464>
-  <FloorCube465>
-    <Position x="-1.000004" y="-0.9599996" z="2.500001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube465>
-  <FloorCube466>
-    <Position x="-0.9000038" y="-0.9599996" z="2.500001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube466>
-  <FloorCube467>
-    <Position x="-0.8000038" y="-0.9599996" z="2.500001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube467>
-  <FloorCube468>
-    <Position x="-0.7000037" y="-0.9599996" z="2.500001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube468>
-  <FloorCube469>
-    <Position x="-0.6000037" y="-0.9599996" z="2.500001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube469>
-  <FloorCube470>
-    <Position x="0.3999963" y="-0.9599996" z="2.500001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube470>
-  <FloorCube471>
-    <Position x="-0.5000037" y="-0.9599996" z="2.500001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube471>
-  <FloorCube472>
-    <Position x="-0.4000037" y="-0.9599996" z="2.500001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube472>
-  <FloorCube473>
-    <Position x="-0.3000037" y="-0.9599996" z="2.500001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube473>
-  <FloorCube474>
-    <Position x="-0.2000037" y="-0.9599996" z="2.500001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube474>
-  <FloorCube475>
-    <Position x="-0.1000037" y="-0.9599996" z="2.500001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube475>
-  <FloorCube476>
-    <Position x="-3.710389E-06" y="-0.9599996" z="2.500001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube476>
-  <FloorCube477>
-    <Position x="0.09999629" y="-0.9599996" z="2.500001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube477>
-  <FloorCube478>
-    <Position x="0.1999963" y="-0.9599996" z="2.500001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube478>
-  <FloorCube479>
-    <Position x="0.2999963" y="-0.9599996" z="2.500001" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube479>
-  <FloorCube480>
-    <Position x="0.399996" y="-0.9599996" z="2.400002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube480>
-  <FloorCube481>
-    <Position x="-2.500004" y="-0.9599996" z="2.400002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube481>
-  <FloorCube482>
-    <Position x="-2.400004" y="-0.9599996" z="2.400002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube482>
-  <FloorCube483>
-    <Position x="-2.300004" y="-0.9599996" z="2.400002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube483>
-  <FloorCube484>
-    <Position x="-2.200004" y="-0.9599996" z="2.400002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube484>
-  <FloorCube485>
-    <Position x="-2.100004" y="-0.9599996" z="2.400002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube485>
-  <FloorCube486>
-    <Position x="-2.000004" y="-0.9599996" z="2.400002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube486>
-  <FloorCube487>
-    <Position x="-1.900004" y="-0.9599996" z="2.400002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube487>
-  <FloorCube488>
-    <Position x="-1.800004" y="-0.9599996" z="2.400002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube488>
-  <FloorCube489>
-    <Position x="-1.700004" y="-0.9599996" z="2.400002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube489>
-  <FloorCube490>
-    <Position x="-1.600004" y="-0.9599996" z="2.400002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube490>
-  <FloorCube491>
-    <Position x="-1.500004" y="-0.9599996" z="2.400002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube491>
-  <FloorCube492>
-    <Position x="-1.400004" y="-0.9599996" z="2.400002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube492>
-  <FloorCube493>
-    <Position x="-1.300004" y="-0.9599996" z="2.400002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube493>
-  <FloorCube494>
-    <Position x="-1.200004" y="-0.9599996" z="2.400002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube494>
-  <FloorCube495>
-    <Position x="-1.100004" y="-0.9599996" z="2.400002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube495>
-  <FloorCube496>
-    <Position x="-1.000004" y="-0.9599996" z="2.400002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube496>
-  <FloorCube497>
-    <Position x="-0.900004" y="-0.9599996" z="2.400002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube497>
-  <FloorCube498>
-    <Position x="-0.800004" y="-0.9599996" z="2.400002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube498>
-  <FloorCube499>
-    <Position x="-0.700004" y="-0.9599996" z="2.400002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube499>
-  <FloorCube500>
-    <Position x="-0.600004" y="-0.9599996" z="2.400002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube500>
-  <FloorCube501>
-    <Position x="-0.5000039" y="-0.9599996" z="2.400002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube501>
-  <FloorCube502>
-    <Position x="-0.4000039" y="-0.9599996" z="2.400002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube502>
-  <FloorCube503>
-    <Position x="-0.3000039" y="-0.9599996" z="2.400002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube503>
-  <FloorCube504>
-    <Position x="-0.200004" y="-0.9599996" z="2.400002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube504>
-  <FloorCube505>
-    <Position x="-0.100004" y="-0.9599996" z="2.400002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube505>
-  <FloorCube506>
-    <Position x="-3.948808E-06" y="-0.9599996" z="2.400002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube506>
-  <FloorCube507>
-    <Position x="0.09999605" y="-0.9599996" z="2.400002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube507>
-  <FloorCube508>
-    <Position x="0.1999961" y="-0.9599996" z="2.400002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube508>
-  <FloorCube509>
-    <Position x="0.299996" y="-0.9599996" z="2.400002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube509>
-  <FloorCube510>
-    <Position x="0.09999581" y="-0.9599996" z="2.300002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube510>
-  <FloorCube511>
-    <Position x="0.1999958" y="-0.9599996" z="2.300002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube511>
-  <FloorCube512>
-    <Position x="0.2999958" y="-0.9599996" z="2.300002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube512>
-  <FloorCube513>
-    <Position x="0.3999958" y="-0.9599996" z="2.300002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube513>
-  <FloorCube514>
-    <Position x="-2.500004" y="-0.9599996" z="2.300002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube514>
-  <FloorCube515>
-    <Position x="-2.400004" y="-0.9599996" z="2.300002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube515>
-  <FloorCube516>
-    <Position x="-2.300004" y="-0.9599996" z="2.300002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube516>
-  <FloorCube517>
-    <Position x="-2.200004" y="-0.9599996" z="2.300002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube517>
-  <FloorCube518>
-    <Position x="-2.100004" y="-0.9599996" z="2.300002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube518>
-  <FloorCube519>
-    <Position x="-2.000005" y="-0.9599996" z="2.300002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube519>
-  <FloorCube520>
-    <Position x="-1.900005" y="-0.9599996" z="2.300002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube520>
-  <FloorCube521>
-    <Position x="-1.800004" y="-0.9599996" z="2.300002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube521>
-  <FloorCube522>
-    <Position x="-1.700004" y="-0.9599996" z="2.300002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube522>
-  <FloorCube523>
-    <Position x="-1.600004" y="-0.9599996" z="2.300002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube523>
-  <FloorCube524>
-    <Position x="-1.500004" y="-0.9599996" z="2.300002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube524>
-  <FloorCube525>
-    <Position x="-1.400004" y="-0.9599996" z="2.300002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube525>
-  <FloorCube526>
-    <Position x="-1.300004" y="-0.9599996" z="2.300002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube526>
-  <FloorCube527>
-    <Position x="-1.200004" y="-0.9599996" z="2.300002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube527>
-  <FloorCube528>
-    <Position x="-1.100004" y="-0.9599996" z="2.300002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube528>
-  <FloorCube529>
-    <Position x="-1.000004" y="-0.9599996" z="2.300002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube529>
-  <FloorCube530>
-    <Position x="-0.9000043" y="-0.9599996" z="2.300002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube530>
-  <FloorCube531>
-    <Position x="-0.8000042" y="-0.9599996" z="2.300002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube531>
-  <FloorCube532>
-    <Position x="-0.7000042" y="-0.9599996" z="2.300002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube532>
-  <FloorCube533>
-    <Position x="-0.6000042" y="-0.9599996" z="2.300002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube533>
-  <FloorCube534>
-    <Position x="-0.5000042" y="-0.9599996" z="2.300002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube534>
-  <FloorCube535>
-    <Position x="-0.4000042" y="-0.9599996" z="2.300002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube535>
-  <FloorCube536>
-    <Position x="-0.3000042" y="-0.9599996" z="2.300002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube536>
-  <FloorCube537>
-    <Position x="-0.2000042" y="-0.9599996" z="2.300002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube537>
-  <FloorCube538>
-    <Position x="-0.1000042" y="-0.9599996" z="2.300002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube538>
-  <FloorCube539>
-    <Position x="-4.187226E-06" y="-0.9599996" z="2.300002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube539>
-  <FloorCube540>
-    <Position x="0.1999956" y="-0.9599996" z="2.200002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube540>
-  <FloorCube541>
-    <Position x="-0.3000044" y="-0.9599996" z="2.200002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube541>
-  <FloorCube542>
-    <Position x="-1.100005" y="-0.9599996" z="2.200002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube542>
-  <FloorCube543>
-    <Position x="-1.900005" y="-0.9599996" z="2.200002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube543>
-  <FloorCube544>
-    <Position x="-1.600005" y="-0.9599996" z="2.200002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube544>
-  <FloorCube545>
-    <Position x="-1.500005" y="-0.9599996" z="2.200002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube545>
-  <FloorCube546>
-    <Position x="-0.1000044" y="-0.9599996" z="2.200002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube546>
-  <FloorCube547>
-    <Position x="-0.9000045" y="-0.9599996" z="2.200002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube547>
-  <FloorCube548>
-    <Position x="-2.300004" y="-0.9599996" z="2.200002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube548>
-  <FloorCube549>
-    <Position x="-0.8000045" y="-0.9599996" z="2.200002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube549>
-  <FloorCube550>
-    <Position x="-1.700005" y="-0.9599996" z="2.200002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube550>
-  <FloorCube551>
-    <Position x="0.2999956" y="-0.9599996" z="2.200002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube551>
-  <FloorCube552>
-    <Position x="-0.5000044" y="-0.9599996" z="2.200002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube552>
-  <FloorCube553>
-    <Position x="-1.300005" y="-0.9599996" z="2.200002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube553>
-  <FloorCube554>
-    <Position x="-2.100005" y="-0.9599996" z="2.200002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube554>
-  <FloorCube555>
-    <Position x="0.3999956" y="-0.9599996" z="2.200002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube555>
-  <FloorCube556>
-    <Position x="-0.2000044" y="-0.9599996" z="2.200002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube556>
-  <FloorCube557>
-    <Position x="-0.4000044" y="-0.9599996" z="2.200002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube557>
-  <FloorCube558>
-    <Position x="-1.000005" y="-0.9599996" z="2.200002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube558>
-  <FloorCube559>
-    <Position x="-1.200005" y="-0.9599996" z="2.200002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube559>
-  <FloorCube560>
-    <Position x="-1.800005" y="-0.9599996" z="2.200002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube560>
-  <FloorCube561>
-    <Position x="-2.000005" y="-0.9599996" z="2.200002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube561>
-  <FloorCube562>
-    <Position x="0.09999558" y="-0.9599996" z="2.200002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube562>
-  <FloorCube563>
-    <Position x="-0.6000044" y="-0.9599996" z="2.200002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube563>
-  <FloorCube564>
-    <Position x="-1.400005" y="-0.9599996" z="2.200002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube564>
-  <FloorCube565>
-    <Position x="-2.200005" y="-0.9599996" z="2.200002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube565>
-  <FloorCube566>
-    <Position x="-4.425645E-06" y="-0.9599996" z="2.200002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube566>
-  <FloorCube567>
-    <Position x="-2.400004" y="-0.9599996" z="2.200002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube567>
-  <FloorCube568>
-    <Position x="-0.7000045" y="-0.9599996" z="2.200002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube568>
-  <FloorCube569>
-    <Position x="-2.500004" y="-0.9599996" z="2.200002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube569>
-  <FloorCube570>
-    <Position x="-0.5000046" y="-0.9599996" z="2.100002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube570>
-  <FloorCube571>
-    <Position x="-1.500005" y="-0.9599996" z="2.100002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube571>
-  <FloorCube572>
-    <Position x="-1.900005" y="-0.9599996" z="2.100002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube572>
-  <FloorCube573>
-    <Position x="-0.1000047" y="-0.9599996" z="2.100002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube573>
-  <FloorCube574>
-    <Position x="-0.7000047" y="-0.9599996" z="2.100002" />
-    <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube574>
-  <FloorCube575>
-    <Position x="-2.100005" y="-0.9599996" z="2.100002" />
+  <BlankCubeType>GRASS</BlankCubeType>
+  <FloorCubeCount>600</FloorCubeCount>
+  <FloorCube>
+    <Details x="-2.5" y="-0.9599996" z="4" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.4" y="-0.9599996" z="4" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.3" y="-0.9599996" z="4" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.2" y="-0.9599996" z="4" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.1" y="-0.9599996" z="4" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2" y="-0.9599996" z="4" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.9" y="-0.9599996" z="4" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.8" y="-0.9599996" z="4" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.7" y="-0.9599996" z="4" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.6" y="-0.9599996" z="4" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.5" y="-0.9599996" z="4" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.4" y="-0.9599996" z="4" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.3" y="-0.9599996" z="4" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.2" y="-0.9599996" z="4" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.1" y="-0.9599996" z="4" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1" y="-0.9599996" z="4" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.9000002" y="-0.9599996" z="4" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.8000002" y="-0.9599996" z="4" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.7000002" y="-0.9599996" z="4" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.6000001" y="-0.9599996" z="4" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.5000001" y="-0.9599996" z="4" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.4000001" y="-0.9599996" z="4" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.3000001" y="-0.9599996" z="4" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.2000001" y="-0.9599996" z="4" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.1000001" y="-0.9599996" z="4" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.341105E-07" y="-0.9599996" z="4" CubeType="Standard" />
     <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube575>
-  <FloorCube576>
-    <Position x="0.3999953" y="-0.9599996" z="2.100002" />
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.09999987" y="-0.9599996" z="4" CubeType="Standard" />
     <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube576>
-  <FloorCube577>
-    <Position x="-0.2000047" y="-0.9599996" z="2.100002" />
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.1999999" y="-0.9599996" z="4" CubeType="Standard" />
     <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube577>
-  <FloorCube578>
-    <Position x="-0.9000047" y="-0.9599996" z="2.100002" />
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.2999999" y="-0.9599996" z="4" CubeType="Standard" />
     <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube578>
-  <FloorCube579>
-    <Position x="-1.200005" y="-0.9599996" z="2.100002" />
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.3999999" y="-0.9599996" z="4" CubeType="Standard" />
     <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube579>
-  <FloorCube580>
-    <Position x="-0.3000047" y="-0.9599996" z="2.100002" />
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.5" y="-0.9599996" z="3.9" CubeType="Standard" />
     <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube580>
-  <FloorCube581>
-    <Position x="-1.800005" y="-0.9599996" z="2.100002" />
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.4" y="-0.9599996" z="3.9" CubeType="Standard" />
     <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube581>
-  <FloorCube582>
-    <Position x="0.09999534" y="-0.9599996" z="2.100002" />
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.3" y="-0.9599996" z="3.9" CubeType="Standard" />
     <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube582>
-  <FloorCube583>
-    <Position x="-2.000005" y="-0.9599996" z="2.100002" />
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.200001" y="-0.9599996" z="3.9" CubeType="Standard" />
     <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube583>
-  <FloorCube584>
-    <Position x="-1.300005" y="-0.9599996" z="2.100002" />
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.100001" y="-0.9599996" z="3.9" CubeType="Standard" />
     <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube584>
-  <FloorCube585>
-    <Position x="-1.100005" y="-0.9599996" z="2.100002" />
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.000001" y="-0.9599996" z="3.9" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.900001" y="-0.9599996" z="3.9" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.800001" y="-0.9599996" z="3.9" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.700001" y="-0.9599996" z="3.9" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.600001" y="-0.9599996" z="3.9" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.500001" y="-0.9599996" z="3.9" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.400001" y="-0.9599996" z="3.9" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.300001" y="-0.9599996" z="3.9" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.200001" y="-0.9599996" z="3.9" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.100001" y="-0.9599996" z="3.9" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1" y="-0.9599996" z="3.9" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.9000005" y="-0.9599996" z="3.9" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.8000004" y="-0.9599996" z="3.9" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.7000004" y="-0.9599996" z="3.9" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.6000004" y="-0.9599996" z="3.9" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.5000004" y="-0.9599996" z="3.9" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.4000004" y="-0.9599996" z="3.9" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.3000004" y="-0.9599996" z="3.9" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.2000004" y="-0.9599996" z="3.9" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.1000004" y="-0.9599996" z="3.9" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-3.72529E-07" y="-0.9599996" z="3.9" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.09999963" y="-0.9599996" z="3.9" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.1999996" y="-0.9599996" z="3.9" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.2999996" y="-0.9599996" z="3.9" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.3999996" y="-0.9599996" z="3.9" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.2000006" y="-0.9599996" z="3.8" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.3000006" y="-0.9599996" z="3.8" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.000001" y="-0.9599996" z="3.8" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.100001" y="-0.9599996" z="3.8" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.800001" y="-0.9599996" z="3.8" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.900001" y="-0.9599996" z="3.8" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.3999994" y="-0.9599996" z="3.8" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.4000006" y="-0.9599996" z="3.8" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.200001" y="-0.9599996" z="3.8" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.000001" y="-0.9599996" z="3.8" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.2999994" y="-0.9599996" z="3.8" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.200001" y="-0.9599996" z="3.8" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.8000007" y="-0.9599996" z="3.8" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.300001" y="-0.9599996" z="3.8" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.5000006" y="-0.9599996" z="3.8" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.6000006" y="-0.9599996" z="3.8" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-6.109476E-07" y="-0.9599996" z="3.8" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.1999994" y="-0.9599996" z="3.8" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.09999939" y="-0.9599996" z="3.8" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.400001" y="-0.9599996" z="3.8" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.400001" y="-0.9599996" z="3.8" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.600001" y="-0.9599996" z="3.8" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.1000006" y="-0.9599996" z="3.8" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.9000007" y="-0.9599996" z="3.8" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.700001" y="-0.9599996" z="3.8" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.5" y="-0.9599996" z="3.8" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.100001" y="-0.9599996" z="3.8" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.500001" y="-0.9599996" z="3.8" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.300001" y="-0.9599996" z="3.8" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.7000006" y="-0.9599996" z="3.8" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.3999991" y="-0.9599996" z="3.7" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.3000008" y="-0.9599996" z="3.7" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.4000008" y="-0.9599996" z="3.7" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.100001" y="-0.9599996" z="3.7" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.200001" y="-0.9599996" z="3.7" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.900001" y="-0.9599996" z="3.7" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.000001" y="-0.9599996" z="3.7" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.1999992" y="-0.9599996" z="3.7" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.5000008" y="-0.9599996" z="3.7" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.300001" y="-0.9599996" z="3.7" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.100001" y="-0.9599996" z="3.7" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.9000009" y="-0.9599996" z="3.7" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.500001" y="-0.9599996" z="3.7" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.400001" y="-0.9599996" z="3.7" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.300001" y="-0.9599996" z="3.7" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.8000009" y="-0.9599996" z="3.7" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.400001" y="-0.9599996" z="3.7" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.1000009" y="-0.9599996" z="3.7" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.6000009" y="-0.9599996" z="3.7" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.7000009" y="-0.9599996" z="3.7" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.200001" y="-0.9599996" z="3.7" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.500001" y="-0.9599996" z="3.7" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.700001" y="-0.9599996" z="3.7" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.09999915" y="-0.9599996" z="3.7" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-8.493662E-07" y="-0.9599996" z="3.7" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.2999991" y="-0.9599996" z="3.7" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.2000009" y="-0.9599996" z="3.7" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.000001" y="-0.9599996" z="3.7" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.800001" y="-0.9599996" z="3.7" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.600001" y="-0.9599996" z="3.7" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.3999989" y="-0.9599996" z="3.6" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.087785E-06" y="-0.9599996" z="3.6" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.09999891" y="-0.9599996" z="3.6" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.1999989" y="-0.9599996" z="3.6" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.2999989" y="-0.9599996" z="3.6" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.500001" y="-0.9599996" z="3.6" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.400001" y="-0.9599996" z="3.6" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.300001" y="-0.9599996" z="3.6" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.200001" y="-0.9599996" z="3.6" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.100001" y="-0.9599996" z="3.6" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.000001" y="-0.9599996" z="3.6" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.900001" y="-0.9599996" z="3.6" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.800001" y="-0.9599996" z="3.6" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.700001" y="-0.9599996" z="3.6" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.600001" y="-0.9599996" z="3.6" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.500001" y="-0.9599996" z="3.6" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.400001" y="-0.9599996" z="3.6" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.300001" y="-0.9599996" z="3.6" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.200001" y="-0.9599996" z="3.6" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.100001" y="-0.9599996" z="3.6" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.000001" y="-0.9599996" z="3.6" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.9000012" y="-0.9599996" z="3.6" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.8000011" y="-0.9599996" z="3.6" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.7000011" y="-0.9599996" z="3.6" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.6000011" y="-0.9599996" z="3.6" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.5000011" y="-0.9599996" z="3.6" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.4000011" y="-0.9599996" z="3.6" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.3000011" y="-0.9599996" z="3.6" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.2000011" y="-0.9599996" z="3.6" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.1000011" y="-0.9599996" z="3.6" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.500001" y="-0.9599996" z="3.5" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.400001" y="-0.9599996" z="3.5" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.300001" y="-0.9599996" z="3.5" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.200001" y="-0.9599996" z="3.5" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.100002" y="-0.9599996" z="3.5" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.000002" y="-0.9599996" z="3.5" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.900002" y="-0.9599996" z="3.5" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.800002" y="-0.9599996" z="3.5" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.700002" y="-0.9599996" z="3.5" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.600002" y="-0.9599996" z="3.5" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.500002" y="-0.9599996" z="3.5" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.400002" y="-0.9599996" z="3.5" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.300002" y="-0.9599996" z="3.5" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.200001" y="-0.9599996" z="3.5" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.100001" y="-0.9599996" z="3.5" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.000001" y="-0.9599996" z="3.5" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.9000014" y="-0.9599996" z="3.5" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.2999987" y="-0.9599996" z="3.5" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.3999987" y="-0.9599996" z="3.5" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.09999844" y="-0.9599996" z="3.400001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.6000016" y="-0.9599996" z="3.400001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.400002" y="-0.9599996" z="3.400001" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.300002" y="-0.9599996" z="3.400001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.100002" y="-0.9599996" z="3.400001" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.500001" y="-0.9599996" z="3.400001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.700002" y="-0.9599996" z="3.400001" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.9000016" y="-0.9599996" z="3.400001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.564622E-06" y="-0.9599996" z="3.400001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.1000016" y="-0.9599996" z="3.400001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.2000016" y="-0.9599996" z="3.400001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.000002" y="-0.9599996" z="3.400001" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.3000016" y="-0.9599996" z="3.400001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.900002" y="-0.9599996" z="3.400001" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.100002" y="-0.9599996" z="3.400001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.200002" y="-0.9599996" z="3.400001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.3999984" y="-0.9599996" z="3.400001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.200002" y="-0.9599996" z="3.400001" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.300002" y="-0.9599996" z="3.400001" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.4000016" y="-0.9599996" z="3.400001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.5000015" y="-0.9599996" z="3.400001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.000002" y="-0.9599996" z="3.400001" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.2999984" y="-0.9599996" z="3.400001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.600002" y="-0.9599996" z="3.400001" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.400002" y="-0.9599996" z="3.400001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.800002" y="-0.9599996" z="3.400001" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.500002" y="-0.9599996" z="3.400001" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.7000016" y="-0.9599996" z="3.400001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.3999982" y="-0.9599996" z="3.300001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.500002" y="-0.9599996" z="3.300001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.400002" y="-0.9599996" z="3.300001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.300002" y="-0.9599996" z="3.300001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.200002" y="-0.9599996" z="3.300001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.100002" y="-0.9599996" z="3.300001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.000002" y="-0.9599996" z="3.300001" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.900002" y="-0.9599996" z="3.300001" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.800002" y="-0.9599996" z="3.300001" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.700002" y="-0.9599996" z="3.300001" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.600002" y="-0.9599996" z="3.300001" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.500002" y="-0.9599996" z="3.300001" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.400002" y="-0.9599996" z="3.300001" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.300002" y="-0.9599996" z="3.300001" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.200002" y="-0.9599996" z="3.300001" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.100002" y="-0.9599996" z="3.300001" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.000002" y="-0.9599996" z="3.300001" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.9000019" y="-0.9599996" z="3.300001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.7000018" y="-0.9599996" z="3.300001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.6000018" y="-0.9599996" z="3.300001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.5000018" y="-0.9599996" z="3.300001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.4000018" y="-0.9599996" z="3.300001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.3000018" y="-0.9599996" z="3.300001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.2000018" y="-0.9599996" z="3.300001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.1000018" y="-0.9599996" z="3.300001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.803041E-06" y="-0.9599996" z="3.300001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.0999982" y="-0.9599996" z="3.300001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.2999982" y="-0.9599996" z="3.300001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.500002" y="-0.9599996" z="3.200001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.400002" y="-0.9599996" z="3.200001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.300002" y="-0.9599996" z="3.200001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.200002" y="-0.9599996" z="3.200001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.100002" y="-0.9599996" z="3.200001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.000002" y="-0.9599996" z="3.200001" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.900002" y="-0.9599996" z="3.200001" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.800002" y="-0.9599996" z="3.200001" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.700002" y="-0.9599996" z="3.200001" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.600002" y="-0.9599996" z="3.200001" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.500002" y="-0.9599996" z="3.200001" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.400002" y="-0.9599996" z="3.200001" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.300002" y="-0.9599996" z="3.200001" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.200002" y="-0.9599996" z="3.200001" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.100002" y="-0.9599996" z="3.200001" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.000002" y="-0.9599996" z="3.200001" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.9000021" y="-0.9599996" z="3.200001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.7000021" y="-0.9599996" z="3.200001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.6000021" y="-0.9599996" z="3.200001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.500002" y="-0.9599996" z="3.200001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.400002" y="-0.9599996" z="3.200001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.300002" y="-0.9599996" z="3.200001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.200002" y="-0.9599996" z="3.200001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.100002" y="-0.9599996" z="3.200001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.041459E-06" y="-0.9599996" z="3.200001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.09999796" y="-0.9599996" z="3.200001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.299998" y="-0.9599996" z="3.200001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.3999979" y="-0.9599996" z="3.200001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.500002" y="-0.9599996" z="3.100001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.400002" y="-0.9599996" z="3.100001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.300002" y="-0.9599996" z="3.100001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.200002" y="-0.9599996" z="3.100001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.100003" y="-0.9599996" z="3.100001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.000003" y="-0.9599996" z="3.100001" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.900003" y="-0.9599996" z="3.100001" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.800003" y="-0.9599996" z="3.100001" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.700003" y="-0.9599996" z="3.100001" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.600003" y="-0.9599996" z="3.100001" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.500003" y="-0.9599996" z="3.100001" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.400002" y="-0.9599996" z="3.100001" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.300002" y="-0.9599996" z="3.100001" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.200002" y="-0.9599996" z="3.100001" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.100002" y="-0.9599996" z="3.100001" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.000002" y="-0.9599996" z="3.100001" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.9000024" y="-0.9599996" z="3.100001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.7000023" y="-0.9599996" z="3.100001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.6000023" y="-0.9599996" z="3.100001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.5000023" y="-0.9599996" z="3.100001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.4000023" y="-0.9599996" z="3.100001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.3000023" y="-0.9599996" z="3.100001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.2000023" y="-0.9599996" z="3.100001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.1000023" y="-0.9599996" z="3.100001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.279878E-06" y="-0.9599996" z="3.100001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.09999772" y="-0.9599996" z="3.100001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.2999977" y="-0.9599996" z="3.100001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.3999977" y="-0.9599996" z="3.100001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.500002" y="-0.9599996" z="3.000001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.400002" y="-0.9599996" z="3.000001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.300003" y="-0.9599996" z="3.000001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.200003" y="-0.9599996" z="3.000001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.100003" y="-0.9599996" z="3.000001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.000003" y="-0.9599996" z="3.000001" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.900003" y="-0.9599996" z="3.000001" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.800003" y="-0.9599996" z="3.000001" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.700003" y="-0.9599996" z="3.000001" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.600003" y="-0.9599996" z="3.000001" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.500003" y="-0.9599996" z="3.000001" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.400003" y="-0.9599996" z="3.000001" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.300003" y="-0.9599996" z="3.000001" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.200003" y="-0.9599996" z="3.000001" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.100003" y="-0.9599996" z="3.000001" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.000003" y="-0.9599996" z="3.000001" CubeType="Standard" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.9000026" y="-0.9599996" z="3.000001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.7000026" y="-0.9599996" z="3.000001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.6000025" y="-0.9599996" z="3.000001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.5000025" y="-0.9599996" z="3.000001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.4000025" y="-0.9599996" z="3.000001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.3000025" y="-0.9599996" z="3.000001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.2000025" y="-0.9599996" z="3.000001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.1000025" y="-0.9599996" z="3.000001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.518296E-06" y="-0.9599996" z="3.000001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.09999748" y="-0.9599996" z="3.000001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.2999975" y="-0.9599996" z="3.000001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.3999975" y="-0.9599996" z="3.000001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.2999972" y="-0.9599996" z="2.900001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.2000028" y="-0.9599996" z="2.900001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.000003" y="-0.9599996" z="2.900001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.800003" y="-0.9599996" z="2.900001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.400003" y="-0.9599996" z="2.900001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.600003" y="-0.9599996" z="2.900001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.756715E-06" y="-0.9599996" z="2.900001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.200003" y="-0.9599996" z="2.900001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.7000028" y="-0.9599996" z="2.900001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.400003" y="-0.9599996" z="2.900001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.3999972" y="-0.9599996" z="2.900001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.4000027" y="-0.9599996" z="2.900001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.200003" y="-0.9599996" z="2.900001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.000003" y="-0.9599996" z="2.900001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.1000028" y="-0.9599996" z="2.900001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.3000028" y="-0.9599996" z="2.900001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.9000028" y="-0.9599996" z="2.900001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.100003" y="-0.9599996" z="2.900001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.700003" y="-0.9599996" z="2.900001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.900003" y="-0.9599996" z="2.900001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.500003" y="-0.9599996" z="2.900001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.5000027" y="-0.9599996" z="2.900001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.300003" y="-0.9599996" z="2.900001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.100003" y="-0.9599996" z="2.900001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.09999724" y="-0.9599996" z="2.900001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.300003" y="-0.9599996" z="2.900001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.6000028" y="-0.9599996" z="2.900001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.500003" y="-0.9599996" z="2.900001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.500003" y="-0.9599996" z="2.800001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.400003" y="-0.9599996" z="2.800001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.300003" y="-0.9599996" z="2.800001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.200003" y="-0.9599996" z="2.800001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.100003" y="-0.9599996" z="2.800001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.000003" y="-0.9599996" z="2.800001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.900003" y="-0.9599996" z="2.800001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.800003" y="-0.9599996" z="2.800001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.700003" y="-0.9599996" z="2.800001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.600003" y="-0.9599996" z="2.800001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.500003" y="-0.9599996" z="2.800001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.400003" y="-0.9599996" z="2.800001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.300003" y="-0.9599996" z="2.800001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.200003" y="-0.9599996" z="2.800001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.100003" y="-0.9599996" z="2.800001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.000003" y="-0.9599996" z="2.800001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.9000031" y="-0.9599996" z="2.800001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.700003" y="-0.9599996" z="2.800001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.600003" y="-0.9599996" z="2.800001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.500003" y="-0.9599996" z="2.800001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.400003" y="-0.9599996" z="2.800001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.300003" y="-0.9599996" z="2.800001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.200003" y="-0.9599996" z="2.800001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.100003" y="-0.9599996" z="2.800001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.995133E-06" y="-0.9599996" z="2.800001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.09999701" y="-0.9599996" z="2.800001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.299997" y="-0.9599996" z="2.800001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.399997" y="-0.9599996" z="2.800001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.500003" y="-0.9599996" z="2.700001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.400003" y="-0.9599996" z="2.700001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.300003" y="-0.9599996" z="2.700001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.200003" y="-0.9599996" z="2.700001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.100003" y="-0.9599996" z="2.700001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.000004" y="-0.9599996" z="2.700001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.900004" y="-0.9599996" z="2.700001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.800004" y="-0.9599996" z="2.700001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.700004" y="-0.9599996" z="2.700001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.600003" y="-0.9599996" z="2.700001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.500003" y="-0.9599996" z="2.700001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.400003" y="-0.9599996" z="2.700001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.300003" y="-0.9599996" z="2.700001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.200003" y="-0.9599996" z="2.700001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.100003" y="-0.9599996" z="2.700001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.3999968" y="-0.9599996" z="2.700001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.000003" y="-0.9599996" z="2.700001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.9000033" y="-0.9599996" z="2.700001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.2999968" y="-0.9599996" z="2.700001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.3999965" y="-0.9599996" z="2.600001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.500003" y="-0.9599996" z="2.600001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.400003" y="-0.9599996" z="2.600001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.300004" y="-0.9599996" z="2.600001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.200004" y="-0.9599996" z="2.600001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.100004" y="-0.9599996" z="2.600001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.000004" y="-0.9599996" z="2.600001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.900004" y="-0.9599996" z="2.600001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.800004" y="-0.9599996" z="2.600001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.700004" y="-0.9599996" z="2.600001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.600004" y="-0.9599996" z="2.600001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.500004" y="-0.9599996" z="2.600001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.400004" y="-0.9599996" z="2.600001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.300004" y="-0.9599996" z="2.600001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.200004" y="-0.9599996" z="2.600001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.100004" y="-0.9599996" z="2.600001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.000004" y="-0.9599996" z="2.600001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.9000036" y="-0.9599996" z="2.600001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.8000035" y="-0.9599996" z="2.600001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.7000035" y="-0.9599996" z="2.600001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.6000035" y="-0.9599996" z="2.600001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.5000035" y="-0.9599996" z="2.600001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.4000035" y="-0.9599996" z="2.600001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.3000035" y="-0.9599996" z="2.600001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.2000035" y="-0.9599996" z="2.600001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.1000035" y="-0.9599996" z="2.600001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-3.471971E-06" y="-0.9599996" z="2.600001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.09999653" y="-0.9599996" z="2.600001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.1999965" y="-0.9599996" z="2.600001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.2999965" y="-0.9599996" z="2.600001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.000004" y="-0.9599996" z="2.500001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.700004" y="-0.9599996" z="2.500001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.300004" y="-0.9599996" z="2.500001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.1000037" y="-0.9599996" z="2.500001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.2000037" y="-0.9599996" z="2.500001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.400004" y="-0.9599996" z="2.500001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.9000038" y="-0.9599996" z="2.500001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.2999963" y="-0.9599996" z="2.500001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.5000037" y="-0.9599996" z="2.500001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.300004" y="-0.9599996" z="2.500001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.000004" y="-0.9599996" z="2.500001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.500004" y="-0.9599996" z="2.500001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.3000037" y="-0.9599996" z="2.500001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.100004" y="-0.9599996" z="2.500001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.7000037" y="-0.9599996" z="2.500001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.500004" y="-0.9599996" z="2.500001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.200004" y="-0.9599996" z="2.500001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-3.710389E-06" y="-0.9599996" z="2.500001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.8000038" y="-0.9599996" z="2.500001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.600004" y="-0.9599996" z="2.500001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.800004" y="-0.9599996" z="2.500001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.3999963" y="-0.9599996" z="2.500001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.1999963" y="-0.9599996" z="2.500001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.4000037" y="-0.9599996" z="2.500001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.6000037" y="-0.9599996" z="2.500001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.200004" y="-0.9599996" z="2.500001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.400004" y="-0.9599996" z="2.500001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.900004" y="-0.9599996" z="2.500001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.100004" y="-0.9599996" z="2.500001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.500004" y="-0.9599996" z="2.400002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.900004" y="-0.9599996" z="2.400002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.500004" y="-0.9599996" z="2.400002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.09999605" y="-0.9599996" z="2.400002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.5000039" y="-0.9599996" z="2.400002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.000004" y="-0.9599996" z="2.400002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.700004" y="-0.9599996" z="2.400002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.300004" y="-0.9599996" z="2.400002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.300004" y="-0.9599996" z="2.400002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.100004" y="-0.9599996" z="2.400002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.299996" y="-0.9599996" z="2.400002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.100004" y="-0.9599996" z="2.400002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.700004" y="-0.9599996" z="2.400002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.100004" y="-0.9599996" z="2.400002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.200004" y="-0.9599996" z="2.400002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.400004" y="-0.9599996" z="2.400002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.900004" y="-0.9599996" z="2.400002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.3000039" y="-0.9599996" z="2.400002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.399996" y="-0.9599996" z="2.400002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.1999961" y="-0.9599996" z="2.400002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-3.948808E-06" y="-0.9599996" z="2.400002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.200004" y="-0.9599996" z="2.400002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.4000039" y="-0.9599996" z="2.400002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.600004" y="-0.9599996" z="2.400002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.800004" y="-0.9599996" z="2.400002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.000004" y="-0.9599996" z="2.400002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.200004" y="-0.9599996" z="2.400002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.400004" y="-0.9599996" z="2.400002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.600004" y="-0.9599996" z="2.400002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.800004" y="-0.9599996" z="2.400002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.500004" y="-0.9599996" z="2.300002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.400004" y="-0.9599996" z="2.300002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.300004" y="-0.9599996" z="2.300002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.200004" y="-0.9599996" z="2.300002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.100004" y="-0.9599996" z="2.300002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.000005" y="-0.9599996" z="2.300002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.900005" y="-0.9599996" z="2.300002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.800004" y="-0.9599996" z="2.300002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.700004" y="-0.9599996" z="2.300002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.600004" y="-0.9599996" z="2.300002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.500004" y="-0.9599996" z="2.300002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.400004" y="-0.9599996" z="2.300002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.300004" y="-0.9599996" z="2.300002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.200004" y="-0.9599996" z="2.300002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.100004" y="-0.9599996" z="2.300002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.000004" y="-0.9599996" z="2.300002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.9000043" y="-0.9599996" z="2.300002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.8000042" y="-0.9599996" z="2.300002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.7000042" y="-0.9599996" z="2.300002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.6000042" y="-0.9599996" z="2.300002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.5000042" y="-0.9599996" z="2.300002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.4000042" y="-0.9599996" z="2.300002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.3000042" y="-0.9599996" z="2.300002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.2000042" y="-0.9599996" z="2.300002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.1000042" y="-0.9599996" z="2.300002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-4.187226E-06" y="-0.9599996" z="2.300002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.09999581" y="-0.9599996" z="2.300002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.1999958" y="-0.9599996" z="2.300002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.2999958" y="-0.9599996" z="2.300002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.3999958" y="-0.9599996" z="2.300002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.3999956" y="-0.9599996" z="2.200002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.2999956" y="-0.9599996" z="2.200002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.500004" y="-0.9599996" z="2.200002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.400004" y="-0.9599996" z="2.200002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.300004" y="-0.9599996" z="2.200002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.200005" y="-0.9599996" z="2.200002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.100005" y="-0.9599996" z="2.200002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.000005" y="-0.9599996" z="2.200002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.900005" y="-0.9599996" z="2.200002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.800005" y="-0.9599996" z="2.200002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.700005" y="-0.9599996" z="2.200002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.600005" y="-0.9599996" z="2.200002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.500005" y="-0.9599996" z="2.200002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.400005" y="-0.9599996" z="2.200002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.300005" y="-0.9599996" z="2.200002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.200005" y="-0.9599996" z="2.200002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.100005" y="-0.9599996" z="2.200002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.000005" y="-0.9599996" z="2.200002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.9000045" y="-0.9599996" z="2.200002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.8000045" y="-0.9599996" z="2.200002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.7000045" y="-0.9599996" z="2.200002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.6000044" y="-0.9599996" z="2.200002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.5000044" y="-0.9599996" z="2.200002" CubeType="Standard" />
     <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube585>
-  <FloorCube586>
-    <Position x="0.2999953" y="-0.9599996" z="2.100002" />
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.4000044" y="-0.9599996" z="2.200002" CubeType="Standard" />
     <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube586>
-  <FloorCube587>
-    <Position x="-1.600005" y="-0.9599996" z="2.100002" />
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.3000044" y="-0.9599996" z="2.200002" CubeType="Standard" />
     <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube587>
-  <FloorCube588>
-    <Position x="0.1999953" y="-0.9599996" z="2.100002" />
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.2000044" y="-0.9599996" z="2.200002" CubeType="Standard" />
     <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube588>
-  <FloorCube589>
-    <Position x="-2.300005" y="-0.9599996" z="2.100002" />
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.1000044" y="-0.9599996" z="2.200002" CubeType="Standard" />
     <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube589>
-  <FloorCube590>
-    <Position x="-2.500005" y="-0.9599996" z="2.100002" />
+  </FloorCube>
+  <FloorCube>
+    <Details x="-4.425645E-06" y="-0.9599996" z="2.200002" CubeType="Standard" />
     <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube590>
-  <FloorCube591>
-    <Position x="-4.664063E-06" y="-0.9599996" z="2.100002" />
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.09999558" y="-0.9599996" z="2.200002" CubeType="Standard" />
     <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube591>
-  <FloorCube592>
-    <Position x="-1.400005" y="-0.9599996" z="2.100002" />
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.1999956" y="-0.9599996" z="2.200002" CubeType="Standard" />
     <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube592>
-  <FloorCube593>
-    <Position x="-0.8000047" y="-0.9599996" z="2.100002" />
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.500005" y="-0.9599996" z="2.100002" CubeType="Standard" />
     <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube593>
-  <FloorCube594>
-    <Position x="-0.6000047" y="-0.9599996" z="2.100002" />
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.400005" y="-0.9599996" z="2.100002" CubeType="Standard" />
     <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube594>
-  <FloorCube595>
-    <Position x="-2.200005" y="-0.9599996" z="2.100002" />
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.300005" y="-0.9599996" z="2.100002" CubeType="Standard" />
     <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube595>
-  <FloorCube596>
-    <Position x="-0.4000047" y="-0.9599996" z="2.100002" />
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.200005" y="-0.9599996" z="2.100002" CubeType="Standard" />
     <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube596>
-  <FloorCube597>
-    <Position x="-1.000005" y="-0.9599996" z="2.100002" />
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.100005" y="-0.9599996" z="2.100002" CubeType="Standard" />
     <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube597>
-  <FloorCube598>
-    <Position x="-1.700005" y="-0.9599996" z="2.100002" />
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.000005" y="-0.9599996" z="2.100002" CubeType="Standard" />
     <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube598>
-  <FloorCube599>
-    <Position x="-2.400005" y="-0.9599996" z="2.100002" />
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.900005" y="-0.9599996" z="2.100002" CubeType="Standard" />
     <BlackFloorCube>false</BlackFloorCube>
-  </FloorCube599>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.800005" y="-0.9599996" z="2.100002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.700005" y="-0.9599996" z="2.100002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.600005" y="-0.9599996" z="2.100002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.500005" y="-0.9599996" z="2.100002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.400005" y="-0.9599996" z="2.100002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.300005" y="-0.9599996" z="2.100002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.200005" y="-0.9599996" z="2.100002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.100005" y="-0.9599996" z="2.100002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.000005" y="-0.9599996" z="2.100002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.9000047" y="-0.9599996" z="2.100002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.8000047" y="-0.9599996" z="2.100002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.7000047" y="-0.9599996" z="2.100002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.6000047" y="-0.9599996" z="2.100002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.5000046" y="-0.9599996" z="2.100002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.4000047" y="-0.9599996" z="2.100002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.3000047" y="-0.9599996" z="2.100002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.2000047" y="-0.9599996" z="2.100002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.1000047" y="-0.9599996" z="2.100002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-4.664063E-06" y="-0.9599996" z="2.100002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.3999953" y="-0.9599996" z="2.100002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.09999534" y="-0.9599996" z="2.100002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.1999953" y="-0.9599996" z="2.100002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.2999953" y="-0.9599996" z="2.100002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.09999629" y="-0.9599996" z="2.500001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.09999868" y="-0.9599996" z="3.5" CubeType="Lava" />
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.326203E-06" y="-0.9599996" z="3.5" CubeType="Lava" />
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.1000013" y="-0.9599996" z="3.5" CubeType="Lava" />
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.2000013" y="-0.9599996" z="3.5" CubeType="Lava" />
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.3000013" y="-0.9599996" z="3.5" CubeType="Lava" />
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.4000013" y="-0.9599996" z="3.5" CubeType="Lava" />
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.5000013" y="-0.9599996" z="3.5" CubeType="Lava" />
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.6000013" y="-0.9599996" z="3.5" CubeType="Lava" />
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.7000014" y="-0.9599996" z="3.5" CubeType="Lava" />
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.8000014" y="-0.9599996" z="3.5" CubeType="Lava" />
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.8000016" y="-0.9599996" z="3.400001" CubeType="Lava" />
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.8000019" y="-0.9599996" z="3.300001" CubeType="Lava" />
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.8000021" y="-0.9599996" z="3.200001" CubeType="Lava" />
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.8000023" y="-0.9599996" z="3.100001" CubeType="Lava" />
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.8000026" y="-0.9599996" z="3.000001" CubeType="Lava" />
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.8000028" y="-0.9599996" z="2.900001" CubeType="Lava" />
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.8000031" y="-0.9599996" z="2.800001" CubeType="Lava" />
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.8000033" y="-0.9599996" z="2.700001" CubeType="Lava" />
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.7000033" y="-0.9599996" z="2.700001" CubeType="Lava" />
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.6000032" y="-0.9599996" z="2.700001" CubeType="Lava" />
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.5000032" y="-0.9599996" z="2.700001" CubeType="Lava" />
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.1999968" y="-0.9599996" z="2.700001" CubeType="Lava" />
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.09999677" y="-0.9599996" z="2.700001" CubeType="Lava" />
+  </FloorCube>
+  <FloorCube>
+    <Details x="-3.233552E-06" y="-0.9599996" z="2.700001" CubeType="Lava" />
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.1000032" y="-0.9599996" z="2.700001" CubeType="Lava" />
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.2000032" y="-0.9599996" z="2.700001" CubeType="Lava" />
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.3000032" y="-0.9599996" z="2.700001" CubeType="Lava" />
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.4000032" y="-0.9599996" z="2.700001" CubeType="Lava" />
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.199997" y="-0.9599996" z="2.800001" CubeType="Lava" />
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.1999972" y="-0.9599996" z="2.900001" CubeType="Lava" />
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.1999975" y="-0.9599996" z="3.000001" CubeType="Lava" />
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.1999977" y="-0.9599996" z="3.100001" CubeType="Lava" />
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.199998" y="-0.9599996" z="3.200001" CubeType="Lava" />
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.1999982" y="-0.9599996" z="3.300001" CubeType="Lava" />
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.1999984" y="-0.9599996" z="3.400001" CubeType="Lava" />
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.1999987" y="-0.9599996" z="3.5" CubeType="Lava" />
+  </FloorCube>
 </FloorCubes>

@@ -68,7 +68,10 @@ public class LamppostCubeScript : MonoBehaviour
         }
 
 
-
+        if (restartScript.loading)
+        {
+            Destroy(this.gameObject);
+        }
 
     }
 

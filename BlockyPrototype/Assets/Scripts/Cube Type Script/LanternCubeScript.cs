@@ -64,7 +64,10 @@ public class LanternCubeScript : MonoBehaviour
             }
         }
 
-       
+        if (restartScript.loading)
+        {
+            Destroy(this.gameObject);
+        }
     }
 
 

@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeActive: 0
-  grassPrefab: {fileID: 3014774579378426385, guid: 9af2a9c1228060c49bce3f842264e516,
-    type: 3}
+  timeActiveExploded: 0
+  isBlackCube: 0
+  restartScript: {fileID: 0}
+  snowMaterial: {fileID: 2100000, guid: 20be59ce95604d24abe856cf4c4d1cb5, type: 2}
 --- !u!1001 &950092328094184999
 PrefabInstance:
   m_ObjectHideFlags: 0

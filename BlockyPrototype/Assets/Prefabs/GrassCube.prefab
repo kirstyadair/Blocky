@@ -12,6 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67b5fa4cd549632459d6368ffeea2f0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeActive: 0
+  timeActiveExploded: 0
+  indexInFloorCube: 0
+  isBlackCube: 0
+  grassMaterial: {fileID: 2100000, guid: 642e091bb4789fd4994f97e6410615c5, type: 2}
 --- !u!1001 &8859332087606719207
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -99,6 +104,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 642e091bb4789fd4994f97e6410615c5, type: 2}
+    - target: {fileID: 5817763899701695810, guid: 6eb6cc60bb32c714da6170868cdd0e2d,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3374727502714218062, guid: 6eb6cc60bb32c714da6170868cdd0e2d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6eb6cc60bb32c714da6170868cdd0e2d, type: 3}

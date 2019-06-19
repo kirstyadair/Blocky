@@ -5351,6 +5351,49 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 349421578}
   m_CullTransparentMesh: 0
+--- !u!1 &375411460
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 375411461}
+  - component: {fileID: 375411462}
+  m_Layer: 0
+  m_Name: FloorCubesArrayTracker
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &375411461
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 375411460}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1983557218}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &375411462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 375411460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 910f408f677411a43ad69dbf44495a76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &381097221
 GameObject:
   m_ObjectHideFlags: 0
@@ -13723,6 +13766,7 @@ MonoBehaviour:
   radius: 5
   force: 350
   exploding: 0
+  loading: 0
 --- !u!1 &892386110
 GameObject:
   m_ObjectHideFlags: 0
@@ -14467,6 +14511,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27d6f73298196d4418bc09733e591619, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  floorCubes: []
+  restartScript: {fileID: 886829632}
+  grassMaterial: {fileID: 2100000, guid: 642e091bb4789fd4994f97e6410615c5, type: 2}
+  sandMaterial: {fileID: 2100000, guid: 5a17d1ecfd50d804cbff687fe83911d2, type: 2}
+  snowMaterial: {fileID: 2100000, guid: 20be59ce95604d24abe856cf4c4d1cb5, type: 2}
+  dirtMaterial: {fileID: 2100000, guid: 31e162afe8bce094f984119e1f4e3e4e, type: 2}
+  standardMaterial: {fileID: 2100000, guid: f49904b88d36d354fadd94d6102d94f6, type: 2}
+  fire: {fileID: 7631402564027792317, guid: f11bba449a749344490c2e969d09c8cb, type: 3}
+  burning: {fileID: 7709139060426278228, guid: 06c06e06d314aa34e8e9e03c2944806c, type: 3}
+  longgrass: {fileID: 3382673833530160598, guid: 025c7f6738e449c4e8e894e374f17494,
+    type: 3}
+  tree: {fileID: 7353951020297265173, guid: edb60fed6d15eb74dbb8467edce90c08, type: 3}
+  flowers: {fileID: 5058448345568311063, guid: c565dcc71eed71645b72bf9ca1cd8a05, type: 3}
+  stone: {fileID: 7331588718690229105, guid: cb8be2734a9c7604295ec71c6ba527f5, type: 3}
+  wood: {fileID: 4403392763372521678, guid: 0825913859810a541a6ea6c762f6a305, type: 3}
+  lantern: {fileID: 4820199742950422470, guid: e2aa54b03fef996418d47f97faea5ffd, type: 3}
+  fence: {fileID: 7033973679645492213, guid: 902fdb0ee031f69419180caaabd170ff, type: 3}
+  lilypad: {fileID: 4075847212933672060, guid: 1093b312b31850a429d15cb0136d9c80, type: 3}
+  lamppost: {fileID: 1045780089144333438, guid: 6511e8099528024479fcf90e54479ec1,
+    type: 3}
+  grass: {fileID: 3014774579378426385, guid: 9af2a9c1228060c49bce3f842264e516, type: 3}
+  dirt: {fileID: 5545948537728656736, guid: 238f0f7ec59fc664a83a475f3e579f19, type: 3}
+  snow: {fileID: 6776630915081606865, guid: 0fe5262738c374146b93beebb6c3b558, type: 3}
+  sand: {fileID: 7106929501281752313, guid: 34f6481c264caa641a8432aff2e1b6bc, type: 3}
+  nuclear: {fileID: 8977728968571009517, guid: dcba1757d85612f4ea131d6ecabeed57, type: 3}
+  lava: {fileID: 6714531147735001649, guid: 6156a5c9a1cfce84b97ea891e91606fb, type: 3}
+  water: {fileID: 617789895762305217, guid: 389e375adee60ae48a79d3939a733e73, type: 3}
+  pondwater: {fileID: 5109018965715498486, guid: 03d36fc63f122ae4792e39103c3b3a8a,
+    type: 3}
+  paving: {fileID: 8885696192964990692, guid: 0d1969576481fca488ca1c46e002eca6, type: 3}
 --- !u!1 &975359052
 GameObject:
   m_ObjectHideFlags: 0
@@ -29084,6 +29158,7 @@ Transform:
   - {fileID: 1981522358}
   - {fileID: 886829631}
   - {fileID: 975321203}
+  - {fileID: 375411461}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

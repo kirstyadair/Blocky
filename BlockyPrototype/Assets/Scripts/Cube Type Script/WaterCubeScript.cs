@@ -128,15 +128,45 @@ public class WaterCubeScript : MonoBehaviour
             {
                 Destroy(other.gameObject);
             }
-            else
+            if (other.GetComponent<GrassCubeScript>().timeActive == timeActive)
             {
-                Destroy(this.gameObject);
+                Destroy(other.gameObject);
             }
         }
 
         if (other.name == "SandCube")
         {
             if (other.GetComponent<SandCubeScript>().timeActive > timeActive)
+            {
+                Destroy(other.gameObject);
+            }
+
+            if (other.GetComponent<SandCubeScript>().timeActive == timeActive)
+            {
+                Destroy(other.gameObject);
+            }
+        }
+
+        if (other.name == "DirtCube")
+        {
+            if (other.GetComponent<DirtCubeScript>().timeActive > timeActive)
+            {
+                Destroy(other.gameObject);
+            }
+            if (other.GetComponent<DirtCubeScript>().timeActive == timeActive)
+            {
+                Destroy(other.gameObject);
+            }
+        }
+
+        if (other.name == "SnowCube")
+        {
+            if (other.GetComponent<SnowCubeScript>().timeActive > timeActive)
+            {
+                Destroy(other.gameObject);
+            }
+
+            if (other.GetComponent<SnowCubeScript>().timeActive == timeActive)
             {
                 Destroy(other.gameObject);
             }

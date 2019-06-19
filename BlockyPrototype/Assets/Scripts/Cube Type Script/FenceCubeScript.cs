@@ -6,6 +6,8 @@ public class FenceCubeScript : MonoBehaviour
 {
     public double timeActive = 0.0f;
     public double timeActiveExploded = 0.0f;
+    public int rotation;
+    public bool isCorner;
     public GameObject groundPrefab;
     public GameObject grassPrefab;
     public GameObject dirtPrefab;
@@ -71,7 +73,10 @@ public class FenceCubeScript : MonoBehaviour
         }
 
 
-
+        if (restartScript.loading)
+        {
+            Destroy(this.gameObject);
+        }
         
     }
 

@@ -75,6 +75,11 @@ public class LilypadCubeScript : MonoBehaviour
                 Destroy(this.gameObject);
             }
         }
+
+        if (restartScript.loading)
+        {
+            Destroy(this.gameObject);
+        }
     }
 
 

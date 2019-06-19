@@ -140,16 +140,15 @@ public class LavaCubeScript : MonoBehaviour
             {
                 Destroy(other.gameObject);
             }
-            else
+            if (other.GetComponent<SandCubeScript>().timeActive == timeActive)
             {
-                Destroy(this.gameObject);
+                Destroy(other.gameObject);
             }
         }
 
         if (other.name == "FireCube" || other.name == "WoodCube" || other.name == "FlowerCube" || other.name == "BurningCube" || other.name == "StoneCube" || other.name == "TreeCube" || other.name == "LongGrassCube" || other.name == "LanternCube" || other.name == "FenceCube")
         {
             Vector3 position = this.transform.position;
-            Debug.Log(groundPrefab);
             if (groundPrefab == null)
             {
                 Debug.Log(playerScript.blankCubePrefab);

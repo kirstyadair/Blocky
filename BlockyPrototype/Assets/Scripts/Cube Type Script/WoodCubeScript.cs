@@ -67,6 +67,10 @@ public class WoodCubeScript : MonoBehaviour
             transform.position = new Vector3(transform.position.x, -0.8799995f, transform.position.z);
         }
 
+        if (restartScript.loading)
+        {
+            Destroy(this.gameObject);
+        }
     }
 
 

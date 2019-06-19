@@ -128,9 +128,9 @@ public class NuclearCubeScript : MonoBehaviour
             {
                 Destroy(other.gameObject);
             }
-            else
+            if (other.GetComponent<SandCubeScript>().timeActive == timeActive)
             {
-                Destroy(this.gameObject);
+                Destroy(other.gameObject);
             }
         }
 

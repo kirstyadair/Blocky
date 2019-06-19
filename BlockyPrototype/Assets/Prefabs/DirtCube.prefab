@@ -13,8 +13,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeActive: 0
-  dirtPrefab: {fileID: 5545948537728656736, guid: 238f0f7ec59fc664a83a475f3e579f19,
-    type: 3}
+  timeActiveExploded: 0
+  isBlackCube: 0
+  restartScript: {fileID: 0}
+  indexInFloorCube: 0
+  dirtMaterial: {fileID: 2100000, guid: 31e162afe8bce094f984119e1f4e3e4e, type: 2}
 --- !u!1001 &2293212739584640406
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26,6 +29,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DirtCube
+      objectReference: {fileID: 0}
+    - target: {fileID: 5990924509027115254, guid: 6eb6cc60bb32c714da6170868cdd0e2d,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4293475291247187278, guid: 6eb6cc60bb32c714da6170868cdd0e2d,
         type: 3}

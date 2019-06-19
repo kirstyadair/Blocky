@@ -68,7 +68,10 @@ public class TreeCubeScript : MonoBehaviour
         }
 
 
-
+        if (restartScript.loading)
+        {
+            Destroy(this.gameObject);
+        }
         
     }
 

@@ -5,7 +5,7 @@ using UnityEngine;
 public class FloorCubeSpawnerScript : MonoBehaviour
 {
     public GameObject floorCubePrefab;
-    public List<GameObject> floorCubes;
+    public List<Transform> floorCubes;
     public float spaceBetweenCubes;
     public float timeBetweenSpawning;
     int numOfCubes = 0;
@@ -14,7 +14,7 @@ public class FloorCubeSpawnerScript : MonoBehaviour
 
     public void Start()
     {
-        floorCubes = new List<GameObject>();
+        floorCubes = new List<Transform>();
     }
 
 

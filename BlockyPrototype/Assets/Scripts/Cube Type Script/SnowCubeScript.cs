@@ -6,7 +6,9 @@ public class SnowCubeScript : MonoBehaviour
 {
     public double timeActive = 0.0f;
     public double timeActiveExploded = 0.0f;
+    public bool isBlackCube;
     public RestartScript restartScript;
+    public Material snowMaterial;
     PlayerScript playerScript;
 
 
@@ -15,7 +17,18 @@ public class SnowCubeScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gameObject.name = "SnowCube";
+
+        if (!isBlackCube)
+        {
+            gameObject.name = "SnowCube";
+            //GetComponent<Renderer>().material = snowMaterial;
+        }
+        else
+        {
+            gameObject.name = "BlackFloorCube";
+            GetComponent<Renderer>().material.color = new Color(0, 0, 0, 0.4f);
+        }
+        gameObject.tag = "Floor";
         restartScript = GameObject.Find("RestartObject").GetComponent<RestartScript>();
         playerScript = GameObject.Find("PlayerObject").GetComponent<PlayerScript>();
 
