@@ -66,6 +66,32 @@ public class LavaCubeScript : MonoBehaviour
         {
             transform.position = new Vector3(transform.position.x, -0.9599f, transform.position.z);
         }
+
+
+        if (restartScript.loading)
+        {
+            SaveToXMLScript saveScript = GameObject.Find("SaveObject").GetComponent<SaveToXMLScript>();
+            if (saveScript.readBlankCubeType == "GRASS")
+            {
+                GameObject newCube = Instantiate(grassPrefab, transform.position, Quaternion.identity);
+                Destroy(this.gameObject);
+            }
+            if (saveScript.readBlankCubeType == "SNOW")
+            {
+                GameObject newCube = Instantiate(snowPrefab, transform.position, Quaternion.identity);
+                Destroy(this.gameObject);
+            }
+            if (saveScript.readBlankCubeType == "SAND")
+            {
+                GameObject newCube = Instantiate(sandPrefab, transform.position, Quaternion.identity);
+                Destroy(this.gameObject);
+            }
+            if (saveScript.readBlankCubeType == "DIRT")
+            {
+                GameObject newCube = Instantiate(dirtPrefab, transform.position, Quaternion.identity);
+                Destroy(this.gameObject);
+            }
+        }
     }
 
 

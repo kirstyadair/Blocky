@@ -88,6 +88,9 @@ public class PlayerScript : MonoBehaviour
     public CubeType blankCubeType;
     GameObject currentCubePrefab;
     public GameObject blankCubePrefab;
+
+    public GameObject loadSavePanel;
+    public GameObject savePanel;
     
 
 
@@ -297,7 +300,7 @@ public class PlayerScript : MonoBehaviour
 
 
 
-        if (chosenRequirements && reqGenScript.canSelectWalls)
+        if (chosenRequirements && reqGenScript.canSelectWalls && !loadSavePanel.activeInHierarchy && !savePanel.activeInHierarchy)
         {
 
             if (Input.GetButtonDown("Fire1"))

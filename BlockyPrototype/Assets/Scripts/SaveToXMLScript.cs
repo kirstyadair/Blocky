@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Xml;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEditor;
 
 public class SaveToXMLScript : MonoBehaviour
 {
@@ -23,6 +25,7 @@ public class SaveToXMLScript : MonoBehaviour
     public GameObject wood;
     public GameObject lantern;
     public GameObject fence;
+    public GameObject fenceCorner;
     public GameObject lilypad;
     public GameObject lamppost;
     public GameObject grass;
@@ -35,7 +38,12 @@ public class SaveToXMLScript : MonoBehaviour
     public GameObject pondwater;
     public GameObject paving;
     public List<CubeToSpawn> cubesToSpawnList;
-    string readBlankCubeType;
+
+    public GameObject loadingPanel;
+    public GameObject savingPanel;
+
+    public string readBlankCubeType;
+    string url;
     int floorCubeCount;
 
 
@@ -43,6 +51,8 @@ public class SaveToXMLScript : MonoBehaviour
     {
         gameData = GameObject.Find("GameData").GetComponent<GameData>();
         cubesToSpawnList = new List<CubeToSpawn>();
+        loadingPanel.SetActive(false);
+        savingPanel.SetActive(false);
     }
 
 
@@ -51,20 +61,53 @@ public class SaveToXMLScript : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Alpha0))
         {
-            floorCubes = GameObject.FindGameObjectsWithTag("Floor");
-            SaveFloorToXMLFile(floorCubes, "saveTest", gameData.blankCubeType);
+            if (!savingPanel.activeInHierarchy)
+            {
+                savingPanel.SetActive(true);
+            }
+            else
+            {
+                savingPanel.SetActive(false);
+            }
+
+            loadingPanel.SetActive(false);
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha9))
         {
-             
-            cubesToSpawnList = ReadFloorFromXML("saveTest");
-            Debug.Log(cubesToSpawnList.Count);
-
-            StartCoroutine(LoadInCubes());
+            if (!loadingPanel.activeInHierarchy)
+            {
+                loadingPanel.SetActive(true);
+            }
+            else
+            {
+                loadingPanel.SetActive(false);
+            }
             
+            savingPanel.SetActive(false);
         }
     }
+
+    public void SaveToSlot1()
+    {
+        floorCubes = GameObject.FindGameObjectsWithTag("Floor");
+    
+        SaveFloorToXMLFile(floorCubes, "save1", gameData.blankCubeType);
+
+        savingPanel.SetActive(false);
+    }
+
+    public void LoadSave1()
+    {
+        GameObject[] destroyThese = GameObject.FindGameObjectsWithTag("Floor");
+        
+        cubesToSpawnList = ReadFloorFromXML("save1");
+
+        StartCoroutine(LoadInCubes());
+
+        loadingPanel.SetActive(false);
+    }
+    
 
 
 
@@ -212,14 +255,14 @@ public class SaveToXMLScript : MonoBehaviour
             {
                 xmlWriter.WriteAttributeString("CubeType", "Lantern");
             }
-            /* else if (floorCubes[i].GetComponent<FenceCubeScript>() != null)
+            else if (floorCubes[i].GetComponent<FenceCubeScript>() != null)
             {
-                xmlWriter.WriteString("Fence");
+                xmlWriter.WriteAttributeString("CubeType", "Fence");
                 xmlWriter.WriteStartElement("FenceType");
                 xmlWriter.WriteAttributeString("Rotation", floorCubes[i].GetComponent<FenceCubeScript>().rotation.ToString());
                 xmlWriter.WriteAttributeString("IsCorner", floorCubes[i].GetComponent<FenceCubeScript>().isCorner.ToString());
                 xmlWriter.WriteEndElement();
-            }*/
+            }
             else if (floorCubes[i].GetComponent<LilypadCubeScript>() != null)
             {
                 xmlWriter.WriteAttributeString("CubeType", "Lilypad");
@@ -396,7 +439,24 @@ public class SaveToXMLScript : MonoBehaviour
                                     }
                                     if (cubeType == "Fence")
                                     {
-                                        newCube.cubePrefab = fence;
+                                        XmlReader fenceIndividualCubeReader = xmlReader.ReadSubtree();
+
+                                        while(fenceIndividualCubeReader.Read())
+                                        {
+                                            if (fenceIndividualCubeReader.IsStartElement("FenceType"))
+                                            {
+                                                newCube.fenceRotation = int.Parse(fenceIndividualCubeReader["Rotation"]);
+                                                if (fenceIndividualCubeReader["IsCorner"] == "True")
+                                                {
+                                                    newCube.cubePrefab = fenceCorner;
+                                                }
+                                                else
+                                                {
+                                                    newCube.cubePrefab = fence;
+                                                }
+                                            }
+                                        }
+                                        
                                     }
                                     if (cubeType == "Lilypad")
                                     {
@@ -551,7 +611,9 @@ public class SaveToXMLScript : MonoBehaviour
                                 floorCube.GetComponent<Renderer>().material = dirtMaterial;
                                 
                             }
+                            
                         }
+                        
                     }
                     gameData.blankCubeType = CubeType.DIRT;
                     GameObject.Find("PlayerObject").GetComponent<PlayerScript>().cubeType = CubeType.NULL;
@@ -648,7 +710,9 @@ public class SaveToXMLScript : MonoBehaviour
 
     IEnumerator LoadInCubes()
     {
+        restartScript.loading = true;
         yield return new WaitForSeconds(0.5f);
+        restartScript.loading = false;
 
         for (int i = 0; i < cubesToSpawnList.Count; i++)
         {
@@ -657,18 +721,40 @@ public class SaveToXMLScript : MonoBehaviour
                 if (readBlankCubeType == "GRASS" && cubesToSpawnList[i].cubePrefab != grass || readBlankCubeType == "SAND" && cubesToSpawnList[i].cubePrefab != sand || readBlankCubeType == "SNOW" && cubesToSpawnList[i].cubePrefab != snow || readBlankCubeType == "DIRT" && cubesToSpawnList[i].cubePrefab != dirt)
                 {
                     GameObject newCube = Instantiate(cubesToSpawnList[i].cubePrefab, cubesToSpawnList[i].position, Quaternion.identity); 
+                    if (cubesToSpawnList[i].cubePrefab == fence || cubesToSpawnList[i].cubePrefab == fenceCorner)
+                    {
+                        newCube.transform.Rotate(transform.rotation.x, cubesToSpawnList[i].fenceRotation, transform.rotation.z);
+                    }
                     newCube.tag = "Floor";
                 }
                 else
                 {
                     GameObject newCube = Instantiate(cubesToSpawnList[i].cubePrefab, cubesToSpawnList[i].position, Quaternion.identity);
-                    newCube.GetComponent<Renderer>().material = standardMaterial;
+                    Debug.Log(cubesToSpawnList[i].cubePrefab);
+
+                    if (cubesToSpawnList[i].cubePrefab == grass)
+                    {
+                        newCube.GetComponent<GrassCubeScript>().isBlackCube = true;
+                    }
+                    if (cubesToSpawnList[i].cubePrefab == dirt)
+                    {
+                        newCube.GetComponent<DirtCubeScript>().isBlackCube = true;
+                    }
+                    if (cubesToSpawnList[i].cubePrefab == sand)
+                    {
+                        newCube.GetComponent<SandCubeScript>().isBlackCube = true;
+                    }
+                    if (cubesToSpawnList[i].cubePrefab == snow)
+                    {
+                        newCube.GetComponent<SnowCubeScript>().isBlackCube = true;
+                    }
                 }
                    
             }
             
         }
     }
+
 }
 
 
@@ -676,4 +762,5 @@ public class CubeToSpawn
 {
     public Vector3 position;
     public GameObject cubePrefab;
+    public int fenceRotation;
 }

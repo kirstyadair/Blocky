@@ -61,6 +61,7 @@ public class DirtCubeScript : MonoBehaviour
         if (transform.position.y > -0.95f && restartScript.exploding == false)
         {
             transform.position = new Vector3(transform.position.x, -0.9599f, transform.position.z);
+            
         }
 
         //Debug.Log(indexInFloorCube);
@@ -80,8 +81,6 @@ public class DirtCubeScript : MonoBehaviour
             // if this instance is younger than the other instance, destroy the other instance
             if (timeActive < other.GetComponent<DirtCubeScript>().timeActive)
             {
-                indexInFloorCube = other.GetComponent<DirtCubeScript>().indexInFloorCube;
-                spawnerScript.floorCubes[indexInFloorCube] = gameObject.transform;
                 Destroy(other.gameObject);
             }
         }
