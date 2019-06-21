@@ -18,6 +18,7 @@ public class CubeScript : MonoBehaviour
     public CubeMaterial cubeMaterial;
     public float timeActiveExploded = 0.0f;
     public RestartScript restartScript;
+    public string ID;
 
     public Material standardMaterial;
     public Material snowMaterial;

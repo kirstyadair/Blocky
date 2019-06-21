@@ -8,6 +8,7 @@ using UnityEditor;
 public class SaveToXMLScript : MonoBehaviour
 {
     public GameObject[] floorCubes;
+    public List<GameObject> houseCubes;
     public RestartScript restartScript;
     GameData gameData;
     public Material grassMaterial;
@@ -15,6 +16,9 @@ public class SaveToXMLScript : MonoBehaviour
     public Material snowMaterial;
     public Material dirtMaterial;
     public Material standardMaterial;
+    public Material woodMaterial;
+    public Material houseSnowMaterial;
+    public Material brickMaterial;
 
     public GameObject fire;
     public GameObject burning;
@@ -38,6 +42,7 @@ public class SaveToXMLScript : MonoBehaviour
     public GameObject pondwater;
     public GameObject paving;
     public List<CubeToSpawn> cubesToSpawnList;
+    public List<HouseCubeToColour> houseCubesList;
 
     public GameObject loadingPanel;
     public GameObject savingPanel;
@@ -51,6 +56,9 @@ public class SaveToXMLScript : MonoBehaviour
     {
         gameData = GameObject.Find("GameData").GetComponent<GameData>();
         cubesToSpawnList = new List<CubeToSpawn>();
+        floorCubes = GameObject.FindGameObjectsWithTag("Floor");
+        houseCubes = GameObject.Find("RequirementsObject").GetComponent<RequirementsGeneratorScript>().allCubes;
+        houseCubesList = new List<HouseCubeToColour>();
         loadingPanel.SetActive(false);
         savingPanel.SetActive(false);
     }
@@ -91,19 +99,21 @@ public class SaveToXMLScript : MonoBehaviour
     public void SaveToSlot1()
     {
         floorCubes = GameObject.FindGameObjectsWithTag("Floor");
-    
-        SaveFloorToXMLFile(floorCubes, "save1", gameData.blankCubeType);
+        houseCubes = GameObject.Find("RequirementsObject").GetComponent<RequirementsGeneratorScript>().allCubes;
+
+        SaveFloorToXMLFile(floorCubes, "floorSave1", gameData.blankCubeType);
+        SaveHouseToXMLFile(houseCubes, "houseSave1");
 
         savingPanel.SetActive(false);
     }
 
     public void LoadSave1()
     {
-        GameObject[] destroyThese = GameObject.FindGameObjectsWithTag("Floor");
-        
-        cubesToSpawnList = ReadFloorFromXML("save1");
+        cubesToSpawnList = ReadFloorFromXML("floorSave1");
+        houseCubesList = ReadHouseCubesFromXML("houseSave1");
 
         StartCoroutine(LoadInCubes());
+        StartCoroutine(ColourHouseCubes());
 
         loadingPanel.SetActive(false);
     }
@@ -346,6 +356,72 @@ public class SaveToXMLScript : MonoBehaviour
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+    public void SaveHouseToXMLFile(List<GameObject> houseCubes, string fileName)
+    {
+        XmlWriterSettings writerSettings = new XmlWriterSettings();
+        writerSettings.Indent = true;
+        // Create a write instance
+        XmlWriter xmlWriter = XmlWriter.Create(fileName + ".xml", writerSettings);
+        
+        xmlWriter.WriteStartDocument();
+        // Create the root element
+        xmlWriter.WriteStartElement("HouseCubes");
+
+        for (int i = 0; i < houseCubes.Count; i++)
+        {
+            xmlWriter.WriteStartElement("HouseCube");
+            if (houseCubes[i].GetComponent<CubeScript>().cubeMaterial == CubeMaterial.STANDARD)
+            {
+                xmlWriter.WriteAttributeString("Material", "Standard");
+                xmlWriter.WriteAttributeString("Colour", ColorUtility.ToHtmlStringRGB(houseCubes[i].GetComponent<Renderer>().material.color));
+                xmlWriter.WriteAttributeString("ID", houseCubes[i].GetComponent<CubeScript>().ID.ToString());
+            }
+            if (houseCubes[i].GetComponent<CubeScript>().cubeMaterial == CubeMaterial.GLASS)
+            {
+                xmlWriter.WriteAttributeString("Material", "Glass");
+                xmlWriter.WriteAttributeString("Colour", ColorUtility.ToHtmlStringRGBA(houseCubes[i].GetComponent<Renderer>().material.color));
+                xmlWriter.WriteAttributeString("ID", houseCubes[i].GetComponent<CubeScript>().ID.ToString());
+            }
+            if (houseCubes[i].GetComponent<CubeScript>().cubeMaterial == CubeMaterial.WOOD)
+            {
+                xmlWriter.WriteAttributeString("Material", "Wood");
+                xmlWriter.WriteAttributeString("Colour", ColorUtility.ToHtmlStringRGB(houseCubes[i].GetComponent<Renderer>().material.color));
+                xmlWriter.WriteAttributeString("ID", houseCubes[i].GetComponent<CubeScript>().ID.ToString());
+            }
+            if (houseCubes[i].GetComponent<CubeScript>().cubeMaterial == CubeMaterial.SNOW)
+            {
+                xmlWriter.WriteAttributeString("Material", "Snow");
+                xmlWriter.WriteAttributeString("Colour", ColorUtility.ToHtmlStringRGB(houseCubes[i].GetComponent<Renderer>().material.color));
+                xmlWriter.WriteAttributeString("ID", houseCubes[i].GetComponent<CubeScript>().ID.ToString());
+            }
+            if (houseCubes[i].GetComponent<CubeScript>().cubeMaterial == CubeMaterial.BRICK)
+            {
+                xmlWriter.WriteAttributeString("Material", "Brick");
+                xmlWriter.WriteAttributeString("Colour", ColorUtility.ToHtmlStringRGB(houseCubes[i].GetComponent<Renderer>().material.color));
+                xmlWriter.WriteAttributeString("ID", houseCubes[i].GetComponent<CubeScript>().ID.ToString());
+            }
+            xmlWriter.WriteEndElement();
+        }
+
+        xmlWriter.WriteEndElement();
+        xmlWriter.WriteEndDocument();
+        xmlWriter.Close();
+
+    }
+
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////READING FROM FILES///////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -511,6 +587,70 @@ public class SaveToXMLScript : MonoBehaviour
         }
 
         return cubes;
+    }
+
+
+
+
+
+
+
+
+    public List<HouseCubeToColour> ReadHouseCubesFromXML(string filename)
+    {
+        XmlReader xmlReader = XmlReader.Create(filename + ".xml");
+        List<HouseCubeToColour> readHouseCubes = new List<HouseCubeToColour>();
+        
+
+        while (xmlReader.Read())
+        {
+            if (xmlReader.IsStartElement("HouseCubes"))
+            {
+                XmlReader houseCubeReader = xmlReader.ReadSubtree();
+
+                while (houseCubeReader.Read())
+                {
+                    if (houseCubeReader.IsStartElement("HouseCube"))
+                    {
+                        HouseCubeToColour readCube = new HouseCubeToColour();
+                        readHouseCubes.Add(readCube);
+
+                        if (houseCubeReader["Material"] == "Standard")
+                        {
+                            readCube.material = CubeMaterial.STANDARD;
+                        }
+                        if (houseCubeReader["Material"] == "Glass")
+                        {
+                            readCube.material = CubeMaterial.GLASS;
+                        }
+                        if (houseCubeReader["Material"] == "Snow")
+                        {
+                            readCube.material = CubeMaterial.SNOW;
+                        }
+                        if (houseCubeReader["Material"] == "Wood")
+                        {
+                            readCube.material = CubeMaterial.WOOD;
+                        }
+                        if (houseCubeReader["Material"] == "Brick")
+                        {
+                            readCube.material = CubeMaterial.BRICK;
+                        }
+
+                        Color readColour;
+                        string hexColour ="#" + houseCubeReader["Colour"];
+                        if(ColorUtility.TryParseHtmlString(hexColour, out readColour))
+                        {
+                            readCube.color = readColour;
+                        }
+
+                        readCube.ID = houseCubeReader["ID"];
+                    }
+                    
+                }
+            }
+        }
+
+        return readHouseCubes;
     }
 
 
@@ -755,6 +895,61 @@ public class SaveToXMLScript : MonoBehaviour
         }
     }
 
+    IEnumerator ColourHouseCubes()
+    {
+        yield return new WaitForSeconds(0.5f);
+        for (int i = 0; i < houseCubesList.Count; i++)
+        {
+            foreach (GameObject cube in houseCubes)
+            {
+                if (cube.GetComponent<CubeScript>().ID == houseCubesList[i].ID)
+                {
+                    if (houseCubesList[i].material == CubeMaterial.STANDARD)
+                    {
+                        cube.GetComponent<CubeScript>().cubeMaterial = CubeMaterial.STANDARD;
+                        Material mat = cube.GetComponent<CubeScript>().standardMaterial;
+                        cube.GetComponent<Renderer>().material = mat;
+
+                        cube.GetComponent<Renderer>().material.color = houseCubesList[i].color;
+                    }
+                    if (houseCubesList[i].material == CubeMaterial.GLASS)
+                    {
+                        cube.GetComponent<CubeScript>().cubeMaterial = CubeMaterial.GLASS;
+                        Material mat = cube.GetComponent<CubeScript>().standardMaterial;
+                        cube.GetComponent<Renderer>().material = mat;
+
+                        cube.GetComponent<Renderer>().material.color = houseCubesList[i].color;
+                    }
+                    if (houseCubesList[i].material == CubeMaterial.WOOD)
+                    {
+                        cube.GetComponent<CubeScript>().cubeMaterial = CubeMaterial.WOOD;
+                        Material mat = cube.GetComponent<CubeScript>().woodMaterial;
+                        cube.GetComponent<Renderer>().material = mat;
+
+                        cube.GetComponent<Renderer>().material.color = houseCubesList[i].color;
+                    }
+                    if (houseCubesList[i].material == CubeMaterial.SNOW)
+                    {
+                        cube.GetComponent<CubeScript>().cubeMaterial = CubeMaterial.SNOW;
+                        Material mat = cube.GetComponent<CubeScript>().snowMaterial;
+                        cube.GetComponent<Renderer>().material = mat;
+
+                        cube.GetComponent<Renderer>().material.color = houseCubesList[i].color;
+                    }
+                    if (houseCubesList[i].material == CubeMaterial.BRICK)
+                    {
+                        cube.GetComponent<CubeScript>().cubeMaterial = CubeMaterial.BRICK;
+                        Material mat = cube.GetComponent<CubeScript>().brickMaterial;
+                        cube.GetComponent<Renderer>().material = mat;
+
+                        cube.GetComponent<Renderer>().material.color = houseCubesList[i].color;
+                    }
+                    
+                }
+            }
+        }
+    }
+
 }
 
 
@@ -763,4 +958,12 @@ public class CubeToSpawn
     public Vector3 position;
     public GameObject cubePrefab;
     public int fenceRotation;
+}
+
+
+public class HouseCubeToColour
+{
+    public CubeMaterial material;
+    public Color color;
+    public string ID;
 }

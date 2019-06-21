@@ -149,6 +149,7 @@ public class RequirementsGeneratorScript : MonoBehaviour
                 GameObject spawnedCube = Instantiate(cubePrefab, transform.position, Quaternion.identity);
                 spawnedCube.transform.SetParent(GameObject.Find("HouseCubeObject").transform);
                 spawnedCube.GetComponent<CubeScript>().cubeMaterial = CubeMaterial.STANDARD;
+                spawnedCube.GetComponent<CubeScript>().ID = allCubes.Count.ToString();
                 spawnedCube.tag = "BackWall";
                 allCubes.Add(spawnedCube);
                 spawnedCube.GetComponent<CubeScript>().cubeTag = spawnedCube.tag;
@@ -164,6 +165,7 @@ public class RequirementsGeneratorScript : MonoBehaviour
                 GameObject spawnedCube = Instantiate(cubePrefab, transform.position, Quaternion.identity);
                 spawnedCube.transform.SetParent(GameObject.Find("HouseCubeObject").transform);
                 spawnedCube.GetComponent<CubeScript>().cubeMaterial = CubeMaterial.STANDARD;
+                spawnedCube.GetComponent<CubeScript>().ID = allCubes.Count.ToString();
                 spawnedCube.tag = "RightWall";
                 allCubes.Add(spawnedCube);
                 spawnedCube.GetComponent<CubeScript>().cubeTag = spawnedCube.tag;
@@ -179,6 +181,7 @@ public class RequirementsGeneratorScript : MonoBehaviour
                 GameObject spawnedCube = Instantiate(cubePrefab, transform.position, Quaternion.identity);
                 spawnedCube.transform.SetParent(GameObject.Find("HouseCubeObject").transform);
                 spawnedCube.GetComponent<CubeScript>().cubeMaterial = CubeMaterial.STANDARD;
+                spawnedCube.GetComponent<CubeScript>().ID = allCubes.Count.ToString();
                 spawnedCube.tag = "FrontWall";
                 allCubes.Add(spawnedCube);
                 spawnedCube.GetComponent<CubeScript>().cubeTag = spawnedCube.tag;
@@ -194,6 +197,7 @@ public class RequirementsGeneratorScript : MonoBehaviour
                 GameObject spawnedCube = Instantiate(cubePrefab, transform.position, Quaternion.identity);
                 spawnedCube.transform.SetParent(GameObject.Find("HouseCubeObject").transform);
                 spawnedCube.GetComponent<CubeScript>().cubeMaterial = CubeMaterial.STANDARD;
+                spawnedCube.GetComponent<CubeScript>().ID = allCubes.Count.ToString();
                 spawnedCube.tag = "LeftWall";
                 allCubes.Add(spawnedCube);
                 spawnedCube.GetComponent<CubeScript>().cubeTag = spawnedCube.tag;
@@ -236,6 +240,11 @@ public class RequirementsGeneratorScript : MonoBehaviour
                 else if (gridScript.selectedMaterial == CubeMaterial.BRICK)
                 {
                     Material material = cube.GetComponent<CubeScript>().brickMaterial;
+                    cube.GetComponent<Renderer>().material = material;
+                }
+                else if (gridScript.selectedMaterial == CubeMaterial.STANDARD)
+                {
+                    Material material = cube.GetComponent<CubeScript>().standardMaterial;
                     cube.GetComponent<Renderer>().material = material;
                 }
                 cube.GetComponent<Renderer>().material.color = colour;
