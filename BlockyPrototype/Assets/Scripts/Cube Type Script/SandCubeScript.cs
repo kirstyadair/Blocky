@@ -69,70 +69,79 @@ public class SandCubeScript : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.name == "SandCube")
+        if (!isBlackCube)
         {
-            if (other.GetComponent<SandCubeScript>().timeActive == timeActive)
+            if (other.name == "SandCube")
             {
-                other.GetComponent<SandCubeScript>().timeActive += 0.01f;
+                if (other.GetComponent<SandCubeScript>().timeActive == timeActive)
+                {
+                    other.GetComponent<SandCubeScript>().timeActive += 0.01f;
+                }
+
+                if (timeActive < other.GetComponent<SandCubeScript>().timeActive)
+                {
+                    Destroy(other.gameObject);
+                }
             }
 
-            if (timeActive < other.GetComponent<SandCubeScript>().timeActive)
+            if (other.name == "GrassCube")
             {
-                Destroy(other.gameObject);
+                if (other.GetComponent<GrassCubeScript>().timeActive > timeActive)
+                {
+                    Destroy(other.gameObject);
+                }
+                else
+                {
+                    Destroy(this.gameObject);
+                }
             }
-        }
 
-        if (other.name == "GrassCube")
-        {
-            if (other.GetComponent<GrassCubeScript>().timeActive > timeActive)
+            if (other.name == "PavingCube")
             {
-                Destroy(other.gameObject);
+                if (other.GetComponent<PavingCubeScript>().timeActive > timeActive)
+                {
+                    Destroy(other.gameObject);
+                }
             }
-            else
-            {
-                Destroy(this.gameObject);
-            }
-        }
 
-        if (other.name == "PavingCube")
-        {
-            if (other.GetComponent<PavingCubeScript>().timeActive > timeActive)
+            if (other.name == "WaterCube")
             {
-                Destroy(other.gameObject);
+                if (timeActive < other.GetComponent<WaterCubeScript>().timeActive)
+                {
+                    Destroy(other.gameObject);
+                }
             }
-        }
 
-        if (other.name == "WaterCube")
-        {
-            if (timeActive < other.GetComponent<WaterCubeScript>().timeActive)
+            if (other.name == "PondWaterCube")
             {
-                Destroy(other.gameObject);
+                if (timeActive < other.GetComponent<PondWaterCubeScript>().timeActive)
+                {
+                    Destroy(other.gameObject);
+                }
+                else
+                {
+                    Destroy(this.gameObject);
+                }
             }
-        }
 
-        if (other.name == "PondWaterCube")
-        {
-            if (timeActive < other.GetComponent<PondWaterCubeScript>().timeActive)
+            if (other.name == "NuclearCube")
             {
-                Destroy(other.gameObject);
-            }
-            else
-            {
-                Destroy(this.gameObject);
-            }
-        }
-
-        if (other.name == "NuclearCube")
-        {
-            if (timeActive < other.GetComponent<NuclearCubeScript>().timeActive)
-            {
-                Destroy(other.gameObject);
-            }
-            else
-            {
-                Destroy(this.gameObject);
+                if (timeActive < other.GetComponent<NuclearCubeScript>().timeActive)
+                {
+                    Destroy(other.gameObject);
+                }
+                else
+                {
+                    Destroy(this.gameObject);
+                }
             }
         }
+        else if (other.GetComponent<CubeScript>() == null)
+        {
+            
+            Destroy(other.gameObject);
+        }
+    
 
     }
 }

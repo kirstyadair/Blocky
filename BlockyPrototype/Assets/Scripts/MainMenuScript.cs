@@ -6,8 +6,7 @@ using UnityEngine.SceneManagement;
 public class MainMenuScript : MonoBehaviour
 {
     public GameObject gameData;
-    public GameObject terrainPanel;
-    public Animator terrainAnim;
+    public Animator canvasAnim;
     public AudioClip backgroundMusic;
 
     public Material grass;
@@ -24,6 +23,7 @@ public class MainMenuScript : MonoBehaviour
             CreateGameData();
             
         }
+        canvasAnim.SetBool("startSandbox", false);
     }
 
 
@@ -46,8 +46,7 @@ public class MainMenuScript : MonoBehaviour
 
     public void ChooseTerrain()
     {
-        terrainPanel.SetActive(true);
-        terrainAnim.SetBool("panelIn", true);
+        canvasAnim.SetBool("startSandbox", true);
         GetComponent<AudioSource>().Play();
     }
 
@@ -55,7 +54,6 @@ public class MainMenuScript : MonoBehaviour
 
     public void GrassTerrainChosen()
     {
-        terrainAnim.SetBool("panelIn", false);
         gameData.GetComponent<GameData>().blankCubeType = CubeType.GRASS;
         StartSandbox();
     }
@@ -64,7 +62,6 @@ public class MainMenuScript : MonoBehaviour
 
     public void SandTerrainChosen()
     {
-        terrainAnim.SetBool("panelIn", false);
         gameData.GetComponent<GameData>().blankCubeType = CubeType.SAND;
         StartSandbox();
     }
@@ -73,7 +70,6 @@ public class MainMenuScript : MonoBehaviour
 
     public void DirtTerrainChosen()
     {
-        terrainAnim.SetBool("panelIn", false);
         gameData.GetComponent<GameData>().blankCubeType = CubeType.DIRT;
         StartSandbox();
     }
@@ -82,7 +78,6 @@ public class MainMenuScript : MonoBehaviour
 
     public void SnowTerrainChosen()
     {
-        terrainAnim.SetBool("panelIn", false);
         gameData.GetComponent<GameData>().blankCubeType = CubeType.SNOW;
         StartSandbox();
     }
@@ -120,5 +115,11 @@ public class MainMenuScript : MonoBehaviour
         gameData.GetComponent<GameData>().snow = snow;
         gameData.GetComponent<GameData>().dirt = dirt;
         gameData.GetComponent<GameData>().grass = grass;
+    }
+
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }

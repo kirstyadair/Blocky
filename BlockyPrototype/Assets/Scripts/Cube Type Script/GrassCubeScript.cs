@@ -60,20 +60,29 @@ public class GrassCubeScript : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.name == "GrassCube")
+        if (!isBlackCube)
         {
-            if (other.GetComponent<GrassCubeScript>().timeActive == timeActive)
+            if (other.name == "GrassCube")
             {
-                other.GetComponent<GrassCubeScript>().timeActive += 0.01f;
-            }
+                if (other.GetComponent<GrassCubeScript>().timeActive == timeActive)
+                {
+                    other.GetComponent<GrassCubeScript>().timeActive += 0.01f;
+                }
 
-            if (timeActive < other.GetComponent<GrassCubeScript>().timeActive)
-            {
-                //indexInFloorCube = other.GetComponent<GrassCubeScript>().indexInFloorCube;
-                //spawnerScript.floorCubes[indexInFloorCube] = gameObject.transform;
-                Destroy(other.gameObject);
+                if (timeActive < other.GetComponent<GrassCubeScript>().timeActive)
+                {
+                    //indexInFloorCube = other.GetComponent<GrassCubeScript>().indexInFloorCube;
+                    //spawnerScript.floorCubes[indexInFloorCube] = gameObject.transform;
+                    Destroy(other.gameObject);
+                }
             }
         }
+        else if (other.GetComponent<CubeScript>() == null)
+        {
+            
+            Destroy(other.gameObject);
+        }
+        
 
 
         

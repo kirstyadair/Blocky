@@ -106,8 +106,10 @@ public class GridScript : MonoBehaviour
                             }
                             else if (selectedMaterial == CubeMaterial.GLASS)
                             {
-                                cubeToColour.GetComponent<MeshRenderer>().material.color = new Color(1, 1, 1, 0.1f);
+                                
                                 cubeToColour.GetComponent<CubeScript>().cubeMaterial = CubeMaterial.GLASS;
+                                cubeToColour.GetComponent<MeshRenderer>().material = cubeToColour.GetComponent<CubeScript>().standardMaterial;
+                                cubeToColour.GetComponent<MeshRenderer>().material.color = new Color(1, 1, 1, 0.1f);
                                 selectedColour = new Color(0.8f, 1, 1, 1);
                                 gridTile.GetComponent<Image>().sprite = glassSprite;
                             }
@@ -115,6 +117,7 @@ public class GridScript : MonoBehaviour
                             {
                                 cubeToColour.GetComponent<CubeScript>().cubeMaterial = CubeMaterial.SNOW;
                                 selectedColour = Color.white;
+                                cubeToColour.GetComponent<MeshRenderer>().material = cubeToColour.GetComponent<CubeScript>().snowMaterial;
                                 gridTile.GetComponent<Image>().sprite = snowSprite;
                             }
                             else if (selectedMaterial == CubeMaterial.WOOD)

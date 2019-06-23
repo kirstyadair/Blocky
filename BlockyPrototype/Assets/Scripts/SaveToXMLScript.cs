@@ -10,6 +10,7 @@ public class SaveToXMLScript : MonoBehaviour
     public GameObject[] floorCubes;
     public List<GameObject> houseCubes;
     public RestartScript restartScript;
+    public Animator clouds;
     GameData gameData;
     public Material grassMaterial;
     public Material sandMaterial;
@@ -44,8 +45,8 @@ public class SaveToXMLScript : MonoBehaviour
     public List<CubeToSpawn> cubesToSpawnList;
     public List<HouseCubeToColour> houseCubesList;
 
-    public GameObject loadingPanel;
-    public GameObject savingPanel;
+    public GameObject loadSlots;
+    public GameObject saveSlots;
 
     public string readBlankCubeType;
     string url;
@@ -59,8 +60,9 @@ public class SaveToXMLScript : MonoBehaviour
         floorCubes = GameObject.FindGameObjectsWithTag("Floor");
         houseCubes = GameObject.Find("RequirementsObject").GetComponent<RequirementsGeneratorScript>().allCubes;
         houseCubesList = new List<HouseCubeToColour>();
-        loadingPanel.SetActive(false);
-        savingPanel.SetActive(false);
+        saveSlots.SetActive(false);
+        loadSlots.SetActive(false);
+        
     }
 
 
@@ -69,30 +71,34 @@ public class SaveToXMLScript : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Alpha0))
         {
-            if (!savingPanel.activeInHierarchy)
+            if (!saveSlots.activeInHierarchy)
             {
-                savingPanel.SetActive(true);
+                clouds.SetBool("in", true);
+                saveSlots.SetActive(true);
             }
             else
             {
-                savingPanel.SetActive(false);
+                clouds.SetBool("in", false);
+                saveSlots.SetActive(false);
             }
 
-            loadingPanel.SetActive(false);
+            loadSlots.SetActive(false);
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha9))
         {
-            if (!loadingPanel.activeInHierarchy)
+            if (!loadSlots.activeInHierarchy)
             {
-                loadingPanel.SetActive(true);
+                clouds.SetBool("in", true);
+                loadSlots.SetActive(true);
             }
             else
             {
-                loadingPanel.SetActive(false);
+                clouds.SetBool("in", false);
+                loadSlots.SetActive(false);
             }
             
-            savingPanel.SetActive(false);
+            saveSlots.SetActive(false);
         }
     }
 
@@ -104,7 +110,8 @@ public class SaveToXMLScript : MonoBehaviour
         SaveFloorToXMLFile(floorCubes, "floorSave1", gameData.blankCubeType);
         SaveHouseToXMLFile(houseCubes, "houseSave1");
 
-        savingPanel.SetActive(false);
+        saveSlots.SetActive(false);
+        clouds.SetBool("in", false);
     }
 
     public void LoadSave1()
@@ -115,7 +122,56 @@ public class SaveToXMLScript : MonoBehaviour
         StartCoroutine(LoadInCubes());
         StartCoroutine(ColourHouseCubes());
 
-        loadingPanel.SetActive(false);
+        loadSlots.SetActive(false);
+        clouds.SetBool("in", false);
+    }
+    
+    public void SaveToSlot2()
+    {
+        floorCubes = GameObject.FindGameObjectsWithTag("Floor");
+        houseCubes = GameObject.Find("RequirementsObject").GetComponent<RequirementsGeneratorScript>().allCubes;
+
+        SaveFloorToXMLFile(floorCubes, "floorSave2", gameData.blankCubeType);
+        SaveHouseToXMLFile(houseCubes, "houseSave2");
+
+        saveSlots.SetActive(false);
+        clouds.SetBool("in", false);
+    }
+
+    public void LoadSave2()
+    {
+        cubesToSpawnList = ReadFloorFromXML("floorSave2");
+        houseCubesList = ReadHouseCubesFromXML("houseSave2");
+
+        StartCoroutine(LoadInCubes());
+        StartCoroutine(ColourHouseCubes());
+
+        loadSlots.SetActive(false);
+        clouds.SetBool("in", false);
+    }
+    
+    public void SaveToSlot3()
+    {
+        floorCubes = GameObject.FindGameObjectsWithTag("Floor");
+        houseCubes = GameObject.Find("RequirementsObject").GetComponent<RequirementsGeneratorScript>().allCubes;
+
+        SaveFloorToXMLFile(floorCubes, "floorSave3", gameData.blankCubeType);
+        SaveHouseToXMLFile(houseCubes, "houseSave3");
+
+        saveSlots.SetActive(false);
+        clouds.SetBool("in", false);
+    }
+
+    public void LoadSave3()
+    {
+        cubesToSpawnList = ReadFloorFromXML("floorSave3");
+        houseCubesList = ReadHouseCubesFromXML("houseSave3");
+
+        StartCoroutine(LoadInCubes());
+        StartCoroutine(ColourHouseCubes());
+
+        loadSlots.SetActive(false);
+        clouds.SetBool("in", false);
     }
     
 
