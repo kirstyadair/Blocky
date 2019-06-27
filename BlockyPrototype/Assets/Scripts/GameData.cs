@@ -11,7 +11,7 @@ public class GameData : MonoBehaviour
     public Material sand;
     public Material dirt;
     public float backgroundAudioLevel = 0f;
-    public float cubePlacementAudioLevel = 0.4f;
+    public float cubePlacementAudioLevel = 0f;
 
 
 

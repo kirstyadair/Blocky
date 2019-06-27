@@ -2,18 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum FenceType
+{
+    STRAIGHT, CORNER, END, ARCH, GATE
+}
+
+
+
 public class FenceCubeScript : MonoBehaviour
 {
     public double timeActive = 0.0f;
     public double timeActiveExploded = 0.0f;
     public int rotation;
-    public bool isCorner;
-    public GameObject groundPrefab;
+    public FenceType type;
+    GameObject groundPrefab;
     public GameObject grassPrefab;
     public GameObject dirtPrefab;
     public GameObject sandPrefab;
     public GameObject snowPrefab;
-    public RestartScript restartScript;
+    RestartScript restartScript;
     PlayerScript playerScript;
 
 
@@ -66,11 +73,21 @@ public class FenceCubeScript : MonoBehaviour
         }
 
 
-
-        if (transform.position.y != -0.8799995f && restartScript.exploding == false)
+        if (type != FenceType.ARCH)
         {
-            transform.position = new Vector3(transform.position.x, -0.8799995f, transform.position.z);
+            if (transform.position.y != -0.8799995f && restartScript.exploding == false)
+            {
+                transform.position = new Vector3(transform.position.x, -0.8799995f, transform.position.z);
+            }
         }
+        else
+        {
+            if (transform.position.y != -0.8315f && restartScript.exploding == false)
+            {
+                transform.position = new Vector3(transform.position.x, -0.8315f, transform.position.z);
+            }
+        }
+        
 
 
         if (restartScript.loading)

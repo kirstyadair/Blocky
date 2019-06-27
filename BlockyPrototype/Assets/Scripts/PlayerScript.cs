@@ -11,6 +11,7 @@ public enum CubeType
     GRASS,
     WOOD,
     FIRE,
+    BURNING,
     PAVING,
     FLOWER,
     SAND,
@@ -26,7 +27,14 @@ public enum CubeType
     NUCLEAR,
     LILYPAD,
     LAVA,
-    LAMPPOST
+    LAMPPOST,
+    ICE,
+    FENCEEND,
+    FENCEARCH,
+    FENCEGATE,
+    SAPLING,
+    PEBBLES,
+    TORCH
 }
 
 
@@ -42,6 +50,7 @@ public class PlayerScript : MonoBehaviour
 {
     // Variables
     public bool chosenRequirements = false;
+    public bool savingOrLoading = false;
     public float opacity;
     public string selectedWallTag;
     public EditingView editView;
@@ -76,6 +85,9 @@ public class PlayerScript : MonoBehaviour
     public GameObject dirtPrefab;
     public GameObject fencePrefab;
     public GameObject fenceCornerPrefab;
+    public GameObject fenceEndPrefab;
+    public GameObject fenceArchPrefab;
+    public GameObject fenceGatePrefab;
     public GameObject snowPrefab;
     public GameObject lanternPrefab;
     public GameObject treePrefab;
@@ -85,6 +97,11 @@ public class PlayerScript : MonoBehaviour
     public GameObject lilypadPrefab;
     public GameObject lavaPrefab;
     public GameObject lamppostPrefab;
+    public GameObject icePrefab;
+    public GameObject burningPrefab;
+    public GameObject saplingPrefab;
+    public GameObject pebblesPrefab;
+    public GameObject torchPrefab;
     public CubeType blankCubeType;
     GameObject currentCubePrefab;
     public GameObject blankCubePrefab;
@@ -188,6 +205,11 @@ public class PlayerScript : MonoBehaviour
             currentCubePrefab = firePrefab;
             currentCubeAboveGround = true;
         }
+        else if (cubeType == CubeType.BURNING)
+        {
+            currentCubePrefab = burningPrefab;
+            currentCubeAboveGround = true;
+        }
         else if (cubeType == CubeType.PAVING)
         {
             currentCubePrefab = pavingPrefab;
@@ -221,6 +243,21 @@ public class PlayerScript : MonoBehaviour
         else if (cubeType == CubeType.FENCECORNER)
         {
             currentCubePrefab = fenceCornerPrefab;
+            currentCubeAboveGround = true;
+        }
+        else if (cubeType == CubeType.FENCEARCH)
+        {
+            currentCubePrefab = fenceArchPrefab;
+            currentCubeAboveGround = true;
+        }
+        else if (cubeType == CubeType.FENCEEND)
+        {
+            currentCubePrefab = fenceEndPrefab;
+            currentCubeAboveGround = true;
+        }
+        else if (cubeType == CubeType.FENCEGATE)
+        {
+            currentCubePrefab = fenceGatePrefab;
             currentCubeAboveGround = true;
         }
         else if (cubeType == CubeType.SNOW)
@@ -266,6 +303,26 @@ public class PlayerScript : MonoBehaviour
         else if (cubeType == CubeType.LAMPPOST)
         {
             currentCubePrefab = lamppostPrefab;
+            currentCubeAboveGround = true;
+        }
+        else if (cubeType == CubeType.ICE)
+        {
+            currentCubePrefab = icePrefab;
+            currentCubeAboveGround = false;
+        }
+        else if (cubeType == CubeType.SAPLING)
+        {
+            currentCubePrefab = saplingPrefab;
+            currentCubeAboveGround = false;
+        }
+        else if (cubeType == CubeType.PEBBLES)
+        {
+            currentCubePrefab = pebblesPrefab;
+            currentCubeAboveGround = false;
+        }
+        else if (cubeType == CubeType.TORCH)
+        {
+            currentCubePrefab = torchPrefab;
             currentCubeAboveGround = false;
         }
 
@@ -273,12 +330,12 @@ public class PlayerScript : MonoBehaviour
 
         if (editView == EditingView.EXTERIOR)
         {
-            if (Input.GetKeyDown(KeyCode.M))
+            if (Input.GetKeyDown(KeyCode.M) || savingOrLoading)
             {
                 drawingPanelAnim.SetBool("openPanel", false);
                 
             }
-            if (Input.GetKeyDown(KeyCode.N) && wallSelected)
+            if ((Input.GetKeyDown(KeyCode.N) || !savingOrLoading) && wallSelected )
             {
                 drawingPanelAnim.SetBool("openPanel", true);
             }
@@ -287,12 +344,12 @@ public class PlayerScript : MonoBehaviour
 
         if (editView == EditingView.GROUND)
         {
-            if (Input.GetKeyDown(KeyCode.M))
+            if (Input.GetKeyDown(KeyCode.M) || savingOrLoading)
             {
                 floorDrawingPanelAnim.gameObject.SetActive(false);
 
             }
-            if (Input.GetKeyDown(KeyCode.N))
+            if (Input.GetKeyDown(KeyCode.N) || !savingOrLoading)
             {
                 floorDrawingPanelAnim.gameObject.SetActive(true);
             }
@@ -669,7 +726,7 @@ public class PlayerScript : MonoBehaviour
         if (currentCubeAboveGround)
         {
             yield return new WaitForSeconds(0.05f);
-            if (cubeType == CubeType.FENCE || cubeType == CubeType.FENCECORNER)
+            if (cubeType == CubeType.FENCE || cubeType == CubeType.FENCECORNER || cubeType == CubeType.FENCEEND || cubeType == CubeType.FENCEGATE || cubeType == CubeType.FENCEARCH)
             {
                 GameObject newCube = Instantiate(currentCubePrefab, new Vector3(cubePos.x, -0.8799995f, cubePos.z), Quaternion.identity);
                 newCube.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
@@ -678,7 +735,19 @@ public class PlayerScript : MonoBehaviour
                 newCube.GetComponent<FenceCubeScript>().rotation = fiScript.woodRotation;
                 if (cubeType == CubeType.FENCECORNER)
                 {
-                    newCube.GetComponent<FenceCubeScript>().isCorner = true;
+                    newCube.GetComponent<FenceCubeScript>().type = FenceType.CORNER;
+                }
+                if (cubeType == CubeType.FENCEEND)
+                {
+                    newCube.GetComponent<FenceCubeScript>().type = FenceType.END;
+                }
+                if (cubeType == CubeType.FENCEARCH)
+                {
+                    newCube.GetComponent<FenceCubeScript>().type = FenceType.ARCH;
+                }
+                if (cubeType == CubeType.FENCEGATE)
+                {
+                    newCube.GetComponent<FenceCubeScript>().type = FenceType.GATE;
                 }
             }
             else

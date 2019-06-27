@@ -339,6 +339,11 @@ public class GridScript : MonoBehaviour
                         playerScript.cubeType = CubeType.FIRE;
                         StartCoroutine(Pulse(result.gameObject));
                     }
+                    if (result.gameObject.name == "BurningTile")
+                    {
+                        playerScript.cubeType = CubeType.BURNING;
+                        StartCoroutine(Pulse(result.gameObject));
+                    }
                     if (result.gameObject.name == "PavingTile")
                     {
                         playerScript.cubeType = CubeType.PAVING;
@@ -367,6 +372,21 @@ public class GridScript : MonoBehaviour
                     if (result.gameObject.name == "FenceTile")
                     {
                         playerScript.cubeType = CubeType.FENCE;
+                        StartCoroutine(Pulse(result.gameObject));
+                    }
+                    if (result.gameObject.name == "FenceEndTile")
+                    {
+                        playerScript.cubeType = CubeType.FENCEEND;
+                        StartCoroutine(Pulse(result.gameObject));
+                    }
+                    if (result.gameObject.name == "FenceArchTile")
+                    {
+                        playerScript.cubeType = CubeType.FENCEARCH;
+                        StartCoroutine(Pulse(result.gameObject));
+                    }
+                    if (result.gameObject.name == "FenceGateTile")
+                    {
+                        playerScript.cubeType = CubeType.FENCEGATE;
                         StartCoroutine(Pulse(result.gameObject));
                     }
                     if (result.gameObject.name == "FenceCornerTile")
@@ -417,6 +437,26 @@ public class GridScript : MonoBehaviour
                     if (result.gameObject.name == "LamppostTile")
                     {
                         playerScript.cubeType = CubeType.LAMPPOST;
+                        StartCoroutine(Pulse(result.gameObject));
+                    }
+                    if (result.gameObject.name == "IceTile")
+                    {
+                        playerScript.cubeType = CubeType.ICE;
+                        StartCoroutine(Pulse(result.gameObject));
+                    }
+                    if (result.gameObject.name == "SaplingTile")
+                    {
+                        playerScript.cubeType = CubeType.SAPLING;
+                        StartCoroutine(Pulse(result.gameObject));
+                    }
+                    if (result.gameObject.name == "PebblesTile")
+                    {
+                        playerScript.cubeType = CubeType.PEBBLES;
+                        StartCoroutine(Pulse(result.gameObject));
+                    }
+                    if (result.gameObject.name == "TorchTile")
+                    {
+                        playerScript.cubeType = CubeType.TORCH;
                         StartCoroutine(Pulse(result.gameObject));
                     }
                 }

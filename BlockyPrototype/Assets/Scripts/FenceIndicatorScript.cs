@@ -16,6 +16,10 @@ public class FenceIndicatorScript : MonoBehaviour
     public Sprite corner90;
     public Sprite corner180;
     public Sprite corner270;
+    public Sprite end0;
+    public Sprite end90;
+    public Sprite end180;
+    public Sprite end270;
 
     public int woodRotation = 0;
 
@@ -35,7 +39,7 @@ public class FenceIndicatorScript : MonoBehaviour
     {
         if (menuScript.currentOpenMenu == MenuOpen.FENCES && playerScript.floorDrawingPanelAnim.GetBool("slideIn"))
         {
-            if (playerScript.cubeType == CubeType.FENCE)
+            if (playerScript.cubeType == CubeType.FENCE || playerScript.cubeType == CubeType.FENCEARCH || playerScript.cubeType == CubeType.FENCEGATE)
             {
                 indicator.SetActive(true);
                 if (woodRotation == 0 || woodRotation == 180)
@@ -65,6 +69,26 @@ public class FenceIndicatorScript : MonoBehaviour
                 else if (woodRotation == 270)
                 {
                     indicatorImage.sprite = corner270;
+                }
+            }
+            else if (playerScript.cubeType == CubeType.FENCEEND)
+            {
+                indicator.SetActive(true);
+                if (woodRotation == 0)
+                {
+                    indicatorImage.sprite = end0;
+                }
+                else if (woodRotation == 90)
+                {
+                    indicatorImage.sprite = end90;
+                }
+                else if (woodRotation == 180)
+                {
+                    indicatorImage.sprite = end180;
+                }
+                else if (woodRotation == 270)
+                {
+                    indicatorImage.sprite = end270;
                 }
             }
         }

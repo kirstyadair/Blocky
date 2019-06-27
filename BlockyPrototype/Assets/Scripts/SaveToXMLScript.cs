@@ -4,10 +4,12 @@ using System.Xml;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEditor;
+using UnityEngine.Windows;
 
 public class SaveToXMLScript : MonoBehaviour
 {
     public GameObject[] floorCubes;
+    public PlayerScript playerScript;
     public List<GameObject> houseCubes;
     public RestartScript restartScript;
     public Animator clouds;
@@ -31,6 +33,9 @@ public class SaveToXMLScript : MonoBehaviour
     public GameObject lantern;
     public GameObject fence;
     public GameObject fenceCorner;
+    public GameObject fenceEnd;
+    public GameObject fenceGate;
+    public GameObject fenceArch;
     public GameObject lilypad;
     public GameObject lamppost;
     public GameObject grass;
@@ -42,12 +47,22 @@ public class SaveToXMLScript : MonoBehaviour
     public GameObject water;
     public GameObject pondwater;
     public GameObject paving;
+    public GameObject ice;
+    public GameObject sapling;
+    public GameObject pebbles;
+    public GameObject torch;
+    public GameObject floorLight;
+    public GameObject rainbowLight;
+
     public List<CubeToSpawn> cubesToSpawnList;
     public List<HouseCubeToColour> houseCubesList;
 
     public GameObject loadSlots;
     public GameObject saveSlots;
 
+    public RawImage screenshot1;
+    public RawImage screenshot2;
+    public RawImage screenshot3;
     public string readBlankCubeType;
     string url;
     int floorCubeCount;
@@ -71,13 +86,16 @@ public class SaveToXMLScript : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Alpha0))
         {
+            
             if (!saveSlots.activeInHierarchy)
             {
+                playerScript.savingOrLoading = true;
                 clouds.SetBool("in", true);
                 saveSlots.SetActive(true);
             }
             else
             {
+                playerScript.savingOrLoading = false;
                 clouds.SetBool("in", false);
                 saveSlots.SetActive(false);
             }
@@ -89,11 +107,43 @@ public class SaveToXMLScript : MonoBehaviour
         {
             if (!loadSlots.activeInHierarchy)
             {
+                playerScript.savingOrLoading = true;
                 clouds.SetBool("in", true);
                 loadSlots.SetActive(true);
+                Texture2D screenshot = LoadTexture("saveScreenshot1.png");
+                if (screenshot != null)
+                {
+                    screenshot1.texture = screenshot;
+                }
+                else
+                {
+                    screenshot1.enabled = false;
+                }
+
+                Texture2D screenshot2 = LoadTexture("saveScreenshot2.png");
+                if (screenshot2 != null)
+                {
+                    this.screenshot2.texture = screenshot2;
+                }
+                else
+                {
+                    this.screenshot2.enabled = false;
+                }
+
+                Texture2D screenshot3 = LoadTexture("saveScreenshot3.png");
+                if (screenshot3 != null)
+                {
+                    this.screenshot3.texture = screenshot3;
+                }
+                else
+                {
+                    this.screenshot3.enabled = false;
+                }
+                
             }
             else
             {
+                playerScript.savingOrLoading = false;
                 clouds.SetBool("in", false);
                 loadSlots.SetActive(false);
             }
@@ -104,14 +154,17 @@ public class SaveToXMLScript : MonoBehaviour
 
     public void SaveToSlot1()
     {
+        
         floorCubes = GameObject.FindGameObjectsWithTag("Floor");
         houseCubes = GameObject.Find("RequirementsObject").GetComponent<RequirementsGeneratorScript>().allCubes;
 
+        StartCoroutine(ScreenshotSave(1));
         SaveFloorToXMLFile(floorCubes, "floorSave1", gameData.blankCubeType);
         SaveHouseToXMLFile(houseCubes, "houseSave1");
 
         saveSlots.SetActive(false);
         clouds.SetBool("in", false);
+        playerScript.savingOrLoading = false;
     }
 
     public void LoadSave1()
@@ -119,11 +172,14 @@ public class SaveToXMLScript : MonoBehaviour
         cubesToSpawnList = ReadFloorFromXML("floorSave1");
         houseCubesList = ReadHouseCubesFromXML("houseSave1");
 
+        
+
         StartCoroutine(LoadInCubes());
         StartCoroutine(ColourHouseCubes());
 
         loadSlots.SetActive(false);
         clouds.SetBool("in", false);
+        playerScript.savingOrLoading = false;
     }
     
     public void SaveToSlot2()
@@ -131,11 +187,13 @@ public class SaveToXMLScript : MonoBehaviour
         floorCubes = GameObject.FindGameObjectsWithTag("Floor");
         houseCubes = GameObject.Find("RequirementsObject").GetComponent<RequirementsGeneratorScript>().allCubes;
 
+        StartCoroutine(ScreenshotSave(2));
         SaveFloorToXMLFile(floorCubes, "floorSave2", gameData.blankCubeType);
         SaveHouseToXMLFile(houseCubes, "houseSave2");
 
         saveSlots.SetActive(false);
         clouds.SetBool("in", false);
+        playerScript.savingOrLoading = false;
     }
 
     public void LoadSave2()
@@ -148,6 +206,7 @@ public class SaveToXMLScript : MonoBehaviour
 
         loadSlots.SetActive(false);
         clouds.SetBool("in", false);
+        playerScript.savingOrLoading = false;
     }
     
     public void SaveToSlot3()
@@ -155,11 +214,13 @@ public class SaveToXMLScript : MonoBehaviour
         floorCubes = GameObject.FindGameObjectsWithTag("Floor");
         houseCubes = GameObject.Find("RequirementsObject").GetComponent<RequirementsGeneratorScript>().allCubes;
 
+        StartCoroutine(ScreenshotSave(3));
         SaveFloorToXMLFile(floorCubes, "floorSave3", gameData.blankCubeType);
         SaveHouseToXMLFile(houseCubes, "houseSave3");
 
         saveSlots.SetActive(false);
         clouds.SetBool("in", false);
+        playerScript.savingOrLoading = false;
     }
 
     public void LoadSave3()
@@ -172,6 +233,7 @@ public class SaveToXMLScript : MonoBehaviour
 
         loadSlots.SetActive(false);
         clouds.SetBool("in", false);
+        playerScript.savingOrLoading = false;
     }
     
 
@@ -287,6 +349,10 @@ public class SaveToXMLScript : MonoBehaviour
             {
                 xmlWriter.WriteAttributeString("CubeType", "Lava");
             }
+            else if (floorCubes[i].GetComponent<IceCubeScript>() != null)
+            {
+                xmlWriter.WriteAttributeString("CubeType", "Ice");
+            }
 
 
             else if (floorCubes[i].GetComponent<FireCubeScript>() != null)
@@ -326,7 +392,7 @@ public class SaveToXMLScript : MonoBehaviour
                 xmlWriter.WriteAttributeString("CubeType", "Fence");
                 xmlWriter.WriteStartElement("FenceType");
                 xmlWriter.WriteAttributeString("Rotation", floorCubes[i].GetComponent<FenceCubeScript>().rotation.ToString());
-                xmlWriter.WriteAttributeString("IsCorner", floorCubes[i].GetComponent<FenceCubeScript>().isCorner.ToString());
+                xmlWriter.WriteAttributeString("Type", floorCubes[i].GetComponent<FenceCubeScript>().type.ToString());
                 xmlWriter.WriteEndElement();
             }
             else if (floorCubes[i].GetComponent<LilypadCubeScript>() != null)
@@ -337,6 +403,26 @@ public class SaveToXMLScript : MonoBehaviour
             {
                 xmlWriter.WriteAttributeString("CubeType", "Lamppost");
             }
+            else if (floorCubes[i].GetComponent<SaplingCubeScript>() != null)
+            {
+                xmlWriter.WriteAttributeString("CubeType", "Sapling");
+            }
+            else if (floorCubes[i].GetComponent<PebblesCubeScript>() != null)
+            {
+                xmlWriter.WriteAttributeString("CubeType", "Pebbles");
+            }
+            else if (floorCubes[i].GetComponent<TorchCubeScript>() != null)
+            {
+                xmlWriter.WriteAttributeString("CubeType", "Torch");
+            }
+            /*else if (floorCubes[i].GetComponent<FloorLightCubeScript>() != null)
+            {
+                xmlWriter.WriteAttributeString("CubeType", "FloorLight");
+            }
+            else if (floorCubes[i].GetComponent<RainbowLightCubeScript>() != null)
+            {
+                xmlWriter.WriteAttributeString("CubeType", "RainbowLight");
+            }*/
 
             xmlWriter.WriteEndElement();
 
@@ -578,9 +664,21 @@ public class SaveToXMLScript : MonoBehaviour
                                             if (fenceIndividualCubeReader.IsStartElement("FenceType"))
                                             {
                                                 newCube.fenceRotation = int.Parse(fenceIndividualCubeReader["Rotation"]);
-                                                if (fenceIndividualCubeReader["IsCorner"] == "True")
+                                                if (fenceIndividualCubeReader["Type"] == "CORNER")
                                                 {
                                                     newCube.cubePrefab = fenceCorner;
+                                                }
+                                                else if (fenceIndividualCubeReader["Type"] == "END")
+                                                {
+                                                    newCube.cubePrefab = fenceEnd;
+                                                }
+                                                else if (fenceIndividualCubeReader["Type"] == "GATE")
+                                                {
+                                                    newCube.cubePrefab = fenceGate;
+                                                }
+                                                else if (fenceIndividualCubeReader["Type"] == "ARCH")
+                                                {
+                                                    newCube.cubePrefab = fenceArch;
                                                 }
                                                 else
                                                 {
@@ -633,6 +731,30 @@ public class SaveToXMLScript : MonoBehaviour
                                     if (cubeType == "Lava")
                                     {
                                         newCube.cubePrefab = lava;
+                                    }
+                                    if (cubeType == "Ice")
+                                    {
+                                        newCube.cubePrefab = ice;
+                                    }
+                                    if (cubeType == "Sapling")
+                                    {
+                                        newCube.cubePrefab = sapling;
+                                    }
+                                    if (cubeType == "Pebbles")
+                                    {
+                                        newCube.cubePrefab = pebbles;
+                                    }
+                                    if (cubeType == "Torch")
+                                    {
+                                        newCube.cubePrefab = torch;
+                                    }
+                                    if (cubeType == "FloorLight")
+                                    {
+                                        newCube.cubePrefab = floorLight;
+                                    }
+                                    if (cubeType == "RainbowLight")
+                                    {
+                                        newCube.cubePrefab = rainbowLight;
                                     }
                                 }
                             }
@@ -1004,6 +1126,30 @@ public class SaveToXMLScript : MonoBehaviour
                 }
             }
         }
+    }
+
+
+
+    IEnumerator ScreenshotSave(int screenshotSaveSlot)
+    {
+        yield return new WaitForSeconds(0.5f);
+        ScreenCapture.CaptureScreenshot("saveScreenshot" + screenshotSaveSlot + ".png");
+    }
+
+
+    public static Texture2D LoadTexture(string filePath) 
+    {
+
+        Texture2D tex = null;
+        byte[] fileData;
+
+        if (System.IO.File.Exists(filePath))     
+        {
+            fileData = System.IO.File.ReadAllBytes(filePath);
+            tex = new Texture2D(2, 2);
+            tex.LoadImage(fileData); //..this will auto-resize the texture dimensions.
+        }
+        return tex;
     }
 
 }

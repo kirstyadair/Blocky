@@ -25,5 +25,40 @@ public class SecondCameraScript : MonoBehaviour
             }
             
         }
+
+        if (GetComponent<Camera>().enabled)
+        {
+            if (Input.GetKey(KeyCode.W))
+            {
+                float zVal = transform.position.z;
+                transform.position = new Vector3(transform.position.x, transform.position.y, zVal += 0.01f);
+            }
+            if (Input.GetKey(KeyCode.S))
+            {
+                float zVal = transform.position.z;
+                transform.position = new Vector3(transform.position.x, transform.position.y, zVal -= 0.01f);
+            }
+            if (Input.GetKey(KeyCode.D))
+            {
+                float xVal = transform.position.x;
+                transform.position = new Vector3(xVal += 0.01f, transform.position.y, transform.position.z);
+            }
+            if (Input.GetKey(KeyCode.A))
+            {
+                float xVal = transform.position.x;
+                transform.position = new Vector3(xVal -= 0.01f, transform.position.y, transform.position.z);
+            }
+
+
+            if (Input.GetKey(KeyCode.F1))
+            {
+                GetComponent<Camera>().fieldOfView += 0.1f;
+            }
+            if (Input.GetKey(KeyCode.F2))
+            {
+                GetComponent<Camera>().fieldOfView -= 0.1f;
+            }
+            
+        }
     }
 }

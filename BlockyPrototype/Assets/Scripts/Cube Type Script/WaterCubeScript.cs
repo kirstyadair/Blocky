@@ -6,6 +6,7 @@ public class WaterCubeScript : MonoBehaviour
 {
     public double timeActive = 0.0f;
     public double timeActiveExploded = 0.0f;
+    bool hasLilypad = false;
     bool transitioning = false;
     public GameObject groundPrefab;
     public GameObject dirtPrefab;
@@ -198,7 +199,7 @@ public class WaterCubeScript : MonoBehaviour
             }
         }
 
-        if (other.name == "FireCube" || other.name == "WoodCube" || other.name == "FlowerCube" || other.name == "BurningCube" || other.name == "StoneCube" || other.name == "TreeCube" || other.name == "LongGrassCube" || other.name == "LanternCube")
+        if (other.name == "WoodCube" || other.name == "FlowerCube" || other.name == "BurningCube" || other.name == "StoneCube" || other.name == "TreeCube" || other.name == "LongGrassCube" || other.name == "LanternCube")
         {
             Vector3 position = this.transform.position;
             GameObject newCube = Instantiate(groundPrefab, position, Quaternion.identity);
@@ -211,6 +212,19 @@ public class WaterCubeScript : MonoBehaviour
             {
                 Destroy(other.gameObject);
             }
+        }
+
+        if (other.name == "LilypadCube")
+        {
+            hasLilypad = true;
+        }
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other.name == "LilypadCube")
+        {
+            Destroy(this.gameObject);
         }
     }
 

@@ -83,9 +83,7 @@ public class FireCubeScript : MonoBehaviour
     {
         if (other.name == "WaterCube")
         {
-            Vector3 position = other.transform.position;
-            Destroy(other.gameObject);
-            GameObject newCube = Instantiate(groundPrefab, position, Quaternion.identity);
+            Destroy(this.gameObject);
         }
 
         if (other.name == "FireCube")
@@ -182,6 +180,11 @@ public class FireCubeScript : MonoBehaviour
             {
                 Destroy(this.gameObject);
             }
+        }
+
+        if (other.name == "IceCube")
+        {
+            Destroy(this.gameObject);
         }
     }
 }
