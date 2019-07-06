@@ -1,0 +1,2405 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FloorCubes>
+  <BlankCubeType>SAND</BlankCubeType>
+  <FloorCubeCount>600</FloorCubeCount>
+  <FloorCube>
+    <Details x="-2" y="-0.9599996" z="4" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.9" y="-0.9599996" z="4" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.8" y="-0.9599996" z="4" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.7" y="-0.9599996" z="4" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.6" y="-0.9599996" z="4" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.5" y="-0.9599996" z="4" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.4" y="-0.9599996" z="4" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.3" y="-0.9599996" z="4" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.2" y="-0.9599996" z="4" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.1" y="-0.9599996" z="4" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1" y="-0.9599996" z="4" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.400001" y="-0.9599996" z="3.9" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.900001" y="-0.9599996" z="3.9" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.800001" y="-0.9599996" z="3.9" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.200001" y="-0.9599996" z="3.9" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.700001" y="-0.9599996" z="3.9" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.100001" y="-0.9599996" z="3.9" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1" y="-0.9599996" z="3.9" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.600001" y="-0.9599996" z="3.9" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.500001" y="-0.9599996" z="3.9" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.000001" y="-0.9599996" z="3.9" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.300001" y="-0.9599996" z="3.9" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.100001" y="-0.9599996" z="3.8" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.600001" y="-0.9599996" z="3.8" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.400001" y="-0.9599996" z="3.8" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.900001" y="-0.9599996" z="3.8" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.000001" y="-0.9599996" z="3.8" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.300001" y="-0.9599996" z="3.8" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.200001" y="-0.9599996" z="3.8" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.800001" y="-0.9599996" z="3.8" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.700001" y="-0.9599996" z="3.8" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.500001" y="-0.9599996" z="3.8" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.000001" y="-0.9599996" z="3.8" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.100001" y="-0.9599996" z="3.7" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.600001" y="-0.9599996" z="3.7" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.200001" y="-0.9599996" z="3.7" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.700001" y="-0.9599996" z="3.7" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.000001" y="-0.9599996" z="3.7" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.500001" y="-0.9599996" z="3.7" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.400001" y="-0.9599996" z="3.7" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.000001" y="-0.9599996" z="3.7" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.900001" y="-0.9599996" z="3.7" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.300001" y="-0.9599996" z="3.7" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.800001" y="-0.9599996" z="3.7" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.500001" y="-0.9599996" z="3.6" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.900001" y="-0.9599996" z="3.6" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.200001" y="-0.9599996" z="3.6" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.400001" y="-0.9599996" z="3.6" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.600001" y="-0.9599996" z="3.6" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.700001" y="-0.9599996" z="3.6" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.300001" y="-0.9599996" z="3.6" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.000001" y="-0.9599996" z="3.6" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.800001" y="-0.9599996" z="3.6" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.100001" y="-0.9599996" z="3.6" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.000001" y="-0.9599996" z="3.6" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.000002" y="-0.9599996" z="3.5" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.900002" y="-0.9599996" z="3.5" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.800002" y="-0.9599996" z="3.5" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.700002" y="-0.9599996" z="3.5" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.600002" y="-0.9599996" z="3.5" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.500002" y="-0.9599996" z="3.5" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.400002" y="-0.9599996" z="3.5" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.300002" y="-0.9599996" z="3.5" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.200001" y="-0.9599996" z="3.5" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.100001" y="-0.9599996" z="3.5" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.000001" y="-0.9599996" z="3.5" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.000002" y="-0.9599996" z="3.400001" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.900002" y="-0.9599996" z="3.400001" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.800002" y="-0.9599996" z="3.400001" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.700002" y="-0.9599996" z="3.400001" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.600002" y="-0.9599996" z="3.400001" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.500002" y="-0.9599996" z="3.400001" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.400002" y="-0.9599996" z="3.400001" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.300002" y="-0.9599996" z="3.400001" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.200002" y="-0.9599996" z="3.400001" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.100002" y="-0.9599996" z="3.400001" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.000002" y="-0.9599996" z="3.400001" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.000002" y="-0.9599996" z="3.300001" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.900002" y="-0.9599996" z="3.300001" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.800002" y="-0.9599996" z="3.300001" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.700002" y="-0.9599996" z="3.300001" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.600002" y="-0.9599996" z="3.300001" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.500002" y="-0.9599996" z="3.300001" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.400002" y="-0.9599996" z="3.300001" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.300002" y="-0.9599996" z="3.300001" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.200002" y="-0.9599996" z="3.300001" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.100002" y="-0.9599996" z="3.300001" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.000002" y="-0.9599996" z="3.300001" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.000002" y="-0.9599996" z="3.200001" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.900002" y="-0.9599996" z="3.200001" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.800002" y="-0.9599996" z="3.200001" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.700002" y="-0.9599996" z="3.200001" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.600002" y="-0.9599996" z="3.200001" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.500002" y="-0.9599996" z="3.200001" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.400002" y="-0.9599996" z="3.200001" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.300002" y="-0.9599996" z="3.200001" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.200002" y="-0.9599996" z="3.200001" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.100002" y="-0.9599996" z="3.200001" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.000002" y="-0.9599996" z="3.200001" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.000003" y="-0.9599996" z="3.100001" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.900003" y="-0.9599996" z="3.100001" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.800003" y="-0.9599996" z="3.100001" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.700003" y="-0.9599996" z="3.100001" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.600003" y="-0.9599996" z="3.100001" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.500003" y="-0.9599996" z="3.100001" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.400002" y="-0.9599996" z="3.100001" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.300002" y="-0.9599996" z="3.100001" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.200002" y="-0.9599996" z="3.100001" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.100002" y="-0.9599996" z="3.100001" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.000002" y="-0.9599996" z="3.100001" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.000003" y="-0.9599996" z="3.000001" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.900003" y="-0.9599996" z="3.000001" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.800003" y="-0.9599996" z="3.000001" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.700003" y="-0.9599996" z="3.000001" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.600003" y="-0.9599996" z="3.000001" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.500003" y="-0.9599996" z="3.000001" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.400003" y="-0.9599996" z="3.000001" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.300003" y="-0.9599996" z="3.000001" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.200003" y="-0.9599996" z="3.000001" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.100003" y="-0.9599996" z="3.000001" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.000003" y="-0.9599996" z="3.000001" CubeType="Grass" />
+    <BlackFloorCube>true</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.2000006" y="-0.9599996" z="3.8" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.7000006" y="-0.9599996" z="3.8" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.1999994" y="-0.9599996" z="3.8" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.3000006" y="-0.9599996" z="3.8" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.300001" y="-0.9599996" z="3.8" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.1000006" y="-0.9599996" z="3.8" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.6000006" y="-0.9599996" z="3.8" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-6.109476E-07" y="-0.9599996" z="3.8" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.09999939" y="-0.9599996" z="3.8" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.5000006" y="-0.9599996" z="3.8" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.4000006" y="-0.9599996" z="3.8" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.4000008" y="-0.9599996" z="3.7" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-8.493662E-07" y="-0.9599996" z="3.7" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.300001" y="-0.9599996" z="3.7" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.1999992" y="-0.9599996" z="3.7" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.3000008" y="-0.9599996" z="3.7" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.5000008" y="-0.9599996" z="3.7" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.2000009" y="-0.9599996" z="3.7" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.09999915" y="-0.9599996" z="3.7" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.6000009" y="-0.9599996" z="3.7" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.1000009" y="-0.9599996" z="3.7" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.7000009" y="-0.9599996" z="3.7" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.300001" y="-0.9599996" z="3.6" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.7000011" y="-0.9599996" z="3.6" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.6000011" y="-0.9599996" z="3.6" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.5000011" y="-0.9599996" z="3.6" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.4000011" y="-0.9599996" z="3.6" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.3000011" y="-0.9599996" z="3.6" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.2000011" y="-0.9599996" z="3.6" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.1000011" y="-0.9599996" z="3.6" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.087785E-06" y="-0.9599996" z="3.6" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.09999891" y="-0.9599996" z="3.6" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.1999989" y="-0.9599996" z="3.6" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.1999987" y="-0.9599996" z="3.5" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.300001" y="-0.9599996" z="3.5" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.6000013" y="-0.9599996" z="3.5" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.1000013" y="-0.9599996" z="3.5" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.326203E-06" y="-0.9599996" z="3.5" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.5000013" y="-0.9599996" z="3.5" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.7000014" y="-0.9599996" z="3.5" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.4000013" y="-0.9599996" z="3.5" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.2000013" y="-0.9599996" z="3.5" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.09999868" y="-0.9599996" z="3.5" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.3000013" y="-0.9599996" z="3.5" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.300002" y="-0.9599996" z="3.400001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.7000016" y="-0.9599996" z="3.400001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.6000016" y="-0.9599996" z="3.400001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.5000015" y="-0.9599996" z="3.400001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.4000016" y="-0.9599996" z="3.400001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.3000016" y="-0.9599996" z="3.400001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.2000016" y="-0.9599996" z="3.400001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.1000016" y="-0.9599996" z="3.400001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.564622E-06" y="-0.9599996" z="3.400001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.09999844" y="-0.9599996" z="3.400001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.1999984" y="-0.9599996" z="3.400001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.300002" y="-0.9599996" z="3.300001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.7000018" y="-0.9599996" z="3.300001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.6000018" y="-0.9599996" z="3.300001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.5000018" y="-0.9599996" z="3.300001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.4000018" y="-0.9599996" z="3.300001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.3000018" y="-0.9599996" z="3.300001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.2000018" y="-0.9599996" z="3.300001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.1000018" y="-0.9599996" z="3.300001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.803041E-06" y="-0.9599996" z="3.300001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.0999982" y="-0.9599996" z="3.300001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.1999982" y="-0.9599996" z="3.300001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.300002" y="-0.9599996" z="3.200001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.6000021" y="-0.9599996" z="3.200001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.500002" y="-0.9599996" z="3.200001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.400002" y="-0.9599996" z="3.200001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.300002" y="-0.9599996" z="3.200001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.200002" y="-0.9599996" z="3.200001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.100002" y="-0.9599996" z="3.200001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.041459E-06" y="-0.9599996" z="3.200001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.09999796" y="-0.9599996" z="3.200001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.199998" y="-0.9599996" z="3.200001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.300002" y="-0.9599996" z="3.100001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.7000023" y="-0.9599996" z="3.100001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.6000023" y="-0.9599996" z="3.100001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.5000023" y="-0.9599996" z="3.100001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.4000023" y="-0.9599996" z="3.100001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.3000023" y="-0.9599996" z="3.100001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.2000023" y="-0.9599996" z="3.100001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.1000023" y="-0.9599996" z="3.100001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.279878E-06" y="-0.9599996" z="3.100001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.09999772" y="-0.9599996" z="3.100001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.300003" y="-0.9599996" z="2.700001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.900004" y="-0.9599996" z="2.700001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.800004" y="-0.9599996" z="2.700001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.700004" y="-0.9599996" z="2.700001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.600003" y="-0.9599996" z="2.700001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.500003" y="-0.9599996" z="2.700001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.400003" y="-0.9599996" z="2.700001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.300003" y="-0.9599996" z="2.700001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.200003" y="-0.9599996" z="2.700001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.100003" y="-0.9599996" z="2.700001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.7000033" y="-0.9599996" z="2.700001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.6000032" y="-0.9599996" z="2.700001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.5000032" y="-0.9599996" z="2.700001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.4000032" y="-0.9599996" z="2.700001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.3000032" y="-0.9599996" z="2.700001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.2000032" y="-0.9599996" z="2.700001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.1000032" y="-0.9599996" z="2.700001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-3.233552E-06" y="-0.9599996" z="2.700001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.09999677" y="-0.9599996" z="2.700001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.1999968" y="-0.9599996" z="2.700001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.300004" y="-0.9599996" z="2.600001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.900004" y="-0.9599996" z="2.600001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.800004" y="-0.9599996" z="2.600001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.700004" y="-0.9599996" z="2.600001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.600004" y="-0.9599996" z="2.600001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.500004" y="-0.9599996" z="2.600001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.400004" y="-0.9599996" z="2.600001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.300004" y="-0.9599996" z="2.600001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.200004" y="-0.9599996" z="2.600001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.100004" y="-0.9599996" z="2.600001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.7000035" y="-0.9599996" z="2.600001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.6000035" y="-0.9599996" z="2.600001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.5000035" y="-0.9599996" z="2.600001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.4000035" y="-0.9599996" z="2.600001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.3000035" y="-0.9599996" z="2.600001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.2000035" y="-0.9599996" z="2.600001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.1000035" y="-0.9599996" z="2.600001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-3.471971E-06" y="-0.9599996" z="2.600001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.09999653" y="-0.9599996" z="2.600001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.1999965" y="-0.9599996" z="2.600001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.300004" y="-0.9599996" z="2.500001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.900004" y="-0.9599996" z="2.500001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.800004" y="-0.9599996" z="2.500001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.700004" y="-0.9599996" z="2.500001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.600004" y="-0.9599996" z="2.500001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.500004" y="-0.9599996" z="2.500001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.400004" y="-0.9599996" z="2.500001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.300004" y="-0.9599996" z="2.500001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.200004" y="-0.9599996" z="2.500001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.100004" y="-0.9599996" z="2.500001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.7000037" y="-0.9599996" z="2.500001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.6000037" y="-0.9599996" z="2.500001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.5000037" y="-0.9599996" z="2.500001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.4000037" y="-0.9599996" z="2.500001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.3000037" y="-0.9599996" z="2.500001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.2000037" y="-0.9599996" z="2.500001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.1000037" y="-0.9599996" z="2.500001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-3.710389E-06" y="-0.9599996" z="2.500001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.09999629" y="-0.9599996" z="2.500001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.1999963" y="-0.9599996" z="2.500001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.300004" y="-0.9599996" z="2.400002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.900004" y="-0.9599996" z="2.400002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.800004" y="-0.9599996" z="2.400002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.700004" y="-0.9599996" z="2.400002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.600004" y="-0.9599996" z="2.400002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.500004" y="-0.9599996" z="2.400002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.400004" y="-0.9599996" z="2.400002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.300004" y="-0.9599996" z="2.400002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.200004" y="-0.9599996" z="2.400002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.100004" y="-0.9599996" z="2.400002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.700004" y="-0.9599996" z="2.400002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.600004" y="-0.9599996" z="2.400002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.5000039" y="-0.9599996" z="2.400002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.4000039" y="-0.9599996" z="2.400002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.3000039" y="-0.9599996" z="2.400002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.200004" y="-0.9599996" z="2.400002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.100004" y="-0.9599996" z="2.400002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-3.948808E-06" y="-0.9599996" z="2.400002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.09999605" y="-0.9599996" z="2.400002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.1999961" y="-0.9599996" z="2.400002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.300004" y="-0.9599996" z="2.300002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.900005" y="-0.9599996" z="2.300002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.800004" y="-0.9599996" z="2.300002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.700004" y="-0.9599996" z="2.300002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.600004" y="-0.9599996" z="2.300002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.500004" y="-0.9599996" z="2.300002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.400004" y="-0.9599996" z="2.300002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.300004" y="-0.9599996" z="2.300002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.200004" y="-0.9599996" z="2.300002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.100004" y="-0.9599996" z="2.300002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.7000042" y="-0.9599996" z="2.300002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.6000042" y="-0.9599996" z="2.300002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.5000042" y="-0.9599996" z="2.300002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.4000042" y="-0.9599996" z="2.300002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.3000042" y="-0.9599996" z="2.300002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.2000042" y="-0.9599996" z="2.300002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.1000042" y="-0.9599996" z="2.300002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-4.187226E-06" y="-0.9599996" z="2.300002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.09999581" y="-0.9599996" z="2.300002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.1999958" y="-0.9599996" z="2.300002" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.8000002" y="-0.9599996" z="4" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.7000002" y="-0.9599996" z="4" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.6000001" y="-0.9599996" z="4" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.5000001" y="-0.9599996" z="4" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.4000001" y="-0.9599996" z="4" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.3000001" y="-0.9599996" z="4" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.2000001" y="-0.9599996" z="4" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.1000001" y="-0.9599996" z="4" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.341105E-07" y="-0.9599996" z="4" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.09999987" y="-0.9599996" z="4" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.1999999" y="-0.9599996" z="4" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.2999999" y="-0.9599996" z="4" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.3999999" y="-0.9599996" z="4" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.3999996" y="-0.9599996" z="3.9" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.3999994" y="-0.9599996" z="3.8" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.3999991" y="-0.9599996" z="3.7" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.3999989" y="-0.9599996" z="3.6" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.3999987" y="-0.9599996" z="3.5" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.3999984" y="-0.9599996" z="3.400001" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.3999982" y="-0.9599996" z="3.300001" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.3999979" y="-0.9599996" z="3.200001" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.3999977" y="-0.9599996" z="3.100001" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.3999975" y="-0.9599996" z="3.000001" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.399997" y="-0.9599996" z="2.800001" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.3999968" y="-0.9599996" z="2.700001" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.3999965" y="-0.9599996" z="2.600001" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.3999963" y="-0.9599996" z="2.500001" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.399996" y="-0.9599996" z="2.400002" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.3999958" y="-0.9599996" z="2.300002" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.3999956" y="-0.9599996" z="2.200002" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.3999953" y="-0.9599996" z="2.100002" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.2999953" y="-0.9599996" z="2.100002" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.1999953" y="-0.9599996" z="2.100002" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.09999534" y="-0.9599996" z="2.100002" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-4.664063E-06" y="-0.9599996" z="2.100002" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.1000047" y="-0.9599996" z="2.100002" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.2000047" y="-0.9599996" z="2.100002" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.3000047" y="-0.9599996" z="2.100002" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.4000047" y="-0.9599996" z="2.100002" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.5000046" y="-0.9599996" z="2.100002" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.6000047" y="-0.9599996" z="2.100002" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.7000047" y="-0.9599996" z="2.100002" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.8000047" y="-0.9599996" z="2.100002" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.9000047" y="-0.9599996" z="2.100002" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.9000045" y="-0.9599996" z="2.200002" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.9000043" y="-0.9599996" z="2.300002" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.900004" y="-0.9599996" z="2.400002" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.9000038" y="-0.9599996" z="2.500001" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.9000036" y="-0.9599996" z="2.600001" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.9000033" y="-0.9599996" z="2.700001" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.9000026" y="-0.9599996" z="3.000001" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.9000024" y="-0.9599996" z="3.100001" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.9000021" y="-0.9599996" z="3.200001" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.9000019" y="-0.9599996" z="3.300001" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.9000016" y="-0.9599996" z="3.400001" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.9000014" y="-0.9599996" z="3.5" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.9000012" y="-0.9599996" z="3.6" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.9000009" y="-0.9599996" z="3.7" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.9000007" y="-0.9599996" z="3.8" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.9000005" y="-0.9599996" z="3.9" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.9000002" y="-0.9599996" z="4" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.400003" y="-0.9599996" z="2.900001" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.300003" y="-0.9599996" z="2.900001" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.200003" y="-0.9599996" z="2.900001" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.000003" y="-0.9599996" z="2.900001" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.900003" y="-0.9599996" z="2.900001" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.800003" y="-0.9599996" z="2.900001" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.700003" y="-0.9599996" z="2.900001" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.9000028" y="-0.9599996" z="2.900001" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.000003" y="-0.9599996" z="2.900001" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.100003" y="-0.9599996" z="2.900001" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.200003" y="-0.9599996" z="2.900001" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.300003" y="-0.9599996" z="2.900001" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.400003" y="-0.9599996" z="2.900001" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.500003" y="-0.9599996" z="2.900001" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.600003" y="-0.9599996" z="2.900001" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.8000028" y="-0.9599996" z="2.900001" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.7000028" y="-0.9599996" z="2.900001" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.6000028" y="-0.9599996" z="2.900001" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.5000027" y="-0.9599996" z="2.900001" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.4000027" y="-0.9599996" z="2.900001" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.3000028" y="-0.9599996" z="2.900001" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.2000028" y="-0.9599996" z="2.900001" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.1000028" y="-0.9599996" z="2.900001" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.756715E-06" y="-0.9599996" z="2.900001" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.09999724" y="-0.9599996" z="2.900001" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.1999972" y="-0.9599996" z="2.900001" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.2999972" y="-0.9599996" z="2.900001" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.3999972" y="-0.9599996" z="2.900001" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.000005" y="-0.9599996" z="2.100002" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.100005" y="-0.9599996" z="2.100002" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.200005" y="-0.9599996" z="2.100002" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.300005" y="-0.9599996" z="2.100002" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.400005" y="-0.9599996" z="2.100002" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.500005" y="-0.9599996" z="2.100002" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.600005" y="-0.9599996" z="2.100002" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.700005" y="-0.9599996" z="2.100002" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.800005" y="-0.9599996" z="2.100002" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.900005" y="-0.9599996" z="2.100002" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.000005" y="-0.9599996" z="2.100002" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.200005" y="-0.9599996" z="2.100002" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.500003" y="-0.9599996" z="2.800001" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.500003" y="-0.9599996" z="2.700001" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.500003" y="-0.9599996" z="2.600001" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.500004" y="-0.9599996" z="2.500001" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.500004" y="-0.9599996" z="2.400002" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.500004" y="-0.9599996" z="2.300002" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.500004" y="-0.9599996" z="2.200002" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.500005" y="-0.9599996" z="2.100002" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.400005" y="-0.9599996" z="2.100002" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.300005" y="-0.9599996" z="2.100002" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.500003" y="-0.9599996" z="2.900001" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.500002" y="-0.9599996" z="3.000001" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.500002" y="-0.9599996" z="3.100001" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.500002" y="-0.9599996" z="3.200001" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.500002" y="-0.9599996" z="3.300001" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.500001" y="-0.9599996" z="3.400001" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.500001" y="-0.9599996" z="3.5" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.500001" y="-0.9599996" z="3.6" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.500001" y="-0.9599996" z="3.7" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.5" y="-0.9599996" z="3.8" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.5" y="-0.9599996" z="3.9" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.5" y="-0.9599996" z="4" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.4" y="-0.9599996" z="4" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.3" y="-0.9599996" z="4" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.2" y="-0.9599996" z="4" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.1" y="-0.9599996" z="4" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.100001" y="-0.9599996" z="3.9" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.100001" y="-0.9599996" z="3.8" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.100001" y="-0.9599996" z="3.7" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.100001" y="-0.9599996" z="3.6" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.100002" y="-0.9599996" z="3.5" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.100002" y="-0.9599996" z="3.400001" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.100002" y="-0.9599996" z="3.300001" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.100002" y="-0.9599996" z="3.200001" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.100003" y="-0.9599996" z="3.100001" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.100003" y="-0.9599996" z="3.000001" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.100003" y="-0.9599996" z="2.900001" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.100003" y="-0.9599996" z="2.800001" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.100003" y="-0.9599996" z="2.700001" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.100004" y="-0.9599996" z="2.600001" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.100004" y="-0.9599996" z="2.500001" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.100004" y="-0.9599996" z="2.400002" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.100004" y="-0.9599996" z="2.300002" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.100005" y="-0.9599996" z="2.200002" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.100005" y="-0.9599996" z="2.100002" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.4" y="-0.9599996" z="3.9" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.400001" y="-0.9599996" z="3.8" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.400001" y="-0.9599996" z="3.7" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.400001" y="-0.9599996" z="3.6" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.400001" y="-0.9599996" z="3.5" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.400002" y="-0.9599996" z="3.400001" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.400002" y="-0.9599996" z="3.300001" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.400002" y="-0.9599996" z="3.200001" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.400002" y="-0.9599996" z="3.100001" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.400002" y="-0.9599996" z="3.000001" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.300003" y="-0.9599996" z="3.000001" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.200002" y="-0.9599996" z="3.100001" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.200002" y="-0.9599996" z="3.200001" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.200002" y="-0.9599996" z="3.300001" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.200002" y="-0.9599996" z="3.400001" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.200001" y="-0.9599996" z="3.5" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.200001" y="-0.9599996" z="3.6" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.200001" y="-0.9599996" z="3.7" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.200001" y="-0.9599996" z="3.8" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.200001" y="-0.9599996" z="3.9" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.3" y="-0.9599996" z="3.9" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.200003" y="-0.9599996" z="3.000001" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.400003" y="-0.9599996" z="2.800001" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.400003" y="-0.9599996" z="2.700001" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.400003" y="-0.9599996" z="2.600001" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.400004" y="-0.9599996" z="2.500001" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.400004" y="-0.9599996" z="2.400002" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.400004" y="-0.9599996" z="2.300002" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.400004" y="-0.9599996" z="2.200002" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.300004" y="-0.9599996" z="2.200002" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.200005" y="-0.9599996" z="2.200002" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.200004" y="-0.9599996" z="2.300002" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.200004" y="-0.9599996" z="2.400002" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.200004" y="-0.9599996" z="2.500001" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.200004" y="-0.9599996" z="2.600001" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.200003" y="-0.9599996" z="2.700001" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.200003" y="-0.9599996" z="2.800001" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.300003" y="-0.9599996" z="2.800001" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.000004" y="-0.9599996" z="2.700001" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.000004" y="-0.9599996" z="2.600001" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.000004" y="-0.9599996" z="2.500001" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.000004" y="-0.9599996" z="2.400002" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.000005" y="-0.9599996" z="2.300002" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.000005" y="-0.9599996" z="2.200002" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.900005" y="-0.9599996" z="2.200002" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.800005" y="-0.9599996" z="2.200002" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.700005" y="-0.9599996" z="2.200002" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.600005" y="-0.9599996" z="2.200002" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.500005" y="-0.9599996" z="2.200002" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.400005" y="-0.9599996" z="2.200002" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.300005" y="-0.9599996" z="2.200002" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.200005" y="-0.9599996" z="2.200002" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.100005" y="-0.9599996" z="2.200002" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.000005" y="-0.9599996" z="2.200002" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.000004" y="-0.9599996" z="2.300002" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.000004" y="-0.9599996" z="2.400002" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.000004" y="-0.9599996" z="2.500001" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.000004" y="-0.9599996" z="2.600001" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.000003" y="-0.9599996" z="2.700001" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.000003" y="-0.9599996" z="2.800001" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.100003" y="-0.9599996" z="2.800001" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.200003" y="-0.9599996" z="2.800001" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.300003" y="-0.9599996" z="2.800001" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.400003" y="-0.9599996" z="2.800001" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.500003" y="-0.9599996" z="2.800001" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.600003" y="-0.9599996" z="2.800001" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.700003" y="-0.9599996" z="2.800001" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.800003" y="-0.9599996" z="2.800001" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-1.900003" y="-0.9599996" z="2.800001" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.000003" y="-0.9599996" z="2.800001" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.8000007" y="-0.9599996" z="3.8" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.8000009" y="-0.9599996" z="3.7" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.8000011" y="-0.9599996" z="3.6" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.8000014" y="-0.9599996" z="3.5" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.8000016" y="-0.9599996" z="3.400001" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.8000019" y="-0.9599996" z="3.300001" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.8000021" y="-0.9599996" z="3.200001" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.8000023" y="-0.9599996" z="3.100001" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.8000026" y="-0.9599996" z="3.000001" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.7000026" y="-0.9599996" z="3.000001" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.6000025" y="-0.9599996" z="3.000001" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.5000025" y="-0.9599996" z="3.000001" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.4000025" y="-0.9599996" z="3.000001" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.3000025" y="-0.9599996" z="3.000001" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.2000025" y="-0.9599996" z="3.000001" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.1000025" y="-0.9599996" z="3.000001" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.518296E-06" y="-0.9599996" z="3.000001" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.09999748" y="-0.9599996" z="3.000001" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.1999975" y="-0.9599996" z="3.000001" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.2999975" y="-0.9599996" z="3.000001" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.2999977" y="-0.9599996" z="3.100001" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.299998" y="-0.9599996" z="3.200001" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.2999982" y="-0.9599996" z="3.300001" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.2999984" y="-0.9599996" z="3.400001" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.2999987" y="-0.9599996" z="3.5" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.2999989" y="-0.9599996" z="3.6" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.2999991" y="-0.9599996" z="3.7" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.2999994" y="-0.9599996" z="3.8" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.2999996" y="-0.9599996" z="3.9" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.1999996" y="-0.9599996" z="3.9" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.09999963" y="-0.9599996" z="3.9" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-3.72529E-07" y="-0.9599996" z="3.9" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.1000004" y="-0.9599996" z="3.9" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.2000004" y="-0.9599996" z="3.9" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.3000004" y="-0.9599996" z="3.9" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.4000004" y="-0.9599996" z="3.9" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.5000004" y="-0.9599996" z="3.9" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.6000004" y="-0.9599996" z="3.9" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.7000004" y="-0.9599996" z="3.9" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.8000004" y="-0.9599996" z="3.9" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.1999977" y="-0.9599996" z="3.100001" CubeType="Standard" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.9000031" y="-0.9599996" z="2.800001" CubeType="Dirt" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.8000031" y="-0.9599996" z="2.800001" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.700003" y="-0.9599996" z="2.800001" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.600003" y="-0.9599996" z="2.800001" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.500003" y="-0.9599996" z="2.800001" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.400003" y="-0.9599996" z="2.800001" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.300003" y="-0.9599996" z="2.800001" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.200003" y="-0.9599996" z="2.800001" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.100003" y="-0.9599996" z="2.800001" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-2.995133E-06" y="-0.9599996" z="2.800001" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.09999701" y="-0.9599996" z="2.800001" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.199997" y="-0.9599996" z="2.800001" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.299997" y="-0.9599996" z="2.800001" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.2999968" y="-0.9599996" z="2.700001" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.2999965" y="-0.9599996" z="2.600001" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.2999963" y="-0.9599996" z="2.500001" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.299996" y="-0.9599996" z="2.400002" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.2999958" y="-0.9599996" z="2.300002" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.2999956" y="-0.9599996" z="2.200002" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.1999956" y="-0.9599996" z="2.200002" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="0.09999558" y="-0.9599996" z="2.200002" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-4.425645E-06" y="-0.9599996" z="2.200002" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.1000044" y="-0.9599996" z="2.200002" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.2000044" y="-0.9599996" z="2.200002" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.3000044" y="-0.9599996" z="2.200002" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.4000044" y="-0.9599996" z="2.200002" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.5000044" y="-0.9599996" z="2.200002" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.6000044" y="-0.9599996" z="2.200002" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.7000045" y="-0.9599996" z="2.200002" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.8000045" y="-0.9599996" z="2.200002" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.8000042" y="-0.9599996" z="2.300002" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.800004" y="-0.9599996" z="2.400002" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.8000038" y="-0.9599996" z="2.500001" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.8000035" y="-0.9599996" z="2.600001" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.8000033" y="-0.9599996" z="2.700001" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+  <FloorCube>
+    <Details x="-0.7000021" y="-0.9599996" z="3.200001" CubeType="Snow" />
+    <BlackFloorCube>false</BlackFloorCube>
+  </FloorCube>
+</FloorCubes>

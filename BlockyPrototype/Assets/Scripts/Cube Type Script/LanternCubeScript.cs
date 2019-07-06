@@ -94,6 +94,18 @@ public class LanternCubeScript : MonoBehaviour
             }
         }
 
+        if (other.name == "TorchCube")
+        {
+            if (timeActive < other.GetComponent<TorchCubeScript>().timeActive)
+            {
+                Destroy(other.gameObject);
+            }
+            else
+            {
+                Destroy(this.gameObject);
+            }
+        }
+
         if (other.name == "WoodCube")
         {
             if (timeActive < other.GetComponent<WoodCubeScript>().timeActive)

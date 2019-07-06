@@ -379,16 +379,7 @@ public class GridScript : MonoBehaviour
                         playerScript.cubeType = CubeType.FENCEEND;
                         StartCoroutine(Pulse(result.gameObject));
                     }
-                    if (result.gameObject.name == "FenceArchTile")
-                    {
-                        playerScript.cubeType = CubeType.FENCEARCH;
-                        StartCoroutine(Pulse(result.gameObject));
-                    }
-                    if (result.gameObject.name == "FenceGateTile")
-                    {
-                        playerScript.cubeType = CubeType.FENCEGATE;
-                        StartCoroutine(Pulse(result.gameObject));
-                    }
+                    
                     if (result.gameObject.name == "FenceCornerTile")
                     {
                         playerScript.cubeType = CubeType.FENCECORNER;
@@ -457,6 +448,16 @@ public class GridScript : MonoBehaviour
                     if (result.gameObject.name == "TorchTile")
                     {
                         playerScript.cubeType = CubeType.TORCH;
+                        StartCoroutine(Pulse(result.gameObject));
+                    }
+                    if (result.gameObject.name == "FloorLightTile")
+                    {
+                        playerScript.cubeType = CubeType.FLOORLIGHT;
+                        StartCoroutine(Pulse(result.gameObject));
+                    }
+                    if (result.gameObject.name == "RainbowLightTile")
+                    {
+                        playerScript.cubeType = CubeType.RAINBOWLIGHT;
                         StartCoroutine(Pulse(result.gameObject));
                     }
                 }

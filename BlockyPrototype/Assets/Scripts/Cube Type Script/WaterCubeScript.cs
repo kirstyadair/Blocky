@@ -151,11 +151,12 @@ public class WaterCubeScript : MonoBehaviour
 
         if (other.name == "GrassCube")
         {
-            if (other.GetComponent<GrassCubeScript>().timeActive > timeActive)
+            
+            if (other.GetComponent<GrassCubeScript>().timeActive == timeActive)
             {
                 Destroy(other.gameObject);
             }
-            if (other.GetComponent<GrassCubeScript>().timeActive == timeActive)
+            if (timeActive < other.GetComponent<GrassCubeScript>().timeActive)
             {
                 Destroy(other.gameObject);
             }
@@ -199,7 +200,7 @@ public class WaterCubeScript : MonoBehaviour
             }
         }
 
-        if (other.name == "WoodCube" || other.name == "FlowerCube" || other.name == "BurningCube" || other.name == "StoneCube" || other.name == "TreeCube" || other.name == "LongGrassCube" || other.name == "LanternCube")
+        if (other.name == "WoodCube" || other.name == "FlowerCube" || other.name == "BurningCube" || other.name == "StoneCube" || other.name == "TreeCube" || other.name == "LongGrassCube" || other.name == "LanternCube" || other.name == "SaplingCube" || other.name == "LamppostCube")
         {
             Vector3 position = this.transform.position;
             GameObject newCube = Instantiate(groundPrefab, position, Quaternion.identity);
@@ -220,13 +221,7 @@ public class WaterCubeScript : MonoBehaviour
         }
     }
 
-    void OnTriggerExit(Collider other)
-    {
-        if (other.name == "LilypadCube")
-        {
-            Destroy(this.gameObject);
-        }
-    }
+    
 
 
 

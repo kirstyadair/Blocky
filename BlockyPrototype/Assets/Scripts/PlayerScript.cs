@@ -30,11 +30,11 @@ public enum CubeType
     LAMPPOST,
     ICE,
     FENCEEND,
-    FENCEARCH,
-    FENCEGATE,
     SAPLING,
     PEBBLES,
-    TORCH
+    TORCH,
+    FLOORLIGHT,
+    RAINBOWLIGHT
 }
 
 
@@ -56,6 +56,9 @@ public class PlayerScript : MonoBehaviour
     public EditingView editView;
     public CubeType cubeType;
     public GameObject rotateButton;
+    public Image buttonImage;
+    public Sprite floorSprite;
+    public Sprite houseSprite;
 
     [Header("Animators")]
     public Animator drawingPanelAnim;
@@ -102,6 +105,8 @@ public class PlayerScript : MonoBehaviour
     public GameObject saplingPrefab;
     public GameObject pebblesPrefab;
     public GameObject torchPrefab;
+    public GameObject floorLightPrefab;
+    public GameObject rainbowLightPrefab;
     public CubeType blankCubeType;
     GameObject currentCubePrefab;
     public GameObject blankCubePrefab;
@@ -245,19 +250,9 @@ public class PlayerScript : MonoBehaviour
             currentCubePrefab = fenceCornerPrefab;
             currentCubeAboveGround = true;
         }
-        else if (cubeType == CubeType.FENCEARCH)
-        {
-            currentCubePrefab = fenceArchPrefab;
-            currentCubeAboveGround = true;
-        }
         else if (cubeType == CubeType.FENCEEND)
         {
             currentCubePrefab = fenceEndPrefab;
-            currentCubeAboveGround = true;
-        }
-        else if (cubeType == CubeType.FENCEGATE)
-        {
-            currentCubePrefab = fenceGatePrefab;
             currentCubeAboveGround = true;
         }
         else if (cubeType == CubeType.SNOW)
@@ -325,6 +320,16 @@ public class PlayerScript : MonoBehaviour
             currentCubePrefab = torchPrefab;
             currentCubeAboveGround = false;
         }
+        else if (cubeType == CubeType.FLOORLIGHT)
+        {
+            currentCubePrefab = floorLightPrefab;
+            currentCubeAboveGround = false;
+        }
+        else if (cubeType == CubeType.RAINBOWLIGHT)
+        {
+            currentCubePrefab = rainbowLightPrefab;
+            currentCubeAboveGround = false;
+        }
 
 
 
@@ -332,10 +337,11 @@ public class PlayerScript : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.M) || savingOrLoading)
             {
+                Debug.Log("closing draw panel");
                 drawingPanelAnim.SetBool("openPanel", false);
                 
             }
-            if ((Input.GetKeyDown(KeyCode.N) || !savingOrLoading) && wallSelected )
+            if ((Input.GetKeyDown(KeyCode.N)) && wallSelected )
             {
                 drawingPanelAnim.SetBool("openPanel", true);
             }
@@ -349,7 +355,7 @@ public class PlayerScript : MonoBehaviour
                 floorDrawingPanelAnim.gameObject.SetActive(false);
 
             }
-            if (Input.GetKeyDown(KeyCode.N) || !savingOrLoading)
+            if (Input.GetKeyDown(KeyCode.N))
             {
                 floorDrawingPanelAnim.gameObject.SetActive(true);
             }
@@ -374,7 +380,7 @@ public class PlayerScript : MonoBehaviour
 
                             if (hit.collider.gameObject.tag == "BackWall" || hit.collider.gameObject.tag == "FrontWall" || hit.collider.gameObject.tag == "RightWall" || hit.collider.gameObject.tag == "LeftWall")
                             {
-                                // if the camera is in birds eye position
+                                /* // if the camera is in birds eye position
                                 if (cameraAnim.GetBool("FrontToBirdsEye") || cameraAnim.GetBool("ZoomToBirdsEye"))
                                 {
                                     AllCamAnimationsFalse();
@@ -385,7 +391,7 @@ public class PlayerScript : MonoBehaviour
                                 {
                                     AllCamAnimationsFalse();
                                     cameraAnim.SetBool("ZoomToFront", true);
-                                }
+                                }*/
 
 
                                 // if a wall has not already been selected 
@@ -413,7 +419,7 @@ public class PlayerScript : MonoBehaviour
                             {
                                 DeselectWalls();
 
-                                drawingPanelAnim.SetBool("openPanel", false);
+                                /* drawingPanelAnim.SetBool("openPanel", false);
                                 if (cameraAnim.GetBool("BirdsEyeToZoom"))
                                 {
                                     AllCamAnimationsFalse();
@@ -424,7 +430,7 @@ public class PlayerScript : MonoBehaviour
                                     AllCamAnimationsFalse();
                                     cameraAnim.SetBool("FrontToBirdsEye", true);
                                 }
-
+                                */
                                 //Vector3 cubePos = hit.collider.gameObject.transform.position;
 
                                 
@@ -433,7 +439,7 @@ public class PlayerScript : MonoBehaviour
 
                             if (hit.collider.gameObject.name == "BlackFloorCube")
                             {
-                                if (cameraAnim.GetBool("FrontToBirdsEye") || cameraAnim.GetBool("ZoomToBirdsEye"))
+                                /* if (cameraAnim.GetBool("FrontToBirdsEye") || cameraAnim.GetBool("ZoomToBirdsEye"))
                                 {
                                     AllCamAnimationsFalse();
                                     cameraAnim.SetBool("BirdsEyeToZoom", true);
@@ -441,6 +447,7 @@ public class PlayerScript : MonoBehaviour
                                 }
 
                                 drawingPanelAnim.SetBool("openPanel", false);
+                                */
                             }
                         }
                     }
@@ -536,7 +543,7 @@ public class PlayerScript : MonoBehaviour
     void HighlightWall(string wallTag)
     {
         int numberOfCubes = 0;
-        if (colourSelectorAnim.GetBool("show") == false)
+        if (colourSelectorAnim.GetBool("show") == false && editView == EditingView.EXTERIOR)
         {
             drawingPanelAnim.SetBool("openPanel", true);
         }
@@ -726,7 +733,7 @@ public class PlayerScript : MonoBehaviour
         if (currentCubeAboveGround)
         {
             yield return new WaitForSeconds(0.05f);
-            if (cubeType == CubeType.FENCE || cubeType == CubeType.FENCECORNER || cubeType == CubeType.FENCEEND || cubeType == CubeType.FENCEGATE || cubeType == CubeType.FENCEARCH)
+            if (cubeType == CubeType.FENCE || cubeType == CubeType.FENCECORNER || cubeType == CubeType.FENCEEND)
             {
                 GameObject newCube = Instantiate(currentCubePrefab, new Vector3(cubePos.x, -0.8799995f, cubePos.z), Quaternion.identity);
                 newCube.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
@@ -741,14 +748,7 @@ public class PlayerScript : MonoBehaviour
                 {
                     newCube.GetComponent<FenceCubeScript>().type = FenceType.END;
                 }
-                if (cubeType == CubeType.FENCEARCH)
-                {
-                    newCube.GetComponent<FenceCubeScript>().type = FenceType.ARCH;
-                }
-                if (cubeType == CubeType.FENCEGATE)
-                {
-                    newCube.GetComponent<FenceCubeScript>().type = FenceType.GATE;
-                }
+                
             }
             else
             {
@@ -760,4 +760,37 @@ public class PlayerScript : MonoBehaviour
             
         }
     }
+
+
+
+
+    public void CameraChangePerspective()
+    {
+        if (cameraAnim.GetBool("BirdsEyeToFront"))
+        {
+            AllCamAnimationsFalse();
+            cameraAnim.SetBool("FrontToBirdsEye", true);
+            drawingPanelAnim.SetBool("openPanel", false);
+            floorDrawingPanelAnim.SetBool("slideIn", true);
+            buttonImage.sprite = houseSprite;
+        }
+        else if (cameraAnim.GetBool("FrontToBirdsEye"))
+        {
+            AllCamAnimationsFalse();
+            cameraAnim.SetBool("BirdsEyeToFront", true);
+            floorDrawingPanelAnim.SetBool("slideIn", false);
+            buttonImage.sprite = floorSprite;
+        }
+        else // if neither animations are active, i.e. the button hasn't been pressed yet
+        {
+            Debug.Log("first");
+            AllCamAnimationsFalse();
+            cameraAnim.SetBool("FrontToBirdsEye", true);
+            drawingPanelAnim.SetBool("openPanel", false);
+            buttonImage.sprite = houseSprite;
+        }
+        
+    }
+
+
 }

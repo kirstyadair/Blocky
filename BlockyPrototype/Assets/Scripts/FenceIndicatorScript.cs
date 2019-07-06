@@ -39,7 +39,7 @@ public class FenceIndicatorScript : MonoBehaviour
     {
         if (menuScript.currentOpenMenu == MenuOpen.FENCES && playerScript.floorDrawingPanelAnim.GetBool("slideIn"))
         {
-            if (playerScript.cubeType == CubeType.FENCE || playerScript.cubeType == CubeType.FENCEARCH || playerScript.cubeType == CubeType.FENCEGATE)
+            if (playerScript.cubeType == CubeType.FENCE )
             {
                 indicator.SetActive(true);
                 if (woodRotation == 0 || woodRotation == 180)

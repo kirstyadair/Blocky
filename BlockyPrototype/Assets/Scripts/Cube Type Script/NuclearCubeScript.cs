@@ -159,7 +159,10 @@ public class NuclearCubeScript : MonoBehaviour
             }
         }
 
-        if (other.name == "FireCube" || other.name == "WoodCube" || other.name == "FlowerCube" || other.name == "BurningCube" || other.name == "StoneCube" || other.name == "TreeCube" || other.name == "LongGrassCube" || other.name == "LanternCube")
+        if (other.name == "FireCube" || other.name == "WoodCube" || other.name == "FlowerCube" || other.name == "BurningCube" 
+        || other.name == "StoneCube" || other.name == "TreeCube" || other.name == "LongGrassCube" || other.name == "LanternCube"
+        || other.name == "PebblesCube" || other.name == "SaplingCube" || other.name == "FenceCube" || other.name == "LamppostCube"
+        || other.name == "FloorLightCube" || other.name == "RainbowLightCube")
         {
             Vector3 position = this.transform.position;
             Debug.Log(groundPrefab);

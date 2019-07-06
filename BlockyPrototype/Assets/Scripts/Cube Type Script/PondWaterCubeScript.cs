@@ -165,7 +165,19 @@ public class PondWaterCubeScript : MonoBehaviour
             }
         }
 
-        if (other.name == "FireCube" || other.name == "WoodCube" || other.name == "FlowerCube" || other.name == "BurningCube" || other.name == "StoneCube" || other.name == "TreeCube" || other.name == "LongGrassCube" || other.name == "LanternCube")
+        if (other.name == "PebblesCube")
+        {
+            if (other.GetComponent<PebblesCubeScript>().timeActive > timeActive)
+            {
+                Destroy(other.gameObject);
+            }
+        }
+
+        if (other.name == "FireCube" || other.name == "WoodCube" || other.name == "FlowerCube" 
+        || other.name == "BurningCube" || other.name == "StoneCube" || other.name == "TreeCube" 
+        || other.name == "LongGrassCube" || other.name == "LanternCube" || other.name == "SaplingCube" 
+        || other.name == "LamppostCube" || other.name == "FenceCube" || other.name == "TorchCube"
+        || other.name == "FloorLightCube" || other.name == "RainbowLightCube" || other.name == "PebblesCube")
         {
             Vector3 position = this.transform.position;
             GameObject newCube = Instantiate(groundPrefab, position, Quaternion.identity);

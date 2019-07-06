@@ -135,5 +135,41 @@ public class StoneCubeScript : MonoBehaviour
                 Destroy(this.gameObject);
             }
         }
+
+        if (other.name == "FloorLightCube")
+        {
+            if (timeActive < other.GetComponent<FloorLightCubeScript>().timeActive)
+            {
+                Destroy(other.gameObject);
+            }
+            else
+            {
+                Destroy(this.gameObject);
+            }
+        }
+
+        if (other.name == "LanternCube")
+        {
+            if (timeActive < other.GetComponent<LanternCubeScript>().timeActive)
+            {
+                Destroy(other.gameObject);
+            }
+            else
+            {
+                Destroy(this.gameObject);
+            }
+        }
+
+        if (other.name == "RainbowLightCube")
+        {
+            if (timeActive < other.GetComponent<RainbowLightCubeScript>().timeActive)
+            {
+                Destroy(other.gameObject);
+            }
+            else
+            {
+                Destroy(this.gameObject);
+            }
+        }
     }
 }

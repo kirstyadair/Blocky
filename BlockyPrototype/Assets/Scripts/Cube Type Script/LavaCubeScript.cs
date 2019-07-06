@@ -172,7 +172,9 @@ public class LavaCubeScript : MonoBehaviour
             }
         }
 
-        if (other.name == "FireCube" || other.name == "WoodCube" || other.name == "FlowerCube" || other.name == "BurningCube" || other.name == "StoneCube" || other.name == "TreeCube" || other.name == "LongGrassCube" || other.name == "LanternCube" || other.name == "FenceCube")
+        if (other.name == "FireCube" || other.name == "WoodCube" || other.name == "FlowerCube" || other.name == "BurningCube" 
+        || other.name == "StoneCube" || other.name == "TreeCube" || other.name == "LongGrassCube" || other.name == "LanternCube" 
+        || other.name == "FenceCube" || other.name == "PebblesCube" || other.name == "SaplingCube")
         {
             Vector3 position = this.transform.position;
             if (groundPrefab == null)

@@ -10,6 +10,7 @@ public class FireCubeScript : MonoBehaviour
     public GameObject sandPrefab;
     public GameObject snowPrefab;
     public GameObject grassPrefab;
+    public GameObject waterPrefab;
     public RestartScript restartScript;
     PlayerScript playerScript;
     public double timeActive = 0.0f;
@@ -81,7 +82,7 @@ public class FireCubeScript : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.name == "WaterCube")
+        if (other.name == "WaterCube" || other.name == "PondWaterCube")
         {
             Destroy(this.gameObject);
         }
@@ -158,7 +159,7 @@ public class FireCubeScript : MonoBehaviour
             }
         }
 
-        if (other.name == "Tree")
+        if (other.name == "TreeCube")
         {
             if (timeActive < other.GetComponent<TreeCubeScript>().timeActive)
             {
@@ -184,6 +185,7 @@ public class FireCubeScript : MonoBehaviour
 
         if (other.name == "IceCube")
         {
+            GameObject newCube = Instantiate(waterPrefab, other.transform.position, Quaternion.identity);
             Destroy(this.gameObject);
         }
     }

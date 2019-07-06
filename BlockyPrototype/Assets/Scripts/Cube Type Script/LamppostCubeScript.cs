@@ -81,6 +81,66 @@ public class LamppostCubeScript : MonoBehaviour
     {
 
 
+        if (other.name == "WaterCube")
+        {
+            if (timeActive < other.GetComponent<WaterCubeScript>().timeActive)
+            {
+                Destroy(other.gameObject);
+            }
+            else
+            {
+                Destroy(this.gameObject);
+            }
+        }
+
+        if (other.name == "PondWaterCube")
+        {
+            if (timeActive < other.GetComponent<PondWaterCubeScript>().timeActive)
+            {
+                Destroy(other.gameObject);
+            }
+            else
+            {
+                Destroy(this.gameObject);
+            }
+        }
+
+        if (other.name == "NuclearCube")
+        {
+            if (timeActive < other.GetComponent<NuclearCubeScript>().timeActive)
+            {
+                Destroy(other.gameObject);
+            }
+            else
+            {
+                Destroy(this.gameObject);
+            }
+        }
+
+        if (other.name == "LavaCube")
+        {
+            if (timeActive < other.GetComponent<LavaCubeScript>().timeActive)
+            {
+                Destroy(other.gameObject);
+            }
+            else
+            {
+                Destroy(this.gameObject);
+            }
+        }
+
+        if (other.name == "IceCube")
+        {
+            if (timeActive < other.GetComponent<IceCubeScript>().timeActive)
+            {
+                Destroy(other.gameObject);
+            }
+            else
+            {
+                Destroy(this.gameObject);
+            }
+        }
+
         if (other.name == "FireCube")
         {
             if (timeActive < other.GetComponent<FireCubeScript>().timeActive)
@@ -194,6 +254,42 @@ public class LamppostCubeScript : MonoBehaviour
         if (other.name == "LanternCube")
         {
             if (timeActive < other.GetComponent<LanternCubeScript>().timeActive)
+            {
+                Destroy(other.gameObject);
+            }
+            else
+            {
+                Destroy(this.gameObject);
+            }
+        }
+
+        if (other.name == "FloorLightCube")
+        {
+            if (timeActive < other.GetComponent<FloorLightCubeScript>().timeActive)
+            {
+                Destroy(other.gameObject);
+            }
+            else
+            {
+                Destroy(this.gameObject);
+            }
+        }
+
+        if (other.name == "TorchCube")
+        {
+            if (timeActive < other.GetComponent<TorchCubeScript>().timeActive)
+            {
+                Destroy(other.gameObject);
+            }
+            else
+            {
+                Destroy(this.gameObject);
+            }
+        }
+
+        if (other.name == "RainbowLightCube")
+        {
+            if (timeActive < other.GetComponent<RainbowLightCubeScript>().timeActive)
             {
                 Destroy(other.gameObject);
             }

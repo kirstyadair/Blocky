@@ -151,14 +151,7 @@ public class IceCubeScript : MonoBehaviour
 
         if (other.name == "WaterCube")
         {
-            if (other.GetComponent<WaterCubeScript>().timeActive > timeActive)
-            {
-                Destroy(other.gameObject);
-            }
-            else
-            {
-                Destroy(this.gameObject);
-            }
+            Destroy(this.gameObject);
         }
 
         if (other.name == "NuclearCube")
@@ -185,7 +178,9 @@ public class IceCubeScript : MonoBehaviour
             }
         }
 
-        if (other.name == "WoodCube" || other.name == "FlowerCube" || other.name == "BurningCube" || other.name == "StoneCube" || other.name == "TreeCube" || other.name == "LongGrassCube" || other.name == "LanternCube" || other.name == "FenceCube")
+        if (other.name == "WoodCube" || other.name == "FlowerCube" || other.name == "BurningCube" || other.name == "StoneCube" 
+        || other.name == "TreeCube" || other.name == "LongGrassCube" || other.name == "LanternCube" || other.name == "FenceCube"
+        || other.name == "PebblesCube" || other.name == "SaplingCube")
         {
             Vector3 position = this.transform.position;
             if (groundPrefab == null)
@@ -199,8 +194,6 @@ public class IceCubeScript : MonoBehaviour
 
         if (other.name == "FireCube")
         {
-            Destroy(other.gameObject);
-            Debug.Log("fire destroyed");
             GameObject newCube = Instantiate(waterPrefab, this.transform.position, Quaternion.identity);
         }
 

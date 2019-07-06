@@ -135,6 +135,18 @@ public class SandCubeScript : MonoBehaviour
                     Destroy(this.gameObject);
                 }
             }
+
+            if (other.name == "LavaCube")
+            {
+                if (timeActive < other.GetComponent<LavaCubeScript>().timeActive)
+                {
+                    Destroy(other.gameObject);
+                }
+                else
+                {
+                    Destroy(this.gameObject);
+                }
+            }
         }
         else if (other.GetComponent<CubeScript>() == null)
         {

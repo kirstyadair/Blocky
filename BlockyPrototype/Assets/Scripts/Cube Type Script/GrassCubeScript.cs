@@ -76,6 +76,14 @@ public class GrassCubeScript : MonoBehaviour
                     Destroy(other.gameObject);
                 }
             }
+
+            if (other.name == "WaterCube")
+            {
+                if (timeActive < other.GetComponent<WaterCubeScript>().timeActive)
+                {
+                    Destroy(other.gameObject);
+                }
+            }
         }
         else if (other.GetComponent<CubeScript>() == null)
         {

@@ -221,6 +221,40 @@ public class FenceCubeScript : MonoBehaviour
             }
         }
 
-        
+        if (other.name == "TorchCube")
+        {
+            if (timeActive < other.GetComponent<TorchCubeScript>().timeActive)
+            {
+                Destroy(other.gameObject);
+            }
+            else
+            {
+                Destroy(this.gameObject);
+            }
+        }
+
+        if (other.name == "FloorLightCube")
+        {
+            if (timeActive < other.GetComponent<FloorLightCubeScript>().timeActive)
+            {
+                Destroy(other.gameObject);
+            }
+            else
+            {
+                Destroy(this.gameObject);
+            }
+        }
+
+        if (other.name == "RainbowLightCube")
+        {
+            if (timeActive < other.GetComponent<RainbowLightCubeScript>().timeActive)
+            {
+                Destroy(other.gameObject);
+            }
+            else
+            {
+                Destroy(this.gameObject);
+            }
+        }
     }
 }

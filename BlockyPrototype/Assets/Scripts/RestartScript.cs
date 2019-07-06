@@ -7,6 +7,7 @@ public class RestartScript : MonoBehaviour
 {
     public GameObject grenadePrefab;
     public GameObject plane;
+    public GameObject menuPanel;
     GameData gameData;
     public PlayerScript playerScript;
     public GridScript gridScript;
@@ -60,6 +61,7 @@ public class RestartScript : MonoBehaviour
     public void Explode()
     {
         exploding = true;
+        menuPanel.SetActive(false);
         GameObject grenade = Instantiate(grenadePrefab, transform.position, Quaternion.identity);
         if (grenade.GetComponent<Rigidbody>().velocity.y == 0)
         {

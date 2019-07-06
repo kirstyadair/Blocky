@@ -84,6 +84,14 @@ public class PavingCubeScript : MonoBehaviour
             }
         }
         
+        if (other.name == "PondWaterCube")
+        {
+            if (timeActive < other.GetComponent<PondWaterCubeScript>().timeActive)
+            {
+                Destroy(other.gameObject);
+            }
+        }
+        
 
         if (other.name == "SandCube")
         {

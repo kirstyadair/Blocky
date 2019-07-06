@@ -12,6 +12,11 @@ public class MenuScript : MonoBehaviour
 {
     // Variables
     public PlayerScript playerScript;
+    public RestartScript restartScript;
+    public RequirementsGeneratorScript reqGenScript;
+
+    public GameObject textField;
+    public GameObject button;
 
     public GameObject pathsPanel;
     public GameObject waterPanel;
@@ -28,9 +33,11 @@ public class MenuScript : MonoBehaviour
     public GameObject plantsButton;
     public GameObject lightsButton;
 
+    public GameObject dotdotMenu;
     
 
     public bool menuOpen = false;
+    public bool dotdotOpen = false;
     public MenuOpen currentOpenMenu;
 
 
@@ -41,7 +48,7 @@ public class MenuScript : MonoBehaviour
     {
         currentOpenMenu = MenuOpen.NONE;
         
-
+        dotdotMenu.SetActive(false);
     }
 
 
@@ -55,6 +62,7 @@ public class MenuScript : MonoBehaviour
             // if a button has not been selected
             if (!menuOpen)
             {
+                textField.SetActive(true);
                 currentOpenMenu = MenuOpen.NONE;
                 backButton.SetActive(false);
                 pathsButton.SetActive(true);
@@ -74,6 +82,7 @@ public class MenuScript : MonoBehaviour
             
             if (menuOpen)
             {
+                textField.SetActive(false);
                 backButton.SetActive(true);
                 pathsButton.SetActive(false);
                 waterButton.SetActive(false);
@@ -108,6 +117,15 @@ public class MenuScript : MonoBehaviour
                 }
                 
             }
+        }
+
+        if (playerScript.savingOrLoading || restartScript.exploding || reqGenScript.loadingPanel.activeInHierarchy)
+        {
+            button.SetActive(false);
+        }
+        else
+        {
+            button.SetActive(true);
         }
     }
 
@@ -170,5 +188,25 @@ public class MenuScript : MonoBehaviour
 
 
 
+    public void OpenCloseMenu()
+    {
+        if (dotdotOpen)
+        {
+            dotdotMenu.SetActive(false);
+            dotdotOpen = false;
+        }
+        else
+        {
+            dotdotMenu.SetActive(true);
+            dotdotOpen = true;
+        }
+    }
+
+
+
+    public void QuitToMenu()
+    {
+        Application.LoadLevel("MainMenu");
+    }
     
 }

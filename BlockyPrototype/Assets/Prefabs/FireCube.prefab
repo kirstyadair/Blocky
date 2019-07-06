@@ -904,6 +904,8 @@ MonoBehaviour:
     type: 3}
   grassPrefab: {fileID: 3014774579378426385, guid: 9af2a9c1228060c49bce3f842264e516,
     type: 3}
+  waterPrefab: {fileID: 617789895762305217, guid: 389e375adee60ae48a79d3939a733e73,
+    type: 3}
   restartScript: {fileID: 0}
   timeActive: 0
   timeActiveExploded: 0
