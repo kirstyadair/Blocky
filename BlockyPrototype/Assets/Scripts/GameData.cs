@@ -12,6 +12,7 @@ public class GameData : MonoBehaviour
     public Material dirt;
     public float backgroundAudioLevel = 0f;
     public float cubePlacementAudioLevel = 0f;
+    public int levelChosen = 0;
 
 
 

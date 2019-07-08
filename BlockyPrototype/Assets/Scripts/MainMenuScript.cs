@@ -35,11 +35,26 @@ public class MainMenuScript : MonoBehaviour
 
 
 
+    public void StartChallenge()
+    {
+        StartCoroutine(DelayStartChallenge());
+    }
+
+
+
     IEnumerator DelayStartSandbox()
     {
         GetComponent<AudioSource>().Play();
         yield return new WaitForSeconds(0.5f);
         SceneManager.LoadScene("BlockySandbox");
+    }
+
+
+    IEnumerator DelayStartChallenge()
+    {
+        GetComponent<AudioSource>().Play();
+        yield return new WaitForSeconds(0.5f);
+        SceneManager.LoadScene("ChallengeModeScene");
     }
 
 

@@ -17,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BlockySandbox.unity
     guid: 7c0d7812f1be6504ca6d0c9938cac231
+  - enabled: 1
+    path: Assets/Scenes/ChallengeModeScene.unity
+    guid: b494ffc9dd8896848ab9919e3b60da5e
+  - enabled: 1
+    path: Assets/Scenes/ChallengeLevel.unity
+    guid: 9827767f9f05430489304d08a3533e15
   m_configObjects: {}
