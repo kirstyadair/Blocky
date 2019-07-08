@@ -18,6 +18,7 @@ public class RestartScript : MonoBehaviour
     public float radius;
     public float force;
     public bool exploding = false;
+    public bool challengeMode;
     bool showMenu = false;
     // this variable is only here because all above-ground cubes and SaveToXMLscript have access to it here
     public bool loading = false;
@@ -70,6 +71,28 @@ public class RestartScript : MonoBehaviour
                 drawingPanelAnim.SetBool("openPanel", false);
             }
 
+            challengeMode = false;
+            StartCoroutine(DelayExplosion(grenade));
+            
+        }
+        
+    }
+
+
+
+    public void ChallengeExplode()
+    {
+        exploding = true;
+        menuPanel.SetActive(false);
+        GameObject grenade = Instantiate(grenadePrefab, transform.position, Quaternion.identity);
+        if (grenade.GetComponent<Rigidbody>().velocity.y == 0)
+        {
+            if (drawingPanelAnim.GetBool("openPanel"))
+            {
+                drawingPanelAnim.SetBool("openPanel", false);
+            }
+
+            challengeMode = true;
             StartCoroutine(DelayExplosion(grenade));
             
         }
@@ -125,7 +148,15 @@ public class RestartScript : MonoBehaviour
             yield return new WaitForSeconds(0.01f);
         }
 
-        showMenu = true;
+        if (!challengeMode)
+        {
+            showMenu = true;
+        }
+        else
+        {
+            Application.LoadLevel("ChallengeModeScene");
+        }
+        
     }
 
 

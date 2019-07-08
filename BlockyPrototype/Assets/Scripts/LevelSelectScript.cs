@@ -7,6 +7,18 @@ public class LevelSelectScript : MonoBehaviour
 {
     GameObject gameData;
 
+    public void Start()
+    {
+        gameData = GameObject.Find("GameData");
+        
+        if (gameData != null)
+        {
+            gameData.GetComponent<GameData>().levelChosen = 0; 
+            gameData.GetComponent<GameData>().blankCubeType = CubeType.NULL;
+
+        }
+    }
+
     public void Level1Selected()
     {
         gameData = GameObject.Find("GameData");
@@ -21,6 +33,8 @@ public class LevelSelectScript : MonoBehaviour
         if (gameData != null)
         {
             gameData.GetComponent<GameData>().levelChosen = 1; 
+            gameData.GetComponent<GameData>().blankCubeType = CubeType.GRASS;
+
         }
         
 

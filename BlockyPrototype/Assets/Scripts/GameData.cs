@@ -13,6 +13,7 @@ public class GameData : MonoBehaviour
     public float backgroundAudioLevel = 0f;
     public float cubePlacementAudioLevel = 0f;
     public int levelChosen = 0;
+    public bool hasLoaded = false;
 
 
 
@@ -45,7 +46,15 @@ public class GameData : MonoBehaviour
         {
             terrain = grass;
         }
-        
+
+        if (levelChosen != 0 && hasLoaded == false)
+        {
+            if (GameObject.Find("RequirementsObject").GetComponent<RequirementsGeneratorScript>().canSelectWalls)
+            {
+                GameObject.Find("SaveObject").GetComponent<SaveToXMLScript>().LoadLevel(levelChosen);
+                hasLoaded = true;
+            }
+        }
     }
 
 

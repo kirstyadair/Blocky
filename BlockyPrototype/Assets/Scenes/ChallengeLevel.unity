@@ -1836,7 +1836,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2103517722}
-        m_MethodName: Explode
+        m_MethodName: ChallengeExplode
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4830,7 +4830,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 200, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &278494037
 MonoBehaviour:
@@ -4865,7 +4865,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: LOAD
+  m_Text: QUIT TO LEVEL MENU
 --- !u!222 &278494038
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -33430,8 +33430,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1191600343}
-        m_MethodName: OpenLoadMenu
+      - m_Target: {fileID: 673479932}
+        m_MethodName: QuitToLevelMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -36397,6 +36397,7 @@ MonoBehaviour:
   radius: 5
   force: 350
   exploding: 0
+  challengeMode: 0
   loading: 0
 --- !u!4 &2103517723
 Transform:

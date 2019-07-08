@@ -209,4 +209,11 @@ public class MenuScript : MonoBehaviour
         Application.LoadLevel("MainMenu");
     }
     
+
+
+    public void QuitToLevelMenu()
+    {
+        Application.LoadLevel("ChallengeModeScene");
+    }
+    
 }

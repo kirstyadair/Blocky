@@ -641,6 +641,22 @@ public class SaveToXMLScript : MonoBehaviour
 //////////////////////////////////////////////////////////////////////READING FROM FILES///////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+    public void LoadLevel(int levelNumber)
+    {
+        cubesToSpawnList = ReadFloorFromXML("challenge" + levelNumber + "Floor");
+        houseCubesList = ReadHouseCubesFromXML("challenge" + levelNumber + "House");
+
+        StartCoroutine(LoadInCubes());
+        StartCoroutine(ColourHouseCubes());
+    }
+
+
+
+
+
+
+
+
     public List<CubeToSpawn> ReadFloorFromXML(string filename)
     {
         XmlReader xmlReader = XmlReader.Create("Saves/" + filename + ".xml");
@@ -1125,7 +1141,7 @@ public class SaveToXMLScript : MonoBehaviour
                 if (readBlankCubeType == "GRASS" && cubesToSpawnList[i].cubePrefab != grass || readBlankCubeType == "SAND" && cubesToSpawnList[i].cubePrefab != sand || readBlankCubeType == "SNOW" && cubesToSpawnList[i].cubePrefab != snow || readBlankCubeType == "DIRT" && cubesToSpawnList[i].cubePrefab != dirt)
                 {
                     GameObject newCube = Instantiate(cubesToSpawnList[i].cubePrefab, cubesToSpawnList[i].position, Quaternion.identity); 
-                    if (cubesToSpawnList[i].cubePrefab == fence || cubesToSpawnList[i].cubePrefab == fenceCorner)
+                    if (cubesToSpawnList[i].cubePrefab == fence || cubesToSpawnList[i].cubePrefab == fenceCorner || cubesToSpawnList[i].cubePrefab == fenceEnd)
                     {
                         newCube.transform.Rotate(transform.rotation.x, cubesToSpawnList[i].fenceRotation, transform.rotation.z);
                     }
