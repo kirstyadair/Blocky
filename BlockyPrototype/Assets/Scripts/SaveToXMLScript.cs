@@ -646,7 +646,7 @@ public class SaveToXMLScript : MonoBehaviour
         cubesToSpawnList = ReadFloorFromXML("challenge" + levelNumber + "Floor");
         houseCubesList = ReadHouseCubesFromXML("challenge" + levelNumber + "House");
 
-        StartCoroutine(LoadInCubes());
+        StartCoroutine(LoadInChallengeCubes());
         StartCoroutine(ColourHouseCubes());
     }
 
@@ -1145,29 +1145,45 @@ public class SaveToXMLScript : MonoBehaviour
                     {
                         newCube.transform.Rotate(transform.rotation.x, cubesToSpawnList[i].fenceRotation, transform.rotation.z);
                     }
+                    
                     newCube.tag = "Floor";
                 }
                 else
                 {
                     GameObject newCube = Instantiate(cubesToSpawnList[i].cubePrefab, cubesToSpawnList[i].position, Quaternion.identity);
                     
+                }
+                   
+            }
+            
+        }
+    }
 
-                    /* if (cubesToSpawnList[i].cubePrefab == grass)
+
+    IEnumerator LoadInChallengeCubes()
+    {
+        restartScript.loading = true;
+        yield return new WaitForSeconds(0.5f);
+        restartScript.loading = false;
+
+        for (int i = 0; i < cubesToSpawnList.Count; i++)
+        {
+            if (cubesToSpawnList[i].cubePrefab != null)
+            {
+                if (readBlankCubeType == "GRASS" && cubesToSpawnList[i].cubePrefab != grass || readBlankCubeType == "SAND" && cubesToSpawnList[i].cubePrefab != sand || readBlankCubeType == "SNOW" && cubesToSpawnList[i].cubePrefab != snow || readBlankCubeType == "DIRT" && cubesToSpawnList[i].cubePrefab != dirt)
+                {
+                    GameObject newCube = Instantiate(cubesToSpawnList[i].cubePrefab, cubesToSpawnList[i].position, Quaternion.identity); 
+                    if (cubesToSpawnList[i].cubePrefab == fence || cubesToSpawnList[i].cubePrefab == fenceCorner || cubesToSpawnList[i].cubePrefab == fenceEnd)
                     {
-                        newCube.GetComponent<GrassCubeScript>().isBlackCube = true;
+                        newCube.transform.Rotate(transform.rotation.x, cubesToSpawnList[i].fenceRotation, transform.rotation.z);
                     }
-                    if (cubesToSpawnList[i].cubePrefab == dirt)
-                    {
-                        newCube.GetComponent<DirtCubeScript>().isBlackCube = true;
-                    }
-                    if (cubesToSpawnList[i].cubePrefab == sand)
-                    {
-                        newCube.GetComponent<SandCubeScript>().isBlackCube = true;
-                    }
-                    if (cubesToSpawnList[i].cubePrefab == snow)
-                    {
-                        newCube.GetComponent<SnowCubeScript>().isBlackCube = true;
-                    }*/
+                    
+                    newCube.tag = "Untagged";
+                }
+                else
+                {
+                    GameObject newCube = Instantiate(cubesToSpawnList[i].cubePrefab, cubesToSpawnList[i].position, Quaternion.identity);
+                    
                 }
                    
             }

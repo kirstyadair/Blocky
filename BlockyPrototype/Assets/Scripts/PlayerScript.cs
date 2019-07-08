@@ -783,7 +783,6 @@ public class PlayerScript : MonoBehaviour
         }
         else // if neither animations are active, i.e. the button hasn't been pressed yet
         {
-            Debug.Log("first");
             AllCamAnimationsFalse();
             cameraAnim.SetBool("FrontToBirdsEye", true);
             drawingPanelAnim.SetBool("openPanel", false);
