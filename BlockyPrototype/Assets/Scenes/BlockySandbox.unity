@@ -5908,7 +5908,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Texture: {fileID: 2800000, guid: 14ae4043d65c70548914efd30f94e3a5, type: 3}
+  m_Texture: {fileID: 2800000, guid: 62c13ea8af9809f4dbbb053a8f5d2bda, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -7023,7 +7023,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Texture: {fileID: 2800000, guid: bc9b8d7652b27824fadc542e09d8d88e, type: 3}
+  m_Texture: {fileID: 2800000, guid: 617aa5f42395b954eaab45008b807026, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -9263,7 +9263,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Texture: {fileID: 2800000, guid: bc9b8d7652b27824fadc542e09d8d88e, type: 3}
+  m_Texture: {fileID: 2800000, guid: 2568496209a3c8d43bf8d9a398bce6ff, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -15686,6 +15686,7 @@ MonoBehaviour:
   radius: 5
   force: 350
   exploding: 0
+  challengeMode: 0
   loading: 0
 --- !u!1 &892386110
 GameObject:
@@ -24702,7 +24703,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Texture: {fileID: 2800000, guid: 4fab05d34ba03924797a52a8446acb0a, type: 3}
+  m_Texture: {fileID: 2800000, guid: 4c70c21b15759964687c4267bd0112c1, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -25098,7 +25099,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.5870272, b: 0.754717, a: 1}
+  m_Color: {r: 0, g: 0.37588444, b: 0.4811321, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
