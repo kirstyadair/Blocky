@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Features>
+  <Feature1>Pond</Feature1>
+  <Feature2 />
+  <RequiredBlocks CubeType="dirt" Count="12" />
+  <RequiredBlocks CubeType="pondwater" Count="4" />
+  <RequiredBlocks CubeType="lilypad" Count="1" />
+  <NumberOfRequirements>3</NumberOfRequirements>
+</Features>

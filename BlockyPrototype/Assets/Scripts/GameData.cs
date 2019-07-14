@@ -14,6 +14,7 @@ public class GameData : MonoBehaviour
     public float cubePlacementAudioLevel = 0f;
     public int levelChosen = 0;
     public bool hasLoaded = false;
+    public List<CubeType> monitoredCubeTypes;
 
 
 
@@ -22,6 +23,7 @@ public class GameData : MonoBehaviour
     void Start()
     {
         DontDestroyOnLoad(gameObject);
+        monitoredCubeTypes = new List<CubeType>();
     }
 
 
@@ -49,6 +51,8 @@ public class GameData : MonoBehaviour
 
         if (levelChosen != 0 && hasLoaded == false)
         {
+            monitoredCubeTypes = GameObject.Find("SaveObject").GetComponent<SaveToXMLScript>().ReadLevelFile("level" + levelChosen);
+
             if (GameObject.Find("RequirementsObject").GetComponent<RequirementsGeneratorScript>().canSelectWalls)
             {
                 GameObject.Find("SaveObject").GetComponent<SaveToXMLScript>().LoadLevel(levelChosen);

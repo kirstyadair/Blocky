@@ -9,6 +9,7 @@ using UnityEngine.Windows;
 public class SaveToXMLScript : MonoBehaviour
 {
     public GameObject[] floorCubes;
+    public List<CubeType> neededCubeTypes;
     public PlayerScript playerScript;
     public List<GameObject> houseCubes;
     public RestartScript restartScript;
@@ -61,6 +62,9 @@ public class SaveToXMLScript : MonoBehaviour
 
     public GameObject loadSlots;
     public GameObject saveSlots;
+    public Text feature1;
+    public Text feature2;
+    public Text[] cubeReqs;
 
     public RawImage screenshot1;
     public RawImage screenshot2;
@@ -74,12 +78,12 @@ public class SaveToXMLScript : MonoBehaviour
     {
         gameData = GameObject.Find("GameData").GetComponent<GameData>();
         cubesToSpawnList = new List<CubeToSpawn>();
+        neededCubeTypes = new List<CubeType>();
         floorCubes = GameObject.FindGameObjectsWithTag("Floor");
         houseCubes = GameObject.Find("RequirementsObject").GetComponent<RequirementsGeneratorScript>().allCubes;
         houseCubesList = new List<HouseCubeToColour>();
         saveSlots.SetActive(false);
         loadSlots.SetActive(false);
-        
     }
 
 
@@ -648,11 +652,162 @@ public class SaveToXMLScript : MonoBehaviour
 
         StartCoroutine(LoadInChallengeCubes());
         StartCoroutine(ColourHouseCubes());
+
+        
     }
 
 
 
+    public List<CubeType> ReadLevelFile(string filename)
+    {
+        XmlReader reader = XmlReader.Create("ChallengeLevels/" + filename + ".xml");
+        
+        while (reader.Read())
+        {
+            if (reader.IsStartElement("Features"))
+            {
+                XmlReader innerReader = reader.ReadSubtree();
 
+                while (innerReader.Read())
+                {
+                    if (innerReader.IsStartElement("Feature1"))
+                    {
+                        feature1.text = innerReader.ReadString().ToUpper();
+                    }
+                    if (innerReader.IsStartElement("Feature2"))
+                    {
+                        feature2.text = innerReader.ReadString().ToUpper();
+                    }
+
+                    if (innerReader.IsStartElement("RequiredBlocks"))
+                    {
+                        if (innerReader["CubeType"] == "grass")
+                        {
+                            CubeType readCubeType = new CubeType();
+                            readCubeType = CubeType.GRASS;
+                            neededCubeTypes.Add(readCubeType);
+                        }
+                        if (innerReader["CubeType"] == "dirt")
+                        {
+                            CubeType readCubeType = new CubeType();
+                            readCubeType = CubeType.DIRT;
+                            neededCubeTypes.Add(readCubeType);
+                        }
+                        if (innerReader["CubeType"] == "sand")
+                        {
+                            CubeType readCubeType = new CubeType();
+                            readCubeType = CubeType.SAND;
+                            neededCubeTypes.Add(readCubeType);
+                        }
+                        if (innerReader["CubeType"] == "snow")
+                        {
+                            CubeType readCubeType = new CubeType();
+                            readCubeType = CubeType.SNOW;
+                            neededCubeTypes.Add(readCubeType);
+                        }
+                        if (innerReader["CubeType"] == "paving")
+                        {
+                            CubeType readCubeType = new CubeType();
+                            readCubeType = CubeType.PAVING;
+                            neededCubeTypes.Add(readCubeType);
+                        }
+                        if (innerReader["CubeType"] == "water")
+                        {
+                            CubeType readCubeType = new CubeType();
+                            readCubeType = CubeType.WATER;
+                            neededCubeTypes.Add(readCubeType);
+                        }
+                        if (innerReader["CubeType"] == "pondwater")
+                        {
+                            CubeType readCubeType = new CubeType();
+                            readCubeType = CubeType.PONDWATER;
+                            neededCubeTypes.Add(readCubeType);
+                        }
+                        if (innerReader["CubeType"] == "nuclear")
+                        {
+                            CubeType readCubeType = new CubeType();
+                            readCubeType = CubeType.NUCLEAR;
+                            neededCubeTypes.Add(readCubeType);
+                        }
+                        if (innerReader["CubeType"] == "lava")
+                        {
+                            CubeType readCubeType = new CubeType();
+                            readCubeType = CubeType.LAVA;
+                            neededCubeTypes.Add(readCubeType);
+                        }
+                        if (innerReader["CubeType"] == "ice")
+                        {
+                            CubeType readCubeType = new CubeType();
+                            readCubeType = CubeType.ICE;
+                            neededCubeTypes.Add(readCubeType);
+                        }
+                        if (innerReader["CubeType"] == "fire")
+                        {
+                            CubeType readCubeType = new CubeType();
+                            readCubeType = CubeType.FIRE;
+                            neededCubeTypes.Add(readCubeType);
+                        }
+                        if (innerReader["CubeType"] == "wood")
+                        {
+                            CubeType readCubeType = new CubeType();
+                            readCubeType = CubeType.WOOD;
+                            neededCubeTypes.Add(readCubeType);
+                        }
+                        if (innerReader["CubeType"] == "burning")
+                        {
+                            CubeType readCubeType = new CubeType();
+                            readCubeType = CubeType.BURNING;
+                            neededCubeTypes.Add(readCubeType);
+                        }
+                        if (innerReader["CubeType"] == "stone")
+                        {
+                            CubeType readCubeType = new CubeType();
+                            readCubeType = CubeType.STONE;
+                            neededCubeTypes.Add(readCubeType);
+                        }
+                        if (innerReader["CubeType"] == "pebbles")
+                        {
+                            CubeType readCubeType = new CubeType();
+                            readCubeType = CubeType.PEBBLES;
+                            neededCubeTypes.Add(readCubeType);
+                        }
+                        if (innerReader["CubeType"] == "flowers")
+                        {
+                            CubeType readCubeType = new CubeType();
+                            readCubeType = CubeType.FLOWER;
+                            neededCubeTypes.Add(readCubeType);
+                        }
+                        if (innerReader["CubeType"] == "tree")
+                        {
+                            CubeType readCubeType = new CubeType();
+                            readCubeType = CubeType.TREE;
+                            neededCubeTypes.Add(readCubeType);
+                        }
+                        if (innerReader["CubeType"] == "longgrass")
+                        {
+                            CubeType readCubeType = new CubeType();
+                            readCubeType = CubeType.LONGGRASS;
+                            neededCubeTypes.Add(readCubeType);
+                        }
+                        if (innerReader["CubeType"] == "lilypad")
+                        {
+                            CubeType readCubeType = new CubeType();
+                            readCubeType = CubeType.LILYPAD;
+                            neededCubeTypes.Add(readCubeType);
+                        }
+                        if (innerReader["CubeType"] == "sapling")
+                        {
+                            CubeType readCubeType = new CubeType();
+                            readCubeType = CubeType.SAPLING;
+                            neededCubeTypes.Add(readCubeType);
+                        }
+                    }
+                }
+            }
+        }
+        FillMenu(neededCubeTypes);
+        return neededCubeTypes;
+    }
 
 
 
@@ -1268,6 +1423,28 @@ public class SaveToXMLScript : MonoBehaviour
             tex.LoadImage(fileData); //..this will auto-resize the texture dimensions.
         }
         return tex;
+    }
+
+
+
+    public void FillMenu(List<CubeType> requirements)
+    {
+        
+        for (int i = 0; i < requirements.Count; i++)
+        {
+            cubeReqs[i].text = requirements[i].ToString().ToUpper();
+
+            if (i == requirements.Count-1)
+            {
+                if (cubeReqs.Length != requirements.Count)
+                {
+                    for (int j = i + 1; j < cubeReqs.Length; j++)
+                    {
+                        cubeReqs[j].gameObject.SetActive(false);
+                    }
+                }
+            }
+        }
     }
 
 }

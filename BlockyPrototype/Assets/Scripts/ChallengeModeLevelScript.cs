@@ -5,8 +5,7 @@ using UnityEngine.UI;
 
 public class ChallengeModeLevelScript : MonoBehaviour
 {
-    public Text feature1;
-    public Text feature2;
+    public Animator popupAnim;
 
     // Start is called before the first frame update
     void Start()
@@ -14,9 +13,8 @@ public class ChallengeModeLevelScript : MonoBehaviour
         
     }
 
-    // Update is called once per frame
-    void Update()
+    public void CloseMenu()
     {
-        
+        popupAnim.SetBool("introOut", true);
     }
 }

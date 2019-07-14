@@ -130,144 +130,174 @@ public class EditorScript : EditorWindow
 
 
         int currentY = 180;
+        int reqCount = 0;
+        int maxReqCount = 4;
 
-        if (grass)
+        if (grass && reqCount < maxReqCount)
         {
+            reqCount++;
             currentY += 30;
             window.grassCount = EditorGUI.TextField(new Rect(0, currentY, position.width, 15), label: "grassCubes needed", text: window.grassCount);
         }
-        if (dirt)
+        if (dirt && reqCount < maxReqCount)
         {
+            reqCount++;
             currentY += 30;
             window.dirtCount = EditorGUI.TextField(new Rect(0, currentY, position.width, 15), label: "dirtCubes needed", text: window.dirtCount);
         }
-        if (sand)
+        if (sand && reqCount < maxReqCount)
         {
+            reqCount++;
             currentY += 30;
             window.sandCount = EditorGUI.TextField(new Rect(0, currentY, position.width, 15), label: "sandCubes needed", text: window.sandCount);
         }
-        if (snow)
+        if (snow && reqCount < maxReqCount)
         {
+            reqCount++;
             currentY += 30;
             window.snowCount = EditorGUI.TextField(new Rect(0, currentY, position.width, 15), label: "snowCubes needed", text: window.snowCount);
         }
-        if (paving)
+        if (paving && reqCount < maxReqCount)
         {
+            reqCount++;
             currentY += 30;
             window.pavingCount = EditorGUI.TextField(new Rect(0, currentY, position.width, 15), label: "pavingCubes needed", text: window.pavingCount);
         }
-        if (water)
+        if (water && reqCount < maxReqCount)
         {
+            reqCount++;
             currentY += 30;
             window.waterCount = EditorGUI.TextField(new Rect(0, currentY, position.width, 15), label: "waterCubes needed", text: window.waterCount);
         }
-        if (pondwater)
+        if (pondwater && reqCount < maxReqCount)
         {
+            reqCount++;
             currentY += 30;
             window.pondwaterCount = EditorGUI.TextField(new Rect(0, currentY, position.width, 15), label: "pondwaterCubes needed", text: window.pondwaterCount);
         }
-        if (nuclear)
+        if (nuclear && reqCount < maxReqCount)
         {
+            reqCount++;
             currentY += 30;
             window.nuclearCount = EditorGUI.TextField(new Rect(0, currentY, position.width, 15), label: "nuclearCubes needed", text: window.nuclearCount);
         }
-        if (lava)
+        if (lava && reqCount < maxReqCount)
         {
+            reqCount++;
             currentY += 30;
             window.lavaCount = EditorGUI.TextField(new Rect(0, currentY, position.width, 15), label: "lavaCubes needed", text: window.lavaCount);
         }
-        if (ice)
+        if (ice && reqCount < maxReqCount)
         {
+            reqCount++;
             currentY += 30;
             window.iceCount = EditorGUI.TextField(new Rect(0, currentY, position.width, 15), label: "iceCubes needed", text: window.iceCount);
         }
-        if (fire)
+        if (fire && reqCount < maxReqCount)
         {
+            reqCount++;
             currentY += 30;
             window.fireCount = EditorGUI.TextField(new Rect(0, currentY, position.width, 15), label: "fireCubes needed", text: window.fireCount);
         }
-        if (wood)
+        if (wood && reqCount < maxReqCount)
         {
+            reqCount++;
             currentY += 30;
             window.woodCount = EditorGUI.TextField(new Rect(0, currentY, position.width, 15), label: "woodCubes needed", text: window.woodCount);
         }
-        if (stone)
+        if (stone && reqCount < maxReqCount)
         {
+            reqCount++;
             currentY += 30;
             window.stoneCount = EditorGUI.TextField(new Rect(0, currentY, position.width, 15), label: "stoneCubes needed", text: window.stoneCount);
         }
-        if (burning)
+        if (burning && reqCount < maxReqCount)
         {
+            reqCount++;
             currentY += 30;
             window.burningCount = EditorGUI.TextField(new Rect(0, currentY, position.width, 15), label: "burningCubes needed", text: window.burningCount);
         }
-        if (pebbles)
+        if (pebbles && reqCount < maxReqCount)
         {
+            reqCount++;
             currentY += 30;
             window.pebblesCount = EditorGUI.TextField(new Rect(0, currentY, position.width, 15), label: "pebblesCubes needed", text: window.pebblesCount);
         }
-        if (flowers)
+        if (flowers && reqCount < maxReqCount)
         {
+            reqCount++;
             currentY += 30;
             window.flowersCount = EditorGUI.TextField(new Rect(0, currentY, position.width, 15), label: "flowersCubes needed", text: window.flowersCount);
         }
-        if (tree)
+        if (tree && reqCount < maxReqCount)
         {
+            reqCount++;
             currentY += 30;
             window.treeCount = EditorGUI.TextField(new Rect(0, currentY, position.width, 15), label: "treeCubes needed", text: window.treeCount);
         }
-        if (longgrass)
+        if (longgrass && reqCount < maxReqCount)
         {
+            reqCount++;
             currentY += 30;
             window.longgrassCount = EditorGUI.TextField(new Rect(0, currentY, position.width, 15), label: "longgrassCubes needed", text: window.longgrassCount);
         }
-        if (lilypad)
+        if (lilypad && reqCount < maxReqCount)
         {
+            reqCount++;
             currentY += 30;
             window.lilypadCount = EditorGUI.TextField(new Rect(0, currentY, position.width, 15), label: "lilypadCubes needed", text: window.lilypadCount);
         }
-        if (sapling)
+        if (sapling && reqCount < maxReqCount)
         {
+            reqCount++;
             currentY += 30;
             window.saplingCount = EditorGUI.TextField(new Rect(0, currentY, position.width, 15), label: "saplingCubes needed", text: window.saplingCount);
         }
-        if (fenceStraight)
+        if (fenceStraight && reqCount < maxReqCount)
         {
+            reqCount++;
             currentY += 30;
             window.fenceStraightCount = EditorGUI.TextField(new Rect(0, currentY, position.width, 15), label: "fenceStraightCubes needed", text: window.fenceStraightCount);
         }
-        if (fenceCorner)
+        if (fenceCorner && reqCount < maxReqCount)
         {
+            reqCount++;
             currentY += 30;
             window.fenceCornerCount = EditorGUI.TextField(new Rect(0, currentY, position.width, 15), label: "fenceCornerCubes needed", text: window.fenceCornerCount);
         }
-        if (fenceEnd)
+        if (fenceEnd && reqCount < maxReqCount)
         {
+            reqCount++;
             currentY += 30;
             window.fenceEndCount = EditorGUI.TextField(new Rect(0, currentY, position.width, 15), label: "fenceEndCubes needed", text: window.fenceEndCount);
         }
-        if (lantern)
+        if (lantern && reqCount < maxReqCount)
         {
+            reqCount++;
             currentY += 30;
             window.lanternCount = EditorGUI.TextField(new Rect(0, currentY, position.width, 15), label: "lanternCubes needed", text: window.lanternCount);
         }
-        if (lamppost)
+        if (lamppost && reqCount < maxReqCount)
         {
+            reqCount++;
             currentY += 30;
             window.lamppostCount = EditorGUI.TextField(new Rect(0, currentY, position.width, 15), label: "lamppostCubes needed", text: window.lamppostCount);
         }
-        if (torch)
+        if (torch && reqCount < maxReqCount)
         {
+            reqCount++;
             currentY += 30;
             window.torchCount = EditorGUI.TextField(new Rect(0, currentY, position.width, 15), label: "torchCubes needed", text: window.torchCount);
         }
-        if (floorlight)
+        if (floorlight && reqCount < maxReqCount)
         {
+            reqCount++;
             currentY += 30;
             window.floorlightCount = EditorGUI.TextField(new Rect(0, currentY, position.width, 15), label: "floorlightCubes needed", text: window.floorlightCount);
         }
-        if (rainbow)
+        if (rainbow && reqCount < maxReqCount)
         {
+            reqCount++;
             currentY += 30;
             window.rainbowCount = EditorGUI.TextField(new Rect(0, currentY, position.width, 15), label: "rainbowCubes needed", text: window.rainbowCount);
         }
@@ -469,7 +499,10 @@ public class EditorScript : EditorWindow
             numOfReqs++;
         }
         
-        
+        xmlWriter.WriteStartElement("NumberOfRequirements");
+        xmlWriter.WriteString(numOfReqs.ToString());
+        xmlWriter.WriteEndElement();
+
 
         xmlWriter.WriteEndElement();
         xmlWriter.WriteEndDocument();
