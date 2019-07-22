@@ -228,10 +228,12 @@ public class GridScript : MonoBehaviour
                 // If the hit tile is a standard tile within the grid
                 if (result.gameObject.tag == "Tile")
                 {
+                    Debug.Log("deleting, returning to standard");
                     result.gameObject.GetComponent<Image>().color = defaultColour;
                     GameObject cubeToColour = GameObject.Find("cube" + result.gameObject.name);
                     cubeToColour.GetComponent<MeshRenderer>().material.color = defaultColour;
                     cubeToColour.GetComponent<CubeScript>().cubeMaterial = CubeMaterial.STANDARD;
+                    cubeToColour.GetComponent<Renderer>().material = cubeToColour.GetComponent<CubeScript>().standardMaterial;
                 }
             }
         }
@@ -472,8 +474,12 @@ public class GridScript : MonoBehaviour
         GameObject cubeToColour = GameObject.Find("cube" + tile.name);
         if (cubeToColour.GetComponent<CubeScript>().cubeMaterial != CubeMaterial.STANDARD && selectedMaterial == CubeMaterial.STANDARD)
         {
+            Debug.Log("Changing to material " + selectedMaterial);
             cubeToColour.GetComponent<CubeScript>().cubeMaterial = CubeMaterial.STANDARD;
             cubeToColour.GetComponent<Renderer>().material = cubeToColour.GetComponent<CubeScript>().standardMaterial;
+            Color newColor = cubeToColour.GetComponent<Renderer>().material.color;
+            newColor.a = 0.4f;
+            cubeToColour.GetComponent<Renderer>().material.color = newColor;
         }
         tile.GetComponent<Image>().color = selectedColour;
     }

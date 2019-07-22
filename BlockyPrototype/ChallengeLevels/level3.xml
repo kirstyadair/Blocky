@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Features>
+  <Feature1>Lava</Feature1>
+  <Feature2>Fires</Feature2>
+  <RequiredBlocks CubeType="lava" Count="30" />
+  <RequiredBlocks CubeType="fire" Count="10" />
+  <RequiredBlocks CubeType="burning" Count="5" />
+  <NumberOfRequirements>3</NumberOfRequirements>
+</Features>

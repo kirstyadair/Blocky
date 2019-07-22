@@ -510,3 +510,4 @@ public class EditorScript : EditorWindow
         xmlWriter.Close();
     }
 }
+

@@ -10,6 +10,7 @@ public class LevelSelectScript : MonoBehaviour
     public void Start()
     {
         gameData = GameObject.Find("GameData");
+        gameData.GetComponent<GameData>().hasLoaded = false;
         
         if (gameData != null)
         {
@@ -33,6 +34,206 @@ public class LevelSelectScript : MonoBehaviour
         if (gameData != null)
         {
             gameData.GetComponent<GameData>().levelChosen = 1; 
+            gameData.GetComponent<GameData>().blankCubeType = CubeType.GRASS;
+
+        }
+        
+
+        StartCoroutine(DelayLevelLoad());
+    }
+
+    
+
+    public void Level2Selected()
+    {
+        gameData = GameObject.Find("GameData");
+
+        if (gameData == null)
+        {
+            GameObject gameData = new GameObject();
+            gameData.name = "GameData";
+            gameData.AddComponent<GameData>();
+        }
+
+        if (gameData != null)
+        {
+            gameData.GetComponent<GameData>().levelChosen = 2; 
+            gameData.GetComponent<GameData>().blankCubeType = CubeType.GRASS;
+
+        }
+        
+
+        StartCoroutine(DelayLevelLoad());
+    }
+
+    public void Level3Selected()
+    {
+        gameData = GameObject.Find("GameData");
+
+        if (gameData == null)
+        {
+            GameObject gameData = new GameObject();
+            gameData.name = "GameData";
+            gameData.AddComponent<GameData>();
+        }
+
+        if (gameData != null)
+        {
+            gameData.GetComponent<GameData>().levelChosen = 3; 
+            gameData.GetComponent<GameData>().blankCubeType = CubeType.GRASS;
+
+        }
+        
+
+        StartCoroutine(DelayLevelLoad());
+    }
+
+    public void Level4Selected()
+    {
+        gameData = GameObject.Find("GameData");
+
+        if (gameData == null)
+        {
+            GameObject gameData = new GameObject();
+            gameData.name = "GameData";
+            gameData.AddComponent<GameData>();
+        }
+
+        if (gameData != null)
+        {
+            gameData.GetComponent<GameData>().levelChosen = 4; 
+            gameData.GetComponent<GameData>().blankCubeType = CubeType.GRASS;
+
+        }
+        
+
+        StartCoroutine(DelayLevelLoad());
+    }
+
+    public void Level5Selected()
+    {
+        gameData = GameObject.Find("GameData");
+
+        if (gameData == null)
+        {
+            GameObject gameData = new GameObject();
+            gameData.name = "GameData";
+            gameData.AddComponent<GameData>();
+        }
+
+        if (gameData != null)
+        {
+            gameData.GetComponent<GameData>().levelChosen = 5; 
+            gameData.GetComponent<GameData>().blankCubeType = CubeType.GRASS;
+
+        }
+        
+
+        StartCoroutine(DelayLevelLoad());
+    }
+
+    public void Level6Selected()
+    {
+        gameData = GameObject.Find("GameData");
+
+        if (gameData == null)
+        {
+            GameObject gameData = new GameObject();
+            gameData.name = "GameData";
+            gameData.AddComponent<GameData>();
+        }
+
+        if (gameData != null)
+        {
+            gameData.GetComponent<GameData>().levelChosen = 6; 
+            gameData.GetComponent<GameData>().blankCubeType = CubeType.GRASS;
+
+        }
+        
+
+        StartCoroutine(DelayLevelLoad());
+    }
+
+    public void Level7Selected()
+    {
+        gameData = GameObject.Find("GameData");
+
+        if (gameData == null)
+        {
+            GameObject gameData = new GameObject();
+            gameData.name = "GameData";
+            gameData.AddComponent<GameData>();
+        }
+
+        if (gameData != null)
+        {
+            gameData.GetComponent<GameData>().levelChosen = 7; 
+            gameData.GetComponent<GameData>().blankCubeType = CubeType.GRASS;
+
+        }
+        
+
+        StartCoroutine(DelayLevelLoad());
+    }
+
+    public void Level8Selected()
+    {
+        gameData = GameObject.Find("GameData");
+
+        if (gameData == null)
+        {
+            GameObject gameData = new GameObject();
+            gameData.name = "GameData";
+            gameData.AddComponent<GameData>();
+        }
+
+        if (gameData != null)
+        {
+            gameData.GetComponent<GameData>().levelChosen = 8; 
+            gameData.GetComponent<GameData>().blankCubeType = CubeType.GRASS;
+
+        }
+        
+
+        StartCoroutine(DelayLevelLoad());
+    }
+
+    public void Level9Selected()
+    {
+        gameData = GameObject.Find("GameData");
+
+        if (gameData == null)
+        {
+            GameObject gameData = new GameObject();
+            gameData.name = "GameData";
+            gameData.AddComponent<GameData>();
+        }
+
+        if (gameData != null)
+        {
+            gameData.GetComponent<GameData>().levelChosen = 9; 
+            gameData.GetComponent<GameData>().blankCubeType = CubeType.GRASS;
+
+        }
+        
+
+        StartCoroutine(DelayLevelLoad());
+    }
+
+    public void Level10Selected()
+    {
+        gameData = GameObject.Find("GameData");
+
+        if (gameData == null)
+        {
+            GameObject gameData = new GameObject();
+            gameData.name = "GameData";
+            gameData.AddComponent<GameData>();
+        }
+
+        if (gameData != null)
+        {
+            gameData.GetComponent<GameData>().levelChosen = 10; 
             gameData.GetComponent<GameData>().blankCubeType = CubeType.GRASS;
 
         }

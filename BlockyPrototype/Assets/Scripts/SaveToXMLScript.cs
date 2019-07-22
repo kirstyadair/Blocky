@@ -10,6 +10,7 @@ public class SaveToXMLScript : MonoBehaviour
 {
     public GameObject[] floorCubes;
     public List<CubeType> neededCubeTypes;
+    public List<string> neededCubeCount;
     public PlayerScript playerScript;
     public List<GameObject> houseCubes;
     public RestartScript restartScript;
@@ -65,6 +66,7 @@ public class SaveToXMLScript : MonoBehaviour
     public Text feature1;
     public Text feature2;
     public Text[] cubeReqs;
+    public Text[] cubeCounts;
 
     public RawImage screenshot1;
     public RawImage screenshot2;
@@ -72,6 +74,7 @@ public class SaveToXMLScript : MonoBehaviour
     public string readBlankCubeType;
     string url;
     int floorCubeCount;
+    bool hasRead =false;
 
 
     void Start()
@@ -79,6 +82,7 @@ public class SaveToXMLScript : MonoBehaviour
         gameData = GameObject.Find("GameData").GetComponent<GameData>();
         cubesToSpawnList = new List<CubeToSpawn>();
         neededCubeTypes = new List<CubeType>();
+        neededCubeCount = new List<string>();
         floorCubes = GameObject.FindGameObjectsWithTag("Floor");
         houseCubes = GameObject.Find("RequirementsObject").GetComponent<RequirementsGeneratorScript>().allCubes;
         houseCubesList = new List<HouseCubeToColour>();
@@ -653,7 +657,7 @@ public class SaveToXMLScript : MonoBehaviour
         StartCoroutine(LoadInChallengeCubes());
         StartCoroutine(ColourHouseCubes());
 
-        
+        GameObject.Find("GameData").GetComponent<GameData>().StartMenuChecking();
     }
 
 
@@ -661,7 +665,8 @@ public class SaveToXMLScript : MonoBehaviour
     public List<CubeType> ReadLevelFile(string filename)
     {
         XmlReader reader = XmlReader.Create("ChallengeLevels/" + filename + ".xml");
-        
+        int reqNum = 0;
+
         while (reader.Read())
         {
             if (reader.IsStartElement("Features"))
@@ -679,134 +684,192 @@ public class SaveToXMLScript : MonoBehaviour
                         feature2.text = innerReader.ReadString().ToUpper();
                     }
 
+                    if (innerReader.IsStartElement("NumberOfRequirements"))
+                    {
+                        reqNum = int.Parse(innerReader.ReadString());
+                    }
                     if (innerReader.IsStartElement("RequiredBlocks"))
                     {
                         if (innerReader["CubeType"] == "grass")
                         {
+                            string readCount = innerReader["Count"];
+                            neededCubeCount.Add(readCount);
                             CubeType readCubeType = new CubeType();
                             readCubeType = CubeType.GRASS;
                             neededCubeTypes.Add(readCubeType);
                         }
                         if (innerReader["CubeType"] == "dirt")
                         {
+                            string readCount = innerReader["Count"];
+                            neededCubeCount.Add(readCount);
                             CubeType readCubeType = new CubeType();
                             readCubeType = CubeType.DIRT;
                             neededCubeTypes.Add(readCubeType);
                         }
                         if (innerReader["CubeType"] == "sand")
                         {
+                            string readCount = innerReader["Count"];
+                            neededCubeCount.Add(readCount);
                             CubeType readCubeType = new CubeType();
                             readCubeType = CubeType.SAND;
                             neededCubeTypes.Add(readCubeType);
                         }
                         if (innerReader["CubeType"] == "snow")
-                        {
+                        {   string readCount = innerReader["Count"];
+                            neededCubeCount.Add(readCount);
                             CubeType readCubeType = new CubeType();
                             readCubeType = CubeType.SNOW;
                             neededCubeTypes.Add(readCubeType);
                         }
                         if (innerReader["CubeType"] == "paving")
-                        {
+                        {   string readCount = innerReader["Count"];
+                            neededCubeCount.Add(readCount);
                             CubeType readCubeType = new CubeType();
                             readCubeType = CubeType.PAVING;
                             neededCubeTypes.Add(readCubeType);
                         }
                         if (innerReader["CubeType"] == "water")
-                        {
+                        {   string readCount = innerReader["Count"];
+                            neededCubeCount.Add(readCount);
                             CubeType readCubeType = new CubeType();
                             readCubeType = CubeType.WATER;
                             neededCubeTypes.Add(readCubeType);
                         }
                         if (innerReader["CubeType"] == "pondwater")
                         {
+                            string readCount = innerReader["Count"];
+                            neededCubeCount.Add(readCount);
                             CubeType readCubeType = new CubeType();
                             readCubeType = CubeType.PONDWATER;
                             neededCubeTypes.Add(readCubeType);
                         }
                         if (innerReader["CubeType"] == "nuclear")
                         {
+                            string readCount = innerReader["Count"];
+                            neededCubeCount.Add(readCount);
                             CubeType readCubeType = new CubeType();
                             readCubeType = CubeType.NUCLEAR;
                             neededCubeTypes.Add(readCubeType);
                         }
                         if (innerReader["CubeType"] == "lava")
                         {
+                            string readCount = innerReader["Count"];
+                            neededCubeCount.Add(readCount);
                             CubeType readCubeType = new CubeType();
                             readCubeType = CubeType.LAVA;
                             neededCubeTypes.Add(readCubeType);
                         }
                         if (innerReader["CubeType"] == "ice")
                         {
+                            string readCount = innerReader["Count"];
+                            neededCubeCount.Add(readCount);
                             CubeType readCubeType = new CubeType();
                             readCubeType = CubeType.ICE;
                             neededCubeTypes.Add(readCubeType);
                         }
                         if (innerReader["CubeType"] == "fire")
                         {
+                            string readCount = innerReader["Count"];
+                            neededCubeCount.Add(readCount);
                             CubeType readCubeType = new CubeType();
                             readCubeType = CubeType.FIRE;
                             neededCubeTypes.Add(readCubeType);
                         }
                         if (innerReader["CubeType"] == "wood")
                         {
+                            string readCount = innerReader["Count"];
+                            neededCubeCount.Add(readCount);
                             CubeType readCubeType = new CubeType();
                             readCubeType = CubeType.WOOD;
                             neededCubeTypes.Add(readCubeType);
                         }
                         if (innerReader["CubeType"] == "burning")
                         {
+                            string readCount = innerReader["Count"];
+                            neededCubeCount.Add(readCount);
                             CubeType readCubeType = new CubeType();
                             readCubeType = CubeType.BURNING;
                             neededCubeTypes.Add(readCubeType);
                         }
                         if (innerReader["CubeType"] == "stone")
                         {
+                            string readCount = innerReader["Count"];
+                            neededCubeCount.Add(readCount);
                             CubeType readCubeType = new CubeType();
                             readCubeType = CubeType.STONE;
                             neededCubeTypes.Add(readCubeType);
                         }
                         if (innerReader["CubeType"] == "pebbles")
                         {
+                            string readCount = innerReader["Count"];
+                            neededCubeCount.Add(readCount);
                             CubeType readCubeType = new CubeType();
                             readCubeType = CubeType.PEBBLES;
                             neededCubeTypes.Add(readCubeType);
                         }
                         if (innerReader["CubeType"] == "flowers")
                         {
+                            string readCount = innerReader["Count"];
+                            neededCubeCount.Add(readCount);
                             CubeType readCubeType = new CubeType();
                             readCubeType = CubeType.FLOWER;
                             neededCubeTypes.Add(readCubeType);
                         }
                         if (innerReader["CubeType"] == "tree")
                         {
+                            string readCount = innerReader["Count"];
+                            neededCubeCount.Add(readCount);
                             CubeType readCubeType = new CubeType();
                             readCubeType = CubeType.TREE;
                             neededCubeTypes.Add(readCubeType);
                         }
                         if (innerReader["CubeType"] == "longgrass")
                         {
+                            string readCount = innerReader["Count"];
+                            neededCubeCount.Add(readCount);
                             CubeType readCubeType = new CubeType();
                             readCubeType = CubeType.LONGGRASS;
                             neededCubeTypes.Add(readCubeType);
                         }
                         if (innerReader["CubeType"] == "lilypad")
                         {
+                            string readCount = innerReader["Count"];
+                            neededCubeCount.Add(readCount);
                             CubeType readCubeType = new CubeType();
                             readCubeType = CubeType.LILYPAD;
                             neededCubeTypes.Add(readCubeType);
                         }
                         if (innerReader["CubeType"] == "sapling")
                         {
+                            string readCount = innerReader["Count"];
+                            neededCubeCount.Add(readCount);
                             CubeType readCubeType = new CubeType();
                             readCubeType = CubeType.SAPLING;
                             neededCubeTypes.Add(readCubeType);
                         }
+                        
+                        
+                        
                     }
                 }
             }
         }
-        FillMenu(neededCubeTypes);
-        return neededCubeTypes;
+        if (neededCubeTypes.Count == reqNum)
+        {
+            FillMenu(neededCubeTypes, neededCubeCount);
+            return neededCubeTypes;
+        }
+        else
+        {
+            List<CubeType> cutDownNeededCubeTypes = new List<CubeType>();
+            for (int i = 0; i < reqNum; i++)
+            {
+                cutDownNeededCubeTypes.Add(neededCubeTypes[i]);
+            }
+            return cutDownNeededCubeTypes;
+        }
+        
+        
     }
 
 
@@ -1427,24 +1490,32 @@ public class SaveToXMLScript : MonoBehaviour
 
 
 
-    public void FillMenu(List<CubeType> requirements)
+    public void FillMenu(List<CubeType> requirements, List<string> counts)
     {
-        
-        for (int i = 0; i < requirements.Count; i++)
+        if (!hasRead)
         {
-            cubeReqs[i].text = requirements[i].ToString().ToUpper();
 
-            if (i == requirements.Count-1)
+            for (int i = 0; i < requirements.Count; i++)
             {
-                if (cubeReqs.Length != requirements.Count)
+                cubeReqs[i].text = requirements[i].ToString().ToUpper();
+                cubeCounts[i].text = " / " + counts[i];
+                
+
+                if (i == requirements.Count-1)
                 {
-                    for (int j = i + 1; j < cubeReqs.Length; j++)
+                    if (cubeReqs.Length != requirements.Count)
                     {
-                        cubeReqs[j].gameObject.SetActive(false);
+                        for (int j = i + 1; j < cubeReqs.Length; j++)
+                        {
+                            cubeReqs[j].gameObject.SetActive(false);
+                            cubeCounts[j].gameObject.SetActive(false);
+                        }
                     }
                 }
             }
         }
+        hasRead = true;
+        
     }
 
 }

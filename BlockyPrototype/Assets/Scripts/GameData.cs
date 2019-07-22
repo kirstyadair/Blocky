@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameData : MonoBehaviour
 {
@@ -51,13 +52,16 @@ public class GameData : MonoBehaviour
 
         if (levelChosen != 0 && hasLoaded == false)
         {
-            monitoredCubeTypes = GameObject.Find("SaveObject").GetComponent<SaveToXMLScript>().ReadLevelFile("level" + levelChosen);
-
-            if (GameObject.Find("RequirementsObject").GetComponent<RequirementsGeneratorScript>().canSelectWalls)
+            if (GameObject.Find("SaveObject") !=null)
             {
-                GameObject.Find("SaveObject").GetComponent<SaveToXMLScript>().LoadLevel(levelChosen);
-                hasLoaded = true;
+                monitoredCubeTypes = GameObject.Find("SaveObject").GetComponent<SaveToXMLScript>().ReadLevelFile("level" + levelChosen);
+                if (GameObject.Find("RequirementsObject").GetComponent<RequirementsGeneratorScript>().canSelectWalls)
+                {
+                    GameObject.Find("SaveObject").GetComponent<SaveToXMLScript>().LoadLevel(levelChosen);
+                    hasLoaded = true;
+                }
             }
+            
         }
     }
 
@@ -77,5 +81,11 @@ public class GameData : MonoBehaviour
     {
         cubePlacementAudioLevel = value;
         // Audio manager uses this value in AudioManager - don't touch it
+    }
+
+
+    public void StartMenuChecking()
+    {
+        GameObject.Find("ChallengeModeObject").GetComponent<ChallengeModeLevelScript>().StartBlockCheck(monitoredCubeTypes);
     }
 }

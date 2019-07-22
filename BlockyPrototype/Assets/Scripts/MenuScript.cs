@@ -34,7 +34,7 @@ public class MenuScript : MonoBehaviour
     public GameObject lightsButton;
 
     public GameObject dotdotMenu;
-    
+    GameData gameData;
 
     public bool menuOpen = false;
     public bool dotdotOpen = false;
@@ -47,7 +47,7 @@ public class MenuScript : MonoBehaviour
     void Start()
     {
         currentOpenMenu = MenuOpen.NONE;
-        
+        gameData = GameObject.Find("GameData").GetComponent<GameData>();
         dotdotMenu.SetActive(false);
     }
 

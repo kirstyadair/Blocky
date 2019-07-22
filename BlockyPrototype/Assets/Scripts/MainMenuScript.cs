@@ -17,12 +17,15 @@ public class MainMenuScript : MonoBehaviour
 
     private void Start()
     {
-        gameData = GameObject.Find("GameData");
+        
+        
         if (gameData == null)
         {
             CreateGameData();
             
         }
+        gameData = GameObject.Find("GameData");
+        gameData.GetComponent<GameData>().hasLoaded = false;
         canvasAnim.SetBool("startSandbox", false);
     }
 

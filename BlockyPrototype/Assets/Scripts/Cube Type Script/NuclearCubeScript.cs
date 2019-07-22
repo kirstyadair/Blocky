@@ -43,6 +43,8 @@ public class NuclearCubeScript : MonoBehaviour
         {
             groundPrefab = grassPrefab;
         }
+
+        GetComponent<BaseCubeScript>().thisCubeType = CubeType.NUCLEAR;
     }
 
 

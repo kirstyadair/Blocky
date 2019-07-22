@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Features>
+  <Feature1>Pool</Feature1>
+  <Feature2>Paving Path</Feature2>
+  <RequiredBlocks CubeType="paving" Count="20" />
+  <RequiredBlocks CubeType="water" Count="12" />
+  <NumberOfRequirements>2</NumberOfRequirements>
+</Features>

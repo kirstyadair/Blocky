@@ -55,6 +55,7 @@ public class PlayerScript : MonoBehaviour
     public string selectedWallTag;
     public EditingView editView;
     public CubeType cubeType;
+    public CubeType currentCubeType;
     public GameObject rotateButton;
     public Image buttonImage;
     public Sprite floorSprite;
@@ -71,10 +72,16 @@ public class PlayerScript : MonoBehaviour
     public RequirementsGeneratorScript reqGenScript;
     public GridScript gridScript;
     public FenceIndicatorScript fiScript;
+    public SaveToXMLScript saveScript;
 
     bool wallSelected;
     bool currentCubeAboveGround;
     Color blankColor;
+
+    public int requirementCount1;
+    public int requirementCount2;
+    public int requirementCount3;
+    public int requirementCount4;
 
     [Header("Prefabs")]
     public GameObject waterCubePrefab;
@@ -194,141 +201,169 @@ public class PlayerScript : MonoBehaviour
         {
             currentCubePrefab = grassPrefab;
             currentCubeAboveGround = false;
+            currentCubeType = cubeType;
         }
         else if (cubeType == CubeType.WATER)
         {
             currentCubePrefab = waterCubePrefab;
             currentCubeAboveGround = false;
+            currentCubeType = cubeType;
         }
         else if (cubeType == CubeType.WOOD)
         {
             currentCubePrefab = woodPrefab;
             currentCubeAboveGround = true;
+            currentCubeType = cubeType;
         }
         else if (cubeType == CubeType.FIRE)
         {
             currentCubePrefab = firePrefab;
             currentCubeAboveGround = true;
+            currentCubeType = cubeType;
         }
         else if (cubeType == CubeType.BURNING)
         {
             currentCubePrefab = burningPrefab;
             currentCubeAboveGround = true;
+            currentCubeType = cubeType;
         }
         else if (cubeType == CubeType.PAVING)
         {
             currentCubePrefab = pavingPrefab;
             currentCubeAboveGround = false;
+            currentCubeType = cubeType;
         }
         else if (cubeType == CubeType.FLOWER)
         {
             currentCubePrefab = flowerPrefab;
             currentCubeAboveGround = true;
+            currentCubeType = cubeType;
         }
         else if (cubeType == CubeType.SAND)
         {
             currentCubePrefab = sandPrefab;
             currentCubeAboveGround = false;
+            currentCubeType = cubeType;
         }
         else if (cubeType == CubeType.STONE)
         {
             currentCubePrefab = stonePrefab;
             currentCubeAboveGround = true;
+            currentCubeType = cubeType;
         }
         else if (cubeType == CubeType.DIRT)
         {
             currentCubePrefab = dirtPrefab;
             currentCubeAboveGround = false;
+            currentCubeType = cubeType;
         }
         else if (cubeType == CubeType.FENCE)
         {
             currentCubePrefab = fencePrefab;
             currentCubeAboveGround = true;
+            currentCubeType = cubeType;
         }
         else if (cubeType == CubeType.FENCECORNER)
         {
             currentCubePrefab = fenceCornerPrefab;
             currentCubeAboveGround = true;
+            currentCubeType = cubeType;
         }
         else if (cubeType == CubeType.FENCEEND)
         {
             currentCubePrefab = fenceEndPrefab;
             currentCubeAboveGround = true;
+            currentCubeType = cubeType;
         }
         else if (cubeType == CubeType.SNOW)
         {
             currentCubePrefab = snowPrefab;
             currentCubeAboveGround = false;
+            currentCubeType = cubeType;
         }
         else if (cubeType == CubeType.LANTERN)
         {
             currentCubePrefab = lanternPrefab;
             currentCubeAboveGround = true;
+            currentCubeType = cubeType;
         }
         else if (cubeType == CubeType.TREE)
         {
             currentCubePrefab = treePrefab;
             currentCubeAboveGround = true;
+            currentCubeType = cubeType;
         }
         else if (cubeType == CubeType.LONGGRASS)
         {
             currentCubePrefab = longGrassPrefab;
             currentCubeAboveGround = true;
+            currentCubeType = cubeType;
         }
         else if (cubeType == CubeType.PONDWATER)
         {
             currentCubePrefab = pondWaterPrefab;
             currentCubeAboveGround = false;
+            currentCubeType = cubeType;
         }
         else if (cubeType == CubeType.NUCLEAR)
         {
             currentCubePrefab = nuclearPrefab;
             currentCubeAboveGround = false;
+            currentCubeType = cubeType;
         }
         else if (cubeType == CubeType.LILYPAD)
         {
             currentCubePrefab = lilypadPrefab;
             currentCubeAboveGround = true;
+            currentCubeType = cubeType;
         }
         else if (cubeType == CubeType.LAVA)
         {
             currentCubePrefab = lavaPrefab;
             currentCubeAboveGround = false;
+            currentCubeType = cubeType;
         }
         else if (cubeType == CubeType.LAMPPOST)
         {
             currentCubePrefab = lamppostPrefab;
             currentCubeAboveGround = true;
+            currentCubeType = cubeType;
         }
         else if (cubeType == CubeType.ICE)
         {
             currentCubePrefab = icePrefab;
             currentCubeAboveGround = false;
+            currentCubeType = cubeType;
         }
         else if (cubeType == CubeType.SAPLING)
         {
             currentCubePrefab = saplingPrefab;
             currentCubeAboveGround = false;
+            currentCubeType = cubeType;
         }
         else if (cubeType == CubeType.PEBBLES)
         {
             currentCubePrefab = pebblesPrefab;
             currentCubeAboveGround = false;
+            currentCubeType = cubeType;
         }
         else if (cubeType == CubeType.TORCH)
         {
             currentCubePrefab = torchPrefab;
             currentCubeAboveGround = false;
+            currentCubeType = cubeType;
         }
         else if (cubeType == CubeType.FLOORLIGHT)
         {
             currentCubePrefab = floorLightPrefab;
             currentCubeAboveGround = false;
+            currentCubeType = cubeType;
         }
         else if (cubeType == CubeType.RAINBOWLIGHT)
         {
             currentCubePrefab = rainbowLightPrefab;
             currentCubeAboveGround = false;
+            currentCubeType = cubeType;
         }
 
 
@@ -470,7 +505,7 @@ public class PlayerScript : MonoBehaviour
                     {
                         if (hit.collider.gameObject.tag == "Floor" && hit.collider.gameObject.name != "BlackFloorCube")
                         {
-                            StartCoroutine(SpawnInCube(hit));
+                            StartCoroutine(SpawnInCube(hit, currentCubeType));
                             
                         }
                     }
@@ -719,8 +754,10 @@ public class PlayerScript : MonoBehaviour
     }
 
 
-    IEnumerator SpawnInCube(RaycastHit hit)
+    IEnumerator SpawnInCube(RaycastHit hit, CubeType currentCubeType)
     {
+        
+
         Vector3 cubePos = hit.collider.gameObject.transform.position;
         if (!currentCubeAboveGround)
         {
@@ -728,6 +765,7 @@ public class PlayerScript : MonoBehaviour
             GameObject newCube = Instantiate(currentCubePrefab, cubePos, Quaternion.identity);
             newCube.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
             newCube.tag = "Floor";
+
         }
 
         if (currentCubeAboveGround)
@@ -748,6 +786,8 @@ public class PlayerScript : MonoBehaviour
                 {
                     newCube.GetComponent<FenceCubeScript>().type = FenceType.END;
                 }
+
+                
                 
             }
             else
@@ -755,6 +795,8 @@ public class PlayerScript : MonoBehaviour
                 GameObject newCube = Instantiate(currentCubePrefab, new Vector3(cubePos.x, -0.8799995f, cubePos.z), Quaternion.identity);
                 newCube.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
                 newCube.tag = "Floor";
+
+                
             }
             
             
@@ -790,6 +832,7 @@ public class PlayerScript : MonoBehaviour
         }
         
     }
+
 
 
 }

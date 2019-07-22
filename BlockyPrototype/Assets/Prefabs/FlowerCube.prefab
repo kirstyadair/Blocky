@@ -475,6 +475,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeActive: 0
+  timeActiveExploded: 0
+  restartScript: {fileID: 0}
   grassPrefab: {fileID: 3014774579378426385, guid: 9af2a9c1228060c49bce3f842264e516,
     type: 3}
   sandPrefab: {fileID: 7106929501281752313, guid: 34f6481c264caa641a8432aff2e1b6bc,
@@ -484,6 +486,19 @@ MonoBehaviour:
   dirtPrefab: {fileID: 5545948537728656736, guid: 238f0f7ec59fc664a83a475f3e579f19,
     type: 3}
   groundPrefab: {fileID: 0}
+--- !u!114 &4848579607305809760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5058448345568311063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a22640b3072b06b40ba40b55bf9da67f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thisCubeType: 7
 --- !u!1 &1690122538608460851
 GameObject:
   m_ObjectHideFlags: 0
@@ -2806,6 +2821,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FlowerCube
       objectReference: {fileID: 0}
+    - target: {fileID: 3752546829330635847, guid: 6eb6cc60bb32c714da6170868cdd0e2d,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5955dfa8bc966194ebac643453b05a71, type: 2}
     - target: {fileID: 4293475291247187278, guid: 6eb6cc60bb32c714da6170868cdd0e2d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2876,11 +2896,6 @@ PrefabInstance:
       propertyPath: m_Size.z
       value: 0.8
       objectReference: {fileID: 0}
-    - target: {fileID: 3752546829330635847, guid: 6eb6cc60bb32c714da6170868cdd0e2d,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 5955dfa8bc966194ebac643453b05a71, type: 2}
     m_RemovedComponents:
     - {fileID: 3374727502714218062, guid: 6eb6cc60bb32c714da6170868cdd0e2d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6eb6cc60bb32c714da6170868cdd0e2d, type: 3}

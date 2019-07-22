@@ -567,6 +567,19 @@ MonoBehaviour:
     type: 3}
   waterPrefab: {fileID: 617789895762305217, guid: 389e375adee60ae48a79d3939a733e73,
     type: 3}
+--- !u!114 &5153683410512519268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4075847212933672060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a22640b3072b06b40ba40b55bf9da67f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thisCubeType: 19
 --- !u!1 &8306700149094450812
 GameObject:
   m_ObjectHideFlags: 0
@@ -656,6 +669,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LilypadCube
       objectReference: {fileID: 0}
+    - target: {fileID: 3752546829330635847, guid: 6eb6cc60bb32c714da6170868cdd0e2d,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4c34e4572f471594aa29b25efd6d73db, type: 2}
     - target: {fileID: 4293475291247187278, guid: 6eb6cc60bb32c714da6170868cdd0e2d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -726,11 +744,6 @@ PrefabInstance:
       propertyPath: m_Size.z
       value: 0.8
       objectReference: {fileID: 0}
-    - target: {fileID: 3752546829330635847, guid: 6eb6cc60bb32c714da6170868cdd0e2d,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 4c34e4572f471594aa29b25efd6d73db, type: 2}
     - target: {fileID: 5817763899701695810, guid: 6eb6cc60bb32c714da6170868cdd0e2d,
         type: 3}
       propertyPath: m_Controller

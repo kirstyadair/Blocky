@@ -29,6 +29,19 @@ MonoBehaviour:
   nuclear4: {fileID: 2100000, guid: 198125aa41e19814487808bb81ad4340, type: 2}
   nuclearOuter: {fileID: 2100000, guid: f3964f189009679459783002edf9f65e, type: 2}
   restartScript: {fileID: 0}
+--- !u!114 &5922007041830155964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5109018965715498486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a22640b3072b06b40ba40b55bf9da67f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thisCubeType: 17
 --- !u!1 &3400283081076374144
 GameObject:
   m_ObjectHideFlags: 0
@@ -426,6 +439,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PondWaterCube
       objectReference: {fileID: 0}
+    - target: {fileID: 3752546829330635847, guid: 6eb6cc60bb32c714da6170868cdd0e2d,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 735f3689f20d2a3489514de50c3c6e19, type: 2}
     - target: {fileID: 4293475291247187278, guid: 6eb6cc60bb32c714da6170868cdd0e2d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -496,11 +514,6 @@ PrefabInstance:
       propertyPath: m_Size.z
       value: 0.8
       objectReference: {fileID: 0}
-    - target: {fileID: 3752546829330635847, guid: 6eb6cc60bb32c714da6170868cdd0e2d,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 735f3689f20d2a3489514de50c3c6e19, type: 2}
     - target: {fileID: 5817763899701695810, guid: 6eb6cc60bb32c714da6170868cdd0e2d,
         type: 3}
       propertyPath: m_Controller
