@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Features>
+  <Feature1>Pool</Feature1>
+  <Feature2>Campfire</Feature2>
+  <RequiredBlocks CubeType="dirt" Count="12" />
+  <RequiredBlocks CubeType="water" Count="20" />
+  <RequiredBlocks CubeType="stone" Count="8" />
+  <RequiredBlocks CubeType="burning" Count="4" />
+  <NumberOfRequirements>4</NumberOfRequirements>
+</Features>

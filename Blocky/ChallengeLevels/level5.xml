@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Features>
+  <Feature1>A farm</Feature1>
+  <Feature2>Make it gay</Feature2>
+  <RequiredBlocks CubeType="dirt" Count="50" />
+  <RequiredBlocks CubeType="paving" Count="25" />
+  <RequiredBlocks CubeType="water" Count="40" />
+  <NumberOfRequirements>3</NumberOfRequirements>
+</Features>

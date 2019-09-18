@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Features>
+  <Feature1>Graveyard</Feature1>
+  <Feature2>Lifeyard</Feature2>
+  <RequiredBlocks CubeType="dirt" Count="10" />
+  <RequiredBlocks CubeType="stone" Count="20" />
+  <NumberOfRequirements>2</NumberOfRequirements>
+</Features>
